@@ -17,9 +17,18 @@
     code:'dexaraniiznx',
     scope:'dexaraniiznx',
     table:'sector',
-    json: true,
+    json: true,        
+    limit: 1000,               
+    reverse: false
 }).then(function(res) {
     console.log(res);
+
+        pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
 });
+
+console.log("Ohh SHINY!");
+
+//var tmp = JSON.parse(res);
+//console.log(res);
 
 </script>
