@@ -1,0 +1,25 @@
+<pre style="width: 100%; height: 100%; margin:0px; "></pre>
+
+<script src='dist-web/eosjs-api.js'></script>
+<script src='dist-web/eosjs-jsonrpc.js'></script>
+<script src='dist-web/eosjs-jssig.js'></script>
+<script>
+  let pre = document.getElementsByTagName('pre')[0];
+  const defaultPrivateKey = "5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr"; // bob
+  const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
+  const signatureProvider = new eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
+  const api = new eosjs_api.Api({ rpc, signatureProvider });
+
+
+  //console.log( rpc.get_account('dexaraniiznx') );   // <<<==== WORKING!
+
+  var res = rpc.get_table_rows({
+    code:'dexaraniiznx',
+    scope:'dexaraniiznx',
+    table:'sector',
+    json: true,
+}).then(function(res) {
+    console.log(res);
+});
+
+</script>
