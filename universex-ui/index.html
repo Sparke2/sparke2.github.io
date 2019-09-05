@@ -62,6 +62,10 @@ function switchView() {
 
         content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="width: 75px; height: 75px;" class="` + div_style + `">`;
         content += `<div style="margin-top: 5px; margin-left: 5px;">` + div_text + `</div>`;
+        if(res.rows[i].has_planet)
+        {
+          content += `<img src="planet.png" height="45" width="45" style="margin-bottom: 5px; margin-left: 11px;">`;
+        }
 
         var date = new Date();
         var timestamp = date.getTime(); // Returns data in MICROSECONDS
@@ -126,21 +130,30 @@ function switchView() {
         // For each ROW in the table add a special planet-holder div
         // and fill its content with planetary (or empty sector) variables.
         var div_height = "30px;";
+        var div_description_txt = "Empty sector ";
         if(res.rows[i].has_planet)
         {
+          div_description_txt = "Planet ";
           div_height = "70px";
         }
         content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="margin-bottom: 12px; width: 100%; height: ` + div_height + `" class="outset">`;
-        content += `<div style="margin-left: 10px; margin-top: 5px; position: absolute;"> Planet ` + res.rows[i].id + `</div>`;
+        content += `<div style="margin-left: 10px; margin-top: 5px; position: absolute;">` + div_description_txt + "" + res.rows[i].id + `</div>`;
+        if(res.rows[i].has_planet)
+        {
+          content += `<img src="planet.png" height="45" width="45" style="margin-top: 20px; margin-left: 6%; position: absolute;">`;
+        }
         content += `<div style="margin-left: 18%; margin-top: 5px; position: absolute;"> X: ` + res.rows[i].x + `</div>`;
         content += `<div style="margin-left: 14%; margin-top: 5px; position: absolute;"> Y: ` + res.rows[i].y + `</div>`;
-        content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
-        content += `<div style="margin-left: 33%; margin-top: 10px; position: absolute;"> Metal: ` + res.rows[i].resources[0] + `</div>`;
-        content += `<div style="margin-left: 33%; margin-top: 28px; position: absolute;"> Crystal: ` + res.rows[i].resources[1] + `</div>`;
-        content += `<div style="margin-left: 33%; margin-top: 46px; position: absolute;"> Gas: ` + res.rows[i].resources[2] + `</div>`;
-        content += `<div style="margin-left: 45%; margin-top: 10px; position: absolute;"> Battleships: ` + res.rows[i].planetary_fleet.ships[0] + `</div>`;
-        content += `<div style="margin-left: 45%; margin-top: 28px; position: absolute;"> Cargoships: ` + res.rows[i].planetary_fleet.ships[1] + `</div>`;
-        content += `<div style="margin-left: 45%; margin-top: 46px; position: absolute;"> Colonizers: ` + res.rows[i].planetary_fleet.ships[2] + `</div>`;
+        if(res.rows[i].has_planet)
+        {
+          content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 10px; position: absolute;"> Metal: ` + res.rows[i].resources[0] + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 28px; position: absolute;"> Crystal: ` + res.rows[i].resources[1] + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 46px; position: absolute;"> Gas: ` + res.rows[i].resources[2] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 10px; position: absolute;"> Battleships: ` + res.rows[i].planetary_fleet.ships[0] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 28px; position: absolute;"> Cargoships: ` + res.rows[i].planetary_fleet.ships[1] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 46px; position: absolute;"> Colonizers: ` + res.rows[i].planetary_fleet.ships[2] + `</div>`;
+        }
         content += `<button style="margin-left: 60%; margin-top: 30px; position: absolute;" onclick="expand(` + i + `)"> Expand </button>`;
         var date = new Date();
         var timestamp = date.getTime(); // Returns data in MICROSECONDS
