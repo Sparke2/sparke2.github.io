@@ -1,6 +1,7 @@
 <!-- <pre style="width: 100%; height: 100%; margin:0px; "></pre> -->
 
-<div id="header_txt" style="width: 100%; height: 5%; margin:0px;"> Author & C++: @Dexaran (dexaran@ethereumclassic.org) <br> UI: @Sparke2 (ligreat875@gmail.com) </div>
+<div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: @Dexaran (dexaran@ethereumclassic.org) <br> UI: @Sparke2 (ligreat875@gmail.com) </div>
+<button style="margin-left: 40%; margin-top: -25px; position: absolute;" onclick="switchView()"> Switch View </button>
 <div id="main_holder" style="width: 100%; height: 100%; margin:0px;"></div>
 
 <script src='dist-web/eosjs-api.js'></script>
@@ -10,6 +11,8 @@
 
 <style>
   div.outset {border-style: outset;}
+  div.groove {border-style: groove;}
+  div.groove {background-color: #92a8d1;}
 </style>
 
 <script>
@@ -25,6 +28,71 @@ function expand(itr) {
   var el = document.getElementById("div" + itr);
   el.style.height = "250px";
 }
+
+
+function switchView() {
+  var content = "";
+  var response_json;
+
+  var res = rpc.get_table_rows({
+    code:'dexaraniiznx',
+    scope:'dexaraniiznx',
+    table:'sector',
+    json: true,        
+    limit: 1000,               
+    reverse: false
+}).then(function(res){
+  
+        //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
+
+      for(i=0; i<res.rows.length;i++)
+      {
+        
+        // For each ROW in the table add a special planet-holder div
+        // and fill its content with planetary (or empty sector) variables.
+        var div_text = "sector: ";
+        var div_style = "groove";
+        if(res.rows[i].has_planet)
+        {
+          div_text = "planet: ";
+          div_style = "outset";
+
+        }
+        div_text += res.rows[i].id;
+
+        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="width: 75px; height: 75px;" class="` + div_style + `">`;
+        content += `<div style="margin-top: 5px; margin-left: 5px;">` + div_text + `</div>`;
+
+        var date = new Date();
+        var timestamp = date.getTime(); // Returns data in MICROSECONDS
+                                        // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
+        var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+        content += `</div>`;
+      }
+      document.getElementById("main_holder").innerHTML = content;
+      for (j = 0; j<res.rows.length;j++)
+      {
+        // Then apply the position
+
+        var mainholder = document.getElementById("main_holder");
+        mainholder = mainholder.getBoundingClientRect();
+        var offset_x = mainholder.x + 5;
+        var offset_y = mainholder.y + 5;
+        console.log("X:" + offset_x + " Y:" + offset_y);
+
+        var div_id = "div";
+        div_id += j;
+        var current_div = document.getElementById(div_id);
+
+        current_div.style.position = "absolute";
+        current_div.style.left = res.rows[j].x * 75 + offset_x;
+        current_div.style.top = res.rows[j].y * 75 + offset_y;
+
+
+        //console.log("id " + div_id + " x:" + res.rows[j].x + " y:" + res.rows[j].y);
+      }
+  });
+}
 </script>
 
 
@@ -34,7 +102,6 @@ function expand(itr) {
   const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
   const signatureProvider = new eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
   const api = new eosjs_api.Api({ rpc, signatureProvider });
-
 
   //console.log( rpc.get_account('dexaraniiznx') );   // <<<==== WORKING!
 
@@ -64,48 +131,29 @@ function expand(itr) {
           div_height = "70px";
         }
         content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="margin-bottom: 12px; width: 100%; height: ` + div_height + `" class="outset">`;
-
         content += `<div style="margin-left: 10px; margin-top: 5px; position: absolute;"> Planet ` + res.rows[i].id + `</div>`;
-
         content += `<div style="margin-left: 18%; margin-top: 5px; position: absolute;"> X: ` + res.rows[i].x + `</div>`;
-
         content += `<div style="margin-left: 14%; margin-top: 5px; position: absolute;"> Y: ` + res.rows[i].y + `</div>`;
-
         content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
-
         content += `<div style="margin-left: 33%; margin-top: 10px; position: absolute;"> Metal: ` + res.rows[i].resources[0] + `</div>`;
-
         content += `<div style="margin-left: 33%; margin-top: 28px; position: absolute;"> Crystal: ` + res.rows[i].resources[1] + `</div>`;
-
         content += `<div style="margin-left: 33%; margin-top: 46px; position: absolute;"> Gas: ` + res.rows[i].resources[2] + `</div>`;
-
         content += `<div style="margin-left: 45%; margin-top: 10px; position: absolute;"> Battleships: ` + res.rows[i].planetary_fleet.ships[0] + `</div>`;
-
         content += `<div style="margin-left: 45%; margin-top: 28px; position: absolute;"> Cargoships: ` + res.rows[i].planetary_fleet.ships[1] + `</div>`;
-
         content += `<div style="margin-left: 45%; margin-top: 46px; position: absolute;"> Colonizers: ` + res.rows[i].planetary_fleet.ships[2] + `</div>`;
-
         content += `<button style="margin-left: 60%; margin-top: 30px; position: absolute;" onclick="expand(` + i + `)"> Expand </button>`;
-
         var date = new Date();
         var timestamp = date.getTime(); // Returns data in MICROSECONDS
                                         // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
 
         var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
-
         content += `<div style="margin-left: 73%; margin-top: 30px; position: absolute;"> Last updated: `+ diff +  ` seconds ago </div>`;
         
         //content += `<div style="margin-left: 73%; margin-top: 5px; position: absolute;"> NOW: `+ timestamp +  ` </div>`;
 
         content += `</div>`;
       }
-
-
-
-
       document.getElementById("main_holder").innerHTML = content;
-
-
 
 });
 
