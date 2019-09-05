@@ -87,6 +87,16 @@ function expand(itr) {
 
         content += `<button style="margin-left: 60%; margin-top: 30px; position: absolute;" onclick="expand(` + i + `)"> Expand </button>`;
 
+        var date = new Date();
+        var timestamp = date.getTime(); // Returns data in MICROSECONDS
+                                        // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
+
+        var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+
+        content += `<div style="margin-left: 73%; margin-top: 30px; position: absolute;"> Last updated: `+ diff +  ` seconds ago </div>`;
+        
+        //content += `<div style="margin-left: 73%; margin-top: 5px; position: absolute;"> NOW: `+ timestamp +  ` </div>`;
+
         content += `</div>`;
       }
 
