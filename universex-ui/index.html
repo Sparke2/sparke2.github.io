@@ -1,8 +1,15 @@
 <!-- <pre style="width: 100%; height: 100%; margin:0px; "></pre> -->
 
 <div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) </div>
-<button style="margin-left: 25%; margin-top: -25px; position: absolute;" onclick="switchView()"> Switch to Grid View </button>
+<button style="margin-left: 25%; margin-top: -25px; position: absolute;" onclick="switchView()"> Switch to grid view </button>
 <div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> Universe X <a href="https://eos.io/">EOSIO</a> smart-contract UI</div>
+<div id="planetary_mode" style="width: 80%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">
+  
+
+    <button style="margin-left: 95%; margin-top: 2%; position: relative;" onclick="hidePlanet()"> X </button>
+    <div style="margin-left: 4%; margin-top: 10%; position: relative; font-size: 22;"> Planet ID:  </div>
+    <div id="id_holder" style="margin-left: 15%; margin-top: 10%; position: relative; font-size: 22;"></div>
+</div>
 <div id="main_holder" style="width: 100%; height: 100%; margin:0px;"></div>
 
 <script src='dist-web/eosjs-api.js'></script>
@@ -11,23 +18,61 @@
 
 
 <style>
+
+
+#planetary_mode {
+  z-index: 10;
+}
   div.outset {border-style: outset;}
   div.groove {border-style: groove;}
   div.groove {background-color: #92a8d1;}
+  var el = document.getElementById("planetary_mode");
+  el.style.opacity = 0.9;
+  el.style.order = 119;
 </style>
 
 <script>
+
+var activate_selection = true;
+
   // Super easy color change function.
 function selectOn(element) {
-  element.style.background = "PaleGreen";
+  if(activate_selection)
+  {
+    element.style.background = "PaleGreen";
+  }
 }
 function selectOff(element) {
-  element.style.background = 'transparent';
+  if(activate_selection)
+  {
+    element.style.background = 'transparent';
+  }
 }
 function expand(itr) {
   console.log(itr);
   var el = document.getElementById("div" + itr);
   el.style.height = "250px";
+}
+
+function showPlanet(id)
+{
+  console.log(id);
+  var el = document.getElementById("planetary_mode");
+  var id_hldr = document.getElementById("id_holder");
+  id_hldr.innerHTML = id;
+  el.style.display = "inline";
+  activate_selection = false;
+}
+
+function hidePlanet()
+{
+  var el = document.getElementById("planetary_mode");
+  el.style.display = "none";
+  activate_selection = true;
+  var id_hldr = document.getElementById("id_holder");
+  var div_id = "div" + id_hldr.innerHTML;
+  var div_back = document.getElementById(div_id);
+  selectOff(div_back);
 }
 
 
@@ -61,8 +106,8 @@ function switchView() {
         }
         div_text += res.rows[i].id;
 
-        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="width: 75px; height: 75px;" class="` + div_style + `">`;
-        content += `<div style="margin-top: 5px; margin-left: 5px;">` + div_text + `</div>`;
+        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onclick="showPlanet(` + i + `)" onmouseout="selectOff(this)" style="width: 75px; height: 75px;" class="` + div_style + `">`;
+        content += `<div style="margin-top: 5px; margin-left: 5px;" >` + div_text + `</div>`;
         if(res.rows[i].has_planet)
         {
           content += `<img src="planet.png" height="45" width="45" style="margin-bottom: 5px; margin-left: 11px;">`;
@@ -137,7 +182,7 @@ function switchView() {
           div_description_txt = "Planet ";
           div_height = "70px";
         }
-        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onmouseout="selectOff(this)" style="margin-bottom: 12px; width: 100%; height: ` + div_height + `" class="outset">`;
+        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onclick="showPlanet(` + i + `)" onmouseout="selectOff(this)" style="margin-bottom: 12px; width: 100%; height: ` + div_height + `" class="outset">`;
         content += `<div style="margin-left: 10px; margin-top: 5px; position: absolute;">` + div_description_txt + "" + res.rows[i].id + `</div>`;
         if(res.rows[i].has_planet)
         {
