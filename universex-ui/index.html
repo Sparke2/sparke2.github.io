@@ -1,14 +1,27 @@
 <!-- <pre style="width: 100%; height: 100%; margin:0px; "></pre> -->
 
 <div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) </div>
-<button style="margin-left: 25%; margin-top: -25px; position: absolute;" onclick="switchView()"> Switch to grid view </button>
+<button id="switch_to_grid_btn" style="margin-left: 25%; margin-top: -25px; position: absolute;" onclick="initGridView()"> Switch to grid view </button>
+<button id="switch_to_text_btn" style="margin-left: 25%; margin-top: -25px; position: absolute;" onclick="initTextView()"> Switch to sector list </button>
 <div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> Universe X <a href="https://eos.io/">EOSIO</a> smart-contract UI</div>
-<div id="planetary_mode" style="width: 80%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">
-  
 
-    <button style="margin-left: 95%; margin-top: 2%; position: relative;" onclick="hidePlanet()"> X </button>
-    <div style="margin-left: 4%; margin-top: 10%; position: relative; font-size: 22;"> Planet ID:  </div>
-    <div id="id_holder" style="margin-left: 15%; margin-top: 10%; position: relative; font-size: 22;"></div>
+
+<!--- PLANETARY MODE SCREEN -->
+<div id="planetary_mode">
+  <div id="planetScreen" class="planetmode" style="width: 70%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">
+  <button style="margin-left: 95%; margin-top: 2%; position: absolute;" onclick="hideAllPlanets()"> X </button>
+  <div style="margin-left: 2%; margin-top: 1%; position: absolute; font-size: 22;"><p id="planet_description">Planet ID:  </p><p id="planet_update_text">Updated: </p><p id="planet_update"></p></div>
+    <div id="buildings" class="itemholder" style="width: 72%; height: 40%; margin-left: 2%; margin-top: 30%; position: absolute; display: none;"></div>
+    <div id="actions" class="itemholder" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 30%; position: absolute; display: none;">
+      <button style="margin-left: 15%; margin-top: 5%; width: 70%; height: 13%; position: absolute;"> Send Fleets Here </button>
+      <button style="margin-left: 15%; margin-top: 45%; width: 70%; height: 13%; position: absolute;" disabled="true"> Give planetary order </button>
+      <button style="margin-left: 15%; margin-top: 25%; width: 70%; height: 13%; position: absolute;" disabled="true"> Abandon planet </button>
+    </div>
+    <div id="fleets" class="fleetlist" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 5%; position: absolute; display: none;"></div>
+</div>
+<!--    ------------------------- -->
+
+
 </div>
 <div id="main_holder" style="width: 100%; height: 100%; margin:0px;"></div>
 
@@ -20,20 +33,68 @@
 <style>
 
 
-#planetary_mode {
+div.planetmode {
   z-index: 10;
 }
+div.planetmode {
+  opacity: 0.98;
+}
+
+  div.itemholder {border-style: outset;}
+  div.itemholder {background-color: #92a8d1;}
+
+  div.fleetlist {border-style: outset;}
+  div.fleetlist {background-color: #006B52;}
+
   div.outset {border-style: outset;}
   div.groove {border-style: groove;}
   div.groove {background-color: #92a8d1;}
-  var el = document.getElementById("planetary_mode");
-  el.style.opacity = 0.9;
-  el.style.order = 119;
 </style>
 
 <script>
 
 var activate_selection = true;
+var temperatures = [];
+
+// Main elements that will be modified frequently.
+
+  var planetScreen = document.getElementById("planetScreen");
+  var planetDescription = document.getElementById("planet_description");
+  var planetUpdate = document.getElementById("planet_update");
+
+  var gridBtn = document.getElementById("switch_to_grid_btn");
+  var textBtn = document.getElementById("switch_to_text_btn");
+
+  var active_view = "text"; // For autoupdate to re-init view that is currently selected by user.
+
+// SET TIMER
+// Incrementing the "Last updated" counters by 1 each second.
+var sec_timer = setInterval(function() {
+
+  var timerNow = planetUpdate.innerHTML;
+  timerNow++;
+  planetUpdate.innerHTML = timerNow;
+              
+}, 1000);
+// END TIMER
+
+// SET AUTO RE-INIT once per update cycle to be up-to-date with the contract state
+// Reinit the selected map section
+var cyclic_update_timer = setInterval(function() {
+
+  if(active_view == "text")
+  {
+    initTextView();
+    console.log("reiniting TEXT VIEW");
+  }
+  else if (active_view == "grid")
+  {
+    initGridView();
+    console.log("reiniting GRID VIEW");
+  }
+              
+}, 300000);
+// END TIMER
 
   // Super easy color change function.
 function selectOn(element) {
@@ -54,31 +115,169 @@ function expand(itr) {
   el.style.height = "250px";
 }
 
+
+/*
 function showPlanet(id)
 {
-  console.log(id);
-  var el = document.getElementById("planetary_mode");
-  var id_hldr = document.getElementById("id_holder");
-  id_hldr.innerHTML = id;
+  var el = document.getElementById("planetScreen" + id);
+  //var id_hldr = document.getElementById("id_holder");
+  //var planet_dscr = document.getElementById("planet_description");
+  //id_hldr.innerHTML = id;
   el.style.display = "inline";
   activate_selection = false;
 }
+*/
 
-function hidePlanet()
+function showPlanetaryElements()
 {
-  var el = document.getElementById("planetary_mode");
-  el.style.display = "none";
-  activate_selection = true;
-  var id_hldr = document.getElementById("id_holder");
-  var div_id = "div" + id_hldr.innerHTML;
-  var div_back = document.getElementById(div_id);
-  selectOff(div_back);
+  showBuildings();
+  showFleets();
+  showActions();
+}
+
+function hidePlanetaryElements()
+{
+  hideBuildings();
+  hideFleets();
+  hideActions();
 }
 
 
-function switchView() {
-  var content = "";
-  var response_json;
+function showBuildings()
+{
+  var el = document.getElementById("buildings");
+  el.style.display = "inline";
+}
+
+function hideBuildings()
+{
+  var el = document.getElementById("buildings");
+  el.style.display = "none";
+}
+function showActions()
+{
+  var el = document.getElementById("actions");
+  el.style.display = "inline";
+}
+
+function hideActions()
+{
+  var el = document.getElementById("actions");
+  el.style.display = "none";
+}
+
+function showFleets()
+{
+  var el = document.getElementById("fleets");
+  el.style.display = "inline";
+}
+
+function hideFleets()
+{
+  var el = document.getElementById("fleets");
+  el.style.display = "none";
+}
+
+function showPlanet(id)
+{
+  planetScreen = document.getElementById("planetScreen");
+  planetDescription = document.getElementById("planet_description");
+  planetUpdate = document.getElementById("planet_update");
+
+    var res = rpc.get_table_rows({
+    code:'dexaraniiznx',
+    scope:'dexaraniiznx',
+    table:'sector',
+    json: true,        
+    limit: 1000,               
+    reverse: false
+    }).then(function(res){
+  
+        //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
+
+      for(i=0; i<res.rows.length;i++)
+      {
+        if(i == id)
+        {
+          if(res.rows[i].has_planet)
+          {
+
+            /* DRAWING A PLANET ************************/
+            showPlanetaryElements();
+
+            planetDescription.innerHTML = "Planet ";
+            planetDescription.innerHTML += id;
+
+            var date = new Date();
+            var timestamp = date.getTime(); // Returns data in MICROSECONDS
+                                        // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
+            var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+            planetUpdate.innerHTML = diff;
+
+          }
+          else 
+          {
+            /* EMPTY SECTOR selected *******************/
+            hidePlanetaryElements();
+
+            planetDescription.innerHTML = "Empty sector ";
+          }
+        }
+      }
+  });
+
+  planetScreen.style.display = "inline";
+}
+
+function hidePlanet(id)
+{
+  //var el = document.getElementById("planetScreen" + id);
+  var el = document.getElementById("planetScreen");
+  el.style.display = "none";
+  activate_selection = true;
+  /*
+  var id_hldr = document.getElementById("id_holder");
+  var div_id = "div" + id;
+  var div_to_hide = document.getElementById(div_id);
+  selectOff(div_to_hide);
+  */
+}
+
+
+function hideAllPlanets()
+{
+  for (i=0; i<10000; i++)
+  {
+    hidePlanet(i);
+  }
+}
+
+function loadPlanetScreen(id)
+{
+  var planetScreen = "";
+  planetScreen += `<div id="planetScreen` + id + `" class="planetmode" style="width: 80%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">`
+
+  planetScreen += `<button style="margin-left: 95%; margin-top: 2%; position: relative;" onclick="hidePlanet(` + i + `)"> X </button>`;
+  planetScreen += `<div style="margin-left: 4%; margin-top: 10%; position: relative; font-size: 22;"><div style="display: none;" id="idHolder` + i +  `">` + i + `</div><p id="planet_description">Planet ID:  </p></div>`;
+
+  planetScreen += 
+  planetScreen += `<div id="buildings` + id + `" class="itemholder" style="width: 96%; height: 35%; position: relative; margin-left: 2%; margin-right: 2%; margin-top: 65%;">`
+  planetScreen += `</div>`; // Building cells submenu
+  planetScreen += `</div>`; // Main div
+  
+  var el = document.getElementById("planetary_mode");
+  el.innerHTML += planetScreen;
+}
+
+
+function initGridView() {
+
+  content = "";
+  active_view = "grid";
+
+  gridBtn.style.display = "none";
+  textBtn.style.display = "inline";
+  activate_selection = true;
 
   var res = rpc.get_table_rows({
     code:'dexaraniiznx',
@@ -93,6 +292,8 @@ function switchView() {
 
       for(i=0; i<res.rows.length;i++)
       {
+
+        //loadPlanetScreen(i);
         
         // For each ROW in the table add a special planet-holder div
         // and fill its content with planetary (or empty sector) variables.
@@ -102,7 +303,6 @@ function switchView() {
         {
           div_text = "planet: ";
           div_style = "outset";
-
         }
         div_text += res.rows[i].id;
 
@@ -117,6 +317,9 @@ function switchView() {
         var timestamp = date.getTime(); // Returns data in MICROSECONDS
                                         // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
         var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+        temperatures[i] = res.rows[i].temperature;
+
+
         content += `</div>`;
       }
       document.getElementById("main_holder").innerHTML = content;
@@ -143,33 +346,28 @@ function switchView() {
       }
   });
 }
-</script>
 
 
-<script>
-  let pre = document.getElementsByTagName('pre')[0];
-  const defaultPrivateKey = "5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr"; // bob
-  const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
-  const signatureProvider = new eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
-  const api = new eosjs_api.Api({ rpc, signatureProvider });
+function initTextView()
+{
+  content = "";
+  active_view = "text";
 
-  //console.log( rpc.get_account('dexaraniiznx') );   // <<<==== WORKING!
+  gridBtn.style.display = "inline";
+  textBtn.style.display = "none";
+  activate_selection = true;
 
-  var content = "";
-  var response_json;
-
-  var res = rpc.get_table_rows({
+  const response = rpc.get_table_rows({
     code:'dexaraniiznx',
     scope:'dexaraniiznx',
     table:'sector',
     json: true,        
     limit: 1000,               
     reverse: false
-}).then(function(res) {
-    console.log(res);
+  }).then(async function(res) {
+
 
         //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
-
       for(i=0; i<res.rows.length;i++)
       {
         
@@ -177,6 +375,9 @@ function switchView() {
         // and fill its content with planetary (or empty sector) variables.
         var div_height = "30px;";
         var div_description_txt = "Empty sector ";
+        
+        //loadPlanetScreen(i);
+        
         if(res.rows[i].has_planet)
         {
           div_description_txt = "Planet ";
@@ -214,12 +415,97 @@ function switchView() {
       }
       document.getElementById("main_holder").innerHTML = content;
 
-});
+
+      response_json = await res.rows;
+      return res;
+  });
+}
+</script>
 
 
+<script>
+  let pre = document.getElementsByTagName('pre')[0];
+  const defaultPrivateKey = "5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr"; // bob
+  const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
+  const signatureProvider = new eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
+  const api = new eosjs_api.Api({ rpc, signatureProvider });
+
+  //console.log( rpc.get_account('dexaraniiznx') );   // <<<==== WORKING!
+
+  var content = "";
+  var response_json;
+
+  initTextView();
+
+
+/*
+
+  const response = rpc.get_table_rows({
+    code:'dexaraniiznx',
+    scope:'dexaraniiznx',
+    table:'sector',
+    json: true,        
+    limit: 1000,               
+    reverse: false
+  }).then(async function(res) {
+
+
+        //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
+      for(i=0; i<res.rows.length;i++)
+      {
+        
+        // For each ROW in the table add a special planet-holder div
+        // and fill its content with planetary (or empty sector) variables.
+        var div_height = "30px;";
+        var div_description_txt = "Empty sector ";
+        
+        //loadPlanetScreen(i);
+        
+        if(res.rows[i].has_planet)
+        {
+          div_description_txt = "Planet ";
+          div_height = "70px";
+        }
+        content += `<div id="div` + i + `" onmouseover="selectOn(this)" onclick="showPlanet(` + i + `)" onmouseout="selectOff(this)" style="margin-bottom: 12px; width: 100%; height: ` + div_height + `" class="outset">`;
+        content += `<div style="margin-left: 10px; margin-top: 5px; position: absolute;">` + div_description_txt + "" + res.rows[i].id + `</div>`;
+        if(res.rows[i].has_planet)
+        {
+          content += `<img src="planet.png" height="45" width="45" style="margin-top: 20px; margin-left: 6%; position: absolute;">`;
+        }
+        content += `<div style="margin-left: 18%; margin-top: 5px; position: absolute;"> X: ` + res.rows[i].x + `</div>`;
+        content += `<div style="margin-left: 14%; margin-top: 5px; position: absolute;"> Y: ` + res.rows[i].y + `</div>`;
+        if(res.rows[i].has_planet)
+        {
+          content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 10px; position: absolute;"> Metal: ` + res.rows[i].resources[0] + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 28px; position: absolute;"> Crystal: ` + res.rows[i].resources[1] + `</div>`;
+          content += `<div style="margin-left: 33%; margin-top: 46px; position: absolute;"> Gas: ` + res.rows[i].resources[2] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 10px; position: absolute;"> Battleships: ` + res.rows[i].planetary_fleet.ships[0] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 28px; position: absolute;"> Cargoships: ` + res.rows[i].planetary_fleet.ships[1] + `</div>`;
+          content += `<div style="margin-left: 45%; margin-top: 46px; position: absolute;"> Colonizers: ` + res.rows[i].planetary_fleet.ships[2] + `</div>`;
+        }
+        content += `<button style="margin-left: 60%; margin-top: 30px; position: absolute;" onclick="expand(` + i + `)"> Expand </button>`;
+        var date = new Date();
+        var timestamp = date.getTime(); // Returns data in MICROSECONDS
+                                        // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
+
+        var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+        content += `<div style="margin-left: 73%; margin-top: 30px; position: absolute;"> Last updated: `+ diff +  ` seconds ago </div>`;
+        
+        //content += `<div style="margin-left: 73%; margin-top: 5px; position: absolute;"> NOW: `+ timestamp +  ` </div>`;
+
+        content += `</div>`;
+      }
+      document.getElementById("main_holder").innerHTML = content;
+
+
+      response_json = await res.rows;
+      return res;
+  });
+
+  */
 
 console.log("res variable does not work outside the async rpc.get_table_rows function");
-
 //var tmp = JSON.parse(res);
 //console.log(res);
 
