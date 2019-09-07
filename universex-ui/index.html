@@ -8,16 +8,35 @@
 
 <!--- PLANETARY MODE SCREEN -->
 <div id="planetary_mode">
-  <div id="planetScreen" class="planetmode" style="width: 70%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">
-  <button style="margin-left: 95%; margin-top: 2%; position: absolute;" onclick="hideAllPlanets()"> X </button>
-  <div style="margin-left: 2%; margin-top: 1%; position: absolute; font-size: 22;"><p id="planet_description">Planet ID:  </p><p id="planet_update_text">Updated: </p><p id="planet_update"></p></div>
-    <div id="buildings" class="itemholder" style="width: 72%; height: 40%; margin-left: 2%; margin-top: 30%; position: absolute; display: none;"></div>
-    <div id="actions" class="itemholder" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 30%; position: absolute; display: none;">
+  <div id="planetScreen" class="planetmode" style="width: 70%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 0%; display: none;">
+
+
+    <div id="planet_upper_bar" class="itemholder" style="margin-left: 1%; margin-top: 1%; width: 98%; height: 6%; position: absolute;">
+      <p id="planet_description" style="margin-left: 1%; margin-top: 0%; position: absolute;">Planet ID:  </p>
+      <p id="planet_position_xy" style="margin-left: 6%; margin-top: 0%; position: absolute;"></p>
+      <p id="planet_update_text" style="margin-left: 1%; margin-top: 2%; position: absolute;">Updated: </p>
+      <p id="planet_update" style="margin-left: 6%; margin-top: 2%; position: absolute;"></p>
+      <p id="planet_owner_text" style="margin-left: 11%; margin-top: 2%; position: absolute;">Owner: </p>
+      <p id="planet_owner_name" style="margin-left: 15%; margin-top: 2%; position: absolute;"></p>
+      <button style="margin-left: 98%; margin-top: 0%; position: absolute;" onclick="hideAllPlanets()"> X </button>
+    </div>
+    <div id="buildings" class="itemholder" style="width: 72%; height: 30%; margin-left: 2%; margin-top: 40%; position: absolute; display: none;">
+        <div id="buildings_tab_name" style="font-size: 22;">Planetary Landscape and buildings</div> 
+  </div>
+    <div id="actions" class="itemholder" style="width: 22%; height: 30%; margin-left: 75%; margin-top: 40%; position: absolute; display: none;">
+
+        <div id="actions_tab_name" style="font-size: 22;">Planetary actions</div> 
       <button style="margin-left: 15%; margin-top: 5%; width: 70%; height: 13%; position: absolute;"> Send Fleets Here </button>
-      <button style="margin-left: 15%; margin-top: 45%; width: 70%; height: 13%; position: absolute;" disabled="true"> Give planetary order </button>
+      <button style="margin-left: 15%; margin-top: 45%; width: 70%; height: 13%; position: absolute;" disabled="true"> Issue planetary order </button>
       <button style="margin-left: 15%; margin-top: 25%; width: 70%; height: 13%; position: absolute;" disabled="true"> Abandon planet </button>
     </div>
-    <div id="fleets" class="fleetlist" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 5%; position: absolute; display: none;"></div>
+    <div id="fleets" class="fleetlist" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 7%; position: absolute; display: none;">
+      
+        <div id="fleets_tab_name" style="font-size: 22;">Active fleets and fleet orders</div> 
+    </div>
+    <div id="deco_landscape" class="itemholder" style="width: 72%; height: 54%; margin-left: 2%; margin-top: 7%; position: absolute;">
+      
+    </div>
 </div>
 <!--    ------------------------- -->
 
@@ -40,15 +59,18 @@ div.planetmode {
   opacity: 0.98;
 }
 
-  div.itemholder {border-style: outset;}
+  div.itemholder {border-style: groove;}
   div.itemholder {background-color: #92a8d1;}
 
   div.fleetlist {border-style: outset;}
-  div.fleetlist {background-color: #006B52;}
+  div.fleetlist {background-color: #309B92;}
 
   div.outset {border-style: outset;}
   div.groove {border-style: groove;}
   div.groove {background-color: #92a8d1;}
+
+
+  div.planetmode {border-style: groove;}
 </style>
 
 <script>
@@ -61,6 +83,8 @@ var temperatures = [];
   var planetScreen = document.getElementById("planetScreen");
   var planetDescription = document.getElementById("planet_description");
   var planetUpdate = document.getElementById("planet_update");
+  var planetPositionXY = document.getElementById("planet_position_xy");
+  var planetOwnerName = document.getElementById("planet_owner_name");
 
   var gridBtn = document.getElementById("switch_to_grid_btn");
   var textBtn = document.getElementById("switch_to_text_btn");
@@ -93,7 +117,7 @@ var cyclic_update_timer = setInterval(function() {
     console.log("reiniting GRID VIEW");
   }
               
-}, 300000);
+}, 90000);
 // END TIMER
 
   // Super easy color change function.
@@ -207,6 +231,21 @@ function showPlanet(id)
 
             planetDescription.innerHTML = "Planet ";
             planetDescription.innerHTML += id;
+
+            planetPositionXY.innerHTML = "";
+            planetPositionXY.innerHTML += res.rows[i].x;
+            planetPositionXY.innerHTML += " : ";
+            planetPositionXY.innerHTML += res.rows[i].y;
+
+            planetOwnerName.innerHTML  = "";
+            if(res.rows[i].owner_name != "")
+            {
+              planetOwnerName.innerHTML  += res.rows[i].owner_name;
+            }
+            else
+            {
+              planetOwnerName.innerHTML  += "no owner";
+            }
 
             var date = new Date();
             var timestamp = date.getTime(); // Returns data in MICROSECONDS
