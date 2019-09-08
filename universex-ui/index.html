@@ -3,8 +3,10 @@
 <div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) </div>
 <button id="switch_to_grid_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initGridView()"> Switch to grid view </button>
 <button id="switch_to_text_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initTextView()"> Switch to sector list </button>
-<input id="player_name_input" type="text" name="player_name" style="margin-left: 25%; margin-top: -25px; position: absolute;" value="dexaraniiznx">
 <p id="player_name_description" style="margin-left: 25%; margin-top: -42px; position: absolute;"> Player name: </p>
+<input id="player_name_input" type="text" name="player_name" onchange="updatePlayerName()" style="margin-left: 25%; margin-top: -25px; position: absolute;" value="dexaraniiznx">
+<div id="player_exists" style="display: none;">false</div>
+
 <div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> Universe X <a href="https://eos.io/">EOSIO</a> smart-contract UI</div>
 
 
@@ -21,9 +23,42 @@
       <p id="planet_owner_name" style="margin-left: 15%; margin-top: 2%; position: absolute;"></p>
       <button style="margin-left: 98%; margin-top: 0%; position: absolute;" onclick="hideAllPlanets()"> X </button>
     </div>
+
     <div id="buildings" class="itemholder" style="width: 72%; height: 30%; margin-left: 2%; margin-top: 40%; position: absolute; display: none;">
         <div id="buildings_tab_name" style="font-size: 22;">Planetary Landscape and buildings</div> 
+
+      <div id="metal_mine" class="outset" onclick="showBuildingOverlay(3)" style="margin-left: 3%; margin-top: 1%; height: 28%; width: 8%; position: absolute;">Metal Mine
+        <div id="metal_mine_lvl" style="display: none;"></div>
+      </div> 
+      <div id="crystal_mine" class="outset" onclick="showBuildingOverlay(4)" style="margin-left: 13%; margin-top: 1%; height: 28%; width: 8%; position: absolute;">Crystal Mine
+        <div id="crystal_mine_lvl" style="display: none;"></div>
+      </div> 
+      <div id="gas_mine" class="outset" onclick="showBuildingOverlay(5)" style="margin-left: 23%; margin-top: 1%; height: 28%; width: 8%; position: absolute;">Gas Mine
+        <div id="gas_mine_lvl" style="display: none;"></div>
+      </div> 
+
+      <div id="metal_storage" class="outset" onclick="showBuildingOverlay(6)" style="margin-left: 3%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Metal Storage
+        <div id="metal_storage_lvl" style="display: none;"></div>
+      </div> 
+      <div id="crystal_storage" class="outset" onclick="showBuildingOverlay(7)" style="margin-left: 13%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Crystal Storage
+        <div id="crystal_storage_lvl" style="display: none;"></div>
+      </div> 
+      <div id="gas_storage" class="outset" onclick="showBuildingOverlay(8)" style="margin-left: 23%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Gas Storage
+        <div id="gas_storage_lvl" style="display: none;"></div>
+      </div> 
+
+      <div id="com_center" class="outset" onclick="showBuildingOverlay(0)" style="margin-left: 45%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Com. Center
+        <div id="com_center_lvl" style="display: none;"></div>
+      </div> 
+      <div id="assembly" class="outset" onclick="showBuildingOverlay(1)" style="margin-left: 35%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Assembly
+        <div id="assembly_lvl" style="display: none;"></div>
+      </div> 
+      <div id="shield" class="outset" onclick="showBuildingOverlay(2)" style="margin-left: 55%; margin-top: 12%; height: 28%; width: 8%; position: absolute;">Shield
+        <div id="shield_lvl" style="display: none;"></div>
+      </div> 
+
   </div>
+
     <div id="actions" class="itemholder" style="width: 22%; height: 30%; margin-left: 75%; margin-top: 40%; position: absolute; display: none;">
 
         <div id="actions_tab_name" style="font-size: 22;">Planetary actions</div> 
@@ -36,6 +71,12 @@
         <div id="fleets_tab_name" style="font-size: 22;">Active fleets and fleet orders</div> 
     </div>
     <div id="deco_landscape" class="itemholder" style="width: 72%; height: 54%; margin-left: 2%; margin-top: 7%; position: absolute;">
+
+    <div id="cell_name" style="margin-left: 10%; margin-top: 2%; position: absolute; "> Metal MINE</div>
+    <div id="cell_building_level" style="margin-left: 10%; margin-top: 5%; position: absolute; ">Lvl: 0</div>
+    <div id="cell_description" style="margin-left: 10%; margin-top: 8%; position: absolute; "> Does nothing because 0</div>
+
+      <button id="spawn_btn" style="margin-left: 10%; margin-top: 15%; width: 80%; height: 15%; position: absolute; display: none;" onclick="spawnPlayer()"> Spawn Here </button>
       
     </div>
 <!--    ------------------------- -->
@@ -53,9 +94,52 @@
       <option value="">chose owned planet</option>
     </select>
 
-      <button style="margin-left: 97%; margin-top: 0%; position: absolute;" onclick="hideSendFleetMenu()"> X </button>
+<p style="position: fixed; margin-left: 27%; margin-top: 1%; font-size: 20; color: #FFFFFF;">Order: </p>
+
+    <select id="order_select" onchange="checkAllowedCargo()" style="position: fixed; margin-left: 30%; margin-top: 1%; width: 10%; height: 3%;">
+      <option value="2">Attack</option>
+      <option value="3">Transport</option>
+      <option value="4">Move</option>
+      <option value="5">Colonize</option>
+    </select>
+
+<p style="position: fixed; margin-left: 17%; margin-top: 1%; font-size: 20; color: #FFFFFF;">To: </p>
+<p id="fleet_send_destination" style="position: fixed; margin-left: 19%; margin-top: 1%; font-size: 20; color: #FFFFFF;">planet</p>
 
 
+<div style="position: fixed; margin-left: 4%; margin-top: 3%; font-size: 22; color: #FFFFFF;">Ships</div>
+
+<div id="battleships_textholder" style="position: fixed; margin-left: 1%; margin-top: 5%; font-size: 17; color: #FFFFFF;">Battleships:</div>
+<input id="battleships_to_send" style="position: fixed; margin-left: 8%; margin-top: 5%; height: 2%; width: 5%;"></input>
+<div id="battleships_max" style="position: fixed; margin-left: 13%; margin-top: 5%; font-size: 22; color: #FFFFFF;">/</div>
+
+<div id="cargoships_textholder" style="position: fixed; margin-left: 1%; margin-top: 7%; font-size: 17; color: #FFFFFF;">Cargoships:</div>
+<input id="cargoships_to_send" style="position: fixed; margin-left: 8%; margin-top: 7%; height: 2%; width: 5%;"></input>
+<div id="cargoships_max" style="position: fixed; margin-left: 13%; margin-top: 7%; font-size: 22; color: #FFFFFF;">/</div>
+
+<div id="colonizers_textholder" style="position: fixed; margin-left: 1%; margin-top: 9%; font-size: 17; color: #FFFFFF;">Colonizers:</div>
+<input id="colonizers_to_send" style="position: fixed; margin-left: 8%; margin-top: 9%; height: 2%; width: 5%;"></input>
+<div id="colonizers_max" style="position: fixed; margin-left: 13%; margin-top: 9%; font-size: 22; color: #FFFFFF;">/</div>
+
+
+<div style="position: fixed; margin-left: 23%; margin-top: 3%; font-size: 22; color: #FFFFFF;">Cargo</div>
+
+<div id="metal_textholder" style="position: fixed; margin-left: 19%; margin-top: 5%; font-size: 17; color: #FFFFFF;">Metal:</div>
+<input id="metal_to_send" style="position: fixed; margin-left: 24%; margin-top: 5%; height: 2%; width: 5%;" disabled="true" value="none: attack"></input>
+<div id="metal_max" style="position: fixed; margin-left: 29%; margin-top: 5%; font-size: 22; color: #FFFFFF;"></div>
+
+<div id="crystals_textholder" style="position: fixed; margin-left: 19%; margin-top: 7%; font-size: 17; color: #FFFFFF;">Crystals:</div>
+<input id="crystals_to_send" style="position: fixed; margin-left: 24%; margin-top: 7%; height: 2%; width: 5%;" disabled="true" value="none: attack"></input>
+<div id="crystals_max" style="position: fixed; margin-left: 29%; margin-top: 7%; font-size: 22; color: #FFFFFF;"></div>
+
+<div id="gas_textholder" style="position: fixed; margin-left: 19%; margin-top: 9%; font-size: 17; color: #FFFFFF;">Gas:</div>
+<input id="gas_to_send" style="position: fixed; margin-left: 24%; margin-top: 9%; height: 2%; width: 5%;" disabled="true" value="none: attack"></input>
+<div id="gas_max" style="position: fixed; margin-left: 29%; margin-top: 9%; font-size: 22; color: #FFFFFF;"></div>
+
+
+<button style="margin-left: 97%; margin-top: 0%; position: absolute;" onclick="hideSendFleetMenu()"> X </button>
+<button style="margin-left: 25%; margin-top: 29%; height: 14%; width: 20%; position: absolute;" onclick="sendFleetConfirm()"> CONFIRM </button>
+<div id="fleet_action_text" style="margin-left: 72%; margin-top: 10%; height: 14%; width: 20%; position: absolute; color: #FFFFFF;">Attack a chosen planet<br> then return home</div>
 </div>
 <!--    ------------------------- -->
 
@@ -104,8 +188,12 @@ div.planetmode {
 
 var activate_selection = true;
 var temperatures = [];
+var selected_planet_id;
+
+var contract_name = "dexaraniiznx";
 
 var player_name = document.getElementById("player_name_input").value;
+var player_exist_div = document.getElementById("player_exists");
 //console.log(player_name);
 
 // Main elements that will be modified frequently.
@@ -115,6 +203,24 @@ var player_name = document.getElementById("player_name_input").value;
   var planetUpdate = document.getElementById("planet_update");
   var planetPositionXY = document.getElementById("planet_position_xy");
   var planetOwnerName = document.getElementById("planet_owner_name");
+
+  /* ********** BUILDINGS AND STRUCTURES ***************/
+  var cellName = document.getElementById("cell_name");
+  var cellLevel = document.getElementById("cell_building_level");
+  var cellDescription = document.getElementById("cell_description");
+
+  var metal_mine_lvl = document.getElementById("metal_mine_lvl");
+  var crystal_mine_lvl = document.getElementById("crystal_mine_lvl");
+  var gas_mine_lvl = document.getElementById("gas_mine_lvl");
+
+  var metal_storage_lvl = document.getElementById("metal_storage_lvl");
+  var crystal_storage_lvl = document.getElementById("crystal_storage_lvl");
+  var gas_storage_lvl = document.getElementById("gas_storage_lvl");
+
+  var assembly_lvl = document.getElementById("assembly_lvl");
+  var com_center_lvl = document.getElementById("com_center_lvl");
+  var shield_lvl = document.getElementById("shield_lvl");
+  /* ************* END BUILDINGS **********************/
 
   var gridBtn = document.getElementById("switch_to_grid_btn");
   var textBtn = document.getElementById("switch_to_text_btn");
@@ -153,6 +259,14 @@ var cyclic_update_timer = setInterval(function() {
 /* ************************************** */
 // End global variables
 
+
+function spawnPlayer()
+{
+  console.log("Spawning player " + player_name + " at sector(or planet) " + selected_planet_id);
+
+  // Generate a TX and send it with Scatter
+}
+
   // Super easy color change function.
 function selectOn(element) {
   if(activate_selection)
@@ -172,18 +286,96 @@ function expand(itr) {
   el.style.height = "250px";
 }
 
-
-/*
-function showPlanet(id)
+function showBuildingOverlay(id)
 {
-  var el = document.getElementById("planetScreen" + id);
-  //var id_hldr = document.getElementById("id_holder");
-  //var planet_dscr = document.getElementById("planet_description");
-  //id_hldr.innerHTML = id;
-  el.style.display = "inline";
-  activate_selection = false;
+  // 0 - com center
+  // 1 - assembly
+  // 2 - shield
+  // 3,4,5 - metal,crystal,gas mines
+  // 6,7,8 - metal,crystal,gas storages
+
+  switch (id) {
+  case 0:
+    cellName.innerHTML = "Command Center";
+    cellLevel.innerHTML = "Level: " + com_center_lvl;
+    cellDescription.innerHTML = "Command Center is required to send fleets outside of this planet";
+    break;
+  case 1:
+    cellName.innerHTML = "Assembly";
+    cellLevel.innerHTML = "Level: " + assembly_lvl;
+    cellDescription.innerHTML = "Assembly is used to craft ships";
+    break;
+  case 2:
+    cellName.innerHTML = "Shield";
+    cellLevel.innerHTML = "Level: " + shield_lvl;
+    cellDescription.innerHTML = "Shield will increase the durability of planetary ships";
+    break;
+  case 3:
+    cellName.innerHTML = "Metal Mine";
+    cellLevel.innerHTML = "Level: " + metal_mine_lvl;
+    cellDescription.innerHTML = "Metal +10/minute";
+    break;
+  case 4:
+    cellName.innerHTML = "Crystal Mine";
+    cellLevel.innerHTML = "Level: " + crystal_mine_lvl;
+    cellDescription.innerHTML = "Crystals +7/minute";
+    break;
+  case 5:
+    cellName.innerHTML = "Gas Mine";
+    cellLevel.innerHTML = "Level: " + gas_mine_lvl;
+    cellDescription.innerHTML = "Gas +5/minute";
+    break;
+  case 6:
+    cellName.innerHTML = "Metal Storage";
+    cellLevel.innerHTML = "Level: " + metal_storage_lvl;
+    cellDescription.innerHTML = "Metal storage +5000";
+    break;
+  case 7:
+    cellName.innerHTML = "Crystal Storage";
+    cellLevel.innerHTML = "Level: " + crystal_storage_lvl;
+    cellDescription.innerHTML = "Crystal storage +5000";
+    break;
+  case 8:
+    cellName.innerHTML = "Gas Storage";
+    cellLevel.innerHTML = "Level: " + gas_storage_lvl;
+    cellDescription.innerHTML = "Gas storage +5000";
+  }
 }
-*/
+
+function updatePlayerName()
+{
+  player_name = document.getElementById("player_name_input").value;
+
+  player_exist_div.innerHTML = "false";
+  // TODO: Update with `players` table 
+  //       when it will be supported by contract.
+
+  var res = rpc.get_table_rows({
+    code: contract_name,
+    scope: contract_name,
+    table:'sector',
+    json: true,        
+    limit: 1000,               
+    reverse: false
+    }).then(function(res){
+      for(i=0; i<res.rows.length; i++)
+      {
+        // Update player existence.
+        // If a player controls at least one planet do not suggest him to spawn anymore.
+        if(res.rows[i].owner_name == player_name)
+        {
+          player_exist_div.innerHTML = "true";
+        }
+      }
+    });
+}
+
+function sendFleetConfirm()
+{
+  // Sending fleetorder transaction here
+
+  console.log("Fleet order confirmed");
+}
 
 function showPlanetaryElements()
 {
@@ -212,6 +404,62 @@ function hideBuildings()
   el.style.display = "none";
 }
 
+function showSpawnOption()
+{
+  var el = document.getElementById("spawn_btn");
+  el.style.display = "inline";
+}
+
+function hideSpawnOption()
+{
+  var el = document.getElementById("spawn_btn");
+  el.style.display = "none";
+}
+
+function checkAllowedCargo()
+{
+  var el = document.getElementById("order_select");
+  var cargo_metal = document.getElementById("metal_to_send");
+  var cargo_crystal = document.getElementById("crystals_to_send");
+  var cargo_gas = document.getElementById("gas_to_send");
+  var action_text = document.getElementById("fleet_action_text");
+
+  if(el.value == 2)
+  {
+    cargo_metal.disabled = true;
+    cargo_crystal.disabled = true;
+    cargo_gas.disabled = true;
+
+    cargo_metal.value = "none: attack";
+    cargo_crystal.value = "none: attack";
+    cargo_gas.value = "none: attack";
+
+    action_text.innerHTML = `Attack a chosen planet<br> then return home`;
+  }
+  else
+  {
+    cargo_metal.disabled = false;
+    cargo_crystal.disabled = false;
+    cargo_gas.disabled = false;
+
+    cargo_metal.value = 0;
+    cargo_crystal.value = 0;
+    cargo_gas.value = 0;
+
+    if(el.value == 3)
+    {
+      action_text.innerHTML = `Transport cargo<br> then return home`;
+    }
+    else if(el.value == 4)
+    {
+      action_text.innerHTML = `Transport cargo<br> then stay at the destination planet`;
+    }
+    else if(el.value == 5)
+    {
+      action_text.innerHTML = `Colonize a chosen planet,<br> fleet will stay at the colonized planet`;
+    }
+  }
+}
 
 function showSendFleetMenu()
 {
@@ -219,11 +467,13 @@ function showSendFleetMenu()
 
   var el = document.getElementById("sendFleetMenu");
   var planets_dropdown = document.getElementById("planet_select");
+  var destination_id = document.getElementById("fleet_send_destination");
   planets_dropdown.innerHTML = `<option value="">choose owned planet</option>`;
+  destination_id.innerHTML = "planet " + selected_planet_id;
 
   var res = rpc.get_table_rows({
-    code:'dexaraniiznx',
-    scope:'dexaraniiznx',
+    code: contract_name,
+    scope: contract_name,
     table:'sector',
     json: true,        
     limit: 1000,               
@@ -250,7 +500,29 @@ function hideSendFleetMenu()
 function showPlanetFleets()
 {
   var planet_id = document.getElementById("planet_select").value;
-  console.log("Fleets at planet " + planet_id);
+
+  var battleships = document.getElementById("battleships_max");
+  var cargoships = document.getElementById("cargoships_max");
+  var colonizers = document.getElementById("colonizers_max");
+
+  var res = rpc.get_table_rows({
+    code: contract_name,
+    scope: contract_name,
+    table:'sector',
+    json: true,        
+    limit: 1000,               
+    reverse: false
+    }).then(function(res){
+      for(i=0; i<res.rows.length; i++)
+      {
+        if(res.rows[i].id == planet_id)
+        {
+          battleships.innerHTML = "/ " + res.rows[i].planetary_fleet.ships[0];
+          cargoships.innerHTML = "/ " + res.rows[i].planetary_fleet.ships[1];
+          colonizers.innerHTML = "/ " + res.rows[i].planetary_fleet.ships[2];
+        }
+      }
+    });
 }
 
 
@@ -280,13 +552,25 @@ function hideFleets()
 
 function showPlanet(id)
 {
+  hideSendFleetMenu();
+  if(player_exist_div.innerHTML == "false")
+  {
+    showSpawnOption();
+  }
+  else
+  {
+    hideSpawnOption();
+  }
+
+  selected_planet_id = id;
+
   planetScreen = document.getElementById("planetScreen");
   planetDescription = document.getElementById("planet_description");
   planetUpdate = document.getElementById("planet_update");
 
     var res = rpc.get_table_rows({
-    code:'dexaraniiznx',
-    scope:'dexaraniiznx',
+    code: contract_name,
+    scope: contract_name,
     table:'sector',
     json: true,        
     limit: 1000,               
@@ -305,17 +589,27 @@ function showPlanet(id)
             /* DRAWING A PLANET ************************/
             showPlanetaryElements();
 
+            com_center_lvl = res.rows[i].planetary_buildings[0].level;
+            assembly_lvl = res.rows[i].planetary_buildings[1].level;
+            shield_lvl = res.rows[i].planetary_buildings[2].level;
+            metal_mine_lvl = res.rows[i].planetary_buildings[3].level;
+            crystal_mine_lvl = res.rows[i].planetary_buildings[4].level;
+            gas_mine_lvl = res.rows[i].planetary_buildings[5].level;
+            metal_storage_lvl = res.rows[i].planetary_buildings[6].level;
+            crystal_storage_lvl = res.rows[i].planetary_buildings[7].level;
+            gas_storage_lvl = res.rows[i].planetary_buildings[8].level;
+
             planetDescription.innerHTML = "Planet ";
             planetDescription.innerHTML += id;
 
             planetOwnerName.innerHTML  = "";
             if(res.rows[i].owner_name != "")
             {
-              planetOwnerName.innerHTML  += res.rows[i].owner_name;
+              planetOwnerName.innerHTML += res.rows[i].owner_name;
             }
             else
             {
-              planetOwnerName.innerHTML  += "no owner";
+              planetOwnerName.innerHTML += "no owner";
             }
 
             var date = new Date();
@@ -372,6 +666,9 @@ function hideAllPlanets()
 
 function loadPlanetScreen(id)
 {
+
+
+
   var planetScreen = "";
   planetScreen += `<div id="planetScreen` + id + `" class="planetmode" style="width: 80%; height: 80%; background-color: #E2E2E2; position: fixed; margin-left: 10%; margin-top: 3%; display: none;">`
 
@@ -398,8 +695,8 @@ function initGridView() {
   activate_selection = true;
 
   var res = rpc.get_table_rows({
-    code:'dexaraniiznx',
-    scope:'dexaraniiznx',
+    code: contract_name,
+    scope: contract_name,
     table:'sector',
     json: true,        
     limit: 1000,               
@@ -476,8 +773,8 @@ function initTextView()
   activate_selection = true;
 
   const response = rpc.get_table_rows({
-    code:'dexaraniiznx',
-    scope:'dexaraniiznx',
+    code: contract_name,
+    scope: contract_name,
     table:'sector',
     json: true,        
     limit: 1000,               
@@ -542,6 +839,10 @@ function initTextView()
 
 
 <script>
+
+  // Start the execution of this code
+  // on page load.
+
   let pre = document.getElementsByTagName('pre')[0];
   const defaultPrivateKey = "5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr"; // bob
   const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
@@ -559,8 +860,8 @@ function initTextView()
 /*
 
   const response = rpc.get_table_rows({
-    code:'dexaraniiznx',
-    scope:'dexaraniiznx',
+    code: contract_name,
+    scope: contract_name,
     table:'sector',
     json: true,        
     limit: 1000,               
