@@ -72,9 +72,25 @@
     </div>
     <div id="deco_landscape" class="itemholder" style="width: 72%; height: 54%; margin-left: 2%; margin-top: 7%; position: absolute;">
 
-    <div id="cell_name" style="margin-left: 10%; margin-top: 2%; position: absolute; "> Metal MINE</div>
-    <div id="cell_building_level" style="margin-left: 10%; margin-top: 5%; position: absolute; ">Lvl: 0</div>
-    <div id="cell_description" style="margin-left: 10%; margin-top: 8%; position: absolute; "> Does nothing because 0</div>
+    <div id="cell_name" style="margin-left: 10%; margin-top: 2%; position: absolute; "> Undefined building</div>
+    <div id="cell_building_level" style="margin-left: 10%; margin-top: 5%; position: absolute; ">Lvl: -</div>
+    <div id="cell_description" style="margin-left: 10%; margin-top: 8%; position: absolute; "> Does nothing </div>
+
+
+    <div id="resources_bar" class="sendfleetmenu" style="margin-left: -0.2%; margin-top: 41%; height: 7%; width: 99.8%; position: absolute; ">
+
+      <div style="margin-left: 10%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Metal: </div>
+      <div id="planetary_metal_res" style="margin-left: 15%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+
+      <div style="margin-left: 24%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Crystal: </div>
+      <div id="planetary_crystal_res" style="margin-left: 30%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+
+      <div style="margin-left: 41.3%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Gas: </div>
+      <div id="planetary_gas_res" style="margin-left: 45%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+    </div>
+
+    <button id="cell_build_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 37%; height: 7%; width: 10%; position: absolute; display: none;"> BUILD </button>
+    <button id="cell_upgrade_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 37%; height: 7%; width: 10%;  position: absolute; display: none;"> UPGRADE </button>
 
       <button id="spawn_btn" style="margin-left: 10%; margin-top: 15%; width: 80%; height: 15%; position: absolute; display: none;" onclick="spawnPlayer()"> Spawn Here </button>
       
@@ -192,6 +208,7 @@ div.planetmode {
 var activate_selection = true;
 var temperatures = [];
 var selected_planet_id;
+var selected_building_cell_id;
 
 var contract_name = "dexaraniiznx";
 
@@ -200,6 +217,11 @@ var player_exist_div = document.getElementById("player_exists");
 //console.log(player_name);
 
 // Main elements that will be modified frequently.
+
+  /*  RESOURCES */
+  var planetary_metal = document.getElementById("planetary_metal_res");
+  var planetary_crystal = document.getElementById("planetary_crystal_res");
+  var planetary_gas = document.getElementById("planetary_gas_res");
 
   var planetScreen = document.getElementById("planetScreen");
   var planetDescription = document.getElementById("planet_description");
@@ -289,6 +311,11 @@ function expand(itr) {
   el.style.height = "250px";
 }
 
+function addTaskBuild()
+{
+  console.log("Adding a building task and transaction for : " + selected_building_cell_id);
+}
+
 function showBuildingOverlay(id)
 {
   // 0 - com center
@@ -297,51 +324,129 @@ function showBuildingOverlay(id)
   // 3,4,5 - metal,crystal,gas mines
   // 6,7,8 - metal,crystal,gas storages
 
+  selected_building_cell_id = id;
+
+  // TODO: Assign building names, desctiptions and variables to class
+  //       use class instead of hardcoded descriptions and assignments.
   switch (id) {
   case 0:
     cellName.innerHTML = "Command Center";
     cellLevel.innerHTML = "Level: " + com_center_lvl;
     cellDescription.innerHTML = "Command Center is required to send fleets outside of this planet";
+    if(com_center_lvl > 0)
+    {
+      hideBuildBtn();
+      hideUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 1:
     cellName.innerHTML = "Assembly";
     cellLevel.innerHTML = "Level: " + assembly_lvl;
     cellDescription.innerHTML = "Assembly is used to craft ships";
+    if(assembly_lvl > 0)
+    {
+      hideBuildBtn();
+      hideUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 2:
     cellName.innerHTML = "Shield";
     cellLevel.innerHTML = "Level: " + shield_lvl;
     cellDescription.innerHTML = "Shield will increase the durability of planetary ships";
+    if(shield_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 3:
     cellName.innerHTML = "Metal Mine";
     cellLevel.innerHTML = "Level: " + metal_mine_lvl;
     cellDescription.innerHTML = "Metal +10/minute";
+    if(metal_mine_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 4:
     cellName.innerHTML = "Crystal Mine";
     cellLevel.innerHTML = "Level: " + crystal_mine_lvl;
     cellDescription.innerHTML = "Crystals +7/minute";
+    if(crystal_mine_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 5:
     cellName.innerHTML = "Gas Mine";
     cellLevel.innerHTML = "Level: " + gas_mine_lvl;
     cellDescription.innerHTML = "Gas +5/minute";
+    if(gas_mine_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 6:
     cellName.innerHTML = "Metal Storage";
     cellLevel.innerHTML = "Level: " + metal_storage_lvl;
     cellDescription.innerHTML = "Metal storage +5000";
+    if(metal_storage_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 7:
     cellName.innerHTML = "Crystal Storage";
     cellLevel.innerHTML = "Level: " + crystal_storage_lvl;
     cellDescription.innerHTML = "Crystal storage +5000";
+    if(crystal_storage_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   case 8:
     cellName.innerHTML = "Gas Storage";
     cellLevel.innerHTML = "Level: " + gas_storage_lvl;
     cellDescription.innerHTML = "Gas storage +5000";
+    if(gas_storage_lvl > 0)
+    {
+      showUpgradeBtn();
+    }
+    else
+    {
+      showBuildBtn();
+    }
     break;
   }
 }
@@ -374,6 +479,20 @@ function updatePlayerName()
     });
 }
 
+function showCellInfo()
+{
+  cellName.style.display = "inline";
+  cellLevel.style.display = "inline";
+  cellDescription.style.display = "inline";
+}
+
+function hideCellInfo()
+{
+  cellName.style.display = "none";
+  cellLevel.style.display = "none";
+  cellDescription.style.display = "none";
+}
+
 function sendFleetConfirm()
 {
   // Sending fleetorder transaction here
@@ -386,6 +505,8 @@ function showPlanetaryElements()
   showBuildings();
   showFleets();
   showActions();
+  showBuildBtn();
+  showCellInfo();
 }
 
 function hidePlanetaryElements()
@@ -393,8 +514,51 @@ function hidePlanetaryElements()
   hideBuildings();
   hideFleets();
   hideActions();
+  hideBuildBtn();
+  hideCellInfo();
 }
 
+function disableBuildBtns()
+{
+  var build_btn = document.getElementById("cell_build_btn");
+  var upgrade_btn = document.getElementById("cell_upgrade_btn");
+  build_btn.disabled = true;
+  upgrade_btn.disabled = true;
+}
+
+function enableBuildBtns()
+{
+  var build_btn = document.getElementById("cell_build_btn");
+  var upgrade_btn = document.getElementById("cell_upgrade_btn");
+  build_btn.disabled = false;
+  upgrade_btn.disabled = false;
+}
+
+function showBuildBtn()
+{
+  var build_btn = document.getElementById("cell_build_btn");
+  build_btn.style.display = "inline";
+  hideUpgradeBtn();
+}
+
+function showUpgradeBtn()
+{
+  var upgrade_btn = document.getElementById("cell_upgrade_btn");
+  upgrade_btn.style.display = "inline";
+  hideBuildBtn();
+}
+
+function hideBuildBtn()
+{
+  var build_btn = document.getElementById("cell_build_btn");
+  build_btn.style.display = "none";
+}
+
+function hideUpgradeBtn()
+{
+  var upgrade_btn = document.getElementById("cell_upgrade_btn");
+  upgrade_btn.style.display = "none";
+}
 
 function showBuildings()
 {
@@ -557,6 +721,7 @@ function hideFleets()
 function showPlanet(id)
 {
   hideSendFleetMenu();
+
   if(player_exist_div.innerHTML == "false")
   {
     showSpawnOption();
@@ -584,7 +749,9 @@ function showPlanet(id)
     }).then(function(res){
   
         //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
-
+        planetary_metal.innerHTML = "0";
+        planetary_crystal.innerHTML = "0";
+        planetary_gas.innerHTML = "0";
     
           if(res.rows[0].has_planet)
           {
@@ -601,6 +768,10 @@ function showPlanet(id)
             metal_storage_lvl = res.rows[0].planetary_buildings[6].level;
             crystal_storage_lvl = res.rows[0].planetary_buildings[7].level;
             gas_storage_lvl = res.rows[0].planetary_buildings[8].level;
+            showBuildingOverlay(3);
+            planetary_metal.innerHTML = res.rows[0].resources[0];
+            planetary_crystal.innerHTML = res.rows[0].resources[1];
+            planetary_gas.innerHTML = res.rows[0].resources[2];
 
             planetDescription.innerHTML = "Planet ";
             planetDescription.innerHTML += id;
@@ -613,6 +784,18 @@ function showPlanet(id)
             else
             {
               planetOwnerName.innerHTML += "no owner";
+            }
+
+            if(res.rows[0].owner_name == player_name)
+            {
+              // Enable BUILD and UPGRADE buttons
+              // for owned planets.
+              enableBuildBtns();
+            }
+            else
+            {
+              // Disable BUILD and UPGRADE btns otherwise.
+              disableBuildBtns();
             }
 
             var date = new Date();
@@ -760,6 +943,8 @@ function initGridView() {
 
         //console.log("id " + div_id + " x:" + res.rows[j].x + " y:" + res.rows[j].y);
       }
+
+      updatePlayerName();
   });
 }
 
@@ -833,7 +1018,9 @@ function initTextView()
 
 
       response_json = await res.rows;
+      updatePlayerName();
       return res;
+
   });
 }
 </script>
