@@ -150,6 +150,9 @@
 <script src='dist-web/eosjs-api.js'></script>
 <script src='dist-web/eosjs-jsonrpc.js'></script>
 <script src='dist-web/eosjs-jssig.js'></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-core.min.js"></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs.min.js"></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs2.min.js"></script>
 
 <style>
 
@@ -339,6 +342,7 @@ function showBuildingOverlay(id)
     cellName.innerHTML = "Gas Storage";
     cellLevel.innerHTML = "Level: " + gas_storage_lvl;
     cellDescription.innerHTML = "Gas storage +5000";
+    break;
   }
 }
 
@@ -568,44 +572,43 @@ function showPlanet(id)
   planetDescription = document.getElementById("planet_description");
   planetUpdate = document.getElementById("planet_update");
 
-    var res = rpc.get_table_rows({
+  // Use `lower_bound: <id>` to get a single row by ID
+  var res = rpc.get_table_rows({
     code: contract_name,
     scope: contract_name,
     table:'sector',
-    json: true,        
-    limit: 1000,               
+    json: true,
+    lower_bound: selected_planet_id,        
+    limit: 1,               
     reverse: false
     }).then(function(res){
   
         //pre.textContent += '\n\n' + JSON.stringify(res, null, 2);
 
-      for(i=0; i<res.rows.length;i++)
-      {
-        if(i == id)
-        {
-          if(res.rows[i].has_planet)
+    
+          if(res.rows[0].has_planet)
           {
 
             /* DRAWING A PLANET ************************/
             showPlanetaryElements();
 
-            com_center_lvl = res.rows[i].planetary_buildings[0].level;
-            assembly_lvl = res.rows[i].planetary_buildings[1].level;
-            shield_lvl = res.rows[i].planetary_buildings[2].level;
-            metal_mine_lvl = res.rows[i].planetary_buildings[3].level;
-            crystal_mine_lvl = res.rows[i].planetary_buildings[4].level;
-            gas_mine_lvl = res.rows[i].planetary_buildings[5].level;
-            metal_storage_lvl = res.rows[i].planetary_buildings[6].level;
-            crystal_storage_lvl = res.rows[i].planetary_buildings[7].level;
-            gas_storage_lvl = res.rows[i].planetary_buildings[8].level;
+            com_center_lvl = res.rows[0].planetary_buildings[0].level;
+            assembly_lvl = res.rows[0].planetary_buildings[1].level;
+            shield_lvl = res.rows[0].planetary_buildings[2].level;
+            metal_mine_lvl = res.rows[0].planetary_buildings[3].level;
+            crystal_mine_lvl = res.rows[0].planetary_buildings[4].level;
+            gas_mine_lvl = res.rows[0].planetary_buildings[5].level;
+            metal_storage_lvl = res.rows[0].planetary_buildings[6].level;
+            crystal_storage_lvl = res.rows[0].planetary_buildings[7].level;
+            gas_storage_lvl = res.rows[0].planetary_buildings[8].level;
 
             planetDescription.innerHTML = "Planet ";
             planetDescription.innerHTML += id;
 
             planetOwnerName.innerHTML  = "";
-            if(res.rows[i].owner_name != "")
+            if(res.rows[0].owner_name != "")
             {
-              planetOwnerName.innerHTML += res.rows[i].owner_name;
+              planetOwnerName.innerHTML += res.rows[0].owner_name;
             }
             else
             {
@@ -615,7 +618,7 @@ function showPlanet(id)
             var date = new Date();
             var timestamp = date.getTime(); // Returns data in MICROSECONDS
                                         // Needs to be converted to SECONDS as uint64_t outputs now() in seconds.
-            var diff = Math.round(timestamp / 1000) - res.rows[i].last_updated[0];
+            var diff = Math.round(timestamp / 1000) - res.rows[0].last_updated[0];
             planetUpdate.innerHTML = diff;
 
           }
@@ -630,12 +633,10 @@ function showPlanet(id)
           /* Fill vatiables that are relevant for both sectors and planets */
 
           planetPositionXY.innerHTML = "[";
-          planetPositionXY.innerHTML += res.rows[i].x;
+          planetPositionXY.innerHTML += res.rows[0].x;
           planetPositionXY.innerHTML += " : ";
-          planetPositionXY.innerHTML += res.rows[i].y;
+          planetPositionXY.innerHTML += res.rows[0].y;
           planetPositionXY.innerHTML += "]";
-        }
-      }
   });
 
   planetScreen.style.display = "inline";
