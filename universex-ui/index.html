@@ -5,6 +5,11 @@
 <button id="switch_to_text_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initTextView()"> Switch to sector list </button>
 <p id="player_name_description" style="margin-left: 25%; margin-top: -42px; position: absolute;"> Player name: </p>
 <input id="player_name_input" type="text" name="player_name" onchange="updatePlayerName()" style="margin-left: 25%; margin-top: -25px; position: absolute;" value="dexaraniiznx">
+
+<button id="scatter_login_btn" style="margin-left: 75%; margin-top: -25px; position: absolute;" onclick="loginWithScatter()"> LOGIN WITH SCATTER </button>
+<button id="scatter_login_btn" style="margin-left: 75%; margin-top: -51px; position: absolute;" onclick="despawnPlayer()"> Delete player </button>
+<p id="scatter_login_status" style="margin-left: 85%; margin-top: -25px; position: absolute;"> no scatter account </p>
+
 <div id="player_exists" style="display: none;">false</div>
 
 <div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> Universe X <a href="https://eos.io/">EOSIO</a> smart-contract UI</div>
@@ -170,6 +175,12 @@
 <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs.min.js"></script>
 <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs2.min.js"></script>
 
+<!-- SCATTER imports -->
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-core.min.js"></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs.min.js"></script>
+<script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-eosjs2.min.js"></script>
+<!-- ---------- -->
+
 <style>
 
 
@@ -209,6 +220,23 @@ var activate_selection = true;
 var temperatures = [];
 var selected_planet_id;
 var selected_building_cell_id;
+
+ScatterJS.plugins(new ScatterEOS());
+var account;
+var scatter;
+var scatterEos;
+var requiredFields;
+
+const connectionOptions = {
+  initTimeout: 10000
+}
+const network = {
+    blockchain:'eos',
+    chainId:'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
+    host:'eu1.eosdac.io',
+    port:443,
+    protocol:'https'
+  }
 
 var contract_name = "dexaraniiznx";
 
@@ -285,11 +313,118 @@ var cyclic_update_timer = setInterval(function() {
 // End global variables
 
 
+
+// SCATTER-related funcs
+
+function loginWithScatter()
+{
+  ScatterJS.scatter.connect(contract_name, connectionOptions).then(connected => {
+    if (!connected) {
+    // User does not have Scatter installed/unlocked.
+      console.log("SCATTER: Connection troubles!");
+      return false;
+    }
+    else
+  {
+    console.log("SCATTER: Connected!");
+  }
+  scatter = ScatterJS.scatter;
+  scatterEos = scatter.eos(network, eosjs_api.Api, { rpc });
+  requiredFields = {
+    accounts: [network]
+  };
+
+   scatter.getIdentity(requiredFields).then(async function() {
+      account = scatter.identity.accounts.find(x => x.blockchain === 'eos');
+      console.log(account);
+      document.getElementById("player_name_input").value = await account.name;
+    }).then(async function() {
+      updatePlayerName();
+      var el = document.getElementById("scatter_login_status");
+      el.innerHTML = "scatter name connected";
+   });
+  });
+
+  window.scatter = null;
+}
+// END SCATTER
+
+
+
 function spawnPlayer()
 {
-  console.log("Spawning player " + player_name + " at sector(or planet) " + selected_planet_id);
+  //console.log("Spawning player " + player_name + " at sector(or planet) " + selected_planet_id);
 
   // Generate a TX and send it with Scatter
+  requiredFields = {
+    accounts: [network]
+  };
+
+  scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'spawnplayer',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      planet_id: selected_planet_id
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+    }).catch(error => {
+      console.error(error);
+    });
+
+
+  //window.scatter = null;
+
+  initTextView();
+  showPlanet(selected_planet_id);
+
+}
+
+
+function despawnPlayer()
+{
+  console.log("Despawning player " + player_name);
+
+  // Generate a TX and send it with Scatter
+  requiredFields = {
+    accounts: [network]
+  };
+
+  scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'despwnplayer',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: player_name
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+    }).catch(error => {
+      console.error(error);
+    });
+
+
+  //window.scatter = null;
 }
 
   // Super easy color change function.
@@ -477,6 +612,8 @@ function updatePlayerName()
         }
       }
     });
+
+    console.log("Name updated: " + player_name);
 }
 
 function showCellInfo()
@@ -1033,7 +1170,7 @@ function initTextView()
 
   let pre = document.getElementsByTagName('pre')[0];
   const defaultPrivateKey = "5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr"; // bob
-  const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosnewyork.io');
+  const rpc = new eosjs_jsonrpc.JsonRpc('https://api.eosn.io');
   const signatureProvider = new eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
   const api = new eosjs_api.Api({ rpc, signatureProvider });
 
