@@ -312,7 +312,18 @@ var cyclic_update_timer = setInterval(function() {
 /* ************************************** */
 // End global variables
 
-
+function updateScreen()
+{
+  updatePlayerName();
+  if(active_view == "text")
+  {
+    initTextView();
+  }
+  else if (active_view == "grid")
+  {
+    initGridView();
+  }
+}
 
 // SCATTER-related funcs
 
@@ -344,6 +355,7 @@ function loginWithScatter()
       el.innerHTML = "scatter name connected";
    });
   });
+
 
   window.scatter = null;
 }
@@ -386,9 +398,7 @@ function spawnPlayer()
 
   //window.scatter = null;
 
-  initTextView();
-  showPlanet(selected_planet_id);
-
+  updateScreen();
 }
 
 
@@ -422,9 +432,48 @@ function despawnPlayer()
     }).catch(error => {
       console.error(error);
     });
-
-
   //window.scatter = null;
+  updateScreen();
+}
+
+
+function addTask(_id, _type, _task_id, _quantity)
+{
+  console.log("Placing task at planet " + _id);
+
+  // Generate a TX and send it with Scatter
+  requiredFields = {
+    accounts: [network]
+  };
+
+  scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'addtask',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      id: _id,
+      type: _type,
+      task_id: _task_id,
+      quantity: _quantity,
+      autoupdate: false
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+    }).catch(error => {
+      console.error(error);
+    });
+  //window.scatter = null;
+  updateScreen();
 }
 
   // Super easy color change function.
@@ -448,7 +497,7 @@ function expand(itr) {
 
 function addTaskBuild()
 {
-  console.log("Adding a building task and transaction for : " + selected_building_cell_id);
+  addTask(selected_planet_id, 0, selected_building_cell_id, 0);
 }
 
 function showBuildingOverlay(id)
