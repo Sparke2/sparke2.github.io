@@ -1,5 +1,7 @@
 <!-- <pre style="width: 100%; height: 100%; margin:0px; "></pre> -->
 
+<div id="resolution_holder" style="width: 1920px; height: 1080px;">
+
 <div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) </div>
 <button id="switch_to_grid_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initGridView()"> Switch to grid view </button>
 <button id="switch_to_text_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initTextView()"> Switch to sector list </button>
@@ -460,7 +462,7 @@ function addTask(_id, _type, _task_id, _quantity)
       type: _type,
       task_id: _task_id,
       quantity: _quantity,
-      autoupdate: false
+      autoupdate: true
     }
   }]
 }, {
@@ -1180,7 +1182,14 @@ function initTextView()
         content += `<div style="margin-left: 14%; margin-top: 5px; position: absolute;"> Y: ` + res.rows[i].y + `</div>`;
         if(res.rows[i].has_planet)
         {
-          content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
+          if(res.rows[i].owner_name == "")
+          {
+            content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> No owner </div>`;
+          }
+          else
+          {
+            content += `<div style="margin-left: 15%; margin-top: 35px; position: absolute;"> Owner: ` + res.rows[i].owner_name + `</div>`;
+          }
           content += `<div style="margin-left: 33%; margin-top: 10px; position: absolute;"> Metal: ` + res.rows[i].resources[0] + `</div>`;
           content += `<div style="margin-left: 33%; margin-top: 28px; position: absolute;"> Crystal: ` + res.rows[i].resources[1] + `</div>`;
           content += `<div style="margin-left: 33%; margin-top: 46px; position: absolute;"> Gas: ` + res.rows[i].resources[2] + `</div>`;
@@ -1303,3 +1312,6 @@ console.log("res variable does not work outside the async rpc.get_table_rows fun
 //console.log(res);
 
 </script>
+
+
+</div>
