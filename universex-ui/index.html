@@ -13,6 +13,7 @@
 <p id="player_name_description" style="margin-left: 25%; margin-top: -42px; position: absolute;"> Player name: </p>
 <input id="player_name_input" type="text" name="player_name" onchange="updatePlayerName()" style="margin-left: 25%; margin-top: -25px; position: absolute;" disabled="true" value="dexaraniiznx">
 
+
 <button id="scatter_login_btn" style="margin-left: 75%; margin-top: -25px; position: absolute;" onclick="loginWithScatter()"> LOGIN WITH SCATTER </button>
 <button id="scatter_login_btn" style="margin-left: 75%; margin-top: -51px; position: absolute;" onclick="despawnPlayer()"> Delete player </button>
 <p id="scatter_login_status" style="margin-left: 85%; margin-top: -25px; position: absolute;"> no scatter account </p>
@@ -269,11 +270,13 @@ div.planetmode {
 
   var task_names = {0:"Com. Center", 1:"Assembly", 2:"Shield", 3:"Metal Mine", 4:"Crystal Mine", 5:"Gas Mine", 6:"Metal Storage", 7:"Crystal Storage", 8:"Gas Storage"};
   var ship_task_id = {0:"Battleships", 1:"Cargoships", 2:"Colonizers"};
+  var order_names = {0:"Idle", 1:"Travelling home", 2:"Attack", 3:"Transport", 4:"Move", 5:"Colonize"};
 
   // Setting global variables
   /* **************************************************** */
 
 var activate_selection = true;
+var planet_screen_active = false;
 var temperatures = [];
 var selected_planet_id;
 var selected_building_cell_id;
@@ -290,7 +293,7 @@ const connectionOptions = {
 const network = {
     blockchain:'eos',
     chainId:'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
-    host:'eu1.eosdac.io',
+    host:'api.cypherglass.com',
     port:443,
     protocol:'https'
   }
@@ -343,14 +346,24 @@ var player_signed_up = false;
   var cargoships_to_assemble_input = document.getElementById("cargoships_to_assemble");
   var colonizers_to_assemble_input = document.getElementById("colonizers_to_assemble");
 
+  var battleships_to_send_input = document.getElementById("battleships_to_send");
+  var cargoships_to_send_input = document.getElementById("cargoships_to_send");
+  var colonizers_to_send_input = document.getElementById("colonizers_to_send");
+
   var allocated_metal_popup = document.getElementById("allocated_metal_res");
   var allocated_crystal_popup = document.getElementById("allocated_crystal_res");
   var allocated_gas_popup = document.getElementById("allocated_gas_res");
+
+  var cargo_metal = document.getElementById("metal_to_send");
+  var cargo_crystal = document.getElementById("crystals_to_send");
+  var cargo_gas = document.getElementById("gas_to_send");
 
   var assemble_div = document.getElementById("assembling_elements");
 
   var taskholder = document.getElementById("tasks_holder");
 
+  var planets_dropdown = document.getElementById("planet_select");
+  var orderselect = document.getElementById("order_select");
   var active_view = "text"; // For autoupdate to re-init view that is currently selected by user.
 
 // SET TIMER
@@ -395,6 +408,12 @@ function updateScreen()
   else if (active_view == "grid")
   {
     initGridView();
+  }
+
+  if(planet_screen_active)
+  {
+    showPlanet(selected_planet_id);
+    showBuildingOverlay(selected_building_cell_id);
   }
 }
 
@@ -906,8 +925,41 @@ function hideCellInfo()
 function sendFleetConfirm()
 {
   // Sending fleetorder transaction here
-
+    scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'fleetorder',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      planet_id: planets_dropdown.value,
+      destination_id: selected_planet_id,
+      order_type: orderselect.value,
+      battleship_count: battleships_to_send_input.value,
+      cargoship_count: cargoships_to_send_input.value,
+      colonizer_count: colonizers_to_send_input.value,
+      cargo_metal: document.getElementById("metal_to_send").value,
+      cargo_crystal: document.getElementById("crystals_to_send").value,
+      cargo_gas: document.getElementById("gas_to_send").value
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+      updateScreen();
+    }).catch(error => {
+      console.error(error);
+      alert(error);
+    });
   console.log("Fleet order confirmed");
+
+
 }
 
 function showPlanetaryElements()
@@ -1013,9 +1065,6 @@ function hideSpawnOption()
 function checkAllowedCargo()
 {
   var el = document.getElementById("order_select");
-  var cargo_metal = document.getElementById("metal_to_send");
-  var cargo_crystal = document.getElementById("crystals_to_send");
-  var cargo_gas = document.getElementById("gas_to_send");
   var action_text = document.getElementById("fleet_action_text");
 
   if(el.value == 2)
@@ -1060,7 +1109,6 @@ function showSendFleetMenu()
   // First load the planets owned by current player
 
   var el = document.getElementById("sendFleetMenu");
-  var planets_dropdown = document.getElementById("planet_select");
   var destination_id = document.getElementById("fleet_send_destination");
   planets_dropdown.innerHTML = `<option value="">choose owned planet</option>`;
   destination_id.innerHTML = "planet " + selected_planet_id;
@@ -1146,6 +1194,8 @@ function hideFleets()
 
 function showPlanet(id)
 {
+  planet_screen_active = true;
+
   hideSendFleetMenu();
   hideAssembling();
 
@@ -1251,6 +1301,7 @@ function showPlanet(id)
             /* ***       DRAWING A TASK LIST        *** */
 
             console.log(res.rows[0]);
+            var remaining_time;
 
             if(res.rows[0].fleets.length > 0)
             {
@@ -1259,15 +1310,17 @@ function showPlanet(id)
               {
                 //var remaining_time = res.rows[0].building_queue[i].start_time + res.rows[0].building_queue[i].time_required - Math.round(timestamp / 1000);
 
-                taskholder.innerHTML += `<div id="buildtask` + i + ` class="fleet_task_div">`;
-                taskholder.innerHTML += `<div>Building: ` + task_names[res.rows[0].building_queue[i].task_goal_id] + `</div>`;
+                remaining_time = res.rows[0].fleets[i].leave_time + res.rows[0].fleets[i].travel_time - Math.round(timestamp / 1000);
+
+                taskholder.innerHTML += `<div id="fleet` + res.rows[0].fleets[i].id + ` class="fleet_task_div">`;
+                taskholder.innerHTML += `<div>Fleet: ` + res.rows[0].fleets[i].id + `</div>`;
+                taskholder.innerHTML += `<div>Destination: ` + res.rows[0].fleets[i].destination_id + `</div>`;
+                taskholder.innerHTML += `<div>Order: ` + order_names[res.rows[0].fleets[i].order] + `</div>`;
                 taskholder.innerHTML += `<div>Remaining time: ` +  remaining_time + " sec" +`</div>`;
 
                 taskholder.innerHTML += `</div>`;
               }
             }
-
-            var remaining_time;
 
             if(res.rows[0].assembling_queue.length > 0)
             {
@@ -1325,6 +1378,7 @@ function showPlanet(id)
 
 function hidePlanet(id)
 {
+  planet_screen_active = false;
   //var el = document.getElementById("planetScreen" + id);
   var el = document.getElementById("planetScreen");
   el.style.display = "none";
