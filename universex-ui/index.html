@@ -1,12 +1,17 @@
 <!-- <pre style="width: 100%; height: 100%; margin:0px; "></pre> -->
+<html>
+<header>
+  
+<div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) <br> We are looking for better UI developers (JS/HTML/CSS), <br>feel free to write a email if you are willing to contribute.</div><div id="res_warning" style="padding-left:30%; padding-right:30%; padding-top:1%;  padding-bottom: 3%;"></div>
+</header>
+<body onload="warnResolution()"></body>
 
 <div id="resolution_holder" style="width: 1920px; height: 1080px; min-width: 1980px; min-height: 1080px;">
 
-<div id="header_txt" style="width: 30%; height: 5%; padding-bottom: 10px;"> Author & C++: <a href="https://github.com/Dexaran/">@Dexaran</a> (dexaran@ethereumclassic.org) <br> UI: <a href="https://github.com/Sparke2/">@Sparke2</a> (ligreat875@gmail.com) </div>
 <button id="switch_to_grid_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initGridView()"> Switch to grid view </button>
 <button id="switch_to_text_btn" style="margin-left: 15%; margin-top: -25px; position: absolute;" onclick="initTextView()"> Switch to sector list </button>
 <p id="player_name_description" style="margin-left: 25%; margin-top: -42px; position: absolute;"> Player name: </p>
-<input id="player_name_input" type="text" name="player_name" onchange="updatePlayerName()" style="margin-left: 25%; margin-top: -25px; position: absolute;" value="dexaraniiznx">
+<input id="player_name_input" type="text" name="player_name" onchange="updatePlayerName()" style="margin-left: 25%; margin-top: -25px; position: absolute;" disabled="true" value="dexaraniiznx">
 
 <button id="scatter_login_btn" style="margin-left: 75%; margin-top: -25px; position: absolute;" onclick="loginWithScatter()"> LOGIN WITH SCATTER </button>
 <button id="scatter_login_btn" style="margin-left: 75%; margin-top: -51px; position: absolute;" onclick="despawnPlayer()"> Delete player </button>
@@ -14,7 +19,7 @@
 
 <div id="player_exists" style="display: none;">false</div>
 
-<div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> Universe X <a href="https://eos.io/">EOSIO</a> smart-contract UI</div>
+<div style="margin-left: 40%; margin-top: -45px; position: absolute; font-size: 31;"> GalaxEOS <a href="https://eos.io/">EOSIO</a> smart-contract game</div>
 
 
 <!--- PLANETARY MODE SCREEN -->
@@ -73,9 +78,10 @@
       <button style="margin-left: 15%; margin-top: 45%; width: 70%; height: 13%; position: absolute;" disabled="true"> Issue planetary order </button>
       <button style="margin-left: 15%; margin-top: 25%; width: 70%; height: 13%; position: absolute;" disabled="true"> Abandon planet </button>
     </div>
-    <div id="fleets" class="fleetlist" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 7%; position: absolute; display: none;">
+    <div id="Tasks" class="fleetlist" style="width: 22%; height: 40%; margin-left: 75%; margin-top: 7%; position: absolute; display: none;">
       
-        <div id="fleets_tab_name" style="font-size: 22;">Active fleets and fleet orders</div> 
+        <div id="tasks_tab_name" style="font-size: 22;">Tasks</div> 
+        <div id="tasks_holder"></div>
     </div>
     <div id="deco_landscape" class="itemholder" style="width: 72%; height: 54%; margin-left: 2%; margin-top: 7%; position: absolute;">
 
@@ -83,21 +89,42 @@
     <div id="cell_building_level" style="margin-left: 10%; margin-top: 5%; position: absolute; ">Lvl: -</div>
     <div id="cell_description" style="margin-left: 10%; margin-top: 8%; position: absolute; "> Does nothing </div>
 
+    <div id="resources_allocation_bar" style="margin-left: -0.2%; margin-top: 38%; height: 7%; width: 99.8%; position: absolute; ">
+
+      <div id="allocated_metal_res" style="margin-left: 17%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+
+      <div id="allocated_crystal_res" style="margin-left: 33%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+
+      <div id="allocated_gas_res" style="margin-left: 49%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+    </div>
 
     <div id="resources_bar" class="sendfleetmenu" style="margin-left: -0.2%; margin-top: 41%; height: 7%; width: 99.8%; position: absolute; ">
 
       <div style="margin-left: 10%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Metal: </div>
-      <div id="planetary_metal_res" style="margin-left: 15%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+      <div id="planetary_metal_res" style="margin-left: 17%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
 
       <div style="margin-left: 24%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Crystal: </div>
-      <div id="planetary_crystal_res" style="margin-left: 30%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+      <div id="planetary_crystal_res" style="margin-left: 33%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
 
       <div style="margin-left: 41.3%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;">Gas: </div>
-      <div id="planetary_gas_res" style="margin-left: 45%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
+      <div id="planetary_gas_res" style="margin-left: 49%; margin-top: 1%; position: absolute; font-size: 17; color: #FFFFFF;"></div>
     </div>
 
-    <button id="cell_build_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 37%; height: 7%; width: 10%; position: absolute; display: none;"> BUILD </button>
-    <button id="cell_upgrade_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 37%; height: 7%; width: 10%;  position: absolute; display: none;"> UPGRADE </button>
+    <button id="cell_build_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 33%; height: 7%; width: 10%; position: absolute; display: none;"> BUILD </button>
+    <button id="cell_upgrade_btn" onclick="addTaskBuild()" style="margin-left: 0%; margin-top: 33%; height: 7%; width: 10%;  position: absolute; display: none;"> UPGRADE </button>
+
+    <div id="assembling_elements" style="margin-left: 3%; margin-top: 25%; height: 7%; width: 10%;  position: absolute; display: none;">
+
+      <button id="cell_assemble_btn" onclick="addTaskAssemble()" style="position: absolute; margin-top: 80%;"> ASSEMBLE </button>
+      <input id="battleships_to_assemble" type="number" min="0" onchange="applyAssembleMaterials()" style="width: 60%; margin-left: 90%; margin-top: 5%; position: absolute;"></input>
+      <input id="cargoships_to_assemble" type="number" min="0" onchange="applyAssembleMaterials()" style="width: 60%; margin-left: 90%; margin-top: 30%; position: absolute;"></input>
+      <input id="colonizers_to_assemble" type="number" min="0" onchange="applyAssembleMaterials()" style="width: 60%; margin-left: 90%; margin-top: 55%; position: absolute;"></input>
+
+
+      <div style="margin-left: 1%; margin-top: 5%; position: absolute;">Battleships:</div>
+      <div style="margin-left: 1%; margin-top: 30%; position: absolute;">Cargoships:</div>
+      <div style="margin-left: 1%; margin-top: 55%; position: absolute;">Colonizers:</div>
+    </div>
 
       <button id="spawn_btn" style="margin-left: 10%; margin-top: 15%; width: 80%; height: 15%; position: absolute; display: none;" onclick="spawnPlayer()"> Spawn Here </button>
       
@@ -218,6 +245,31 @@ div.planetmode {
 
 <script>
 
+  // Preparing ENUMs
+
+  var resource_num = {"metal":0, "crystal":1, "gas":2};
+
+
+/*
+  var base_ships = {"battleship": [ 
+    "resource_cost":[ 150, 20, 0 ]
+  ],
+  "cargoship": [
+  ]
+   };
+*/
+
+ var ship_costs = { 
+    battleship: [ 150, 30, 0 ],
+    cargoship: [ 200, 150, 0 ],
+    colonizer: [ 400, 750, 150 ]
+  };
+
+  console.log(ship_costs.battleship[resource_num["metal"]]);
+
+  var task_names = {0:"Com. Center", 1:"Assembly", 2:"Shield", 3:"Metal Mine", 4:"Crystal Mine", 5:"Gas Mine", 6:"Metal Storage", 7:"Crystal Storage", 8:"Gas Storage"};
+  var ship_task_id = {0:"Battleships", 1:"Cargoships", 2:"Colonizers"};
+
   // Setting global variables
   /* **************************************************** */
 
@@ -247,6 +299,7 @@ var contract_name = "dexaraniiznx";
 
 var player_name = document.getElementById("player_name_input").value;
 var player_exist_div = document.getElementById("player_exists");
+var player_signed_up = false;
 //console.log(player_name);
 
 // Main elements that will be modified frequently.
@@ -282,6 +335,21 @@ var player_exist_div = document.getElementById("player_exists");
 
   var gridBtn = document.getElementById("switch_to_grid_btn");
   var textBtn = document.getElementById("switch_to_text_btn");
+  var build_btn = document.getElementById("cell_build_btn");
+  var upgrade_btn = document.getElementById("cell_upgrade_btn");
+  var assemble_btn = document.getElementById("cell_assemble_btn");
+
+  var battleships_to_assemble_input = document.getElementById("battleships_to_assemble");
+  var cargoships_to_assemble_input = document.getElementById("cargoships_to_assemble");
+  var colonizers_to_assemble_input = document.getElementById("colonizers_to_assemble");
+
+  var allocated_metal_popup = document.getElementById("allocated_metal_res");
+  var allocated_crystal_popup = document.getElementById("allocated_crystal_res");
+  var allocated_gas_popup = document.getElementById("allocated_gas_res");
+
+  var assemble_div = document.getElementById("assembling_elements");
+
+  var taskholder = document.getElementById("tasks_holder");
 
   var active_view = "text"; // For autoupdate to re-init view that is currently selected by user.
 
@@ -338,6 +406,7 @@ function loginWithScatter()
     if (!connected) {
     // User does not have Scatter installed/unlocked.
       console.log("SCATTER: Connection troubles!");
+      alert("Scatter failed to connect!");
       return false;
     }
     else
@@ -354,6 +423,7 @@ function loginWithScatter()
       account = scatter.identity.accounts.find(x => x.blockchain === 'eos');
       console.log(account);
       document.getElementById("player_name_input").value = await account.name;
+      player_signed_up = true;
     }).then(async function() {
       updatePlayerName();
       var el = document.getElementById("scatter_login_status");
@@ -442,10 +512,50 @@ function despawnPlayer()
 }
 
 
-function addTask(_id, _type, _task_id, _quantity)
+function applyAssembleMaterials()
 {
-  console.log("Placing task at planet " + _id);
 
+  // TODO replace with reading info from contract
+  //      and FOR cycles instead of manual assignment
+  var allocated_metal = battleships_to_assemble_input.value * ship_costs.battleship[resource_num["metal"]] + cargoships_to_assemble_input.value * ship_costs.cargoship[resource_num["metal"]] + colonizers_to_assemble_input.value * ship_costs.colonizer[resource_num["metal"]];
+  var allocated_crystal = battleships_to_assemble_input.value * ship_costs.battleship[resource_num["crystal"]] + cargoships_to_assemble_input.value * ship_costs.cargoship[resource_num["crystal"]] + colonizers_to_assemble_input.value * ship_costs.colonizer[resource_num["crystal"]];
+  var allocated_gas = battleships_to_assemble_input.value * ship_costs.battleship[resource_num["gas"]] + cargoships_to_assemble_input.value * ship_costs.cargoship[resource_num["gas"]] + colonizers_to_assemble_input.value * ship_costs.colonizer[resource_num["gas"]];
+
+  allocated_metal_popup.innerHTML = allocated_metal;
+  allocated_crystal_popup.innerHTML = allocated_crystal;
+  allocated_gas_popup.innerHTML = allocated_gas;
+
+  if(allocated_metal > planetary_metal.innerHTML)
+  {
+    allocated_metal_popup.style.color = "#ff3030";
+  }
+  else
+  {
+    allocated_metal_popup.style.color = "#30FF30";
+  }
+
+
+  if(allocated_crystal > planetary_crystal.innerHTML)
+  {
+    allocated_crystal_popup.style.color = "#ff3030";
+  }
+  else
+  {
+    allocated_crystal_popup.style.color = "#30FF30";
+  }
+
+  if(allocated_gas > planetary_gas.innerHTML)
+  {
+    allocated_gas_popup.style.color = "#ff3030";
+  }
+  else
+  {
+    allocated_gas_popup.style.color = "#30FF30";
+  }
+}
+
+function addTaskBuild()
+{
   // Generate a TX and send it with Scatter
   requiredFields = {
     accounts: [network]
@@ -454,17 +564,15 @@ function addTask(_id, _type, _task_id, _quantity)
   scatterEos.transact({
       actions: [{
         account: 'dexaraniiznx',
-        name: 'addtask',
+        name: 'buildtask',
         authorization: [{
           actor: account.name,
           permission: account.authority
         }],
     data: {
       acc: account.name,
-      id: _id,
-      type: _type,
-      task_id: _task_id,
-      quantity: _quantity,
+      id: selected_planet_id,
+      task_id: selected_building_cell_id,
       autoupdate: true
     }
   }]
@@ -474,11 +582,118 @@ function addTask(_id, _type, _task_id, _quantity)
 })
 .then(trx => {
       console.log(`Transaction ID: ${trx.transaction_id}`);
+      updateScreen();
     }).catch(error => {
       console.error(error);
+      alert(error);
     });
   //window.scatter = null;
-  updateScreen();
+}
+
+function addTaskAssemble()
+{
+  // TODO
+
+  // Assembling tasks has slightly different logic of transaction action pushing
+  // so we need a separate function to group actions in a single transaction.
+
+  var tx_actions = { };
+  var tx_data    = { };
+
+  if(battleships_to_assemble_input.value > 0)
+  {
+    //addTask(selected_planet_id, 1, 8, battleships_to_assemble_input.value);
+    scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'assembletask',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      id: selected_planet_id,
+      task_id: 0,
+      quantity: battleships_to_assemble_input.value,
+      autoupdate: true
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+      updateScreen();
+    }).catch(error => {
+      console.error(error);
+      alert(error);
+    });
+  }
+  if(cargoships_to_assemble_input.value > 0)
+  {
+    //addTask(selected_planet_id, 1, 8, battleships_to_assemble_input.value);
+    scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'assembletask',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      id: selected_planet_id,
+      task_id: 1,
+      quantity: cargoships_to_assemble_input.value,
+      autoupdate: true
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+      updateScreen();
+    }).catch(error => {
+      console.error(error);
+      alert(error);
+    });
+  }
+  if(colonizers_to_assemble_input.value > 0)
+  {
+    //addTask(selected_planet_id, 1, 10, colonizers_to_assemble_input.value);
+    //addTask(selected_planet_id, 1, 8, battleships_to_assemble_input.value);
+    scatterEos.transact({
+      actions: [{
+        account: 'dexaraniiznx',
+        name: 'assembletask',
+        authorization: [{
+          actor: account.name,
+          permission: account.authority
+        }],
+    data: {
+      acc: account.name,
+      id: selected_planet_id,
+      task_id: 2,
+      quantity: colonizers_to_assemble_input.value,
+      autoupdate: true
+    }
+  }]
+}, {
+  blocksBehind: 3,
+  expireSeconds: 30,
+})
+.then(trx => {
+      console.log(`Transaction ID: ${trx.transaction_id}`);
+      updateScreen();
+    }).catch(error => {
+      console.error(error);
+      alert(error);
+    });
+  }
 }
 
   // Super easy color change function.
@@ -500,10 +715,12 @@ function expand(itr) {
   el.style.height = "250px";
 }
 
+/* PRE GALAXEOS UPDATE
 function addTaskBuild()
 {
-  addTask(selected_planet_id, 0, selected_building_cell_id, 0);
+  addTaskBuild(selected_planet_id, 0, selected_building_cell_id, 0);
 }
+*/
 
 function showBuildingOverlay(id)
 {
@@ -514,6 +731,7 @@ function showBuildingOverlay(id)
   // 6,7,8 - metal,crystal,gas storages
 
   selected_building_cell_id = id;
+  hideAssembling();
 
   // TODO: Assign building names, desctiptions and variables to class
   //       use class instead of hardcoded descriptions and assignments.
@@ -540,6 +758,7 @@ function showBuildingOverlay(id)
     {
       hideBuildBtn();
       hideUpgradeBtn();
+      showAssembling();
     }
     else
     {
@@ -694,7 +913,7 @@ function sendFleetConfirm()
 function showPlanetaryElements()
 {
   showBuildings();
-  showFleets();
+  showTasks();
   showActions();
   showBuildBtn();
   showCellInfo();
@@ -711,43 +930,59 @@ function hidePlanetaryElements()
 
 function disableBuildBtns()
 {
-  var build_btn = document.getElementById("cell_build_btn");
-  var upgrade_btn = document.getElementById("cell_upgrade_btn");
   build_btn.disabled = true;
   upgrade_btn.disabled = true;
+  assemble_btn.disabled = true;
+
+  battleships_to_assemble_input.disabled = true;
+  cargoships_to_assemble_input.disabled = true;
+  colonizers_to_assemble_input.disabled = true;
 }
 
 function enableBuildBtns()
 {
-  var build_btn = document.getElementById("cell_build_btn");
-  var upgrade_btn = document.getElementById("cell_upgrade_btn");
   build_btn.disabled = false;
   upgrade_btn.disabled = false;
+  assemble_btn.disabled = false;
+
+  battleships_to_assemble_input.disabled = false;
+  cargoships_to_assemble_input.disabled = false;
+  colonizers_to_assemble_input.disabled = false;
+}
+
+function showAssembling()
+{
+  assemble_div.style.display = "inline";
+}
+
+function hideAssembling()
+{
+  assemble_div.style.display = "none";
+
+  allocated_metal_popup.innerHTML = "";
+  allocated_crystal_popup.innerHTML = "";
+  allocated_gas_popup.innerHTML = "";
 }
 
 function showBuildBtn()
 {
-  var build_btn = document.getElementById("cell_build_btn");
   build_btn.style.display = "inline";
   hideUpgradeBtn();
 }
 
 function showUpgradeBtn()
 {
-  var upgrade_btn = document.getElementById("cell_upgrade_btn");
   upgrade_btn.style.display = "inline";
   hideBuildBtn();
 }
 
 function hideBuildBtn()
 {
-  var build_btn = document.getElementById("cell_build_btn");
   build_btn.style.display = "none";
 }
 
 function hideUpgradeBtn()
 {
-  var upgrade_btn = document.getElementById("cell_upgrade_btn");
   upgrade_btn.style.display = "none";
 }
 
@@ -897,9 +1132,9 @@ function hideActions()
   el.style.display = "none";
 }
 
-function showFleets()
+function showTasks()
 {
-  var el = document.getElementById("fleets");
+  var el = document.getElementById("Tasks");
   el.style.display = "inline";
 }
 
@@ -912,10 +1147,26 @@ function hideFleets()
 function showPlanet(id)
 {
   hideSendFleetMenu();
+  hideAssembling();
+
+  taskholder.innerHTML = "";
+
+  // ALERT If player must unlock an account with Scatter first
+
 
   if(player_exist_div.innerHTML == "false")
   {
     showSpawnOption();
+    if(!player_signed_up)
+    {
+      //alert("Please, connect the Scatter account to interact with the game!");
+
+      spawn_btn.innerHTML = "Please, connect the Scatter account to spawn in the game";
+    }
+    else
+    {
+      spawn_btn.innerHTML = "SPAWN HERE";
+    }
   }
   else
   {
@@ -971,6 +1222,8 @@ function showPlanet(id)
             if(res.rows[0].owner_name != "")
             {
               planetOwnerName.innerHTML += res.rows[0].owner_name;
+              // Disable SPAWN button if the planet is already owned by someone
+              hideSpawnOption();
             }
             else
             {
@@ -995,6 +1248,60 @@ function showPlanet(id)
             var diff = Math.round(timestamp / 1000) - res.rows[0].last_updated[0];
             planetUpdate.innerHTML = diff;
 
+            /* ***       DRAWING A TASK LIST        *** */
+
+            console.log(res.rows[0]);
+
+            if(res.rows[0].fleets.length > 0)
+            {
+              // Draw fleets first!
+              for (var i=0; i<res.rows[0].fleets.length; i++)
+              {
+                //var remaining_time = res.rows[0].building_queue[i].start_time + res.rows[0].building_queue[i].time_required - Math.round(timestamp / 1000);
+
+                taskholder.innerHTML += `<div id="buildtask` + i + ` class="fleet_task_div">`;
+                taskholder.innerHTML += `<div>Building: ` + task_names[res.rows[0].building_queue[i].task_goal_id] + `</div>`;
+                taskholder.innerHTML += `<div>Remaining time: ` +  remaining_time + " sec" +`</div>`;
+
+                taskholder.innerHTML += `</div>`;
+              }
+            }
+
+            var remaining_time;
+
+            if(res.rows[0].assembling_queue.length > 0)
+            {
+              // Draw assembling tasks
+              for (var i=0; i<res.rows[0].assembling_queue.length; i++)
+              {
+                remaining_time = res.rows[0].assembling_queue[i].start_time + res.rows[0].assembling_queue[i].time_required - Math.round(timestamp / 1000);
+
+                taskholder.innerHTML += `<div id="assemblingtask` + i + ` class="assembling_task_div">`;
+                taskholder.innerHTML += `<div>Assembling: ` + ship_task_id[res.rows[0].assembling_queue[i].task_goal_id] + `</div>`;
+                taskholder.innerHTML += `<div>Quantity: ` + res.rows[0].assembling_queue[i].quantity + `</div>`;
+                taskholder.innerHTML += `<div>Remaining time: ` +  remaining_time + " sec" + `</div>`;
+
+                taskholder.innerHTML += `</div>`;
+              }
+            }
+
+            if(res.rows[0].building_queue.length > 0)
+            {
+              // Draw building tasks
+
+              for (var j=0; j<res.rows[0].building_queue.length; j++)
+              {
+                remaining_time = res.rows[0].building_queue[j].start_time + res.rows[0].building_queue[j].time_required - Math.round(timestamp / 1000);
+
+                taskholder.innerHTML += `<div id="buildtask` + j + ` class="building_task_div">`;
+                taskholder.innerHTML += `<div>Building: ` + task_names[res.rows[0].building_queue[j].task_goal_id] + `</div>`;
+                taskholder.innerHTML += `<div>Remaining time: ` +  remaining_time + " sec" + `</div>`;
+
+                taskholder.innerHTML += `</div>`;
+              }
+            }
+
+            /* **************************************** */
           }
           else 
           {
@@ -1004,7 +1311,7 @@ function showPlanet(id)
             planetDescription.innerHTML = "Empty sector ";
           }
 
-          /* Fill vatiables that are relevant for both sectors and planets */
+          /* Fill variables that are relevant for both sectors and planets */
 
           planetPositionXY.innerHTML = "[";
           planetPositionXY.innerHTML += res.rows[0].x;
@@ -1314,7 +1621,18 @@ console.log("res variable does not work outside the async rpc.get_table_rows fun
 //var tmp = JSON.parse(res);
 //console.log(res);
 
+
+function warnResolution()
+{
+  if(screen.width != 1920 || screen.height != 1080)
+  {
+    //alert("Warning! This is a debugging UI and it is only adjusted for 1920x1080 screen resolution");
+    document.getElementById("res_warning").innerHTML = "Warning! This is just a template UI and it is only adjusted for 1920x1080 screen resolution";
+  }
+}
+
 </script>
 
 
 </div>
+</html>
