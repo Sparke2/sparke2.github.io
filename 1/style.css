@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  background-color: black;
+  width: 100%;
+  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1em;
+  line-height: 135%;
+  float: left;
+  background: linear-gradient(190deg, #000000 50%, rgba(0, 0, 0, 0) 99.99%);
+}
+a {
+  color: rgb(247, 244, 244);
+  text-decoration: none;
+  -webkit-transition: all.6s ease;
+}
+a:hover {
+  color: rgb(207, 148, 72);
+  -webkit-transition: all.6s ease;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  width: 98%;
+  border-bottom: 2px solid rgb(112, 110, 110);
+  float: left;
+}
+header #logo {
+  width: 10%;
+  float: left;
+}
+header #logo img {
+  width: 80px;
+  height: 70px;
+  float: left;
+  padding-left: 40px;
+}
+header #menuHead {
+  font-family: "Teko", sans-serif;
+  width: 90%;
+  float: right;
+}
+header #menuHead div {
+  float: right;
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 1.7em;
+  padding-top: 25px;
+}
+/* Стили для главной страницы */
+#wrapper #bigArticle h1 {
+  width: 80%;
+  margin-left: 10%;
+  font-family: "Audiowide", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 59px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+}
+#wrapper #bigArticle h2 {
+  width: 60%;
+  margin-left: 20%;
+  font-size: 45px;
+  text-align: center;
+  color: orange;
+  font-family: "Teko", sans-serif;
+  float: left;
+  padding-top: 30px;
+  margin-bottom: 15px;
+}
+#wrapper #bigArticle img {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
+/* Работа с подвалом сайта */
+footer {
+  width: 98%;
+  padding: 1%;
+  border-top: 2px solid silver;
+  padding-bottom: 10px;
+  float: left;
+}
+footer #social {
+  float: left;
+  width: 50%;
+}
+footer #social img {
+  width: 30px;
+  height: 27px;
+  float: left;
+  margin-left: 20px;
+}
+footer #rights {
+  float: left;
+  width: 50%;
+  text-align: right;
+  font-size: 1.1em;
+  color: black;
+}
+#prizes #prizesArticle img {
+  margin-top: 25px;
+  width: 43%;
+  float: left;
+  margin-left: 28.5%;
+  margin-bottom: 30px;
+}
+#roadmap #roadmapArticle h2 {
+  float: left;
+  color: white;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 4em;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-family: "Teko", sans-serif;
+  text-shadow: 3px 3px 3px rgb(228, 142, 13);
+}
+#roadmap #roadmapArticle p {
+  float: left;
+  color: white;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 1.8em;
+  line-height: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-shadow: 1px 2px 2px rgb(0, 0, 0);
+  font-family: "Teko", sans-serif;
+}
+#roadmap #roadmapArticle p span {
+  margin-left: 3%;
+}
+
+/* Работа с обратной связью */
+
+form h1 {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+  font-size: 3.3em;
+  margin-bottom: 5px;
+  text-shadow: 3px 3px 3px rgb(197, 129, 27);
+  float: left;
+}
+#feedback {
+  width: 30%;
+  margin-left: 10%;
+  float: left;
+}
+form input {
+  width: 100%;
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "Teko", sans-serif;
+  font-size: 1.5em;
+  float: left;
+}
+form textarea {
+  width: 100%;
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "Teko", sans-serif;
+  font-size: 1.5em;
+  resize: none;
+  float: left;
+}
+form button {
+  width: 102%;
+  padding: 0px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "Teko", sans-serif;
+  font-size: 2.4em;
+  margin-bottom: 30px;
+  background-color: rgb(219, 151, 24);
+  float: left;
+}
+form button:hover {
+  background-color: rgb(250, 163, 2);
+}
+#contacts h1 {
+  width: 20%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+  font-size: 3.3em;
+  margin-bottom: 5px;
+  text-shadow: 3px 3px 3px rgb(197, 129, 27);
+  float: left;
+  margin-left: 15%;
+}
+#contacts #contactsnum a h3 {
+  width: 20%;
+  margin-left: 15%;
+  float: left;
+  font-family: "Teko", sans-serif;
+  font-size: 2.2em;
+  margin-top: 40px;
+  text-shadow: 0px 1px 1px rgb(204, 163, 86);
+}
+
+
