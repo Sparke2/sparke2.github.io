@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script src='web3.min.js'></script>
   <script src='abi.js'></script>
   <script type="script.js"></script>
@@ -22,12 +22,13 @@
       <div id="menuHead">
         <a href="#social"><div>Contacts</div></a>
         <a href="#"><div>Whitepaper</div></a>
-        <a href="#"><div>About us</div></a>
+        <a href="#about_us"><div>About us</div></a>
       <div><a href="#roadmap">Roadmap</div>
       <div><a href="#prizes">Prizes</div>
     </div>
 </header>
 
+<body class="bg_main">
 <div id="wrapper">
   <div id="bigArticle">
     <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
@@ -42,7 +43,53 @@
   </div>
 </div>
 
+
 <script type="text/javascript">
+  // Точки, соответствующие призам на прогресс_баре
+var prizes = [];
+prizes.push([3, 3000]);
+prizes.push([12.5, 10000]);
+prizes.push([21, 25000]);
+prizes.push([29.5, 30000]);
+prizes.push([39.5, 50000]);
+prizes.push([46.5, 100000]);
+prizes.push([57.5, 200000]);
+prizes.push([63, 250000]);
+prizes.push([75.5, 350000]);
+prizes.push([80, 420000]);
+prizes.push([93.5, 500000]);
+prizes.push([100, 1000000]);
+
+// Функция, отвечающая за заполнение прогресс_бара
+function fill_progress_bar(myBalance){
+  var current_interval = 0;
+  var bar_percentage = 0;
+
+  for (var i = 0; i < prizes.length; i++) {
+    if (myBalance < prizes[i][1])
+    {
+      current_interval = i;
+      break;
+    }
+  }
+  console.log(current_interval);
+
+  if(current_interval > 0)
+  {
+    bar_percentage += prizes[current_interval - 1][0];
+    var interval_percentage = (myBalance - prizes[current_interval - 1][1]) / (prizes[current_interval][1] - prizes[current_interval - 1][1]);
+    bar_percentage += interval_percentage * (prizes[current_interval][0] - prizes[current_interval - 1][0]);
+
+
+    console.log("Calculations: ", interval_percentage);
+    console.log("BAR: ", bar_percentage);
+  }
+  else
+  {
+    bar_percentage += myBalance / (prizes[0][1] / prizes[0][0]);
+  }
+  document.getElementById("myBar1").style.width = bar_percentage + "%";
+}
 
 //Плавные переходы из меню сайта
  $(document).ready(function(){
@@ -53,97 +100,7 @@
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
-
-
-//Подсветка призов
-$( document ).ready(function(){
-    $( " .block_1,.block_1:before" ).hover(function(){ 
-      $( " .block_1,.block_1:before" ).css( "background", "#3f3f3f" )
-      }, function(){ 
-      $( " .block_1,.block_1:before" ).css( "background", "#1a1918" ) 
-    });
-  });
   
-   $( document ).ready(function(){
-    $( " .block_2,.block_2:before" ).hover(function(){
-      $( " .block_2,.block_2:before" ).css( "background", "#3f3f3f" )
-      }, function(){  
-      $( " .block_2,.block_2:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-   $( document ).ready(function(){
-    $( " .block_3,.block_3:before" ).hover(function(){ 
-      $( " .block_3,.block_3:before" ).css( "background", "#3f3f3f" )
-      }, function(){   
-      $( " .block_3,.block_3:before" ).css( "background", "#1a1918" )
-    });
-  });
-   $( document ).ready(function(){
-    $( " .block_4,.block_4:before" ).hover(function(){ 
-      $( " .block_4,.block_4:before" ).css( "background", "#3f3f3f" )
-      }, function(){
-      $( " .block_4,.block_4:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-   $( document ).ready(function(){
-    $( " .block_5,.block_5:before" ).hover(function(){  
-      $( " .block_5,.block_5:before" ).css( "background", "#3f3f3f" )
-      }, function(){ 
-      $( " .block_5,.block_5:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-   $( document ).ready(function(){
-    $( " .block_6,.block_6:before" ).hover(function(){ 
-      $( " .block_6,.block_6:before" ).css( "background", "#3f3f3f" )
-      }, function(){ 
-      $( " .block_6,.block_6:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-  $( document ).ready(function(){
-    $( ".block_7,.block_7:before" ).hover(function(){ 
-      $( ".block_7,.block_7:before" ).css( "background", "#3f3f3f" )
-      }, function(){ 
-      $( ".block_7,.block_7:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-   
-  $( document ).ready(function(){
-    $( " .block_8,.block_8:before" ).hover(function(){ 
-      $( " .block_8,.block_8:before" ).css( "background", "#3f3f3f" )
-      }, function(){ 
-      $( " .block_8,.block_8:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-    
-  $( document ).ready(function(){
-    $( " .block_9,.block_9:before" ).hover(function(){ 
-      $( " .block_9,.block_9:before" ).css( "background", "#3f3f3f" )
-      }, function(){
-      $( " .block_9,.block_9:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-   $( document ).ready(function(){
-    $( " .block_10,.block_10:before" ).hover(function(){ 
-      $( " .block_10,.block_10:before" ).css( "background", "#3f3f3f" )
-      }, function(){   
-      $( " .block_10,.block_10:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-    $( document ).ready(function(){
-    $( " .block_11,.block_11:before" ).hover(function(){ 
-      $( " .block_11,.block_11:before" ).css( "background", "#3f3f3f" )
-      }, function(){  
-      $( " .block_11,.block_11:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-     $( document ).ready(function(){
-    $( " .block_12,.block_12:before" ).hover(function(){ 
-      $( " .block_12,.block_12:before" ).css( "background", "#3f3f3f" )
-      }, function(){  
-      $( " .block_12,.block_12:before" ).css( "background", "#1a1918" ) 
-    });
-  });
-
 //Работа с контрактом
 var web3 = new Web3(Web3.givenProvider || "https://main-rpc.linkpool.io");
 
@@ -158,46 +115,49 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
     document.getElementById("balance").innerHTML = myBalance;
     document.getElementById("balance").innerHTML += "/1 000 000";
 
+    //console.log(document.getElementById("myBar1"));
+    fill_progress_bar(400000);
 });
+
 </script>  
 
 
 <body>
-<h1 id="prizes">Ico goals and prizes</h1>
+<h1 id="prizes">ICO goals and prizes</h1>
 
 <div class="wrapper_0">
   <div class="block_7">
-    <h4>IPad air </h4>
+    <h4>iPad air </h4>
     <img class="img_1" src="img/ipad_air.png" alt="iPad air">
-    <h5>10 000$</h5>
+    <h5>$ 10 000</h5>
   </div>
   <div class="block_8">
     <h4 class="h4_3">Listing on exchanges </h4>
-    <h5><br> <br> 30 000$</h5>
+    <h5><br> <br>$ 30 000</h5>
   </div>
   <div class="block_9">
     <h4 class="h4_2"> Additional listings on exchanges</h4>
-    <h5> <br> 100 000$</h5>
+    <h5> <br>$ 100 000</h5>
   </div>
   <div class="block_10">
-    <h4>IPhone 12 </h4>
+    <h4>iPhone 12 </h4>
     <img class="img_1" src="img/iphone12.png" alt="iPhone 12">
-    <h5>250 000$</h5>
+    <h5>$ 250 000</h5>
   </div>
   <div class="block_11">
      <h4>Macbook air </h4>
     <img class="img_2" src="img/macbook_air.png" alt="Macbook air">
-    <h5>420 000$</h5>
+    <h5>$ 420 000</h5>
   </div>
   <div class="block_12">
-    <h4 class="h4_1">Lamborghini Huracan evo<br> or 300 000$</h4>
+    <h4 class="h4_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
     <img class="img_6" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
-    <h5>1 000 000$</h5>
+    <h5>$ 1 000 000</h5>
   </div>
 </div>
 
-<div id="b">
-  <p id="balance">dowland result...</p>
+<div id="big_b">
+  <p id="balance">dowlanding result...</p>
 </div>
 <div id="myProgress">
   <div id="myBar1"></div>
@@ -205,38 +165,36 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 
 <div class="wrapper_1">
   <div class="block_1">
-    <h4>IPhone 12 </h4>
+    <h4>iPhone 12 </h4>
     <img class="img_1" src="img/iphone12.png" alt="iPhone 12">
-    <h5>3 000$</h5>
+    <h5>$ 3 000</h5>
   </div>
   <div class="block_2">
     <h4>Macbook air </h4>
     <img class="img_2" src="img/macbook_air.png" alt="Macbook air">
-    <h5>25 000$</h5>
+    <h5>$ 25 000</h5>
   </div>
   <div class="block_3">
-    <h4 class="h4_1">IMac & iPhone 12</h4>
+    <h4 class="h4_1">iMac & iPhone 12</h4>
     <img class="img_7" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
-    <h5>50 000$</h5>
+    <h5>$ 50 000</h5>
   </div>
   <div class="block_4">
-    <h4 class="h4_1">Toyota Camry<br> or  30 000$</h4>
+    <h4 class="h4_1">Toyota Camry<br> or $ 30 000</h4>
     <img class="img_3" src="img/toyota_camry.png" alt="Toyota Camry">
-    <h5>200 000$</h5>
+    <h5>$ 200 000</h5>
   </div>
   <div class="block_5">
-    <h4 class="h4_1">Mercedes e-class or 50 000$</h4>
+    <h4 class="h4_1">Mercedes e-class or $ 50 000</h4>
     <img class="img_4" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
-    <h5>350 000$</h5>
+    <h5>$ 350 000</h5>
   </div>
   <div class="block_6">
-    <h4 class="h4_1">Porsche Panamera or 100 000$</h4>
+    <h4 class="h4_1">Porsche Panamera or $ 100 000</h4>
     <img class="img_5" src="img/porsche_panamera.webp" alt="Porsche Panamera">
-    <h5>500 000$</h5>
+    <h5>$ 500 000</h5>
   </div>
 </div>
-
-
 </body>
 
 
@@ -246,7 +204,7 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 <!-- Чтобы progress bar передвинулся на следующий шаг нужно поменять на class="progress-step is-complete"-->
 <body>
 <section id="roadmap" class="road__wrap">
-<div class="container  road">
+<div class="container_road">
 <h3 class="section-title">Road map</h3>
 <div class="container top-margin">
 <div class="indicators__img">
@@ -269,7 +227,6 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 <div id="step3" class="progress-step">
 <div class="step-text">
 <h2>Development of smart contract for drawing prizes</h2>
-
 <h4></h4>
 </div>
 </div>
@@ -302,13 +259,47 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 </section>
 </body>
 
+<body >
+  <h3 class="section-title" id="about_us">About us</h3>
+  <div class="about_us">
+    <div class="people_1">
+      <h4 align="center">Milliano Conti</h4>
+      <h5 align="center">Founder</h5>
+      <h6 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h6>
+    </div>
+    <div class="people_2">
+      <h4 align="center">Maria Rebrova</h4>
+      <h5 align="center">Designer, interface developer</h5>
+      <h6 align="center">ligreat875@gmail.com<br><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h6>
+    </div>
+    <div class="people_3">
+      <h4 align="center">Vadim Doronin</h4>
+      <h5 align="center"> Web Developer</h5>
+      <h6 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h6>
+    </div>
+    <div class="people_4">
+      <h4></h4>
+      <h5></h5>
+    </div>
+    <div class="line_main"></div>
+    <div class="line_1"></div>
+    <div class="line_2"></div>
+    <div class="line_3"></div>
+    <div class="line_4"></div>
+    <div class="circle_1"></div>
+    <div class="circle_2"></div>
+    <div class="circle_3"></div>
+    <div class="circle_4"></div>
+  </div>
+</body>
 
+<body class="bg_2">
   <footer>
     <div id="social">
       <a href="https://twitter.com/EthFair/" target="_blank" title="twitter"><img src="img/twitter.jpg" alt="twitter"></a>
       <a href="https://t.me/EthFairDeFi" target="_blank" title="telegram"><img src="img/telegram.jpg" alt="telegram"></a>
       <a href="https://www.reddit.com/user/EthFair/" target="_blank" title="reddit"><img src="img/reddit.svg" alt="reddit"></a>
-      <a target="_blank" title="mail"><img src="img/mail.jpg" alt="mail"></a>
+      <a target="_blank" title="mail"><img src="img/mail.png" alt="mail"></a>
       <p>EthFair.DeFi@gmail.com</p>
     </div>
     <div id="rights">All Rights Reserved &copy;
@@ -318,5 +309,6 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
   <script>
     AOS.init();
   </script>
+</body>
 </body>
 </html>
