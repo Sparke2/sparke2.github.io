@@ -500,7 +500,7 @@ h5{
 */
 
 .people_1{
-	top: 4%;
+	top: 3.5%;
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
@@ -525,7 +525,7 @@ h5{
 
 }
 .people_3{
-	top: 39%;
+	top: 38.5%;
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
@@ -554,7 +554,7 @@ h5{
 
 .line_main{
 	top:1%;
-	left: 49.8%;
+	left: 49.75%;
 	height: 55%;
 	background: #000;
 	width: 0.5%;
@@ -562,14 +562,14 @@ h5{
 	position: absolute;
 }
 .line_1{
- top: 2%;
+ top: 1.5%;
  left: 19%;
  width: 30%;
  position: absolute;
  border-top: 3px dashed #000;
 }
 .line_3{
- top: 37%;
+ top: 36.5%;
  left: 19%;
  width: 30%;
  border-top: 3px dashed #000;
@@ -622,7 +622,7 @@ h5{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 54%;
+	top: 53.5%;
 	left: 49.1%;
 }
 
