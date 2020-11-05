@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>EthFair</title>
-  <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
-  <script src='web3.min.js'></script>
-  <script src='abi.js'></script>
-  <script type="script.js"></script>
+	<title>EthFair</title>
+	<link rel="stylesheet" href="style.css" />
+	 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	 <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src='web3.min.js'></script>
+	<script src='abi.js'></script>
+	<script type="script.js"></script>
 </head>
 <body>
 <header>
-    <div id="logo"> <img src="img/logo.png"> </div>
-      <div id="menuHead">
-        <a href="#social"><div>Contacts</div></a>
-        <a href="#"><div>Whitepaper</div></a>
-        <a href="#about_us"><div>About us</div></a>
-      <div><a href="#roadmap">Roadmap</div>
-      <div><a href="#prizes">Prizes</div>
-    </div>
+		<div id="logo"> <img src="img/logo.png"> </div>
+			<div id="menuHead">
+				<a href="#social"><div>Contacts</div></a>
+				<a href="#"><div>Whitepaper</div></a>
+				<a href="#about_us"><div>About us</div></a>
+				<a href="#roadmap"><div>Roadmap</div></a>
+				<a href="#prizes"><div>Prizes</div></a>
+		</div>
 </header>
 
 <body class="bg_main">
 <div id="wrapper">
-  <div id="bigArticle">
-    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
-      <h1>EthFair</h2>
-    </div> 
-    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
-      <h2>Don't wait for a pump <br><br>Get a lambo now!!!</h2>
-    </div>
-    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
-      <img src="img/lambo.png">
-    </div>
-  </div>
+	<div id="bigArticle">
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+			<h1>EthFair</h2>
+		</div> 
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+			<h2>Don't wait for a pump <br><br>Get a lambo now!!!</h2>
+		</div>
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+			<img src="img/lambo.png">
+		</div>
+	</div>
 </div>
 
 
 <script type="text/javascript">
-  // Точки, соответствующие призам на прогресс_баре
+	// Точки, соответствующие призам на прогресс_баре
 var prizes = [];
 prizes.push([3, 3000]);
 prizes.push([12.5, 10000]);
@@ -62,45 +62,55 @@ prizes.push([100, 1000000]);
 
 // Функция, отвечающая за заполнение прогресс_бара
 function fill_progress_bar(myBalance){
-  var current_interval = 0;
-  var bar_percentage = 0;
+	var current_interval = 0;
+	var bar_percentage = 0;
 
-  for (var i = 0; i < prizes.length; i++) {
-    if (myBalance < prizes[i][1])
-    {
-      current_interval = i;
-      break;
-    }
-  }
-  console.log(current_interval);
+	for (var i = 0; i < prizes.length; i++) {
+		if (myBalance < prizes[i][1])
+		{
+			current_interval = i;
+			break;
+		}
+	}
+	console.log(current_interval);
 
-  if(current_interval > 0)
-  {
-    bar_percentage += prizes[current_interval - 1][0];
-    var interval_percentage = (myBalance - prizes[current_interval - 1][1]) / (prizes[current_interval][1] - prizes[current_interval - 1][1]);
-    bar_percentage += interval_percentage * (prizes[current_interval][0] - prizes[current_interval - 1][0]);
+	if(current_interval > 0)
+	{
+		bar_percentage += prizes[current_interval - 1][0];
+		var interval_percentage = (myBalance - prizes[current_interval - 1][1]) / (prizes[current_interval][1] - prizes[current_interval - 1][1]);
+		bar_percentage += interval_percentage * (prizes[current_interval][0] - prizes[current_interval - 1][0]);
 
 
-    console.log("Calculations: ", interval_percentage);
-    console.log("BAR: ", bar_percentage);
-  }
-  else
-  {
-    bar_percentage += myBalance / (prizes[0][1] / prizes[0][0]);
-  }
-  document.getElementById("myBar1").style.width = bar_percentage + "%";
+		console.log("Calculations: ", interval_percentage);
+		console.log("BAR: ", bar_percentage);
+	}
+	else
+	{
+		bar_percentage += myBalance / (prizes[0][1] / prizes[0][0]);
+	}
+	document.getElementById("myBar1").style.width = bar_percentage + "%";
 }
 
 //Плавные переходы из меню сайта
  $(document).ready(function(){
-    $("#menuHead").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
+		$("#menuHead").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
 });
-  
+
+/*
+	$( document ).ready(function(){
+		$( " .people_4" ).hover(function(){ 
+			$( " .people_4" ).css( "background", "#004dff" )
+			}, function(){
+			$( " .people_4" ).css( "background", "#369edb" ) 
+		});
+	});
+*/
+	
 //Работа с контрактом
 var web3 = new Web3(Web3.givenProvider || "https://main-rpc.linkpool.io");
 
@@ -110,90 +120,104 @@ var myContract = new web3.eth.Contract(abiArray, '0x2af5d2ad76741191d15dfe7bf6ac
 console.log(myContract);
 
 myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call().then(function(receipt){
-    console.log("RESULT_1 ", receipt);
-    myBalance = receipt;
-    document.getElementById("balance").innerHTML = myBalance;
-    document.getElementById("balance").innerHTML += "/1 000 000";
+		console.log("RESULT_1 ", receipt);
+		myBalance = receipt;
+		document.getElementById("balance").innerHTML = myBalance;
+		document.getElementById("balance").innerHTML += "/1 000 000";
 
-    //console.log(document.getElementById("myBar1"));
-    fill_progress_bar(400000);
+		//console.log(document.getElementById("myBar1"));
+		fill_progress_bar(400000);
 });
 
 </script>  
 
 
 <body>
+<h1></h1>
+<div class="text" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" data-aos-duration="1000">
+	<div class="money" align="center"><img src="img/money.png"></div>
+	<div class="money_1"><img src="img/bottom_coin.png"></div>
+	<div class="text_1">
+	<h2>EthFair - is a DeFi lottery project built on the Ethereum blockchain with a use of solidity smart-contracts and ERC20 standard tokens.</h2><h2>The project is a draw that will feature a total of 3 Lamborghini Huracans, 3 other elite supercars, several new iPads, MacBooks, iPhones and other prizes.</h2><h2>The distinction of this draw is its use of blockchain technology, so the winner selection process is transparent and verifiable without any possibility of fraud.
+	</h2>
+	</div>
+</div>
+</body>
+
+<body>
 <h1 id="prizes">ICO goals and prizes</h1>
 
-<div class="wrapper_0">
-  <div class="block_7">
-    <h4>iPad air </h4>
-    <img class="img_1" src="img/ipad_air.png" alt="iPad air">
-    <h5>$ 10 000</h5>
-  </div>
-  <div class="block_8">
-    <h4 class="h4_3">Listing on exchanges </h4>
-    <h5><br> <br>$ 30 000</h5>
-  </div>
-  <div class="block_9">
-    <h4 class="h4_2"> Additional listings on exchanges</h4>
-    <h5> <br>$ 100 000</h5>
-  </div>
-  <div class="block_10">
-    <h4>iPhone 12 </h4>
-    <img class="img_1" src="img/iphone12.png" alt="iPhone 12">
-    <h5>$ 250 000</h5>
-  </div>
-  <div class="block_11">
-     <h4>Macbook air </h4>
-    <img class="img_2" src="img/macbook_air.png" alt="Macbook air">
-    <h5>$ 420 000</h5>
-  </div>
-  <div class="block_12">
-    <h4 class="h4_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
-    <img class="img_6" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
-    <h5>$ 1 000 000</h5>
-  </div>
+<div class="wrapper_0" data-aos="fade-up" data-aos-duration="1500">
+	<div class="block_7">
+		<h4>iPad air </h4>
+		<img class="img_1" src="img/ipad_air.png" alt="iPad air">
+		<h5>$ 10 000</h5>
+	</div>
+	<div class="block_8">
+		<h4 class="h4_3">Listing on exchanges </h4>
+		<h5><br> <br>$ 30 000</h5>
+	</div>
+	<div class="block_9">
+		<h4 class="h4_2"> Additional listings on exchanges</h4>
+		<h5> <br>$ 100 000</h5>
+	</div>
+	<div class="block_10">
+		<h4>iPhone 12 </h4>
+		<img class="img_1" src="img/iphone12.png" alt="iPhone 12">
+		<h5>$ 250 000</h5>
+	</div>
+	<div class="block_11">
+		 <h4>Macbook air </h4>
+		<img class="img_2" src="img/macbook_air.png" alt="Macbook air">
+		<h5>$ 420 000</h5>
+	</div>
+	<div class="block_12">
+		<h4 class="h4_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
+		<img class="img_6" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
+		<h5>$ 1 000 000</h5>
+	</div>
 </div>
 
 <div id="big_b">
-  <p id="balance">dowlanding result...</p>
+	<p id="balance">dowlanding result...</p>
 </div>
 <div id="myProgress">
-  <div id="myBar1"></div>
+	<div id="myBar1"></div>
 </div>
 
-<div class="wrapper_1">
-  <div class="block_1">
-    <h4>iPhone 12 </h4>
-    <img class="img_1" src="img/iphone12.png" alt="iPhone 12">
-    <h5>$ 3 000</h5>
-  </div>
-  <div class="block_2">
-    <h4>Macbook air </h4>
-    <img class="img_2" src="img/macbook_air.png" alt="Macbook air">
-    <h5>$ 25 000</h5>
-  </div>
-  <div class="block_3">
-    <h4 class="h4_1">iMac & iPhone 12</h4>
-    <img class="img_7" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
-    <h5>$ 50 000</h5>
-  </div>
-  <div class="block_4">
-    <h4 class="h4_1">Toyota Camry<br> or $ 30 000</h4>
-    <img class="img_3" src="img/toyota_camry.png" alt="Toyota Camry">
-    <h5>$ 200 000</h5>
-  </div>
-  <div class="block_5">
-    <h4 class="h4_1">Mercedes e-class or $ 50 000</h4>
-    <img class="img_4" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
-    <h5>$ 350 000</h5>
-  </div>
-  <div class="block_6">
-    <h4 class="h4_1">Porsche Panamera or $ 100 000</h4>
-    <img class="img_5" src="img/porsche_panamera.webp" alt="Porsche Panamera">
-    <h5>$ 500 000</h5>
-  </div>
+<div class="wrapper_1" data-aos="fade-down" data-aos-duration="1500">
+	<div class="block_1">
+		<h4>iPhone 12 </h4>
+		<img class="img_1" src="img/iphone12.png" alt="iPhone 12">
+		<h5>$ 3 000</h5>
+	</div>
+	<div class="block_2">
+		<h4>Macbook air </h4>
+		<img class="img_2" src="img/macbook_air.png" alt="Macbook air">
+		<h5>$ 25 000</h5>
+	</div>
+	<div class="block_3">
+		<h4 class="h4_1">iMac & iPhone 12</h4>
+		<img class="img_7" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
+		<h5>$ 50 000</h5>
+	</div>
+	<div class="block_4">
+		<h4 class="h4_1">Toyota Camry<br> or $ 30 000</h4>
+		<img class="img_3" src="img/toyota_camry.png" alt="Toyota Camry">
+		<h5>$ 200 000</h5>
+	</div>
+	<div class="block_5">
+		<h4 class="h4_1">Mercedes e-class or $ 50 000</h4>
+		<img class="img_4" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
+		<h5>$ 350 000</h5>
+	</div>
+	<div class="block_6">
+		<h4 class="h4_1">Porsche Panamera or $ 100 000</h4>
+		<img class="img_5" src="img/porsche_panamera.webp" alt="Porsche Panamera">
+		<h5>$ 500 000</h5>
+	</div>
 </div>
 </body>
 
@@ -260,56 +284,56 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 </body>
 
 <body >
-  <h3 class="section-title" id="about_us">About us</h3>
-  <div class="about_us">
-    <div class="people_1">
-      <h4 align="center">Milliano Conti</h4>
-      <h5 align="center">Founder</h5>
-      <h6 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h6>
-    </div>
-    <div class="people_2">
-      <h4 align="center">Maria Rebrova</h4>
-      <h5 align="center">Designer, interface developer</h5>
-      <h6 align="center">ligreat875@gmail.com</h6>
-      <h6 align="center"><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h6>
-    </div>
-    <div class="people_3">
-      <h4 align="center">Vadim Doronin</h4>
-      <h5 align="center"> Web Developer</h5>
-      <h6 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h6>
-    </div>
-    <div class="people_4">
-      <h4></h4>
-      <h5></h5>
-    </div>
-    <div class="line_main"></div>
-    <div class="line_1"></div>
-    <div class="line_2"></div>
-    <div class="line_3"></div>
-    <div class="line_4"></div>
-    <div class="circle_1"></div>
-    <div class="circle_2"></div>
-    <div class="circle_3"></div>
-    <div class="circle_4"></div>
-  </div>
+	<h3 class="section-title" id="about_us">About us</h3>
+	<div class="about_us">
+		<div class="people_1" data-aos="flip-left" data-aos-duration="1500">
+			<h4 align="center">Milliano Conti</h4>
+			<h5 align="center">Founder</h5>
+			<h6 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h6>
+		</div>
+		<div class="people_2" data-aos="flip-left" data-aos-duration="2000">
+			<h4 align="center">Maria Rebrova</h4>
+			<h5 align="center">Designer, interface developer</h5>
+			<h6 align="center">ligreat875@gmail.com</h6>
+			<h6 align="center"><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h6>
+		</div>
+		<div class="people_3" data-aos="flip-left" data-aos-duration="2500">
+			<h4 align="center">Vadim Doronin</h4>
+			<h5 align="center"> Web Developer</h5>
+			<h6 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h6>
+		</div>
+		<div class="people_4" data-aos="flip-left" data-aos-duration="2500">
+			<h4></h4>
+			<h5></h5>
+		</div>
+		<div class="line_main"></div>
+		<div class="line_1"></div>
+		<div class="line_2"></div>
+		<div class="line_3"></div>
+		<div class="line_4"></div>
+		<div class="circle_1"></div>
+		<div class="circle_2"></div>
+		<div class="circle_3"></div>
+		<div class="circle_4"></div>
+	</div>
 </body>
 
 <body class="bg_2">
-  <footer>
-    <div id="social">
-      <a href="https://twitter.com/EthFair/" target="_blank" title="twitter"><img src="img/twitter.jpg" alt="twitter"></a>
-      <a href="https://t.me/EthFairDeFi" target="_blank" title="telegram"><img src="img/telegram.jpg" alt="telegram"></a>
-      <a href="https://www.reddit.com/user/EthFair/" target="_blank" title="reddit"><img src="img/reddit.svg" alt="reddit"></a>
-      <a target="_blank" title="mail"><img src="img/mail.png" alt="mail"></a>
-      <p>EthFair.DeFi@gmail.com</p>
-    </div>
-    <div id="rights">All Rights Reserved &copy;
-    <script type="text/javascript">var date = new Date(); document.write(date.getFullYear()) </script> </div>
-  </footer>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+	<footer>
+		<div id="social">
+			<a href="https://twitter.com/EthFair/" target="_blank" title="twitter"><img src="img/twitter.jpg" alt="twitter"></a>
+			<a href="https://t.me/EthFairDeFi" target="_blank" title="telegram"><img src="img/telegram.jpg" alt="telegram"></a>
+			<a href="https://www.reddit.com/user/EthFair/" target="_blank" title="reddit"><img src="img/reddit.svg" alt="reddit"></a>
+			<a target="_blank" title="mail"><img src="img/mail.png" alt="mail"></a>
+			<p>EthFair.DeFi@gmail.com</p>
+		</div>
+		<div id="rights">All Rights Reserved &copy;
+		<script type="text/javascript">var date = new Date(); document.write(date.getFullYear()) </script> </div>
+	</footer>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </body>
 </html>
