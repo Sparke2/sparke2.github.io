@@ -500,7 +500,7 @@ h5{
 */
 
 .people_1{
-	top: 3.5%;
+	top: 4%;
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
@@ -525,7 +525,7 @@ h5{
 
 }
 .people_3{
-	top: 38.5%;
+	top: 39%;
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
@@ -552,24 +552,24 @@ h5{
 	background:#004dff;
 }
 
-.line_main{
-	top:1%;
-	left: 49.75%;
+line_main{
+	top: 1%;
+	left: 49%;
 	height: 55%;
 	background: #000;
-	width: 0.5%;
+	width: 8px;
 	border-radius: 10px; 
 	position: absolute;
 }
 .line_1{
- top: 1.5%;
+ top: 2%;
  left: 19%;
  width: 30%;
  position: absolute;
  border-top: 3px dashed #000;
 }
 .line_3{
- top: 36.5%;
+ top: 37%;
  left: 19%;
  width: 30%;
  border-top: 3px dashed #000;
@@ -592,11 +592,11 @@ h5{
 .circle_1{
 	width: 25px; 
 	height: 25px;
-	position: absolute; 
+	position: relative; 
 	border-radius: 100%; 
 	background: #000;
-	top: 0%;
-	left: 49.1%;
+	top: -0.5%;
+	left: -100%;
 }
 .circle_2{
 	width: 25px; 
@@ -604,8 +604,8 @@ h5{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 17.5%;
-	left: 49.1%;
+	top: 30%;
+	left: -100%;
 }
 .circle_3{
 	width: 25px; 
@@ -613,8 +613,8 @@ h5{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 35%;
-	left: 49.1%;
+	top: 62.5%;
+	left: -100%;
 }
 .circle_4{
 	width: 25px; 
@@ -622,10 +622,9 @@ h5{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 53.5%;
-	left: 49.1%;
+	top: 95.5%;
+	left: -100%;
 }
-
 .people_2:before,.people_1:before,.people_3:before,.people_4:before{
 	content: "";
 	width: 3%; 
