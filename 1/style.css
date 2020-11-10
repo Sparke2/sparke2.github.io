@@ -963,3 +963,8 @@ line_main {
     height: 100%;
     margin-right: 50px;
 }
+#wrapper #bigArticle img {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+}
