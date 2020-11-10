@@ -31,20 +31,37 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-header {
+#header_1 {
 	width: 100%;
 	border-bottom: 2px solid rgb(112, 110, 110);
 	float: left;
+	overflow: hidden;
+	background: #000;
+	z-index: 100;
 }
+
+#header_1 a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all.6s ease;
+	display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header #logo {
-	width: 10%;
+	width: 9%;
 	float: left;
 }
 header #logo img {
-	width: 100px;
-	height: 70px;
+	width: 75%;
+	height: 75%;
 	float: left;
-	padding-left: 40px;
+	padding-left: 25%;
 }
 header #menuHead {
 	font-family: "Teko", sans-serif;
@@ -104,11 +121,12 @@ header #menuHead div {
 
 /* Информация о проекте */
 .text{
+	margin-top: 10%;
 	display: flex;
 	width: 100%
 	height:1200px;
 	position: relative;
-
+	margin-bottom: 20%;
 }
 @keyframes money {        
 	0% { bottom: 0px; }            
@@ -150,13 +168,24 @@ header #menuHead div {
 .text_1 h2{
 	color: #121324;
 	font-family: "Titillium Web", sans-serif;
-	font-size: 2em;
 	line-height: 110%;
 	margin-right: 3%;
 	text-indent: 1.5em;
 	text-align: justify;
+	font-size: calc(15px + 1vw);
+    word-wrap: break-word;
 }
-
+h6 {
+	margin-top: 10%;
+	width: 100%;
+	font-family: "Teko", sans-serif;
+	color: #252425;
+	font-size: 5em;
+	margin-bottom: 3%;
+	text-shadow: 3px 3px 3px rgb(197, 129, 27);
+	text-align: center;
+	padding-top: 10%;
+}
 /* Работа с подвалом сайта */
 /*.bg_2{
 	background: url(img/bg_2.png) no-repeat;
@@ -241,7 +270,7 @@ header #menuHead div {
 		width: 60%;
 		margin-left: 20%;
 		font-size: 5em;
-		margin-top: 35px;
+		margin-top: 5%;
 		margin-bottom: 20px;
 		font-family: "Teko", sans-serif;
 		text-shadow: 3px 3px 3px rgb(228, 142, 13);
@@ -260,16 +289,16 @@ header #menuHead div {
 		margin-bottom: 8%;
 	}
 	.container_road:hover{
-		background:#a7c4f0;
+		background:#f5d2a6;
 		border-radius: 20%;
 	}
 
-	/*Prize and status bar*/
-	#myProgress {
-	 margin-left:50px;
-	 width: 90%;
-	 background-color: #ddd;
-	 border-radius: 50px;
+/*Prize and status bar*/
+#myProgress {
+	margin-left:5%;
+	width: 90%;
+	background-color: #ddd;
+	border-radius: 50px;
  }
 
  #myBar1 {
@@ -281,34 +310,32 @@ header #menuHead div {
 	border-radius: 50px;
 }
 
-h1 {
-	margin-top: 350px;
+h3 {
+	margin-top: 20%;
 	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 10px;
 	font-family: "Teko", sans-serif;
 	color: #252425;
-	font-size: 3.5em;
-	margin-bottom: 5px;
+	font-size: 5em;
+	margin-bottom: 5%;
 	text-shadow: 3px 3px 3px rgb(197, 129, 27);
 	text-align: center;
 }
 
 #big_b{
-	margin-left:50px;
+	margin-left:5%;
 	width: 50%;
 	height: 0px;
 	text-align: left;
-	line-height: 30px;
+	line-height: 180%;
 	color: #000;
 }
 
 p {
-	margin-left: 20px;
+	margin-left: 5%;
 	width: 100%;
 	font-family: "Teko", sans-serif;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	text-align: left;
 }
 
@@ -319,29 +346,17 @@ p {
  height: 100%;
 }
 
-.block_8, .block_9,.block_10,.block_11,.block_12 {
-	margin-top: 50px;
-	margin-bottom: 24px;
-	width: 120px; 
-	height: 140px; 
-	margin-left: 85px;
+.block_7,.block_8, .block_9,.block_10,.block_11,.block_12 {
+	margin-top: 3%;
+	margin-bottom: 1.4%;
+	width: 8%; 
+	height: 9%; 
+	margin-left: 8.3%;
 	background: #ffbe6a;
 	position: relative;
 	border-radius: 10px;
 	transition: 1s;
 }
-.block_7 {
-	margin-top: 50px;
-	margin-bottom: 24px;
-	width: 120px; 
-	height: 140px; 
-	margin-left: 140px;
-	background: #ffbe6a;
-	position: relative;
-	border-radius: 10px;
-	transition: 1s;
-}
-
 .block_7:before,.block_8:before,.block_9:before,.block_10:before,.block_11:before,.block_12:before{
 	content: "";
 	width: 0; 
@@ -362,26 +377,26 @@ p {
  height: 100%;
 }
 .block_2, .block_3,.block_4,.block_5,.block_6{
-	margin-top: 24px;
-	width: 120px; 
-	height: 140px; 
-	margin-left: 100px;
+	margin-top: 1.5%;
+	width: 8%; 
+	height: 9%; 
+	margin-right: 7.8%;
 	background: #ffbe6a;
 	position: relative;
 	border-radius: 10px;
 	transition: 1s;
 }
 .block_1{
-	margin-top: 24px;
-	width: 120px; 
-	height: 140px; 
-	margin-left: 26px;
+	margin-left:3%;
+	margin-top: 1.5%;
+	width: 8%; 
+	height: 9%; 
+	margin-right: 7.8%;
 	background: #ffbe6a;
 	position: relative;
 	border-radius: 10px;
 	transition: 1s;
 }
-
 .block_1:before, .block_2:before, .block_3:before,.block_4:before,.block_5:before,.block_6:before{
 	content: "";
 	width: 0; 
@@ -402,81 +417,86 @@ p {
 h4{
 	font-family: "Teko", sans-serif;
 	color: #000;
-	font-size: 1.5em;
-	margin-top: 10px;
+	margin-top: 2%;
 	text-align: center;
+	 font-size: 1.5vw;
+	 line-height: 100%;
 }
 .h4_1{
  font-family: "Teko", sans-serif;
  color: #000;
- font-size: 1.3em;
- margin-top: 10px;
+ margin-top: 2%;
+ margin-bottom: 5%;
  text-align: center;
+  font-size: 1.5vw;
+  line-height: 100%;
+}
+.h4_1_1{
+ font-family: "Teko", sans-serif;
+ color: #000;
+ margin-top: 2%;
+ text-align: center;
+  font-size: 1.5vw;
+  line-height: 100%;
 }
 .h4_2{
  font-family: "Teko", sans-serif;
  color: #000;
- font-size: 1.9em;
- margin-top: 10px;
+ margin-top: 2%;
  text-align: center;
- line-height: 28px;
+ line-height: 90%;
+ font-size: 2vw;
+
 }
 .h4_3{
  font-family: "Teko", sans-serif;
  color: #000;
- font-size: 2.2em;
- margin-top: 10px;
+ margin-top: 2%;
  text-align: center;
- line-height: 32px;
+ line-height: 90%;
+ font-size: 2vw;
+ margin-bottom:5%; 
 }
 
 h5{
 	font-family: "Teko", sans-serif;
 	color: #dfe3e4;
-	font-size: 1.5em;
-	margin-top: 0px;
 	text-align: center;
 	text-shadow: 3px 3px 3px #000;
+	 font-size: 1.5vw;
 }
 
 
 .img_1{
- width: 60px; 
- height: 80px;
- margin-left:30px; 
+ width: 47%; 
+ margin-left:26%; 
+}
+.img_1_1{
+ width: 57%; 
+ margin-left:22%; 
 }
 .img_2{
- width: 110px; 
- height: 80px;
- margin-left:5px; 
+ width: 100%; 
 }
 .img_3{
- width: 110px; 
- height: 55px;
- margin-left:5px;
+ width: 100%; 
+ margin-left: 1%;
+}
+.img_3_1{
+ width: 80%; 
+ margin-left: 10%;
 }
 .img_4{
- width: 120px; 
- height: 55px;
- margin-left:5px;
+ width: 87%;
+ margin-left: 5%;
 }
 .img_5{
-	margin-top:5px;
-	width: 110px; 
-	height: 50px;
-	margin-left:5px;
-}
-.img_6{
- width: 110px; 
- height: 40px;
- margin-left:5px;
-}
-.img_7{
- width: 100px; 
- height: 80px;
- margin-left:10px;
+ width: 80%; 
+ margin-left: 10%;
 }
 
+
+/* About us */
 .about_us{
 	margin-top: 8%;
 	display: flex;
@@ -504,7 +524,7 @@ h5{
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
-	background: #369edb;
+	background: #ffbe6a;
 	margin-bottom: 15%;
 	border-radius: 10px;
 	position: absolute;
@@ -515,8 +535,8 @@ h5{
 	top: 21%;
 	left: 68%;
 	width: 4%; 
-	height: 14%;
-	background: #369edb;
+	height: 15%;
+	background: #ffbe6a;
 	margin-bottom: 4%;
 	position: absolute;
 	border-radius: 10px;
@@ -529,7 +549,7 @@ h5{
 	left: 7%;
 	width: 4%; 
 	height: 14%; 
-	background: #369edb;
+	background: #ffbe6a;
 	margin-bottom: 15%;
 	border-radius: 10px;
 	position: absolute;
@@ -541,7 +561,7 @@ h5{
 	left: 68%;
 	width: 4%; 
 	height: 14%;
-	background: #369edb;
+	background: #ffbe6a;
 	margin-bottom: 4%;
 	position: absolute;
 	border-radius: 10px;
@@ -549,46 +569,43 @@ h5{
 	transition: 1s;
 }
 .people_1:hover,.people_2:hover,.people_3:hover,.people_4:hover {
-	background:#004dff;
+	background:#ffa500;
 }
 
 line_main{
 	top: 1%;
 	left: 49%;
-	height: 55%;
-	background: #000;
+	height: 36.5%;
+	background: #ffbe6a;
 	width: 8px;
 	border-radius: 10px; 
 	position: absolute;
 }
-.line_1{
+.line_1{	
  top: 2%;
  left: 19%;
  width: 30%;
+ height: 0.5%;
  position: absolute;
- border-top: 3px dashed #000;
+ background: #000;
 }
 .line_3{
  top: 37%;
  left: 19%;
  width: 30%;
- border-top: 3px dashed #000;
+ height: 0.5%;
+ background: #000;
  position: absolute;
 }
 .line_2{
  top: 19%;
  left: 50%;
  width: 30%;
- border-top: 3px dashed #000;
+ height: 0.5%;
+ background: #000;
  position: absolute;
 }
-.line_4{
- top: 55%;
- left: 50%;
- width: 30%;
- border-top: 3px dashed #000;
- position: absolute;
-}
+
 .circle_1{
 	width: 25px; 
 	height: 25px;
@@ -604,7 +621,7 @@ line_main{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 30%;
+	top: 45%;
 	left: -100%;
 }
 .circle_3{
@@ -613,7 +630,7 @@ line_main{
 	position: absolute; 
 	border-radius: 100%;  
 	background: #000;
-	top: 62.5%;
+	top: 95%;
 	left: -100%;
 }
 .circle_4{
@@ -642,22 +659,28 @@ line_main{
 }
 
 .about_us h4{
-	color: #dfe3e4;
-	font-family: "Titillium Web", sans-serif;
-	margin-top: 1%;
-	font-size: 150%;
-}
-.about_us h5{
-	color: #ffa500;
-	font-family: "Titillium Web", sans-serif;
-	font-size: 120%;
-	margin-top: 1%;
-}
-.about_us h6{
 	color: #000;
 	font-family: "Titillium Web", sans-serif;
-	font-size: 120%;
 	margin-top: 1%;
+	font-size: calc(6px + 1vw);
+  line-height: 100%;
+word-wrap: break-word;
+}
+.about_us h5{
+	color: #dfe3e4;
+	font-family: "Titillium Web", sans-serif;
+	font-size: calc(6px + 1vw);
+  line-height: 100%;
+	margin-top: 1%;
+	word-wrap: break-word;
+}
+.about_us h3{
+	color: #000;
+	font-family: "Titillium Web", sans-serif;
+	font-size: calc(6px + 1vw);
+  line-height: 100%;;
+	margin-top: 1%;
+	word-wrap: break-word;
 }
 .about_us img{
  margin-top: 1.5%;
