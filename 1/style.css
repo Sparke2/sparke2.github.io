@@ -957,3 +957,9 @@ line_main {
   position: relative;
   margin-bottom: 0;
 }
+.text_1 {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin-right: 50px;
+}
