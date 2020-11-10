@@ -18,7 +18,7 @@
 	<script src='particlesjs-config.json'></script>
 </head>
 <body>
-<header>
+<header id="header_1">
 		<div id="logo"> <img src="img/logo.png"> </div>
 			<div id="menuHead">
 				<a href="#social"><div>Contacts</div></a>
@@ -26,6 +26,8 @@
 				<a href="#about_us"><div>About us</div></a>
 				<a href="#roadmap"><div>Roadmap</div></a>
 				<a href="#prizes"><div>Prizes</div></a>
+				<a href="#about_project"><div>About the project</div></a>
+				
 		</div>
 </header>
 
@@ -46,6 +48,25 @@
 
 
 <script type="text/javascript">
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var header_1 = document.getElementById("header_1");
+
+// Get the offset position of the navbar
+var sticky = header_1.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header_1.classList.add("sticky")
+  } else {
+    header_1.classList.remove("sticky");
+  }
+}
+
 	// Точки, соответствующие призам на прогресс_баре
 var prizes = [];
 prizes.push([3, 3000]);
@@ -134,7 +155,7 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 
 
 <body>
-<h1></h1>
+<h6 id="about_project">About the project</h6>
 <div class="text" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" data-aos-duration="1000">
@@ -148,12 +169,12 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 </body>
 
 <body>
-<h1 id="prizes">ICO goals and prizes</h1>
+<h6 id="prizes">ICO goals and prizes</h6>
 
 <div class="wrapper_0" data-aos="fade-up" data-aos-duration="1500">
 	<div class="block_7">
 		<h4>iPad air </h4>
-		<img class="img_1" src="img/ipad_air.png" alt="iPad air">
+		<img class="img_1_1" src="img/ipad_air.png" alt="iPad air">
 		<h5>$ 10 000</h5>
 	</div>
 	<div class="block_8">
@@ -175,8 +196,8 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 		<h5>$ 420 000</h5>
 	</div>
 	<div class="block_12">
-		<h4 class="h4_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
-		<img class="img_6" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
+		<h4 class="h4_1_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
+		<img class="img_4" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
 		<h5>$ 1 000 000</h5>
 	</div>
 </div>
@@ -200,8 +221,8 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 		<h5>$ 25 000</h5>
 	</div>
 	<div class="block_3">
-		<h4 class="h4_1">iMac & iPhone 12</h4>
-		<img class="img_7" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
+		<h4 class="h4_1_1">iMac & iPhone 12</h4>
+		<img class="img_5" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
 		<h5>$ 50 000</h5>
 	</div>
 	<div class="block_4">
@@ -211,12 +232,12 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 	</div>
 	<div class="block_5">
 		<h4 class="h4_1">Mercedes e-class or $ 50 000</h4>
-		<img class="img_4" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
+		<img class="img_3" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
 		<h5>$ 350 000</h5>
 	</div>
 	<div class="block_6">
-		<h4 class="h4_1">Porsche Panamera or $ 100 000</h4>
-		<img class="img_5" src="img/porsche_panamera.webp" alt="Porsche Panamera">
+		<h4 class="h4_1">Porsche Panamera<br> or $ 100 000</h4>
+		<img class="img_3_1" src="img/porsche_panamera.webp" alt="Porsche Panamera">
 		<h5>$ 500 000</h5>
 	</div>
 </div>
@@ -285,37 +306,31 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 </body>
 
 <body >
-	<h3 class="section-title" id="about_us">About us</h3>
+	<h6 id="about_us" >About us</h6>
 	<div class="about_us">
 		<div class="people_1" data-aos="flip-left" data-aos-duration="1500">
 			<h4 align="center">Milliano Conti</h4>
 			<h5 align="center">Founder</h5>
-			<h6 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h6>
+			<h3 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h3>
 		</div>
 		<div class="people_2" data-aos="flip-left" data-aos-duration="2000">
 			<h4 align="center">Maria Rebrova</h4>
 			<h5 align="center">Designer, interface developer</h5>
-			<h6 align="center">ligreat875@gmail.com</h6>
-			<h6 align="center"><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h6>
+			<h3 align="center">ligreat875@gmail.com<br><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h3>
 		</div>
 		<div class="people_3" data-aos="flip-left" data-aos-duration="2500">
 			<h4 align="center">Vadim Doronin</h4>
 			<h5 align="center"> Web Developer</h5>
-			<h6 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h6>
+			<h3 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h3>
 		</div>
-		<div class="people_4" data-aos="flip-left" data-aos-duration="2500">
-			<h4></h4>
-			<h5></h5>
-		</div>
+
 		<div class="line_1"></div>
 		<div class="line_2"></div>
 		<div class="line_3"></div>
-		<div class="line_4"></div>
 		<line_main>
 		<div class="circle_1"></div>
 		<div class="circle_2"></div>
 		<div class="circle_3"></div>
-		<div class="circle_4"></div>
 		</line_main>
 	</div>
 </body>
