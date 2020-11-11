@@ -3,6 +3,38 @@
   padding: 0;
   outline: none;
 }
+
+/*мобильная версия*/
+@media all and (orientation: portrait){
+header #logo img {
+  width: 75%;
+  height: 75%;
+  float: left;
+  padding-left: 25%;
+}
+header #menuHead {
+  font-family: "Teko", sans-serif;
+  width: 50%;
+  float: right;
+}
+header #menuHead div {
+  float: right;
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 0.5em;
+  padding-top: 1%;
+}
+.text_1 h2 {
+  color: #121324;
+  font-family: "Titillium Web", sans-serif;
+  line-height: 110%;
+  margin-right: 3%;
+  text-indent: 1em;
+  text-align: justify;
+  font-size: calc(4px + 1vw);
+  word-wrap: break-word;  
+}
+}
 body {
   background-color: #fff;
   width: 100%;
