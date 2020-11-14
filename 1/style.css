@@ -3,9 +3,6 @@
   padding: 0;
   outline: none;
 }
-
-
-
 body {
   background-color: #fff;
   width: 100%;
@@ -19,6 +16,8 @@ body {
   background: url(img/bg_1.png);
   background-repeat: no-repeat;
   background-position: left top;
+  background-size:contain;
+
 }
 
 a {
@@ -82,13 +81,14 @@ header #menuHead div {
   padding-top: 25px;
 }
 /* Стили для главной страницы */
+
 #wrapper #bigArticle h1 {
   width: 80%;
   margin-left: 10%;
   font-family: "Audiowide", cursive;
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: calc(35px + 3vw);
   line-height: 59px;
   color: #fff;
   text-align: center;
@@ -97,18 +97,20 @@ header #menuHead div {
 #wrapper #bigArticle h2 {
   width: 60%;
   margin-left: 20%;
-  font-size: 45px;
+  font-size: calc(15px + 2vw);
   text-align: center;
   color: orange;
   font-family: "Teko", sans-serif;
   float: left;
   padding-top: 30px;
   margin-bottom: 15px;
+  line-height: 50%;
 }
 #wrapper #bigArticle img {
-  width: 57%;
-  margin-left: 25%;
-  margin-bottom: 25px;
+	margin-top: 2%;
+  width: 50%;
+  margin-left: 43%;
+  opacity: 0.6;
 }
 
 /* titillium-web-regular - latin */
@@ -130,13 +132,183 @@ header #menuHead div {
       url("../A/fonts/titillium-web-v9-latin-regular.svg#TitilliumWeb")
       format("svg"); /* Legacy iOS */
 }
+/*ICO time*/
+ .ico_time{ 
+  display: flex;
+  height: 250px;
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  flex-direction: column;
+  background: #1e1e1e;
+  box-shadow: 0 0 20px 5px #ffa500;
+  border-radius: 10px;
+}
+.ico_time:hover{
+	box-shadow: 0 0 50px 20px #ffa500;
+}
+.ico_time h4{
+	padding-top: 2%;
+	padding-bottom: 1%;
+	margin-left: 7%;
+	text-align: left;
+	font-size: calc(6px + 1vw);
+	color: #dfe3e4;
+	font-family: "Titillium Web", sans-serif;
+}
+.ico_time h5{
+	font-size: calc(1px + 1vw);
+	text-align: center;
+	color: #dfe3e4;
+	text-shadow: 0px 0px 0px rgb(256, 256, 256);
+	font-family: "Titillium Web", sans-serif;
+}
+.ico_time h6{
+	padding-top: 0px;
+	margin-top: 2%;
+	margin-bottom: 0%;
+	padding-bottom: 0px;
+	text-align: center;
+	font-size: calc(15px + 1vw);
+	text-align: center;
+	color: #dfe3e4;
+	text-shadow: 2px 2px 3px #000;
+	font-family: "Teko", sans-serif;
+	transition: 1s;
+}
+.ico_time h6:hover{
+	color: #ffa500;
+}
+/*оформление таймера*/
+.countdown {
+  width: 100%;
+  font-family: "Teko", sans-serif;
+  color: #ffa500;
+  display: inline-flex;
+  text-align: center;
+  font-size: calc(15px + 1vw);
+  justify-content: space-around;
+}
 
+.countdown-number {
+	width: 15%;
+ 	padding: 1%;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.countdown-time {
+	width: 50%;
+  padding: 3%;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.countdown-text {
+  display: block;
+  padding-top: 1%;
+ 
+}
+/*Скопировать текст в буфер обмена */
+.ico_address{
+	position: relative;
+    display:block;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #000;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: -140%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
+}
+button{
+	height: 80%;
+	width: 120%;
+	background: #ffa500;
+	color: #000;
+  	font-family: "Teko", sans-serif;
+  	font-size: calc(6px + 1vw);
+  	transition: 0.3s;
+}
+#myInput{
+	height: 100%;
+	width: 75%;
+	margin-left: 7%;
+	background: #1e1e1e;
+	color: #ffa500;
+	font-size: calc(9px + 1vw);
+	font-family: "Teko", sans-serif;
+	border: 0px;
+}
+button:hover{
+	background: #1e1e1e;
+	color: #ffa500
+}
+.tooltiptext{
+	color: #ffa500;
+  	font-family: "Teko", sans-serif;
+}
+/*Features*/
+.features{
+	display: inline-flex;
+	position: relative;
+	justify-content: space-around;
+}
+.fair img{
+	width: 7%;
+}
+.defi img{
+	width: 50%;
+}
+/*Rules*/
+.rules{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.rules h2{
+	color: #121324;
+  font-family: "Titillium Web", sans-serif;
+  line-height: 110%;
+  margin-right: 3%;
+  text-indent: 1.5em;
+  text-align: justify;
+  font-size: calc(13px + 1vw);
+  word-wrap: break-word;
+}
 /* Информация о проекте */
 .text {
-  margin-top: 10%;
   display: flex;
   width: 100%;
-  /* height: 1200px; */
   position: relative;
   margin-bottom: 20%;
 }
@@ -204,23 +376,17 @@ header #menuHead div {
   word-wrap: break-word;
 }
 h6 {
-  margin-top: 10%;
+  margin-top: 5%;
   width: 100%;
   font-family: "Teko", sans-serif;
   color: #252425;
-  font-size: 5em;
+  font-size: calc(15px + 4vw);
   margin-bottom: 3%;
   text-shadow: 3px 3px 3px rgb(197, 129, 27);
   text-align: center;
   padding-top: 10%;
 }
 /* Работа с подвалом сайта */
-/*.bg_2{
-	background: url(img/bg_2.png) no-repeat;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	}*/
 footer {
   width: 100%;
   padding: 1%;
@@ -303,8 +469,7 @@ footer #rights {
 }
 .progress 
 	/*content:"\f00c" */
-
-	.progress-step:after {
+.progress-step:after {
   content: "";
   position: absolute;
   top: 7px;
@@ -721,24 +886,10 @@ h5 {
 .about_us {
   margin-top: 8%;
   display: flex;
-  /* flex-flow: column wrap;
- align-content: space-between; */
   height: 800px;
   width: 100%;
   position: relative;
 }
-/*
-.about_us::before,
-.about_us::after {
-	content: "";
-	flex-basis: 100%;
-	width: 0;
-	order: 2;
-}
-.people_1:nth-child(3n+1) { order: 1; }
-.people_3:nth-child(3n+2) { order:2; }
-.people_2:nth-child(3n) { order: 3; }
-*/
 
 .people_1 {
   top: 4%;
@@ -919,14 +1070,14 @@ line_main {
   width: 80%;
   height: auto;
   opacity: 0.3;
-  margin-top: 350px;
-  margin-left: 180px;
-  margin-bottom: 300px;
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-bottom: 10%;
 }
 .secondary_for {
   position: absolute;
   width: 95%;
-  margin-left: 40px;
+  margin-left: 2%;
 }
 .prisez_fon_main {
   position: relative;
@@ -940,14 +1091,14 @@ line_main {
   width: 70%;
   height: auto;
   opacity: 0.1;
-  margin-top: 320px;
-  margin-left: 200px;
-  margin-bottom: 300px;
+  margin-top: 20%;
+  margin-left: 15%;
+  margin-bottom: 10%;
 }
 .progress_for_img_div {
   position: absolute;
   width: 95%;
-  margin-left: 40px;
+  margin-left: 2%;
 }
 #about_us {
   margin-top: 1800px;
@@ -959,15 +1110,4 @@ line_main {
   /* height: 1200px; */
   position: relative;
   margin-bottom: 0;
-}
-.text_1 {
-    position: relative;
-    width: 60%;
-    height: 100%;
-    margin-right: 50px;
-}
-#wrapper #bigArticle img {
-    width: 60%;
-    margin-left: 20%;
-    margin-bottom: 25px;
 }
