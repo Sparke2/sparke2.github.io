@@ -26,13 +26,14 @@
 				<a href="#about_us"><div>About us</div></a>
 				<a href="#roadmap"><div>Roadmap</div></a>
 				<a href="#prizes"><div>Prizes</div></a>
-				<a href="#about_project"><div>About the project</div></a>
+				<a href="#about_project"><div>About project</div></a>
 				
 		</div>
 </header>
 
-<body class="bg_main">
+
 <div id="wrapper">
+	<body class="bg_main">
 	<div id="bigArticle">
 		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
 			<h1>EthFair</h2>
@@ -44,13 +45,14 @@
 			<img src="img/lambo.png">
 		</div>
 	</div>
+	</body>
 </div>
 
 
 <script type="text/javascript">
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// When the user scrolls the page, execute scroll
+window.onscroll = function() {scroll()};
 
 // Get the navbar
 var header_1 = document.getElementById("header_1");
@@ -59,7 +61,7 @@ var header_1 = document.getElementById("header_1");
 var sticky = header_1.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function scroll() {
   if (window.pageYOffset >= sticky) {
     header_1.classList.add("sticky")
   } else {
@@ -122,7 +124,14 @@ function fill_progress_bar(myBalance){
 				$('body,html').animate({scrollTop: top}, 1500);
 		});
 });
-
+$(document).ready(function(){
+		$("#raised").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
+});
 /*
 	$( document ).ready(function(){
 		$( " .people_4" ).hover(function(){ 
@@ -151,11 +160,129 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 		fill_progress_bar(400000);
 });
 
-</script>  
+
+//Таймер
+$(document).ready(function(){
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline="December 01 2020 00:00:00 GMT+0300"; //for Ukraine
+/*var deadline = new Date(Date.parse(new Date()) + 100 * 24 * 60 * 60 * 1000); // for endless timer*/
+initializeClock('countdown', deadline);
+});
+
+
+
+
+/* Скопировать текст в буфер обмена*/
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied! " /*+ copyText.value*/; 
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script> 
+<h6>
+	Features
+</h6>
+<div class="features">
+	<div class="defi"><img src="img/defi.png"></div>
+	<div class="fair"><img src="img/fair.png"></div>
+	<div></div>
+</div>
+<h6>
+	Draw rules
+</h6>
+<div class="rules">
+	<h2>To participate in the ICO you need purchase tokens EthFair for ETH (Ethereum cryptocurrency) at a fixed price of 900,000 for 1 ETH. You can buy tokens by sending ETH to the address. Tokens will come automatically.<font color="red"><i> Important: Do not send ETH to the contract from exchange wallets!</i></font></h2>
+</div>
+
+<div class="ico_time">
+		<h4>
+			The token sale will begin in:
+		</h4>
+		<div id="countdown" class="countdown">
+  			<div class="countdown-number">
+    			<span class="days countdown-time"></span>
+   			 	<span class="countdown-text">Days</span>
+  			</div>
+    		<div class="countdown-number">
+    			<span class="hours countdown-time"></span>
+    			<span class="countdown-text">Hours</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="minutes countdown-time"></span>
+   				<span class="countdown-text">Minutes</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="seconds countdown-time"></span>
+    			<span class="countdown-text">Seconds</span>
+  			</div>
+		</div>
+		<h6 id="raised"><a href="#prizes">Raised</a></h6>
+		<h4>
+			December 1, 2020 - January 1, 2021
+		</h4>
+	<div class="ico_address">
+		<input type="text" value="0x01000b5fe61411c466b70631d7ff070187179bbf" id="myInput">
+		<div class="tooltip">
+		<button onclick="myFunction()" onmouseout="outFunc()">
+  		<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  		Copy
+  		</button>
+		</div>
+	</div>
+	<h5>
+		Send only ETH
+	</h5>
+</div>
 
 
 <body>
-<h6 id="about_project">About the project</h6>
+<h6 id="about_project">About project</h6>
 <div class="text" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" data-aos-duration="1000">
@@ -167,7 +294,8 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 	</div>
 </div>
 </body>
-
+<h6>money for entropy</h6>
+<h6>how to participate in the competition</h6>
 <body>
 <div class="prisez_fon_main">
 	<div class="prisez_fon">
@@ -349,8 +477,8 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 	</div>
 </body>
 
-<body class="bg_2">
-	<footer>
+
+<footer>
 		<div id="social">
 			<a href="https://twitter.com/EthFair/" target="_blank" title="twitter"><img src="img/twitter.jpg" alt="twitter"></a>
 			<a href="https://t.me/EthFairDeFi" target="_blank" title="telegram"><img src="img/telegram.jpg" alt="telegram"></a>
@@ -360,11 +488,9 @@ myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call(
 		</div>
 		<div id="rights">All Rights Reserved &copy;
 		<script type="text/javascript">var date = new Date(); document.write(date.getFullYear()) </script> </div>
-	</footer>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-</body>
-</body>
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </html>
