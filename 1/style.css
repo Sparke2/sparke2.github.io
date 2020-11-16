@@ -1147,3 +1147,66 @@ line_main {
   position: relative;
   margin-bottom: 0;
 }
+
+
+@media (max-width: 500px){
+  a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all.6s ease;
+}
+a:hover {
+  color: rgb(207, 148, 72);
+  -webkit-transition: all.6s ease;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#header_1 {
+  width: 100%;
+  border-bottom: 2px solid rgb(112, 110, 110);
+  float: left;
+  overflow: hidden;
+  background: #000;
+  z-index: 100;
+}
+
+#header_1 a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all.6s ease;
+  display: block;
+}
+#header_1 a:hover {
+  color: rgb(207, 148, 72);
+  -webkit-transition: all.6s ease;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header #logo {
+  width: 5%;
+  float: left;
+}
+header #logo img {
+  width: 75%;
+  height: 75%;
+  float: left;
+  padding-left: 5%;
+}
+header #menuHead {
+  font-family: "Teko", sans-serif;
+  width: 90%;
+  float: right;
+}
+header #menuHead div {
+  float: right;
+  margin-right: 1%;
+  margin-left: 1%;
+  font-size: 1em;
+}
+}
