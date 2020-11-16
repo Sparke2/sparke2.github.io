@@ -17,7 +17,7 @@
 	<script type="script.js"></script>
 	<script src='particlesjs-config.json'></script>
 </head>
-<body>
+
 <header id="header_1">
 		<div id="logo"> <img src="img/logo.png"> </div>
 			<div id="menuHead">
@@ -31,9 +31,9 @@
 		</div>
 </header>
 
-
+<body class="bg_main">
 <div id="wrapper">
-	<body class="bg_main">
+	
 	<div id="bigArticle">
 		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
 			<h1>EthFair</h2>
@@ -45,9 +45,9 @@
 			<img src="img/lambo.png">
 		</div>
 	</div>
-	</body>
+	
 </div>
-
+</body>
 
 <script type="text/javascript">
 
@@ -224,6 +224,27 @@ function outFunc() {
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy to clipboard";
 }
+
+$( document ).ready(function(){
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+});
 </script> 
 <h6>
 	Features
@@ -235,16 +256,22 @@ function outFunc() {
 	<div class="entropy"><img src="img/entropy.png"></div>
 </div>
 <div class="features_1">
-	<div class="defi"><h4>DeFi project</h4></div>
-	<div class="fair"><h4>Fair prize drawing</h4></div>
+	<div class="defi"><h4>Fair, transparent and <br>verifiable prize drawing</h4></div>
+	<div class="fair"><h4>DeFi project</h4></div>
 	<div class="erc20"><h4>Based on smart-contracts</h4></div>
-	<div class="entropy"><h4>The first entropy blockchain</h4></div>
+	<div class="entropy"><h4>The first on-chain source of entropy</h4></div>
 </div>
 <h6>
-	Draw rules
+	Participating in the ICO
 </h6>
-<div class="rules">
-	<h2>To participate in the ICO you need purchase tokens EthFair for ETH (Ethereum cryptocurrency) at a fixed price of 900,000 for 1 ETH. You can buy tokens by sending ETH to the address. Tokens will come automatically.<font color="red"><i> Important: Do not send ETH to the contract from exchange wallets!</i></font></h2>
+<div class="text_2">
+	<h2><ul>
+		<li>In order to obtain EthFAIR tokens an investor needs to send ETH to the ICO contract address after the ICO launch date</li>
+		<li>The tokens will be automatically sent to the address that was used to deposit ETH to the ICO contract immediately </li>
+		<li>IMPORTANT: Do not send ETH from exchanges but use a personally owned wallet instead</li>
+		<li>EthFAIR is a ERC20-compatible token and it will work with any ERC20 wallet</li>
+		<li>Recommended compatible wallets: MetaMask, MyCrypto, MyEtherWallet</li>
+	</ul></h2>
 </div>
 
 <div class="ico_time">
@@ -269,7 +296,7 @@ function outFunc() {
     			<span class="countdown-text">Seconds</span>
   			</div>
 		</div>
-		<h6 id="raised"><a href="#prizes">Raised</a></h6>
+		<h6 id="raised"><a href="#prizes">Track fundraising progress</a></h6>
 		<h4>
 			December 1, 2020 - January 1, 2021
 		</h4>
@@ -282,9 +309,9 @@ function outFunc() {
   		</button>
 		</div>
 	</div>
-	<h5>
-		Send only ETH
-	</h5>
+	<h4>
+		Accepted currency: ETH
+	</h4>
 </div>
 
 
@@ -301,8 +328,43 @@ function outFunc() {
 	</div>
 </div>
 </body>
-<h6>money for entropy</h6>
-<h6>how to participate in the competition</h6>
+<h6>Draw rules</h6>
+<div class="text_2">
+<h2>	
+<ul>
+	<li>Purchase tokens</li>
+	<li>Pick a prize that you want to win</li>
+	<li>Wait for the prize draw to be announced</li>
+	<li>Deposit your tokens to the draw contract (note that your chance of winning a prize is proportional to your relative share of the total tokens deposited by all participants)</li>
+	<li>Wait for the random number generator to pick a winner</li>
+	<li>If you are lucky and you win a prize, then your tokens are burned. In return, you will receive a prize or its equivalent value (in ETH).</li>
+	<li>If you lose, you can withdraw your tokens back and participate in the drawing of the following prizes</li>
+	
+</ul>
+</h2>
+</div>
+<h6>Reward for entropy</h6>
+<div class="text_2">
+	<h2>
+		Generating a provably random number is a complex process that is impossible without a source of entropy. Unfortunately the Ethereum blockchain does not have any suitable built-in sources of entropy.</h2><h2>In order to mitigate this problem EthFair project will use user-generated inputs as a source of entropy. 
+	</h2>
+</div>
+<div class="text_2">
+	<button class="accordion">Read more</button>
+	<div class="panel">
+  		<h2>
+  		To eliminate the possibility of manipulating the random number generator a user needs to deposit a collateral prior to submiting entropy. In exchange each user will be rewarded with 5% of the collateral amount for supplying entropy to the random number generator contract. The collateral will be refunded after the entropy was used and prize draw ended.</h2>
+		<h2> In order to supply entropy to the contract a user needs to:
+		<ul>
+		<li>After the announcement of entropy accumulation phase for a certain prize draw a user needs to generate two random numbers: <i>Entropy</i> and <i>Salt</i> (any 64-bit integer works).</li>
+		<li>Then hash these two numbers with a standard Keccak-256 algorithm or with a use of the smart-contracts hashing function.</li>
+		<li>Supply the <i>hash of the Entropy and Salt</i> to the RNG contract.</li>
+		<li>After the announcement of the entropy disclosure phase the user needs to provide the <i>Entropy</i> and <i>Salt</i> numbers (pre-images of the previously provided hash) to the RNG contract.</li>
+		<li>The RNG contract will send the collateral and the entropy reward back to the users address if the internal smart-contracts hashing function output for <i>Entropy</i> and <i>Salt</i> numbers matches the previously provided hash generated by the user.</li>
+		</ul></h2>
+	</div>
+</div>
+
 <body>
 <div class="prisez_fon_main">
 	<div class="prisez_fon">
@@ -318,7 +380,7 @@ function outFunc() {
 	</div>
 	<div class="block_8">
 		<h4 class="h4_3">Listing on exchanges </h4>
-		<h5><br> <br>$ 30 000</h5>
+		<h5><br>$ 30 000</h5>
 	</div>
 	<div class="block_9">
 		<h4 class="h4_2"> Additional listings on exchanges</h4>
