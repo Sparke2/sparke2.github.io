@@ -177,8 +177,26 @@ header #menuHead div {
 	font-family: "Teko", sans-serif;
 	transition: 1s;
 }
-.ico_time h6:hover{
-	color: #ffa500;
+.ico_time a{
+  position: relative;
+  cursor: pointer;
+	line-height: 1;
+  text-decoration: none;
+  color: #ffa500;
+}
+.ico_time a:after {
+  display: block;
+  position: absolute;
+  left: 0; 
+  width: 0;
+  height: 2px; 
+  background-color: #ffa500; 
+  content: "";
+  transition: width 0.3s ease-out; 
+}
+
+ a:hover:after, a:focus:after {
+  width: 100%; 
 }
 /*оформление таймера*/
 .countdown {
@@ -279,15 +297,33 @@ button:hover{
 }
 /*Features*/
 .features{
-	display: inline-flex;
-	position: relative;
+	display:inline-flex;
 	justify-content: space-around;
+	width: 80%;
+	margin-left: 15%;
+	align-items:flex-end;
+}
+.features_1{
+  display:inline-flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 10%;
+  align-items:flex-end;
+}
+.fair,.defi,.erc20,.entropy{
+	width: 20%;
 }
 .fair img{
-	width: 7%;
+	width: 35%;
 }
 .defi img{
-	width: 50%;
+	width: 33%;
+}
+.erc20 img{
+	width: 26%;
+}
+.entropy img{
+	width: 35%;
 }
 /*Rules*/
 .rules{
