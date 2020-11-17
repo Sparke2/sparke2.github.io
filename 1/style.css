@@ -17,7 +17,7 @@ body {
   background-position: left top;
   background-size: cover;
   width:auto;
-  height: 60vw;
+  height: 55vw;
 }
 
 a {
@@ -81,10 +81,14 @@ header #menuHead div {
   padding-top: 2%;
 }
 /* Стили для главной страницы */
-
-#wrapper #bigArticle h1 {
-  width: 80%;
-  margin-left: 10%;
+#wrapper{
+  margin-top: 3%;
+  display: inline-flex;
+}
+#wrapper_4{
+  margin-top: 10%;
+}
+ #wrapper_4 h1 {
   font-family: "Audiowide", cursive;
   font-style: normal;
   font-weight: bold;
@@ -92,24 +96,18 @@ header #menuHead div {
   line-height: 59px;
   color: #fff;
   text-align: center;
-  margin-top: 100px;
 }
-#wrapper #bigArticle h2 {
-  width: 60%;
-  margin-left: 20%;
+ #wrapper_4 h2 {
   font-size: calc(15px + 2vw);
   text-align: center;
   color: orange;
   font-family: "Teko", sans-serif;
-  float: left;
-  padding-top: 30px;
-  margin-bottom: 15px;
-  line-height: 50%;
+  margin-top: 3%;
+  line-height: 45%;
 }
 #wrapper #bigArticle img {
-	margin-top: 2%;
-  width: 50%;
-  margin-left: 43%;
+  width: 70%;
+  margin-left: 10%;
   opacity: 0.6;
 }
 
@@ -134,12 +132,11 @@ header #menuHead div {
 }
 /*ICO time*/
  .ico_time{ 
+  margin-left: 5%;
   display: flex;
-  height: 270px;
-  width: 30vw;
-  position: absolute;
-  top: 45%;
-  left: 5%;
+  height: 18vw;
+  width: 45vw;
+  position: relative;
   flex-direction: column;
   background: #1e1e1e;
   box-shadow: 0 0 20px 5px #ffa500;
@@ -192,10 +189,27 @@ header #menuHead div {
   height: 2px; 
   background-color: #ffa500; 
   content: "";
-  transition: width 0.3s ease-out; 
+  transition: width 0.3s ease-out;
+}
+.entropy_12 a{
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffa500;
 }
 
- a:hover:after, a:focus:after {
+.entropy_12 a:after{
+  display: block;
+  position: absolute;
+  left: 0; 
+  width: 0;
+  height: 2px; 
+  background-color: #ffa500; 
+  content: "";
+  transition: width 0.3s ease-out; 
+}
+ a:hover:after {
   width: 100%; 
 }
 /*оформление таймера*/
@@ -247,7 +261,7 @@ header #menuHead div {
     position: absolute;
     z-index: 1;
     bottom: 120%;
-    left: -140%;
+    left: -90%;
     opacity: 0;
     transition: opacity 0.4s;
 }
@@ -311,6 +325,7 @@ button:hover{
   margin-left: 10%;
   align-items:flex-start;
 }
+
 .fair,.defi,.erc20,.entropy{
 	width: 20%;
 }
@@ -326,22 +341,7 @@ button:hover{
 .entropy img{
 	width: 35%;
 }
-/*Rules*/
-.rules{
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-.rules h2{
-	color: #121324;
-  font-family: "Titillium Web", sans-serif;
-  line-height: 110%;
-  margin-right: 3%;
-  text-indent: 1.5em;
-  text-align: justify;
-  font-size: calc(13px + 1vw);
-  word-wrap: break-word;
-}
+
 /* Информация о проекте */
 .text {
   display: flex;
@@ -424,30 +424,66 @@ button:hover{
   margin-right: 3%;
   text-indent: 1.5em;
   text-align: justify;
-  font-size: calc(15px + 1vw);
+  font-size: calc(8px + 1vw);
   word-wrap: break-word;
 }
-/* Style the buttons that are used to open and close the accordion panel */
+.features_2{
+  margin-top: 1%;
+  display:inline-flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 13%;
+  align-items:flex-start;
+}
+.img_fea img{
+  width: 50%;
+}
+/*Read more кнопка */
 .accordion {
-  color: #444;
+  margin-top: 1%;
+  color: #000;
   cursor: pointer;
-  padding: 1%;
-  width: 10%;
-  text-align: center;
+  padding: 0.5%;
+  width: 100%;
+  text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
-  margin-left: 5%;
+  margin-left: 0%;
 }
-
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
-  display: none;
+  background-color:#dfe3e4;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  margin-top: 0.5%;
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
 
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.bg_4{
+  background: url(img/bg_4.png);
+  background-repeat: no-repeat;
+  background-position:left;
+  background-size: contain;
+}
+.bg_5{
+  background: url(img/bg_5.png);
+  background-repeat: no-repeat;
+  background-position:right;
+  background-size: contain;
+  height: 80%;
+}
 h6 {
   margin-top: 5%;
   width: 100%;
@@ -724,7 +760,7 @@ h1 {
 }
 
 #myBar1 {
-  width: 29%;
+  width:1%;
   height: 30px;
   background-color: #252425;
   text-align: center;
@@ -756,7 +792,7 @@ p {
   margin-left: 5%;
   width: 100%;
   font-family: "Teko", sans-serif;
-  color: #fff;
+  color: #ffa500;
   font-size: 1.5vw;
   text-align: left;
 }
@@ -779,6 +815,7 @@ p {
 .block_10,
 .block_11,
 .block_12 {
+  align-items: stretch;
   margin-top: 3%;
   margin-bottom: 1.4%;
   width: 8%;
@@ -831,6 +868,7 @@ p {
   position: relative;
   border-radius: 10px;
   transition: 1s;
+  align-items: stretch;
 }
 .block_1 {
   margin-left: 3%;
@@ -968,7 +1006,7 @@ h5 {
   top: 4%;
   left: 7%;
   width: 4%;
-  height: 14%;
+  height: 18%;
   background: #ffbe6a;
   margin-bottom: 15%;
   border-radius: 10px;
@@ -980,7 +1018,7 @@ h5 {
   top: 21%;
   left: 68%;
   width: 4%;
-  height: 15%;
+  height: 18%;
   background: #ffbe6a;
   margin-bottom: 4%;
   position: absolute;
@@ -992,7 +1030,7 @@ h5 {
   top: 39%;
   left: 7%;
   width: 4%;
-  height: 14%;
+  height: 18%;
   background: #ffbe6a;
   margin-bottom: 15%;
   border-radius: 10px;
@@ -1172,7 +1210,7 @@ line_main {
   position: absolute;
   width: 95%;
   margin-left: 2%;
-}
+} 
 #about_us {
   margin-top: 1800px;
 }
