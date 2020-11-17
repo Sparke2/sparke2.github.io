@@ -32,20 +32,59 @@
 </header>
 
 <body class="bg_main">
-<div id="wrapper">
-	
-	<div id="bigArticle">
+<div id="wrapper_4">
 		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
 			<h1>EthFair</h2>
 		</div> 
 		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
 			<h2>Don't wait for a pump <br><br>Get a lambo now!!!</h2>
 		</div>
+</div>
+<div id="wrapper">
+	<div class="ico_time">
+		<h4>
+			The token sale will begin in:
+		</h4>
+		<div id="countdown" class="countdown">
+  			<div class="countdown-number">
+    			<span class="days countdown-time"></span>
+   			 	<span class="countdown-text">Days</span>
+  			</div>
+    		<div class="countdown-number">
+    			<span class="hours countdown-time"></span>
+    			<span class="countdown-text">Hours</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="minutes countdown-time"></span>
+   				<span class="countdown-text">Minutes</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="seconds countdown-time"></span>
+    			<span class="countdown-text">Seconds</span>
+  			</div>
+		</div>
+		<h6 id="raised"><a href="#prizes">Track fundraising progress</a></h6>
+		<h4>
+			December 18, 2020 - January 30, 2021
+		</h4>
+	<div class="ico_address">
+		<input type="text" value="0x01000b5fe61411c466b70631d7ff070187179bbf" id="myInput">
+		<div class="tooltip">
+		<button onclick="myFunction()" onmouseout="outFunc()">
+  		<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  		Copy
+  		</button>
+		</div>
+	</div>
+	<h4>
+		Accepted currency: ETH
+	</h4>
+	</div>
+	<div id="bigArticle">
 		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
 			<img src="img/lambo.png">
 		</div>
 	</div>
-	
 </div>
 </body>
 
@@ -132,6 +171,14 @@ $(document).ready(function(){
 				$('body,html').animate({scrollTop: top}, 1500);
 		});
 });
+$(document).ready(function(){
+		$("#entropy_1").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
+});
 /*
 	$( document ).ready(function(){
 		$( " .people_4" ).hover(function(){ 
@@ -202,7 +249,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline="December 01 2020 00:00:00 GMT+0300"; //for Ukraine
+var deadline="December 18 2020 00:00:00 GMT+0000";
 /*var deadline = new Date(Date.parse(new Date()) + 100 * 24 * 60 * 60 * 1000); // for endless timer*/
 initializeClock('countdown', deadline);
 });
@@ -224,23 +271,24 @@ function outFunc() {
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy to clipboard";
 }
-
+/* Раскрытие текста*/
 $( document ).ready(function(){
 var acc = document.getElementsByClassName("accordion");
 var i;
 
+/*var name_button = document.getElementsByClassName("accordion");
+name_button.innerHTML = "Read more";
+name_button.onclick = function() {
+    name_button.innerHTML = "Read more1";
+  };*/
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
     this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }
@@ -249,77 +297,46 @@ for (i = 0; i < acc.length; i++) {
 <h6>
 	Features
 </h6>
-<div class="features">
+<div data-aos="fade-down" class="features">
 	<div class="defi"><img src="img/defi.png"></div>
 	<div class="fair"><img src="img/fair.png"></div>
 	<div class="erc20"><img src="img/erc20.png"></div>
 	<div class="entropy"><img src="img/entropy.png"></div>
 </div>
-<div class="features_1">
+<div data-aos="fade-down" class="features_1">
 	<div class="defi"><h4>Fair, transparent and <br>verifiable prize drawing</h4></div>
 	<div class="fair"><h4>DeFi project</h4></div>
 	<div class="erc20"><h4>Based on smart-contracts</h4></div>
-	<div class="entropy"><h4>The first on-chain source of entropy</h4></div>
+	<div class="entropy"><h4>The first on-chain source of entropy</h4><h4 class="entropy_12" id="entropy_1"><a href="#entropy">How to get rewards for entropy?</a></h4></div>
 </div>
+<div class="bg_4">
 <h6>
 	Participating in the ICO
 </h6>
+
 <div class="text_2">
+
 	<h2><ul>
 		<li>In order to obtain EthFAIR tokens an investor needs to send ETH to the ICO contract address after the ICO launch date</li>
+		<br>
 		<li>The tokens will be automatically sent to the address that was used to deposit ETH to the ICO contract immediately </li>
+		<br>
 		<li>IMPORTANT: Do not send ETH from exchanges but use a personally owned wallet instead</li>
+		<br>
 		<li>EthFAIR is a ERC20-compatible token and it will work with any ERC20 wallet</li>
+		<br>
 		<li>Recommended compatible wallets: MetaMask, MyCrypto, MyEtherWallet</li>
 	</ul></h2>
 </div>
-
-<div class="ico_time">
-		<h4>
-			The token sale will begin in:
-		</h4>
-		<div id="countdown" class="countdown">
-  			<div class="countdown-number">
-    			<span class="days countdown-time"></span>
-   			 	<span class="countdown-text">Days</span>
-  			</div>
-    		<div class="countdown-number">
-    			<span class="hours countdown-time"></span>
-    			<span class="countdown-text">Hours</span>
-  			</div>
-  			<div class="countdown-number">
-    			<span class="minutes countdown-time"></span>
-   				<span class="countdown-text">Minutes</span>
-  			</div>
-  			<div class="countdown-number">
-    			<span class="seconds countdown-time"></span>
-    			<span class="countdown-text">Seconds</span>
-  			</div>
-		</div>
-		<h6 id="raised"><a href="#prizes">Track fundraising progress</a></h6>
-		<h4>
-			December 1, 2020 - January 1, 2021
-		</h4>
-	<div class="ico_address">
-		<input type="text" value="0x01000b5fe61411c466b70631d7ff070187179bbf" id="myInput">
-		<div class="tooltip">
-		<button onclick="myFunction()" onmouseout="outFunc()">
-  		<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-  		Copy
-  		</button>
-		</div>
-	</div>
-	<h4>
-		Accepted currency: ETH
-	</h4>
+<div class="features_2" data-aos="fade-up">
+	
+	<div class="img_fea"><a href="https://mycrypto.com/" target="_blank" title="MyCrypto"><img src="img/MC.png"></a></div>
+	<div class="img_fea"><a href="https://metamask.io/" target="_blank" title="MetaMask" ><img src="img/MM.png"></a></div>
+	<div class="img_fea"><a href="https://www.myetherwallet.com/" target="_blank" title="MyEtherWallet"><img src="img/MEW.png"></a></div>
 </div>
-
-
-<body>
+</div>
 <h6 id="about_project">About project</h6>
-<div class="text" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" data-aos-duration="1000">
+<div class="text">
 	<div class="money" align="center"><img src="img/money.png"></div>
 	<div class="money_1"><img src="img/bottom_coin.png"></div>
 	<div class="text_1">
@@ -327,39 +344,47 @@ for (i = 0; i < acc.length; i++) {
 	</h2>
 	</div>
 </div>
-</body>
+
+<div class="bg_5">
 <h6>Draw rules</h6>
+
 <div class="text_2">
 <h2>	
 <ul>
 	<li>Purchase tokens</li>
+	<br>
 	<li>Pick a prize that you want to win</li>
+	<br>
 	<li>Wait for the prize draw to be announced</li>
+	<br>
 	<li>Deposit your tokens to the draw contract (note that your chance of winning a prize is proportional to your relative share of the total tokens deposited by all participants)</li>
+	<br>
 	<li>Wait for the random number generator to pick a winner</li>
+	<br>
 	<li>If you are lucky and you win a prize, then your tokens are burned. In return, you will receive a prize or its equivalent value (in ETH).</li>
+	<br>
 	<li>If you lose, you can withdraw your tokens back and participate in the drawing of the following prizes</li>
-	
 </ul>
 </h2>
 </div>
-<h6>Reward for entropy</h6>
+</div>
+<h6 id="entropy">Reward for entropy</h6>
 <div class="text_2">
 	<h2>
 		Generating a provably random number is a complex process that is impossible without a source of entropy. Unfortunately the Ethereum blockchain does not have any suitable built-in sources of entropy.</h2><h2>In order to mitigate this problem EthFair project will use user-generated inputs as a source of entropy. 
 	</h2>
 </div>
 <div class="text_2">
-	<button class="accordion">Read more</button>
+	<button id="name_button" class="accordion">Read more</button>
 	<div class="panel">
   		<h2>
   		To eliminate the possibility of manipulating the random number generator a user needs to deposit a collateral prior to submiting entropy. In exchange each user will be rewarded with 5% of the collateral amount for supplying entropy to the random number generator contract. The collateral will be refunded after the entropy was used and prize draw ended.</h2>
 		<h2> In order to supply entropy to the contract a user needs to:
 		<ul>
-		<li>After the announcement of entropy accumulation phase for a certain prize draw a user needs to generate two random numbers: <i>Entropy</i> and <i>Salt</i> (any 64-bit integer works).</li>
-		<li>Then hash these two numbers with a standard Keccak-256 algorithm or with a use of the smart-contracts hashing function.</li>
-		<li>Supply the <i>hash of the Entropy and Salt</i> to the RNG contract.</li>
-		<li>After the announcement of the entropy disclosure phase the user needs to provide the <i>Entropy</i> and <i>Salt</i> numbers (pre-images of the previously provided hash) to the RNG contract.</li>
+		<li>After the announcement of entropy accumulation phase for a certain prize draw a user needs to generate two random numbers: <i>Entropy</i> and <i>Salt</i> (any 64-bit integer works).</li><br>
+		<li>Then hash these two numbers with a standard Keccak-256 algorithm or with a use of the smart-contracts hashing function.</li><br>
+		<li>Supply the <i>hash of the Entropy and Salt</i> to the RNG contract.</li><br>
+		<li>After the announcement of the entropy disclosure phase the user needs to provide the <i>Entropy</i> and <i>Salt</i> numbers (pre-images of the previously provided hash) to the RNG contract.</li><br>
 		<li>The RNG contract will send the collateral and the entropy reward back to the users address if the internal smart-contracts hashing function output for <i>Entropy</i> and <i>Salt</i> numbers matches the previously provided hash generated by the user.</li>
 		</ul></h2>
 	</div>
@@ -380,7 +405,7 @@ for (i = 0; i < acc.length; i++) {
 	</div>
 	<div class="block_8">
 		<h4 class="h4_3">Listing on exchanges </h4>
-		<h5><br>$ 30 000</h5>
+		<h5><br><br>$ 30 000</h5>
 	</div>
 	<div class="block_9">
 		<h4 class="h4_2"> Additional listings on exchanges</h4>
@@ -432,7 +457,7 @@ for (i = 0; i < acc.length; i++) {
 		<h5>$ 200 000</h5>
 	</div>
 	<div class="block_5">
-		<h4 class="h4_1">Mercedes e-class or $ 50 000</h4>
+		<h4 class="h4_1">Mercedes e-class<br> or $ 50 000</h4>
 		<img class="img_3" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
 		<h5>$ 350 000</h5>
 	</div>
