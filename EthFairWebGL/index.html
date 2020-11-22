@@ -101,9 +101,15 @@
 <script type="text/javascript">
 
 var myCanvas = document.getElementById("drawcanvas");
-myCanvas.width = 1510;
+
+/*
+myCanvas.width = 1500;
 myCanvas.height = 300;
 myCanvas.style.width = "100%";
+*/
+myCanvas.width = window.innerWidth;
+myCanvas.height = window.innerHeight / 3;
+myCanvas.style.width = (window.innerHeight / 3) + "px";
 
 // When the user scrolls the page, execute scroll
 window.onscroll = function() {scroll()};
@@ -682,12 +688,8 @@ function main() {
   const canvas = document.querySelector('#drawcanvas');
   var renderer = new THREE.WebGLRenderer({canvas, antialias: true});
 
-console.log(window.innerWidth);
 
-if(window.innerWidth < 780)
-{
-	canvas.remove();
-}
+
 
   const composer = new EffectComposer( renderer );
 
@@ -697,9 +699,18 @@ if(window.innerWidth < 780)
   renderer.setSize(canvas.width, canvas.height);
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 200 );
+  const camera = new THREE.PerspectiveCamera( 50, canvas.width / canvas.height, 1, 700 );
   camera.layers.enable(1);
-  camera.position.set( 2, 3, 8 );
+  /* DEFAULT CAMER - to be superseded by the init_sequence camera movements
+  camera.position.set( 1, 2, 45 );
+  */
+
+  camera.position.set( 1, 34, 4);
+
+  const CAMERA_TARGET_X = 1;
+  const CAMERA_TARGET_Y = 2;
+  const CAMERA_TARGET_Z = 36;
+
   camera.lookAt( 0, 0, 0 );
 
 const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
@@ -740,7 +751,7 @@ bloomPass.renderToScreen = true
       const controls = new OrbitControls( camera, renderer.domElement );
       controls.maxPolarAngle = Math.PI * 0.5;
       controls.minDistance = 1;
-      controls.maxDistance = 40;
+      controls.maxDistance = 60;
       //controls.addEventListener( 'change', render );
 
 
@@ -751,15 +762,17 @@ var loader = new THREE.FontLoader();
 let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(font) {
   var geometry = new THREE.TextGeometry("EthFair", {
     font: font,
-    size: 2.3,
-    height: 0.125,
+    size: 10,
+    height: 0.5,
     curveSegments: 12
   });
-  renderedText = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { emissive: 0xffa500, opacity: 0.85, transparent: true } ));
+  renderedText = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { emissive: 0xffa500, opacity: 0.85, transparent: false } ));
   renderedText.layers.enable(1);
   renderedText.geometry.center();
   scene.add(renderedText);
 });
+
+
 
 
 
@@ -772,7 +785,124 @@ let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(fo
         }, true );
 
 
+        //scene.fog = new THREE.FogExp2( 0x000000, 0.01 );
+
+        const geometry = new THREE.BufferGeometry();
+        const vertices = [];
+
+/*
+        const textureLoader = new THREE.TextureLoader();
+
+        const sprite1 = textureLoader.load( 'textures/sprites/snowflake1.png' );
+        const sprite2 = textureLoader.load( 'textures/sprites/snowflake2.png' );
+        const sprite3 = textureLoader.load( 'textures/sprites/snowflake3.png' );
+        const sprite4 = textureLoader.load( 'textures/sprites/snowflake4.png' );
+        const sprite5 = textureLoader.load( 'textures/sprites/snowflake5.png' );
+*/
+
+
+// Particles Initial distribution algo
+        for ( let i = 0; i < 500; i ++ ) {
+
+          const x = Math.random() * 2000 - 1000;
+          const y = Math.random() * 2000 - 1000;
+          const z = Math.random() * 2000 - 1000;
+
+          vertices.push( x, y, z );
+
+        }
+// =================== END PARTICLE DISTRIBUTION
+
+//=============== NEW PARTICLE DISTRIBUTION ALGO
+/*
+        for ( let i = 0; i < 40; i ++ ) {
+
+          const x = i * 10;
+          const y = Math.random() * i * 10;
+          const z = 110;
+
+          vertices.push( x, y, z );
+
+        }
+        */
+
+        geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+
+		const textureLoader = new THREE.TextureLoader();
+
+		const particleTexture = textureLoader.load( 'img/banknote.png' );
+
+        let parameters = [
+          [[ 0 ], particleTexture, 50 ],
+          [[ 0], particleTexture, 50 ],
+          [[ 0 ], particleTexture, 50 ],
+          [[ 0 ], particleTexture, 80 ],
+          [[ 0 ], particleTexture, 20 ]
+        ];
+
+        for ( let i = 0; i < parameters.length; i ++ ) {
+
+          const color = new THREE.Color( 0xaaffaa );
+          const textureToAssign = parameters[ i ][ 1 ];
+          const size = parameters[ i ][ 2 ];
+
+          materials[ i ] = new THREE.PointsMaterial( { size: size, map: textureToAssign, blending: THREE.AdditiveBlending, depthTest: false, transparent: false } );
+          materials[ i ].color = color;
+
+          const particles = new THREE.Points( geometry, materials[ i ] );
+
+          particles.rotation.x = Math.random() * 6;
+          particles.rotation.y = Math.random() * 6;
+          particles.rotation.z = Math.random() * 6;
+
+          scene.add( particles );
+
+        }
+
+
+
+
+		let init_sequence = true;
+		let camera_adjustment_speed = 0.35;
+
         function render() {
+
+
+        	/*
+
+  camera.position.set( 11, 60, 2 );
+
+  const CAMERA_TARGET_X = 1;
+  const CAMERA_TARGET_Y = 2;
+  const CAMERA_TARGET_Z = 45;
+  */
+
+        	if (init_sequence)
+        	{
+        		let change_flag = false;
+        		/*
+        		if(Math.abs(camera.position.x - CAMERA_TARGET_X) > 0.5)
+        		{
+        			camera.position.x -= camera_adjustment_speed;
+        			change_flag = true;
+        		} */
+        		if(Math.abs(camera.position.y - CAMERA_TARGET_Y) > 0.5)
+        		{
+        			camera.position.y -= camera_adjustment_speed;
+        			change_flag = true;
+        		}
+        		if(Math.abs(camera.position.z - CAMERA_TARGET_Z) > 0.5)
+        		{
+        			camera.position.z += camera_adjustment_speed;
+        			change_flag = true;
+        		}
+        		if(!change_flag)
+        		{
+        			init_sequence = false;
+        			rotationAccelerator = 0.5;
+        		}
+        		camera.lookAt(0,0,0);
+        	}
 
 /*
     cubes.forEach((cube, ndx) => {
@@ -788,6 +918,8 @@ let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(fo
         }
         */
 
+
+// ============= Rotation of the LOGO onclick
         if(renderedText != undefined)
         {
           renderedText.rotation.y -= rotationAccelerator;
@@ -800,8 +932,50 @@ let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(fo
             }
           }
         }
+//====================================== END ROTATION
 
 
+
+
+// ============= Slow movement of the surrounding particles
+
+/*
+        const time = Date.now() * 0.00002;
+        for ( let i = 0; i < scene.children.length; i ++ ) {
+
+          const object = scene.children[ i ];
+
+          if ( object instanceof THREE.Points ) {
+
+            object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+
+          }
+
+        }
+        */
+
+// ============= END PARTICLES
+
+//============== NEW PARTICLE FALLOFF MOVEMENT ALGORITHM
+
+
+        const time = Date.now() * 0.00002;
+        for ( let i = 0; i < scene.children.length; i ++ ) {
+
+          const object = scene.children[ i ];
+
+          if ( object instanceof THREE.Points ) {
+
+            object.position.y -= 0.02;
+            object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+
+          }
+
+        }
+
+
+
+// ============= Bloom effects rendering (postprocessing)
           scene.traverse( darkenNonBloomed );
           composer.render();
           scene.traverse( restoreMaterial );
@@ -839,4 +1013,5 @@ let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(fo
 
 main();
 </script>
+
 </html>
