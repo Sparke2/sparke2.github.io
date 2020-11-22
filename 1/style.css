@@ -1003,7 +1003,7 @@ h5 {
 }
 
 .people_1 {
-  top: 4%;
+  top: 5%;
   left: 7%;
   width: 4%;
   height: 18%;
@@ -1015,10 +1015,10 @@ h5 {
   transition: 1s;
 }
 .people_2 {
-  top: 21%;
-  left: 68%;
+  top: 22%;
+  left: 67%;
   width: 4%;
-  height: 26%;
+  height: 25%;
   background: #ffbe6a;
   margin-bottom: 4%;
   position: absolute;
@@ -1027,7 +1027,7 @@ h5 {
   transition: 1s;
 }
 .people_3 {
-  top: 39%;
+  top: 40%;
   left: 7%;
   width: 4%;
   height: 18%;
@@ -1067,7 +1067,7 @@ line_main {
   position: absolute;
 }
 .line_1 {
-  top: 2%;
+  top: 2.5%;
   left: 19%;
   width: 30%;
   height: 0.5%;
@@ -1075,7 +1075,7 @@ line_main {
   background: #000;
 }
 .line_3 {
-  top: 37%;
+  top: 37.5%;
   left: 19%;
   width: 30%;
   height: 0.5%;
@@ -1083,14 +1083,13 @@ line_main {
   position: absolute;
 }
 .line_2 {
-  top: 19%;
+  top: 19.5%;
   left: 50%;
   width: 30%;
   height: 0.5%;
   background: #000;
   position: absolute;
 }
-
 .circle_1 {
   width: 25px;
   height: 25px;
