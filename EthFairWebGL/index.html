@@ -759,7 +759,7 @@ let renderedText;
 
 var loader = new THREE.FontLoader();
 
-let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(font) {
+let textLoader = loader.load("/fonts/gentilis_bold.typeface.json", function(font) {
   var geometry = new THREE.TextGeometry("EthFair", {
     font: font,
     size: 10,
@@ -771,11 +771,6 @@ let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(fo
   renderedText.geometry.center();
   scene.add(renderedText);
 });
-
-
-
-
-
 
         document.getElementById("drawcanvas").addEventListener( 'click', function () {
 
