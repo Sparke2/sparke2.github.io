@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>EthFair</title>
+	<link rel="stylesheet" href="style.css" />
+	 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	 <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src='web3.min.js'></script>
+	<script src='abi.js'></script>
+	<script type="script.js"></script>
+	<script src='particlesjs-config.json'></script>
+</head>
+
+<header id="header_1">
+		<div id="logo"> <img src="img/logo.png"> </div>
+			<div id="menuHead">
+				<a href="#social"><div>Contacts</div></a>
+				<a href="https://drive.google.com/file/d/1hifxB8SxrqLdvO7d8Joz_Ef8Fc2irgO2/view" onclick="window.open('https://drive.google.com/file/d/1hifxB8SxrqLdvO7d8Joz_Ef8Fc2irgO2/view')"><div>Whitepaper</div></a>
+				<a href="#about_us"><div>About us</div></a>
+				<a href="#roadmap"><div>Roadmap</div></a>
+				<a href="#prizes"><div>Prizes</div></a>
+				<a href="#about_project"><div>About project</div></a>
+				
+		</div>
+</header>
+
+<body class="bg_main">
+<div id="wrapper_4">
+
+
+
+<canvas id="drawcanvas">
+</canvas>
+
+
+
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+			<h1>EthFair</h2>
+		</div> 
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+			<h2>Don't wait for a pump <br><br>Get a lambo now!!!</h2>
+		</div>
+</div>
+<div id="wrapper">
+	<div class="ico_time">
+		<h4>
+			The token sale will begin in:
+		</h4>
+		<div id="countdown" class="countdown">
+  			<div class="countdown-number">
+    			<span class="days countdown-time"></span>
+   			 	<span class="countdown-text">Days</span>
+  			</div>
+    		<div class="countdown-number">
+    			<span class="hours countdown-time"></span>
+    			<span class="countdown-text">Hours</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="minutes countdown-time"></span>
+   				<span class="countdown-text">Minutes</span>
+  			</div>
+  			<div class="countdown-number">
+    			<span class="seconds countdown-time"></span>
+    			<span class="countdown-text">Seconds</span>
+  			</div>
+		</div>
+		<h6 id="raised"><a href="#prizes">Track fundraising progress</a></h6>
+		<h4>
+			December 18, 2020 - January 30, 2021
+		</h4>
+	<div class="ico_address">
+		<input type="text" value="Coming soon" id="myInput">
+		<!-- 
+		<div class="tooltip">
+		<button onclick="myFunction()" onmouseout="outFunc()">
+  		<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  		Copy
+  		</button>
+		</div>
+		-->
+	</div>
+	<h4>
+		Accepted currency: ETH
+	</h4>
+	</div>
+	<div id="bigArticle">
+		<div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+			<img src="img/lambo.png">
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+
+var myCanvas = document.getElementById("drawcanvas");
+myCanvas.width = 1510;
+myCanvas.height = 300;
+myCanvas.style.width = "100%";
+
+// When the user scrolls the page, execute scroll
+window.onscroll = function() {scroll()};
+
+// Get the navbar
+var header_1 = document.getElementById("header_1");
+
+// Get the offset position of the navbar
+var sticky = header_1.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function scroll() {
+  if (window.pageYOffset >= sticky) {
+    header_1.classList.add("sticky")
+  } else {
+    header_1.classList.remove("sticky");
+  }
+}
+
+	// Точки, соответствующие призам на прогресс_баре
+/*
+var prizes = [];
+prizes.push([3, 3000]);
+prizes.push([12.5, 10000]);
+prizes.push([21, 25000]);
+prizes.push([29.5, 30000]);
+prizes.push([39.5, 50000]);
+prizes.push([46.5, 100000]);
+prizes.push([57.5, 200000]);
+prizes.push([63, 250000]);
+prizes.push([75.5, 350000]);
+prizes.push([80, 420000]);
+prizes.push([93.5, 500000]);
+prizes.push([100, 1000000]);
+*/
+// Функция, отвечающая за заполнение прогресс_бара
+/*
+function fill_progress_bar(myBalance){
+	var current_interval = 0;
+	var bar_percentage = 0;
+
+	for (var i = 0; i < prizes.length; i++) {
+		if (myBalance < prizes[i][1])
+		{
+			current_interval = i;
+			break;
+		}
+	}
+	console.log(current_interval);
+
+	if(current_interval > 0)
+	{
+		bar_percentage += prizes[current_interval - 1][0];
+		var interval_percentage = (myBalance - prizes[current_interval - 1][1]) / (prizes[current_interval][1] - prizes[current_interval - 1][1]);
+		bar_percentage += interval_percentage * (prizes[current_interval][0] - prizes[current_interval - 1][0]);
+
+
+		console.log("Calculations: ", interval_percentage);
+		console.log("BAR: ", bar_percentage);
+	}
+	else
+	{
+		bar_percentage += myBalance / (prizes[0][1] / prizes[0][0]);
+	}
+	document.getElementById("myBar1").style.width = bar_percentage + "%";
+}
+*/
+//Плавные переходы из меню сайта
+ $(document).ready(function(){
+		$("#menuHead").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
+});
+$(document).ready(function(){
+		$("#raised").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
+});
+$(document).ready(function(){
+		$("#entropy_1").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+						top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+		});
+});
+/*
+	$( document ).ready(function(){
+		$( " .people_4" ).hover(function(){ 
+			$( " .people_4" ).css( "background", "#004dff" )
+			}, function(){
+			$( " .people_4" ).css( "background", "#369edb" ) 
+		});
+	});
+*/
+	
+//Работа с контрактом
+/*
+var web3 = new Web3(Web3.givenProvider || "https://main-rpc.linkpool.io");
+
+var myBalance;
+var myContract = new web3.eth.Contract(abiArray, '0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3');
+
+console.log(myContract);
+
+myContract.methods.balanceOf("0x01000b5fe61411c466b70631d7ff070187179bbf").call().then(function(receipt){
+		console.log("RESULT_1 ", receipt);
+		myBalance = receipt;
+		document.getElementById("balance").innerHTML = myBalance;
+		document.getElementById("balance").innerHTML += "/1 000 000";
+
+		//console.log(document.getElementById("myBar1"));
+		fill_progress_bar(400000);
+});
+*/
+
+//Таймер
+$(document).ready(function(){
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline="December 18 2020 00:00:00 GMT+0000";
+/*var deadline = new Date(Date.parse(new Date()) + 100 * 24 * 60 * 60 * 1000); // for endless timer*/
+initializeClock('countdown', deadline);
+});
+
+
+
+
+/* Скопировать текст в буфер обмена*/
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied! " /*+ copyText.value*/; 
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+/* Раскрытие текста*/
+$( document ).ready(function(){
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+/*var name_button = document.getElementsByClassName("accordion");
+name_button.innerHTML = "Read more";
+name_button.onclick = function() {
+    name_button.innerHTML = "Read more1";
+  };*/
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+});
+</script> 
+<h6>
+	Features
+</h6>
+<div data-aos="fade-down" class="features">
+	<div class="defi"><img src="img/defi.png"></div>
+	<div class="fair"><img src="img/fair.png"></div>
+	<div class="erc20"><img src="img/erc20.png"></div>
+	<div class="entropy"><img src="img/entropy.png"></div>
+</div>
+<div data-aos="fade-down" class="features_1">
+	<div class="defi"><h4>Fair, transparent and <br>verifiable prize drawing</h4></div>
+	<div class="fair"><h4>DeFi project</h4></div>
+	<div class="erc20"><h4>Based on smart-contracts</h4></div>
+	<div class="entropy"><h4>The first on-chain source of entropy</h4><h4 class="entropy_12" id="entropy_1"><a href="#entropy">How to get rewards for entropy?</a></h4></div>
+</div>
+<div class="bg_4">
+<h6>
+	Participating in the ICO
+</h6>
+
+<div class="text_2">
+
+	<h2><ul>
+		<li>In order to obtain EthFAIR tokens an investor needs to send ETH to the ICO contract address after the ICO launch date</li>
+		<br>
+		<li>The tokens will be automatically sent to the address that was used to deposit ETH to the ICO contract immediately </li>
+		<br>
+		<li>IMPORTANT: Do not send ETH from exchanges but use a personally owned wallet instead</li>
+		<br>
+		<li>EthFAIR is a ERC20-compatible token and it will work with any ERC20 wallet</li>
+		<br>
+		<li>Recommended compatible wallets: MetaMask, MyCrypto, MyEtherWallet</li>
+	</ul></h2>
+</div>
+<div class="features_2" data-aos="fade-up">
+	
+	<div class="img_fea"><a href="https://mycrypto.com/" target="_blank" title="MyCrypto"><img src="img/MC.png"></a></div>
+	<div class="img_fea"><a href="https://metamask.io/" target="_blank" title="MetaMask" ><img src="img/MM.png"></a></div>
+	<div class="img_fea"><a href="https://www.myetherwallet.com/" target="_blank" title="MyEtherWallet"><img src="img/MEW.png"></a></div>
+</div>
+</div>
+<h6 id="about_project">About project</h6>
+<div class="text">
+	<div class="money" align="center"><img src="img/money.png"></div>
+	<div class="money_1"><img src="img/bottom_coin.png"></div>
+	<div class="text_1">
+	<h2>EthFair - is a DeFi lottery project built on the Ethereum blockchain with a use of solidity smart-contracts and ERC20 standard tokens.</h2><h2>The project is a draw that will feature a total of 3 Lamborghini Huracans, 3 other elite supercars, several new iPads, MacBooks, iPhones and other prizes.</h2><h2>The distinction of this draw is its use of blockchain technology, so the winner selection process is transparent and verifiable without any possibility of fraud.
+	</h2>
+	</div>
+</div>
+
+<div class="bg_5">
+<h6>Draw rules</h6>
+
+<div class="text_2">
+<h2>	
+<ul>
+	<li>Purchase tokens</li>
+	<br>
+	<li>Pick a prize that you want to win</li>
+	<br>
+	<li>Wait for the prize draw to be announced</li>
+	<br>
+	<li>Deposit your tokens to the draw contract (note that your chance of winning a prize is proportional to your relative share of the total tokens deposited by all participants)</li>
+	<br>
+	<li>Wait for the random number generator to pick a winner</li>
+	<br>
+	<li>If you are lucky and you win a prize, then your tokens are burned. In return, you will receive a prize or its equivalent value (in ETH).</li>
+	<br>
+	<li>If you lose, you can withdraw your tokens back and participate in the drawing of the following prizes</li>
+</ul>
+</h2>
+</div>
+</div>
+<h6 id="entropy">Reward for entropy</h6>
+<div class="text_2">
+	<h2>
+		Generating a provably random number is a complex process that is impossible without a source of entropy. Unfortunately the Ethereum blockchain does not have any suitable built-in sources of entropy.</h2><h2>In order to mitigate this problem EthFair project will use user-generated inputs as a source of entropy. 
+	</h2>
+</div>
+<div class="text_2">
+	<button id="name_button" class="accordion">Read more</button>
+	<div class="panel">
+  		<h2>
+  		To eliminate the possibility of manipulating the random number generator a user needs to deposit a collateral prior to submiting entropy. In exchange each user will be rewarded with 5% of the collateral amount for supplying entropy to the random number generator contract. The collateral will be refunded after the entropy was used and prize draw ended.</h2>
+		<h2> In order to supply entropy to the contract a user needs to:
+		<ul>
+		<li>After the announcement of entropy accumulation phase for a certain prize draw a user needs to generate two random numbers: <i>Entropy</i> and <i>Salt</i> (any 64-bit integer works).</li><br>
+		<li>Then hash these two numbers with a standard Keccak-256 algorithm or with a use of the smart-contracts hashing function.</li><br>
+		<li>Supply the <i>hash of the Entropy and Salt</i> to the RNG contract.</li><br>
+		<li>After the announcement of the entropy disclosure phase the user needs to provide the <i>Entropy</i> and <i>Salt</i> numbers (pre-images of the previously provided hash) to the RNG contract.</li><br>
+		<li>The RNG contract will send the collateral and the entropy reward back to the users address if the internal smart-contracts hashing function output for <i>Entropy</i> and <i>Salt</i> numbers matches the previously provided hash generated by the user.</li>
+		</ul></h2>
+	</div>
+</div>
+
+<body>
+<div class="prisez_fon_main">
+	<div class="prisez_fon">
+  	<img class="prisez_for_img" src="img/fon_auto.png">
+  	<div class="secondary_for">
+<h6 id="prizes">ICO goals and prizes</h6>
+
+<div class="wrapper_0" data-aos="fade-up" data-aos-duration="1500">
+	<div class="block_7">
+		<h4>iPad air </h4>
+		<img class="img_1_1" src="img/ipad_air.png" alt="iPad air">
+		<h5>$ 10 000</h5>
+	</div>
+	<div class="block_8">
+		<h4 class="h4_3">Listing on exchanges </h4>
+		<h5><br><br>$ 30 000</h5>
+	</div>
+	<div class="block_9">
+		<h4 class="h4_2"> Additional listings on exchanges</h4>
+		<h5> <br>$ 100 000</h5>
+	</div>
+	<div class="block_10">
+		<h4>iPhone 12 </h4>
+		<img class="img_1" src="img/iphone12.png" alt="iPhone 12">
+		<h5>$ 250 000</h5>
+	</div>
+	<div class="block_11">
+		 <h4>Macbook air </h4>
+		<img class="img_2" src="img/macbook_air.png" alt="Macbook air">
+		<h5>$ 420 000</h5>
+	</div>
+	<div class="block_12">
+		<h4 class="h4_1_1">Lamborghini Huracan evo<br> or $ 300 000</h4>
+		<img class="img_4" src="img/lamborghini_huracan_evo.webp" alt="Lamborghini Huracan evo">
+		<h5>$ 1 000 000</h5>
+	</div>
+</div>
+
+<div id="big_b">
+	<p id="balance">Awaiting ico release date</p>
+</div>
+<div id="myProgress">
+	<div id="myBar1"></div>
+</div>
+
+<div class="wrapper_1" data-aos="fade-down" data-aos-duration="1500">
+	<div class="block_1">
+		<h4>iPhone 12 </h4>
+		<img class="img_1" src="img/iphone12.png" alt="iPhone 12">
+		<h5>$ 3 000</h5>
+	</div>
+	<div class="block_2">
+		<h4>Macbook air </h4>
+		<img class="img_2" src="img/macbook_air.png" alt="Macbook air">
+		<h5>$ 25 000</h5>
+	</div>
+	<div class="block_3">
+		<h4 class="h4_1_1">iMac & iPhone 12</h4>
+		<img class="img_5" src="img/imac_iphone.webp" alt="IMac & iPhone 12">
+		<h5>$ 50 000</h5>
+	</div>
+	<div class="block_4">
+		<h4 class="h4_1">Toyota Camry<br> or $ 30 000</h4>
+		<img class="img_3" src="img/toyota_camry.png" alt="Toyota Camry">
+		<h5>$ 200 000</h5>
+	</div>
+	<div class="block_5">
+		<h4 class="h4_1">Mercedes e-class<br> or $ 50 000</h4>
+		<img class="img_3" src="img/mercedes_e_class.webp" alt="Mercedes e-class">
+		<h5>$ 350 000</h5>
+	</div>
+	<div class="block_6">
+		<h4 class="h4_1">Porsche Panamera<br> or $ 100 000</h4>
+		<img class="img_3_1" src="img/porsche_panamera.webp" alt="Porsche Panamera">
+		<h5>$ 500 000</h5>
+	</div>
+</div>
+  </div>
+  </div>
+</div>
+</body>
+
+
+
+
+
+<!-- Чтобы progress bar передвинулся на следующий шаг нужно поменять на class="progress-step is-complete"-->
+<body>
+	<div class="progress-bar-ico"></div>
+		<div class="progress_for_img_class">
+      <img src="img/4064cef3f98e3003802372dd4e095a9f.jpg">
+    	<div class="progress_for_img_div"> 
+<section id="roadmap" class="road__wrap">
+<div class="container_road">
+<h3 class="section-title">Road map</h3>
+<div class="container top-margin">
+<div class="indicators__img">
+<div class="indicators__img-content">
+<div class="progress">
+<div class="progress-track"></div>
+<div class="first-step"></div>
+<div id="step1" class="progress-step">
+<div class="step-text">
+<h2>Development of ICO contract</h2>
+<h4></h4>
+</div>
+</div>
+<div id="step2" class="progress-step">
+<div class="step-text top">
+<h2>ICO</h2>
+<h4></h4>
+</div>
+</div>
+<div id="step3" class="progress-step">
+<div class="step-text">
+<h2>Development of smart contract for drawing prizes</h2>
+<h4></h4>
+</div>
+</div>
+<div id="step4" class="progress-step">
+<div class="step-text top">
+<h2>Smart contract audit</h2>
+<h4> </h4>
+</div>
+</div>
+<div id="step5" class="progress-step">
+<div class="step-text">
+<h2>Listing on exchanges</h2>
+<h4></h4>
+</div>
+</div>
+<div id="step6" class="progress-step">
+<div class="step-text top">
+<h2>Drawing prizes</h2>
+<h4></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="img-swiper"></div>
+</div>
+</section>
+    </div>
+  </div>
+</div> 
+</body>
+
+<body >
+	<h6 id="about_us" >About us</h6>
+	<div class="about_us">
+		<div class="people_1" data-aos="flip-left" data-aos-duration="1500">
+			<h4 align="center">Milliano Conti</h4>
+			<h5 align="center">Founder</h5>
+			<h3 align="center"> MillianoConti@gmail.com<br><img src="img/mail.png"></h3>
+		</div>
+		<div class="people_2" data-aos="flip-left" data-aos-duration="2000">
+			<h4 align="center">Maria Rebrova</h4>
+			<h5 align="center">Website developer (desktop version)<br>Smart-contract interface developer<br>Artwork designer</h5>
+			<h3 align="center">ligreat875@gmail.com<br><img src="img/mail.png"><a href="https://github.com/Sparke2" target="_blank" title="github"><img src="img/github.png" alt="github"></a></h3>
+		</div>
+		<div class="people_3" data-aos="flip-left" data-aos-duration="2500">
+			<h4 align="center">Vadim Doronin</h4>
+			<h5 align="center"> Web Developer</h5>
+			<h3 align="center">snijweb@gmail.com<br><img src="img/mail.png"></h3>
+		</div>
+
+		<div class="line_1"></div>
+		<div class="line_2"></div>
+		<div class="line_3"></div>
+		<line_main>
+		<div class="circle_1"></div>
+		<div class="circle_2"></div>
+		<div class="circle_3"></div>
+		</line_main>
+	</div>
+</body>
+
+
+<footer>
+		<div id="social">
+			<a href="https://twitter.com/eth_fair/" target="_blank" title="twitter"><img src="img/twitter.jpg" alt="twitter"></a>
+			<a href="https://t.me/EthFairDeFi" target="_blank" title="telegram"><img src="img/telegram.jpg" alt="telegram"></a>
+			<a href="https://www.reddit.com/user/EthFair/" target="_blank" title="reddit"><img src="img/reddit.svg" alt="reddit"></a>
+			<a target="_blank" title="mail"><img src="img/mail.png" alt="mail"></a>
+			<p>EthFair.DeFi@gmail.com</p>
+		</div>
+		<div id="rights">All Rights Reserved &copy;
+		<script type="text/javascript">var date = new Date(); document.write(date.getFullYear()) </script> </div>
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
+
+
+
+
+
+
+<!--
+
+	================================================================
+
+	DEXES WebGL renderer
+
+	ThreeJS for reference: https://threejs.org/
+	Written in VANILLA JS, ThreJS R106
+
+	================================================================
+
+
+ -->
+
+
+
+
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+      varying vec2 vUv;
+
+      void main() {
+
+        vUv = uv;
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+      }
+
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+      uniform sampler2D baseTexture;
+      uniform sampler2D bloomTexture;
+
+      varying vec2 vUv;
+
+      void main() {
+
+        gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+      }
+
+    </script>
+  
+<script type="module">
+      import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+
+      import { GUI } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/dat.gui.module.js';
+
+      import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js';
+      import { EffectComposer } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/EffectComposer.js';
+      import { RenderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/RenderPass.js';
+      import { ShaderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/ShaderPass.js';
+      import { UnrealBloomPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/UnrealBloomPass.js';
+
+function main() {
+
+      const bloomLayer = new THREE.Layers();
+      bloomLayer.set( 1 );
+
+      const darkMaterial = new THREE.MeshBasicMaterial( { color: "black" } );
+      const materials = {};
+
+      let rotationAccelerator = 0;
+
+  const canvas = document.querySelector('#drawcanvas');
+  var renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+
+console.log(window.innerWidth);
+
+if(window.innerWidth < 780)
+{
+	canvas.remove();
+}
+
+  const composer = new EffectComposer( renderer );
+
+  //renderer.setSize(500, 500);   // COMMENTED OUT - this overrides the values of the HTML elemtn
+  //document.body.appendChild(renderer.domElement);
+
+  renderer.setSize(canvas.width, canvas.height);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 200 );
+  camera.layers.enable(1);
+  camera.position.set( 2, 3, 8 );
+  camera.lookAt( 0, 0, 0 );
+
+const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+//bloomPass.exposure = 900000000
+bloomPass.threshold = 0
+bloomPass.strength = 1.5
+bloomPass.radius = 1.2
+bloomPass.renderToScreen = true
+
+      const finalPass = new ShaderPass(
+        new THREE.ShaderMaterial( {
+          uniforms: {
+            baseTexture: { value: null },
+            bloomTexture: { value: composer.renderTarget2.texture }
+          },
+          vertexShader: document.getElementById( 'vertexshader' ).textContent,
+          fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+          defines: {}
+        } ), "baseTexture"
+      );
+      finalPass.needsSwap = true;
+
+  const renderScene = new RenderPass( scene, camera );
+
+  composer.renderToScreen = false;
+  composer.addPass( renderScene );
+  composer.addPass( bloomPass );
+  composer.setSize( window.innerWidth, window.innerHeight );
+
+
+  const finalComposer = new EffectComposer( renderer );
+  finalComposer.setSize( window.innerWidth, window.innerHeight );
+  finalComposer.renderToScreen = true;
+  finalComposer.addPass( renderScene );
+  finalComposer.addPass( finalPass );
+
+
+      const controls = new OrbitControls( camera, renderer.domElement );
+      controls.maxPolarAngle = Math.PI * 0.5;
+      controls.minDistance = 1;
+      controls.maxDistance = 40;
+      //controls.addEventListener( 'change', render );
+
+
+let renderedText;
+
+var loader = new THREE.FontLoader();
+
+let textLoader = loader.load("../fonts/gentilis_bold.typeface.json", function(font) {
+  var geometry = new THREE.TextGeometry("EthFair", {
+    font: font,
+    size: 2.3,
+    height: 0.125,
+    curveSegments: 12
+  });
+  renderedText = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { emissive: 0xffa500, opacity: 0.85, transparent: true } ));
+  renderedText.layers.enable(1);
+  renderedText.geometry.center();
+  scene.add(renderedText);
+});
+
+
+
+
+        document.getElementById("drawcanvas").addEventListener( 'click', function () {
+
+          rotationAccelerator = 0.5;
+          console.log("accelerator reset");
+
+        }, true );
+
+
+        function render() {
+
+/*
+    cubes.forEach((cube, ndx) => {
+      const speed = 1 + ndx * .1;
+      const rot = time * speed;
+      cube.rotation.x = rot;
+    });*/
+
+/*
+        if(blasterText != undefined)
+        {
+          renderedText.rotation.y = 1;
+        }
+        */
+
+        if(renderedText != undefined)
+        {
+          renderedText.rotation.y -= rotationAccelerator;
+          if(rotationAccelerator > 0)
+          {
+            rotationAccelerator -= 0.005;
+            if(rotationAccelerator < 0.01)
+            {
+              rotationAccelerator = 0;
+            }
+          }
+        }
+
+
+          scene.traverse( darkenNonBloomed );
+          composer.render();
+          scene.traverse( restoreMaterial );
+          finalComposer.render();
+
+          requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+
+      function darkenNonBloomed( obj ) {
+
+        if ( obj.isMesh && bloomLayer.test( obj.layers ) === false ) {
+
+          materials[ obj.uuid ] = obj.material;
+          obj.material = darkMaterial;
+
+        }
+
+      }
+
+      function restoreMaterial( obj ) {
+
+        if ( materials[ obj.uuid ] ) {
+
+          obj.material = materials[ obj.uuid ];
+          delete materials[ obj.uuid ];
+
+        }
+
+      }
+
+      console.log("Camera Layers", camera.layers);
+    }
+
+
+main();
+</script>
+</html>
