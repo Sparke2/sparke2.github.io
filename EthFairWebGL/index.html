@@ -981,7 +981,7 @@ let textLoader = loader.load("fonts/gentilis_bold.typeface.json", function(font)
 
       function darkenNonBloomed( obj ) {
 
-        if ( obj.isMesh && bloomLayer.test( obj.layers ) === false ) {
+        if (bloomLayer.test( obj.layers ) === false ) {
 
           materials[ obj.uuid ] = obj.material;
           obj.material = darkMaterial;
