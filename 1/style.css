@@ -1084,12 +1084,13 @@ line_main {
 }
 .line_2 {
   top: 19.5%;
-  left: 50%;
+  left: 49%;
   width: 30%;
   height: 0.5%;
   background: #000;
   position: absolute;
 }
+
 .circle_1 {
   width: 25px;
   height: 25px;
@@ -1149,14 +1150,14 @@ line_main {
   color: #000;
   font-family: "Titillium Web", sans-serif;
   margin-top: 1%;
-  font-size: calc(6px + 1vw);
+  font-size: 20px;
   line-height: 100%;
   word-wrap: break-word;
 }
 .about_us h5 {
   color: #dfe3e4;
   font-family: "Titillium Web", sans-serif;
-  font-size: calc(6px + 1vw);
+  font-size: 20px;
   line-height: 100%;
   margin-top: 1%;
   word-wrap: break-word;
@@ -1164,7 +1165,7 @@ line_main {
 .about_us h3 {
   color: #000;
   font-family: "Titillium Web", sans-serif;
-  font-size: calc(6px + 1vw);
+  font-size:20px;
   line-height: 100%;
   margin-top: 1%;
   word-wrap: break-word;
