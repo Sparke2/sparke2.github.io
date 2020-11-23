@@ -858,12 +858,13 @@ let textLoader = loader.load("fonts/gentilis_bold.typeface.json", function(font)
 
 
 		let init_sequence = false;
-		let awaiting_delay = true;
+		//let awaiting_delay = true;
 		let camera_adjustment_speed = 0.35;
-	let firstLoadTimestamp = 0;
+	//let firstLoadTimestamp = 0;
 
         function render() {
 
+		/*
 	if(firstLoadTimestamp == 0)
 	{
         	firstLoadTimestamp = Date.now();
@@ -872,7 +873,7 @@ let textLoader = loader.load("fonts/gentilis_bold.typeface.json", function(font)
 	{
 		init_sequence = true;
 		awaiting_delay = false;
-	}
+	} */
 
         	/*
 
@@ -1005,7 +1006,11 @@ let textLoader = loader.load("fonts/gentilis_bold.typeface.json", function(font)
     }
 
 
-main();
+	//window.onload(
+window.onload = function()
+{
+   main();
+}
 </script>
 
 </html>
