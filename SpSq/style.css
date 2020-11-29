@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* nova-square-regular - latin */
+@font-face {
+  font-family: 'Nova Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Game_site/fonts/nova-square-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../Game_site/fonts/nova-square-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Game_site/fonts/nova-square-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Game_site/fonts/nova-square-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../Game_site/fonts/nova-square-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Game_site/fonts/nova-square-v13-latin-regular.svg#NovaSquare') format('svg'); /* Legacy iOS */
+}
+
+.text{
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.bg_1{
+  background: url(img/star.jpg);
+  background-repeat:repeat;
+  background-position: left top;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all.1s ease;
+}
+a:hover {
+  color: #ffa500;
+  -webkit-transition: all.1s ease;
+}
+.header {
+  width: 100%;
+  /*border-bottom: 2px solid rgb(112, 110, 110);*/
+  overflow: hidden;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+  background-color:transparent;
+  position: fixed;
+}
+ #menuHead {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+#menuHead div{
+  font-family: "Nova Square", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  background: rgb(0%, 0%, 0%, 0.3);
+  border-radius: 50px;
+  padding: 0em 1em;
+}
+#menuHead div:hover {
+  background: rgb(0%, 0%, 0%, 1);
+  transition: 1s;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+  color: #fff;
+  font-family: "Nova Square", sans-serif;
+  padding-top: 5%;
+  padding-bottom: 1%;
+}
+h2{
+  color: #fff;
+  font-family:sans-serif;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  padding: 0px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  width: 100%;
+}
+.row{
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
