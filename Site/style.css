@@ -1,0 +1,20 @@
+
+#button_buy{
+	height: 30px;
+	width: 100px;
+}
+
+label {
+    font: 1em 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4em;
+    background-color: #0000ff;
+    color: #fff;
+}
+
+input:disabled {
+  background-color: #ddd;
+  color:#000;
+}

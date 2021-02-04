@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Site</title>
+	<link rel="stylesheet" href="style.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<form>
+    <input type="checkbox" autocomplete="off" id="agree_box" onchange="document.getElementById('button_buy').disabled = !this.checked;" />
+    <label for="agree_box">С условиям согласен</label>
+    <input type="button" id="button_buy" onclick="openLink()" value=" Купить " disabled />
+</form>
+<script type="text/javascript">
+	function openLink()
+	{
+		window.open("https://www.google.com","_self")
+	}
+</script>
+</html>
