@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Game Site</title>
+	
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap%22" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap%22" rel="stylesheet">
+  <!-- fonts -->
+  <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src='particlesjs-config.json'></script>
+  <!-- Bootstrap_5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <!-- Bootstrap_5 -->
+</head>
+
+
+<main>
+  <nav class="navbar fixed-top navbar-expand-sm header">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" 
+      aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent" id="menuHead">
+          <ul class="navbar-nav me-auto ms-6">
+                <li class="nav-item">
+                  <a href="#technical_description" class="nav-link text-success fs-4">Development</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#technical_description" class="nav-link text-success fs-4">Road map</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#technical_description" class="nav-link text-success fs-4">News</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#technical_description" class="nav-link text-success fs-4">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#platforms" class="nav-link text-success fs-4">Platforms</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#description" class="nav-link text-success fs-4">Description</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#gallery" class="nav-link text-success fs-4">Gallery</a>
+                </li>
+          </ul>    
+      </div>
+    </div>
+  </nav>
+  <!--
+	<canvas id="drawcanvas"></canvas>
+  -->
+  <div  class="container text-center w-50">
+    <video controls="controls" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://v.pinimg.com/videos/mc/720p/d3/92/ef/d392ef5a1d98cffe481c602e67140ee0.mp4" type="video/mp4">
+    </video>
+  </div>
+	<div class="container" id="gallery">
+	 <h1>Features</h1>
+  </div>
+
+<div class="container w-50" style="margin-right:0px;">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/0.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item multi-collapse" data-bs-interval="10000">
+        <img src="img/3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item multi-collapse">
+        <img src="img/5.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
+
+    <!--Controls-->
+    <button class="carousel-control-prev me-4" type="button" data-bs-target="#multi-item-example" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#multi-item-example" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#multi-item-example" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#multi-item-example" data-bs-slide-to="1"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4" data-bs-target="#carouselExampleDark" data-bs-slide-to="0">
+              <img class=" w-100" src="img/0.jpg" >
+
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block"  data-bs-target="#carouselExampleDark" data-bs-slide-to="1" >
+              <img class="w-100" src="img/1.jpg">
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block"  data-bs-target="#carouselExampleDark" data-bs-slide-to="2">
+              <img class="w-100" src="img/2.jpg">
+          </div>
+        </div>
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+              <img class="w-100" src="img/3.jpg" data-bs-target="#carouselExampleDark" data-bs-slide-to="3">
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="4">
+              <img class="w-100" src="img/4.jpg">
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="5">
+              <img class="w-100" src="img/5.jpg">
+          </div>
+        </div>
+      </div>
+      <!--/.Second slide-->
+    </div>
+    <!--/.Slides-->
+  </div>
+  <!--/.Carousel Wrapper-->
+</div>
+
+
+
+  <div class="text" id="description">
+     <h1>Description</h1>
+  </div>
+  <div class="text" id="platforms">
+     <h1>Platforms</h1>
+  </div>
+  <div class="text" id="technical_description">
+     <h1>Development</h1>
+  </div>
+</main>
+<script type="text/javascript">
+  // Navbar scroll
+$(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".header").addClass("sticky");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $(".header").removeClass("sticky");
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+var myCanvas = document.getElementById("drawcanvas");
+/*
+myCanvas.width = 1500;
+myCanvas.height = 300;
+myCanvas.style.width = "100%";
+*/
+myCanvas.width = window.innerWidth;
+myCanvas.height = window.innerHeight;
+myCanvas.style.width = "100%";
+</script>
+<script type="module">
+      import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+
+      import { GUI } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/dat.gui.module.js';
+
+      import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js';
+      import { EffectComposer } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/EffectComposer.js';
+      import { RenderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/RenderPass.js';
+      import { ShaderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/ShaderPass.js';
+      import { UnrealBloomPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/UnrealBloomPass.js';
+
+function main() {
+  	const canvas = document.querySelector('#drawcanvas');
+  	var renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+  	const scene = new THREE.Scene();
+  	const camera = new THREE.PerspectiveCamera( 50, canvas.width / canvas.height, 1, 600 );
+
+  	scene.background = new THREE.Color(0xffff00);
+
+        function render() {
+        	renderer.render( scene, camera );
+        	requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+  }
+  main();
+</script>
+</html>
