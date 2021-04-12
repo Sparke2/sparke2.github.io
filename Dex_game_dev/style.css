@@ -9,15 +9,29 @@ html,main{
   background-repeat:repeat;
   background-position: left top;
 }
-h1,h2,h3,h4,h5,h6,p{
+footer{
+  background: #000;
+}
+h2,h3,h4,h5,h6,p{
   color: #fff;
   font-family: "Roboto", sans-serif;
-  padding-top: 5%;
-  padding-bottom: 1%;
+}
+p{
+  text-indent: 1.5em;
+}
+.border-custom{
+  border: 2px inset;
+  border-color:#bdffe7;
+}
+h1{
+  font-family: "Michroma", sans-serif;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  color:#bdffe7;
 }
 a {
   font-family: "Nova Square", sans-serif;
-  color: #fff;
+  color:#bdffe7;
   text-decoration: none;
   -webkit-transition: all.1s ease;
 }
@@ -37,6 +51,7 @@ a:hover {
 /* nav bar */
 
 /* carousel */
+
 .carousel .carousel-indicators li {
    width: 10px;
   height: 10px;
@@ -47,10 +62,10 @@ a:hover {
   height: 10px;
   border-radius: 100%;
 }
+
 /* carousel */
 
 /*---------------------- timeline ----------------------*/
-
 
 .main-timeline {
     position: relative
