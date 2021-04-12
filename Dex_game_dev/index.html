@@ -11,9 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap%22" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap%22" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap%22" rel="stylesheet">
   <!-- fonts -->
   <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
-  <script src='particlesjs-config.json'></script>
+
+  <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="jcarousel.responsive.js"></script>
   <!-- Bootstrap_5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
@@ -31,174 +36,168 @@
       <div class="collapse navbar-collapse" id="navbarContent" id="menuHead">
           <ul class="navbar-nav me-auto ms-6">
                 <li class="nav-item">
-                  <a href="#technical_description" class="nav-link text-success fs-4">Development</a>
+                  <a href="#intro" class="nav-link fs-4" style="color:#bdffe7;">Introduction</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#technical_description" class="nav-link text-success fs-4">Road map</a>
+                  <a href="#features" class="nav-link fs-4"  style="color:#bdffe7;">Features</a>
+                </li>
+                 <li class="nav-item">
+                  <a href="#description" class="nav-link fs-4" style="color:#bdffe7;">Description</a>
+                </li>
+                 <li class="nav-item">
+                  <a href="#road_map" class="nav-link fs-4"  style="color:#bdffe7;">Road map</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#technical_description" class="nav-link text-success fs-4">News</a>
+                  <a href="#platforms" class="nav-link fs-4"  style="color:#bdffe7;">Platforms</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#technical_description" class="nav-link text-success fs-4">Features</a>
+                  <a href="#contests" class="nav-link fs-4"  style="color:#bdffe7;">Contests</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#platforms" class="nav-link text-success fs-4">Platforms</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#description" class="nav-link text-success fs-4">Description</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#gallery" class="nav-link text-success fs-4">Gallery</a>
+                  <a href="#careers" class="nav-link fs-4"  style="color:#bdffe7;">Careers</a>
                 </li>
           </ul>    
       </div>
     </div>
   </nav>
+
   <!--
 	<canvas id="drawcanvas"></canvas>
   -->
+<!-- Video
   <div  class="container text-center w-50">
     <video controls="controls" autoplay="autoplay" muted="muted" loop="loop">
       <source src="https://v.pinimg.com/videos/mc/720p/d3/92/ef/d392ef5a1d98cffe481c602e67140ee0.mp4" type="video/mp4">
     </video>
   </div>
-	<div class="container" id="gallery">
-	 <h1>Features</h1>
-  </div>
-
-<div class="container w-50" style="margin-right:0px;">
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+-->
+  <!--Main background -->
+  <div class="video-bg">
+    <div class="container" style="position: absolute; top: 30%; right: 10%;">
+      <h1 class="display-3 text-center">DexGamedev: <br>Open4X project</h1>
+      <p class="text-center fs-4" style="color:#bdffe7;text-indent: 0em;">Merging the 4X, RTS and Survival genres to create<br>an unprecedented experience available to everyone.</p>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="img/0.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
+    <video class="w-100" autoplay muted loop>
+      <source src="video/2.mp4" type="video/mp4"> 
+    </video> 
+  </div>
+  <!--Main background -->
+
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+    <h1 class="text-center" id="intro">Introduction to the Open4X project</h1>
+      <div class="w-75 container">
+        <p class="fs-5" style="text-indent: 0em;">The main goal of Open4X project is to create a 3D multiplayer open-world 4X strategy with continuous gameplay. The game will consist of multiple strategy layers.
+        </p>
+        <p class="fs-5" style="text-indent: 0em;"> Thus, we plan to split the game into its component parts and first implement them separately as demo-games. In fact, the Open4X project will represent three games:
+          <ul class="fs-5" style="color:#fff;">
+              <li> Starships Arena - turn-based card game. Tactical layer, combat system reference implementation and balancing tool.</li>
+
+              <li>Star Cycle - text 2D strategy with a procedurally generated map and event system. Global strategy layer reference implementation.</li>
+
+              <li>The Main Game - 3D strategy combining elements of the both previous games.</li>
+          </ul>
+        </p>
+    </div>
+  </div>
+
+	 <div class="container">
+  	 <h1 class="text-center" id="features">Features</h1>
+      <div class="row">
+        <div class="col-md-4">
+        <p class="fs-5 text">Welcome to a procedurally generated digital universe with its own rules, environments and dangers. Here you are free to pick your own playstyle or change it at any moment. Be a lone traveller, mystery seeker, mercenary or found your own empire. Be vigilant and plan carefully - in this universe, your every action will entail a response from a flexible and fluid ecosystem.
+        </p>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="img/1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="img/2.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item multi-collapse" data-bs-interval="10000">
-        <img src="img/3.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="img/4.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item multi-collapse">
-        <img src="img/5.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+      <div class="col-md-8" style="background: rgba(0, 0, 0, 0.5);">
+        <div class="w-75 float-lg-end float-xl-end float-md-end float-none-start">
+          <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/1.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block text-start">
+                  <h5>Responsive environment</h5>
+                  <p style="text-indent: 0em;">The key to create immersive universe is to make it responsible. Every action must have its consequences. A player must have the ability and tools to impact processes and ecosystems at will.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/2.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Procedural generation</h5>
+                  <p style="text-indent: 0em;" class="text-start">Instead of creating maps, we create laws by which they are created themselves. The universe is then naturally shaped in the process of gameplay.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/3.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Creativeness</h5>
+                  <p style="text-indent: 0em;" class="text-start">Players are free to use or not to use any mechanic of the game. Every goal can be achieved in multiple ways. Every tool has multiple purposes.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/4.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Interactiveness</h5>
+                  <p style="text-indent: 0em;" class="text-start">Every object must be interactable, changeable and even destructible.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/5.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Competitiveness & Cooperation</h5>
+                  <p style="text-indent: 0em;" class="text-start">The basis of the game is the interaction of the players. You can be a lone wolf or found a large interstellar alliance.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="wrapper">
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><div data-bs-target="#carouselExampleDark" data-bs-slide-to="0"><img src="img/1.jpg" alt="Image 1"></div><p>Responsive environment</p></li>
+                        <li><div data-bs-target="#carouselExampleDark" data-bs-slide-to="1"><img src="img/2.jpg" alt="Image 2"></div><p>Procedural generation</p></li>
+                        <li><div data-bs-target="#carouselExampleDark" data-bs-slide-to="2"><img src="img/3.jpg" alt="Image 3"></div><p>Creativeness</p></li>
+                        <li><div data-bs-target="#carouselExampleDark" data-bs-slide-to="3"><img src="img/4.jpg" alt="Image 4"></div><p>Interactiveness</p></li>
+                        <li><div data-bs-target="#carouselExampleDark" data-bs-slide-to="4"><img src="img/5.jpg" alt="Image 5"></div><p style="text-indent: 0em;">Competitiveness & Cooperation</p></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <!--
+                <p class="jcarousel-pagination"></p>
+                -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <!--Carousel Wrapper-->
-  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
-
-    <!--Controls-->
-    <button class="carousel-control-prev me-4" type="button" data-bs-target="#multi-item-example" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#multi-item-example" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-    <!--/.Controls-->
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-bs-target="#multi-item-example" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#multi-item-example" data-bs-slide-to="1"></li>
-    </ol>
-    <!--/.Indicators-->
-
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-
-      <!--First slide-->
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-4" data-bs-target="#carouselExampleDark" data-bs-slide-to="0">
-              <img class=" w-100" src="img/0.jpg" >
-
-          </div>
-          <div class="col-md-4 clearfix d-none d-md-block"  data-bs-target="#carouselExampleDark" data-bs-slide-to="1" >
-              <img class="w-100" src="img/1.jpg">
-          </div>
-          <div class="col-md-4 clearfix d-none d-md-block"  data-bs-target="#carouselExampleDark" data-bs-slide-to="2">
-              <img class="w-100" src="img/2.jpg">
-          </div>
-        </div>
-      </div>
-      <!--/.First slide-->
-
-      <!--Second slide-->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-4">
-              <img class="w-100" src="img/3.jpg" data-bs-target="#carouselExampleDark" data-bs-slide-to="3">
-          </div>
-          <div class="col-md-4 clearfix d-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="4">
-              <img class="w-100" src="img/4.jpg">
-          </div>
-          <div class="col-md-4 clearfix d-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="5">
-              <img class="w-100" src="img/5.jpg">
-          </div>
-        </div>
-      </div>
-      <!--/.Second slide-->
-    </div>
-    <!--/.Slides-->
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+     <h1 class="text-center" id="description">Description</h1>
+     <p class="fs-5">At DexGamedev we are primarily engaged in researching game mechanics. Each game is unique in its own way, but it is based on certain mechanics that allow you to create experience for the player. Our goal is to provide players with tools so that they can choose parts of the game they like and filter out those they don't like.</p>
+     <p class="fs-5">A "game" is, first of all, a set of rules. These rules, mostly mathematical, define the essence of the game, which can be wrapped in a software implementation and a graphical interface.</p>
+     <p class="fs-5">A game like "chess" is just a set of rules by which pieces move around the board. Chess can have many different implementations - pieces can be large or small, black-white or blue-green, made of plastic, or even digitally displayed on your computer monitor.</p>
+     <p class="fs-5">The world is developing rapidly and many modern video games exist only thanks to a beautiful picture and excessive marketing. The most successful games live for decades, but when their software part becomes outdated, they will be forgotten. Rarely an old game deserves a re-implementation without any core gameplay modifications.</p>
+     <p class="fs-5">Our mission is to develop mechanics that can be combined into "immortal" games, which can have many implementations, but the essence of which will be sufficient to make the games interesting for players regardless of the aesthetics or implementation.</p>
   </div>
-  <!--/.Carousel Wrapper-->
-</div>
 
-
-
-  <div class="text" id="description">
-     <h1>Description</h1>
-  </div>
   <div class="container">
+    <h1 class="container text-center" id="road_map">Road map</h1>
     <div class="main-timeline">
           <!-- start experience section-->
                         <div class="timeline">
@@ -206,15 +205,15 @@
                             <div class="date-content">
                                 <div class="date-outer">
                                     <span class="date">
-                                            <span class="month">2 Years</span>
-                                    <span class="year">2013</span>
+                                            <span class="month">1-st</span>
+                                    <span class="year">game</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="timeline-content">
-                                <h5 class="title">Visual Art &amp; Design</h5>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                <h5 class="title">Card game: Starships Arena</h5>
+                                <p class="description" style="text-indent: 0em;">
+                                    Turn-based card game. Tactical layer, combat system reference implementation and balancing tool.
                                 </p>
                             </div>
                         </div>
@@ -226,15 +225,15 @@
                             <div class="date-content">
                                 <div class="date-outer">
                                     <span class="date">
-                                            <span class="month">1 Years</span>
-                                    <span class="year">2015</span>
+                                            <span class="month">2-nd</span>
+                                    <span class="year">game</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="timeline-content">
-                                <h5 class="title">Product Designer</h5>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                <h5 class="title">Text strategy: Star Cycles</h5>
+                                <p class="description" style="text-indent: 0em;">
+                                    Text 2D strategy with a procedurally generated map and event system. Global strategy layer reference implementation.
                                 </p>
                             </div>
                         </div>
@@ -246,48 +245,83 @@
                             <div class="date-content">
                                 <div class="date-outer">
                                     <span class="date">
-                                            <span class="month">2 Years</span>
-                                    <span class="year">2016</span>
+                                            <span class="month">3-d</span>
+                                    <span class="year">game</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="timeline-content">
-                                <h5 class="title">Web Designer</h5>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                <h5 class="title">Main game development phase</h5>
+                                <p class="description" style="text-indent: 0em;">
+                                    3D strategy combining elements of the both previous games.
                                 </p>
                             </div>
                         </div>
                         <!-- end experience section-->
-
-                        <!-- start experience section-->
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer">
-                                    <span class="date">
-                                            <span class="month">2 Years</span>
-                                    <span class="year">2018</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <h5 class="title">Graphic Designer</h5>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end experience section-->              
+          <!-- end experience section-->              
     </div>
   </div>
-  <div class="text" id="platforms">
-     <h1>Platforms</h1>
+
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+     <h1 class="text-center" id="platforms">Platforms</h1>
+        <p class="fs-5">We use WASM as build target.
+        <p class="fs-5">Web applications are more and more closely integrated into our lives every year. Thanks to the WASM standard, excellent performance results have been achieved which allows developers to bring features of desktop apps to the web.</p>
+        <p class="fs-5">We believe that browsers will continue to evolve and the development of browser-executable applications will become a priority, so today we are focusing on developing applications that can be executed as browser applications.</p>
+      <div class="row">
+          <div class="col-md-2">
+              <img class="w-50" src="img/opera.png">
+          </div>
+          <div class="col-md-2">
+              <img class="w-50" src="img/firefox.png">
+          </div>
+          <div class="col-md-2">
+              <img class="w-50" src="img/google.png">
+          </div>
+          <div class="col-md-2">
+              <img class="w-50" src="img/edge.png">
+          </div>
+          <div class="col-md-2">
+              <img class="w-50" src="img/chromium.png">
+          </div>
+          <div class="col-md-2">
+              <img class="w-50" src="img/safari.webp">
+          </div>
+      </div>
   </div>
-  <div class="text" id="technical_description">
-     <h1>Development</h1>
+
+  <div class="container">
+     <h1 class="text-center" id="contests">Paid contests</h1>
+     <p class="fs-5">Our project features paid contests. Anyone is allowed to participate in an open and transparently verifiable manner. This page will include all the updates related to paid contests.</p>
+     <p class="fs-5">Payments are made in cryptocurrencies in order to provide a proof of transaciton publicly.</p>
   </div>
+
+  <div class="container">
+     <h1 class="text-center" id="careers">Careers</h1>
+     <p class="fs-5">We are looking for:
+      <ul class="fs-5" style="color:#fff;">
+        <li>C# / Unity developers, gameplay programmers</li>
+        <li>Marketers</li>
+        <li>Pixel artists / 2D designers</li>
+      </ul>
+     </p>
+     <p class="fs-5">Contact us:
+      <ul class="fs-5" style="color:#fff;">
+        <li>Telegram: t.me/SeriValen</li>
+        <li>Reddit (write a post with your skills and desired position): https://www.reddit.com/r/DexGamedev/</li>
+      </ul>
+     </p>
+     <p class="fs-5">For any business questions/ partnerships:
+      <ul class="fs-5" style="color:#fff;">
+        <li>email: dexaran820@gmail.com </li>
+        <li>telegram: t.me/Dexaran</li>
+      </ul>
+     </p>
+  </div>
+  <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer>
 </main>
+<script type="text/javascript">
+document.querySelector('video').playbackRate = 0.8;
+</script>
 <script type="text/javascript">
   // Navbar scroll
 $(function() {
@@ -301,6 +335,8 @@ $(function() {
     });
 });
 </script>
+
+<!--
 <script type="text/javascript">
 var myCanvas = document.getElementById("drawcanvas");
 /*
@@ -339,4 +375,5 @@ function main() {
   }
   main();
 </script>
+-->
 </html>
