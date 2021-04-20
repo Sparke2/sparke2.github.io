@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dex Gamedev: Open4X</title>
+	
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Scroll Animaton -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Scroll Animaton -->
+	<!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap%22" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap%22" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap%22" rel="stylesheet">
+  <!-- Fonts -->
+  <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+  <!--Carousel -->
+  <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="jcarousel.responsive.js"></script>
+  <!--Carousel -->
+  <!-- Bootstrap_5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <!-- Bootstrap_5 -->
+</head>
+
+
+<main>
+  <!-- Nav bar -->
+  <nav class="navbar sticky-top navbar-expand-sm header">
+    <div class="container text-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" 
+      aria-expanded="false" style="color:#bdffe7;">
+        <span style="color:#bdffe7;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto ms-6">
+                <li class="nav-item">
+                  <a href="#intro" class="nav-link fs-4" style="color:#bdffe7;">Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#features" class="nav-link fs-4"  style="color:#bdffe7;">Features</a>
+                </li>
+                 <li class="nav-item">
+                  <a href="#description" class="nav-link fs-4" style="color:#bdffe7;">Description</a>
+                </li>
+                 <li class="nav-item">
+                  <a href="#road_map" class="nav-link fs-4"  style="color:#bdffe7;">Road map</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#platforms" class="nav-link fs-4"  style="color:#bdffe7;">Platforms</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contests" class="nav-link fs-4"  style="color:#bdffe7;">Contests</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#careers" class="nav-link fs-4"  style="color:#bdffe7;">Careers</a>
+                </li>
+          </ul>    
+      </div>
+    </div>
+  </nav>
+  <!-- Nav bar -->
+
+  <!-- <canvas id="drawcanvas"></canvas> -->
+
+  <!--Main background -->
+  <video autoplay muted loop>
+      <source src="video/2.mp4" type="video/mp4"> 
+  </video> 
+  <div class="container video-text-bg" id="video-text">
+      <div class="row">
+        <div class="col">
+      <h1 class="display-3">DexGamedev: <br>Open4X project
+        <p class="fs-4" style="color:#bdffe7;text-indent: 0em;" data-aos="zoom-out" data-aos-duration="2000">Merging the 4X, RTS and Survival genres to create<br>an unprecedented experience available to everyone.
+        </p>
+      </h1>
+      </div>
+    </div>
+       <div class="row" style="padding-top: 40px;">
+        <div class="col-4">
+          <div style="mix-blend-mode: screen;"><img class="w-100" src="img/white.jpg"></div>
+        </div>
+        <div class="col-4">
+          <div style="mix-blend-mode: screen;"><img class="w-100" src="img/white.jpg"></div>
+        </div>
+        <div class="col-4">
+          <div style="mix-blend-mode: screen;"><img class="w-100" src="img/white.jpg"></div>
+        </div>
+      </div>
+  </div>
+
+  <!--Main background -->
+  <!-- Block Intro -->
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+    <h1 class="text-center" id="intro" style="padding-top: 80px; margin-top: -40px;">Introduction to the Open4X project</h1>
+      <div class="w-75 container">
+        <p class="fs-4" style="text-indent: 0em;">The main goal of Open4X project is to create a 3D multiplayer open-world 4X strategy with continuous gameplay. The game will consist of multiple strategy layers.
+        </p>
+        <p class="fs-4" style="text-indent: 0em;"> Thus, we plan to split the game into its component parts and first implement them separately as demo-games. In fact, the Open4X project will represent three games:
+          <ul class="fs-4" style="color:#fff;">
+              <li> Starships Arena - turn-based card game. Tactical layer, combat system reference implementation and balancing tool.</li>
+              <li>Star Cycle - text 2D strategy with a procedurally generated map and event system. Global strategy layer reference implementation.</li>
+              <li>The Main Game - 3D strategy combining elements of the both previous games.</li>
+          </ul>
+        </p>
+    </div>
+  </div>
+  <!-- Block Intro -->
+  <!-- Block Features -->
+	 <div class="container">
+  	 <h1 class="text-center" id="features" style="padding-top: 80px; margin-top: -40px;">Features</h1>
+      <div class="row">
+        <div class="col-md-4">
+        <p class="fs-3 text">Welcome to a procedurally generated digital universe with its own rules, environments and dangers. Here you are free to pick your own playstyle or change it at any moment. Be a lone traveller, mystery seeker, mercenary or found your own empire. Be vigilant and plan carefully - in this universe, your every action will entail a response from a flexible and fluid ecosystem.
+        </p>
+      </div>
+      <div class="col-md-8" style="background: rgba(0, 0, 0, 0.5);">
+        <div class="w-75 float-lg-end float-xl-end float-md-end float-none-start">
+          <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/1.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Responsive environment</h4>
+                  <p style="text-indent: 0em;" class="text-start fs-5">The key to create immersive universe is to make it responsible. Every action must have its consequences. A player must have the ability and tools to impact processes and ecosystems at will.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/2.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Procedural generation</h4>
+                  <p style="text-indent: 0em;" class="text-start fs-5">Instead of creating maps, we create laws by which they are created themselves. The universe is then naturally shaped in the process of gameplay.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/3.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Creativeness</h4>
+                  <p style="text-indent: 0em;" class="text-start fs-5">Players are free to use or not to use any mechanic of the game. Every goal can be achieved in multiple ways. Every tool has multiple purposes.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/4.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Interactiveness</h4>
+                  <p style="text-indent: 0em;" class="text-start fs-5">Every object must be interactable, changeable and even destructible.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/5.jpg" class="d-block w-100" data-bs-interval="5000" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h4>Competitiveness & Cooperation</h4>
+                  <p style="text-indent: 0em;" class="text-start fs-5">The basis of the game is the interaction of the players. You can be a lone wolf or found a large interstellar alliance.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="wrapper d-none d-lg-block">
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li>
+                          <div data-bs-target="#carouselExamplevDark" data-bs-slide-to="0">
+                            <p style="text-indent: 0em; position: absolute;z-index: 1; padding-top:30px; padding-left:20px; color: #bdffe7;" class="fs-5">Responsive<br>environment</p>
+                            <img src="img/1.jpg" alt="Image 1">
+                          </div>
+                        </li>
+                        <li>
+                          <div data-bs-target="#carouselExampleDark" data-bs-slide-to="1">
+                            <p style="text-indent: 0em; position: absolute;z-index: 1; padding-top:30px; padding-left:30px; color: #bdffe7;" class="fs-5">Procedural<br>generation</p>
+                            <img src="img/2.jpg" alt="Image 2">
+                          </div>
+                        </li>
+                        <li>
+                          <div data-bs-target="#carouselExampleDark" data-bs-slide-to="2">
+                            <p style="text-indent: 0em; position: absolute;z-index: 1; padding-top:50px; padding-left:20px; color: #bdffe7;" class="fs-5">Creativeness</p>
+                            <img src="img/3.jpg" alt="Image 3">
+                          </div>
+                        </li>
+                        <li>
+                          <div data-bs-target="#carouselExampleDark" data-bs-slide-to="3">
+                            <p style="text-indent: 0em; position: absolute;z-index: 1; padding-top:50px; padding-left:10px; color: #bdffe7;" class="fs-5">Interactiveness</p>
+                            <img src="img/4.jpg" alt="Image 4">
+                          </div>
+                        </li>
+                        <li>
+                          <div data-bs-target="#carouselExampleDark" data-bs-slide-to="4">
+                            <p style="text-indent: 0em; position: absolute;z-index: 1; padding-top:30px; padding-left:0px; color: #bdffe7;" class="fs-5">Competitiveness<br>& Cooperation</p>
+                            <img src="img/5.jpg" alt="Image 5">
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <!--
+                <p class="jcarousel-pagination"></p>
+                -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Block Features -->
+  <!-- Block Description -->
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+     <h1 class="text-center" id="description" style="padding-top: 80px; margin-top: -40px;">Description</h1>
+     <div class="row">
+        <div class="col-8">
+          <p class="fs-4">At DexGamedev we are primarily engaged in researching game mechanics. Each game is unique in its own way, but it is based on certain mechanics that allow you to create experience for the player. Our goal is to provide players with tools so that they can choose parts of the game they like and filter out those they don't like.
+          </p>
+        </div>
+        <div class="col-4"><img class="w-75 text-center" src="img/1.jpg"></div>
+     </div>
+     <div class="row my-5">
+       <div class="col-4"><img class="w-75 text-center" src="img/2.jpg"></div>
+       <div class="col-8">
+          <p class="fs-4">A "game" is, first of all, a set of rules. These rules, mostly mathematical, define the essence of the game, which can be wrapped in a software implementation and a graphical interface.
+          </p>
+          <p class="fs-4">A game like "chess" is just a set of rules by which pieces move around the board. Chess can have many different implementations - pieces can be large or small, black-white or blue-green, made of plastic, or even digitally displayed on your computer monitor.
+          </p>
+       </div>
+     </div>
+     <div class="row my-5">
+       <div class="col-8">
+        <p class="fs-4">The world is developing rapidly and many modern video games exist only thanks to a beautiful picture and excessive marketing. The most successful games live for decades, but when their software part becomes outdated, they will be forgotten. Rarely an old game deserves a re-implementation without any core gameplay modifications.
+        </p>
+      </div>
+       <div class="col-4"><img class="w-75 text-center" src="img/3.jpg"></div>
+     </div>
+     <div class="row my-5">
+       <div class="col-4"><img class="w-75 text-center" src="img/4.jpg"></div>
+       <div class="col-8">
+        <p class="fs-4">Our mission is to develop mechanics that can be combined into "immortal" games, which can have many implementations, but the essence of which will be sufficient to make the games interesting for players regardless of the aesthetics or implementation.
+        </p>
+      </div>
+     </div>
+  </div>
+  <!-- Block Description -->
+  <!-- Block Road map -->
+  <div class="container">
+    <h1 class="container text-center" id="road_map" style="padding-top: 80px; margin-top: -40px;">Road map</h1>
+    <div class="main-timeline">
+          <!-- start experience section-->
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">1-st</span>
+                                    <span class="year">game</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h1 class="title">Card game: Starships Arena</h1>
+                                <p class="description fs-5" style="text-indent: 0em;">
+                                    Turn-based card game. Tactical layer, combat system reference implementation and balancing tool.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end experience section-->
+
+                        <!-- start experience section-->
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">2-nd</span>
+                                    <span class="year">game</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h1 class="title">Text strategy: Star Cycles</h1>
+                                <p class="description fs-5" style="text-indent: 0em;">
+                                    Text 2D strategy with a procedurally generated map and event system. Global strategy layer reference implementation.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end experience section-->
+
+                        <!-- start experience section-->
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">3-d</span>
+                                    <span class="year">game</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h1 class="title">Main game development phase</h1>
+                                <p class="description fs-5" style="text-indent: 0em;">
+                                    3D strategy combining elements of the both previous<br> games.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end experience section-->
+          <!-- end experience section-->              
+    </div>
+  </div>
+  <!-- Block Road map -->
+  <!-- Block Platforms -->
+  <div class="container border-custom rounded" style="background: rgba(65, 69, 67, 0.5);">
+     <h1 class="text-center" id="platforms" style="padding-top: 80px; margin-top: -40px;">Platforms</h1>
+        <p class="fs-4">We use WASM as build target.
+        <p class="fs-4">Web applications are more and more closely integrated into our lives every year. Thanks to the WASM standard, excellent performance results have been achieved which allows developers to bring features of desktop apps to the web.</p>
+        <p class="fs-4">We believe that browsers will continue to evolve and the development of browser-executable applications will become a priority, so today we are focusing on developing applications that can be executed as browser applications.</p>
+      <div class="row ms-auto me-auto">
+          <div class="col-sm-2">
+              <img class="w-50" src="img/opera.png">
+          </div>
+          <div class="col-sm-2">
+              <img class="w-50" src="img/firefox.png">
+          </div>
+          <div class="col-sm-2">
+              <img class="w-50" src="img/google.png">
+          </div>
+          <div class="col-sm-2">
+              <img class="w-50" src="img/edge.png">
+          </div>
+          <div class="col-sm-2">
+              <img class="w-50" src="img/chromium.png">
+          </div>
+          <div class="col-sm-2">
+              <img class="w-50" src="img/safari.webp">
+          </div>
+      </div>
+  </div>
+  <!-- Block Platforms -->
+  <!-- Block Contests -->
+  <div class="container">
+     <h1 class="text-center" id="contests" style="padding-top: 80px; margin-top: -40px;">Paid contests</h1>
+     <p class="fs-4">Our project features paid contests. Anyone is allowed to participate in an open and transparently verifiable manner. This page will include all the updates related to paid contests.</p>
+     <p class="fs-4">Payments are made in cryptocurrencies in order to provide a proof of transaciton publicly.</p>
+  </div>
+  <!-- Block Contests -->
+  <!-- Block Careers -->
+  <div class="container">
+     <h1 class="text-center" id="careers" style="padding-top: 80px; margin-top: -40px;">Careers</h1>
+     <p class="fs-4">We are looking for:
+      <ul class="fs-4" style="color:#fff;">
+        <li>C# / Unity developers, gameplay programmers</li>
+        <li>Marketers</li>
+        <li>Pixel artists / 2D designers</li>
+      </ul>
+     </p>
+     <p class="fs-4">Contact us:
+      <ul class="fs-4" style="color:#fff;">
+        <li>Telegram: t.me/SeriValen</li>
+        <li>Reddit (write a post with your skills and desired position): https://www.reddit.com/r/DexGamedev/</li>
+      </ul>
+     </p>
+     <p class="fs-4">For any business questions/ partnerships:
+      <ul class="fs-4" style="color:#fff;">
+        <li>email: dexaran820@gmail.com </li>
+        <li>telegram: t.me/Dexaran</li>
+      </ul>
+     </p>
+  </div>
+  <!-- Block Careers -->
+   <!-- Footer -->
+  <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer>
+  <!-- Footer -->
+</main>
+<script type="text/javascript">
+  // Script slow video
+document.querySelector('video').playbackRate = 0.8;
+</script>
+
+<script type="text/javascript">
+  // Navbar scroll
+$(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".header").addClass("sticky");
+        } else if($(window).innerWidth() < 600){
+           $(".header").addClass("sticky");
+        } else if($(window).innerWidth() >= 600){
+           $(".header").removeClass("sticky");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $(".header").removeClass("sticky");
+        }
+    });
+});
+
+</script>
+
+<!--
+<script type="text/javascript">
+var myCanvas = document.getElementById("drawcanvas");
+/*
+myCanvas.width = 1500;
+myCanvas.height = 300;
+myCanvas.style.width = "100%";
+*/
+myCanvas.width = window.innerWidth;
+myCanvas.height = window.innerHeight;
+myCanvas.style.width = "100%";
+</script>
+<script type="module">
+      import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+
+      import { GUI } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/dat.gui.module.js';
+
+      import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js';
+      import { EffectComposer } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/EffectComposer.js';
+      import { RenderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/RenderPass.js';
+      import { ShaderPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/ShaderPass.js';
+      import { UnrealBloomPass } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/postprocessing/UnrealBloomPass.js';
+
+function main() {
+  	const canvas = document.querySelector('#drawcanvas');
+  	var renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+  	const scene = new THREE.Scene();
+  	const camera = new THREE.PerspectiveCamera( 50, canvas.width / canvas.height, 1, 600 );
+
+  	scene.background = new THREE.Color(0xffff00);
+
+        function render() {
+        	renderer.render( scene, camera );
+        	requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+  }
+  main();
+</script>
+-->
+  <!-- Scroll Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Scroll Animation -->
+</html>
