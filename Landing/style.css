@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+html,main,div{
+background: #030D0F;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+color: #80A2BF;
+font-family: Roboto;
+}
+
+/* nav bar */
+.header {
+  background-color: rgba(0,0,0,0);
+  transition: 1s;
+}
+.sticky {
+  background-color: rgba(1,1,1,1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+/* nav bar */
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
