@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Date</title>
+	<meta charset="utf-8">
+</head>
+<script type="text/javascript">
+
+function getDayInfo(date){
+	var date = new Date("01.01.2022"); //Задаём дату
+
+	function getWeekDay(date){
+  		var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  		return days[date.getDay()];
+	} // Переводим номер дня недели в название
+
+	function getMonthName(date){
+  		var month = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Днкабря'];
+  		return month[date.getMonth()];
+	} // Переводим номер месяца в название
+
+	var week = Math.ceil(( date.getDate()) / 7); // Считаем номер недели: для этого поделим день месяца на количество дней в недели
+
+	console.log(`${getWeekDay(date)}, ${week} неделя ${getMonthName(date)} ${date.getFullYear()} года.`); // Выводим результат
+}
+
+</script>
+</html>
