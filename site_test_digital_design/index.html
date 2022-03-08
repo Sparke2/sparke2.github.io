@@ -3,7 +3,6 @@
 <head>
 	<title>JavaScript</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -11,31 +10,35 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 <main>
-	<div id="top" style="disabled:disabled"></div>
+	<!-- Кнопка вверх страницы -->
+	<div id="top_button" hidden></div>
+	<!-- Кнопка вверх страницы -->
+
 	<!-- Nav bar -->
 		<div class="container-fluid sticky-top shadow-sm" id="headerId">
 			<h1 class="text-center display-4 nav_bar">JavaScript</h1>
 		</div> 
 	<!-- Nav bar -->
+
 	<!-- Information about JS-->
 	<div class="container">
 		<h1>Для чего нужен и что делает Javascript</h1>
-		<h3>Математические операции</h3>
+		<h3 class="my-3">Математические операции</h3>
 		<div class="row">
-			<div class="col-md-10">
+			<div class="col-md-8">
 				<p class="text-indent">На веб-страницах очень часто возникает необходимость произвести те или иные вычисления. Например, есть два текстовых поля и нужно в третьем текстовом поле вывести сумму двух чисел, которые введены в первые два. С помощью Javascript можно создать калькулятор и разместить его на веб-странице.</p>
 				<p class="text-indent">
-					<a style="color:#333259;" href="http://www.javascriptkit.com/script/cut18.shtml">Пример такого калькулятора</a>
+					<a style="color:#026670;" href="http://www.javascriptkit.com/script/cut18.shtml">Пример такого калькулятора</a>
 				</p>
 				<p class="text-indent">
 					Еще ситуация, возьмем какую-нибудь текстовую строку на веб-странице, нужно увеличить ее размер в 1,5 раза. Это тоже можно сделать с помощью математических вычислений, путем умножения текущего размера на коэффициент 1,5. Задач, которые требуют вычислений очень и очень много на практике. Javascript позволяет все это делать.
 				</p>
 			</div>
-			<div class="col-md-2 ">
+			<div class="col-md-4 ">
 				<img class="w-100" src="img/cal.png">
 			</div>
 		</div>
-		<h3>Обработка и валидация данных в HTML-формах</h3>
+		<h3 class="my-3">Обработка и валидация данных в HTML-формах</h3>
 		<div class="row">
 			<div class="col-md-8">
 				<p class="text-indent">Javascript позволяет проверять, что все требуемые поля заполнены и данные, которые в них находятся соответствуют нужному формату (например, если требуются цифры, то должны быть только цифры и не должно быть букв). Делает это Javascript без перезагрузки страницы и даже без подключения к Интернет. Прежде чем отправлять данные на сервер, они проходят предварительную проверку на Javascript. Это снижает нагрузку на сервер.</p>
@@ -44,25 +47,55 @@
 				<img class="w-100" src="img/img_1.png">
 			</div>
 		</div>
-		<h3>Взаимодействия с пользователем и события</h3>
+		<h3 class="my-3">Взаимодействия с пользователем и события</h3>
 		<div class="row">
 			<div class="col-md-8">
-				<p>
-					<ul>На веб-странице могут появляться различные эффекты, в зависимости от того, какие действия совершает пользователь.</ul>
-					<li>Выпадающее меню на сайте при наведении курсора мыши.</li>
-					<li> При клике на кнопку скрыть или показать какой-то элемент на странице.</li>
-					<li>Появления всплывающего окна, когда курсор мыши ушел за пределы окна браузера.</li>
-					<li>Затемнение заднего фона и эффекты плавного появления элемента реализуются на Javascript и так далее.</li>
+				<p class="text-indent"> На веб-странице могут появляться различные эффекты, в зависимости от того, какие действия совершает пользователь.
+					<ul>
+						<li>Выпадающее меню на сайте при наведении курсора мыши.</li>
+						<li> При клике на кнопку скрыть или показать какой-то элемент на странице.</li>
+						<li>Появления всплывающего окна, когда курсор мыши ушел за пределы окна браузера.</li>
+						<li>Затемнение заднего фона и эффекты плавного появления элемента реализуются на Javascript и так далее.</li>
+					</ul>
 				</p>
 			</div>
 			<div class="col-md-4">
 				<img class="w-100" src="img/img_2.png">
 			</div>
 		</div>
+		<h3 class="my-3">Взаимодействовать с HTML-элементами на странице и управлять их содержимым и стилями</h3>
 		<div>
-			<p>Источник:<a href="https://webkyrs.info/post/dlia-chego-nuzhen-i-chto-delaet-javascript-primery">https://webkyrs.info/post/dlia-chego-nuzhen-i-chto-delaet-javascript-primery</a></p>
+			<p class="text-indent">При наступлении определенного события (например, клик мыши или любого другого) можно изменять внешний вид (стили CSS) элементов на странице. Делается это все программно. Еще можно добавлять какие-нибудь HTML-теги или атрибуты к ним, также при наступлении определенного события.</p>
 		</div>
-		<div class="top_button"><a href="#top"><img src="img/top.png"></a></div>
+		<h3 class="my-3">Добавление анимации и различных графических эффектов на веб-страницы</h3>
+		<div>
+			<p class="text-indent">
+				<ol>
+					<li>Падающие и двигающиеся объекты. Например, снег на сайт/</li>
+					<li>Плавное появление и скрытие объектов</li>
+					<li>Таймер обратного отсчета</li>
+				</ol>
+			</p>
+		</div>
+		<div>
+			<p>Источник:<a style="color:#026670;" href="https://webkyrs.info/post/dlia-chego-nuzhen-i-chto-delaet-javascript-primery">https://webkyrs.info/post/dlia-chego-nuzhen-i-chto-delaet-javascript-primery</a></p>
+		</div>
 	</div>
 	<!-- Information about JS-->
+
+	<!--Показать кнопку top_button -->
+	  <script>
+
+	    top_button.onclick = function() {
+	      window.scrollTo(pageXOffset, 0);
+	      // после scrollTo возникнет событие "scroll", так что стрелка автоматически скроется
+	    };
+
+	    window.addEventListener('scroll', function() {
+	      top_button.hidden = (pageYOffset < 100);
+	    });
+	  </script>
+	<!--Показать кнопку top_button -->
+	
 </main>
+</html>
