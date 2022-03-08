@@ -4,26 +4,27 @@
   outline: none;
 }
 html,main{
-background: #D7D8D9;
+background: #EDEAE5;
 }
 .nav_bar{
 	font-family:Roboto; 
-	color:#F20C1F;
+	color:#FCE181;
 }
 #headerId{
-	background: #D7D8D9;
+	background: #026670;
 }
 h1,h3{
 	font-family:Roboto; 
-	color:#32498C; 
+	color:#026670; 
 }
 .text-indent{
 	text-indent:3em;
 }
-p{
+p,a,ul,li{
 	color:#000;
+	font-family:Roboto;
 }
-.top_button{
+#top_button{
 	background-image: url(img/top.png);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -32,5 +33,10 @@ p{
 	display: block;
 	position: fixed;
 	bottom: 30px;
-	margin-left: 80%;
+	margin-left: 90%;
+	cursor: pointer;
+}
+
+li{
+	list-style: circle;
 }
