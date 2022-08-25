@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>DataLIB</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	</head>
+	<body>
+		<header class="no-fixed mb-5">
+			<nav class="navbar navbar-expand-lg fixed-top header-nav navbar-dark bg-primary">
+	        		<div class="container ">
+	                    <a class="navbar-brand" href="#">DataLIB</a>
+	                    <form class="form-inline">
+		      				<input class="form-control" type="search" placeholder="Поисковый запрос" aria-label="Search">
+	    				</form>
+	                    <div class="d-flex">
+	                        <div class="me-4">
+	                        	
+	                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	                                <span class="navbar-toggler-icon"></span>
+	                            </button>
+	                        	
+	                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	                                <ul class="navbar-nav ml-auto align-items-center">
+	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
+	                                    <li><a class="nav-link" href="#">Каталог</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li><a class="nav-link" href="#">Информация</a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                       
+	                        <div class="collapse navbar-collapse justify-content-end" id="navbar">
+	                            <ul class="navbar-nav ml-auto align-items-center">
+	                                <li><a href="https://dev.datalib.iprmedia.ru/profile" class="btn datalib-btn-sm datalib-btn-white me-3">Профиль</a></li>
+	                                <li>
+	                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+	                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+	                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="btn datalib-btn-sm datalib-btn-white" onclick="event.preventDefault(); this.closest('form').submit();">
+	                                                <i class="mdi mdi-logout"></i> Выйти
+	                                            </a>
+	                                        </form>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	    </header>
+        <main>
+		    <div class="container pt-3">
+		    	<div class="d-flex h-100">
+	                <div class="sidebar main-sidebar">
+	                	<div>
+	                		<h6>Панель управления</h6>
+	                	</div>
+				        <div class="sidebar-menu">
+				    		<ul class="border-top border-bottom">
+				                <li>
+				            		<a href="https://dev.datalib.iprmedia.ru/profile" class="">Профиль</a>
+				        		</li>
+				        		<li>
+				            		<a href="https://dev.datalib.iprmedia.ru/profile/events" class="">Мои мероприятия</a>
+				        		</li>
+				        		<li>
+				            		<a href="#collapsePublications" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapsePublications" class="">Издания</a>
+				            		<ul class="collapse " id="collapsePublications">
+				                		<li>
+				                    		<a href="https://dev.datalib.iprmedia.ru/profile/publications/latest" class="">Новые поступления</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/excluded" class="">Исключенные издания</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/recommended" class="">Рекомендации</a>
+						                </li>
+						            </ul>
+				       			</li>
+				                <li>
+						            <a href="#collapseContentManagement" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseContentManagement" class=" active ">Управление контентом</a>
+						            <ul class="collapse show" id="collapseContentManagement">
+				                		<li>
+				                    		<a href="https://dev.datalib.iprmedia.ru/profile/content-management/request-for-add" class="active">Запрос на добавление издания</a>
+						                </li>
+						            </ul>
+				        		</li>
+				                <li>
+						            <a href="#collapsePublicationsOnline" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapsePublicationsOnline" class="">Работа с изданиями on-line</a>
+						            <ul class="collapse " id="collapsePublicationsOnline">
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/favorites" class="">Избранные издания</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/bookmarks" class="">Мои закладки</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/annotations" class="">Мои конспекты</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/work-history" class="">История работы</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/search-history" class="">История поисковых запросов</a>
+						                </li>
+						            </ul>
+				       		 	</li>
+				       		 	<li>
+				        			<a href="#collapseBaseQuestions" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseBaseQuestions" class="active">База вопросов</a>
+				        			<ul class="collapse" id="collapseBaseQuestions">
+				        				<li>
+				        					<a href="#">Список вопросов</a>
+				        				</li>
+				        				<li>
+				        					<a href="#">Создать вопрос</a>
+				        				</li>
+				        			</ul>
+				        		</li>
+				        		<li>
+				        			<a href="#collapseTestConstructor" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseTestConstructor" class="active">Конструктор тестов</a>
+				        			<ul class="collapse" id="collapseTestConstructor">
+				        				<li>
+				        					<a href="#">Мои тесты</a>
+				        				</li>
+				        				<li>
+				        					<a href="#">Создать тест</a>
+				        				</li>
+				        			</ul>
+				        		</li>
+				                <li>
+				            		<a href="#collapseSelections" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseSelections" class="">Конструктор подборок</a>
+						            <ul class="collapse " id="collapseSelections">
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/create" class="">Создать подборку</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/selections" class="">Мои подборки</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/recommended" class="">Рекомендованные</a>
+						                </li>
+						            </ul>
+						        </li>
+				                <li>
+						            <a href="#collapseOrganizationStructure" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOrganizationStructure" class="">Структура организации</a>
+						            <ul class="collapse " id="collapseOrganizationStructure">
+						                                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/departments" class="">Подразделения</a>
+						                </li>
+						                                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/groups" class="">Группы</a>
+						                </li>
+						            </ul>
+						        </li>
+				        		<li>
+						            <a href="#collapseStatistics" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseStatistics" class="">Статистика</a>
+						            <ul class="collapse " id="collapseStatistics">
+						                                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics" class="">Сводная</a>
+						                </li>
+						                                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics/detailed" class="">Детализированная</a>
+						                </li>
+						            </ul>
+						        </li>
+				        		<li>
+						            <a href="#collapseUsers" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseUsers" class="">Пользователи</a>
+						            <ul class="collapse " id="collapseUsers">
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/users" class="">Список пользователей</a>
+						                </li>
+				                		<li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/users/invitation-codes" class="">Коды приглашений</a>
+						                </li>
+						                <li>
+						                    <a href="https://dev.datalib.iprmedia.ru/profile/users/export" class="">Экспорт пользователей</a>
+						                </li>
+				            		</ul>
+				        		</li>
+				    		</ul>
+				    		<form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+						                <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+						                <a href="https://dev.datalib.iprmedia.ru/logout" onclick="event.preventDefault(); this.closest('form').submit();">
+						                    Выйти
+						                </a>
+						    </form>
+						</div>
+					</div>
+		        	<div class="content">
+			        	<div class="container p-3">
+			            	<div class="row">
+			                	<div class="col-12">
+				                    <div class="profile-page-title">
+				                        <h2 class="text-uppercase">Запрос на добавление издания</h2>
+				                    </div>
+				                    <div class="border">
+					                    <p>
+					                        Уважаемый автор! Мы рады Вас приветствовать на первой платформе по подготовке кадров в цифровой экономике DATALIB.RU.
+					                    </p>
+					                    <p>
+					                        Если Вы хотите, чтобы Ваша работа была издана и опубликована на платформе <a href="/">DATALIB.RU</a>,
+					                        заполните заявку ниже, и с Вами свяжется сотрудник для согласования условий.
+					                    </p>
+				                    </div>
+			                    	<form id="send_request_for_add" action="https://dev.datalib.iprmedia.ru/profile/content-management/request-for-add" method="POST" enctype="multipart/form-data">
+			                    		<div class="row">
+			                    			<div class="col">
+						                        <div class="border p-4">
+						                            <h3>Информация об авторе</h3>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <input id="fio" type="text" name="fio" value="" class="form-control" placeholder="ФИО">
+
+						                                    <div class="text-danger" id="fio_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <input id="phone" type="text" name="phone" value="" class="form-control" placeholder="Телефон">
+
+						                                    <div class="text-danger" id="phone_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <input id="email" type="text" name="email" value="" class="form-control" placeholder="Email">
+
+						                                    <div class="text-danger" id="email_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="position">Ученая степень, звание, должность</label>
+						                                    <input id="position" type="text" name="position" value="" class="form-control" placeholder="">
+
+						                                    <div class="text-danger" id="position_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="job">Место работы</label>
+						                                    <input id="job" type="text" name="job" value="" class="form-control" placeholder="">
+
+						                                    <div class="text-danger" id="job_error"></div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="col">
+						                        <div class="border p-4">
+						                            <h3>Информация о работе</h3>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="title">Название (с указанием вида издания)</label>
+						                                    <input id="title" type="text" name="title" value="" class="form-control" placeholder="">
+
+						                                    <div class="text-danger" id="title_error"></div>
+						                                </div>
+						                            </div>
+
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="volume">Объем</label>
+						                                    <input id="volume" type="text" name="volume" value="" class="form-control" placeholder="">
+
+						                                    <div class="text-danger" id="volume_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="annotation" class="form-label">Аннотация</label>
+						                                    <textarea class="form-control" id="annotation" rows="3"></textarea>
+
+						                                    <div class="text-danger" id="annotation_error"></div>
+						                                </div>
+						                            </div>
+
+						                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+						                                <div class="col">
+						                                    <label for="degree_of_readiness">Степень готовности</label>
+						                                    <input id="degree_of_readiness" type="text" name="degree_of_readiness" value="" class="form-control" placeholder="">
+
+						                                    <div class="text-danger" id="degree_of_readiness_error"></div>
+						                                </div>
+						                            </div>
+					                        	</div>
+					                        </div>
+				                        </div>
+				                        <div class="row mt-4">
+						                    <div class="col">
+						                        <div class="mb-3">
+						                            <label for="formFile" class="form-label">Прикрепите план-проспект работы (с содержанием и небольшой частью текста)</label>
+						                            <input class="form-control" type="file" id="formFile" name="file">
+						                        </div>
+						                    </div>          
+						                </div>
+						                <div class="row">
+						                	<div class="col border">
+						                        <div class="row mt-4">
+						                            <div class="col-10">
+						                                <p>
+						                                    Я даю согласие на обработку и хранение моих персональных данных
+						                                </p>
+						                            </div>
+						                            <div class="col-2">
+						                                <input class="form-check-input" type="checkbox" id="sign" name="sign" value="" aria-label="...">
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="col border d-grid gap-1">
+						                        <button type="submit" class="btn datalib-btn datalib-btn-blue mt-4 border" id="send_request_for_add_btn" disabled>Отправить запрос</button>
+
+						                        <div class="text-danger" id="publication_send_error"></div>
+					                    	</div>
+				                        </div>
+			                    	</form>
+			                	</div>
+			            	</div>
+
+						    <div class="modal fade" id="showSuccessSendRequestModal" tabindex="-1" aria-labelledby="showSuccessSendRequestModalLabel" aria-hidden="true">
+							    <div class="modal-dialog modal-lg modal-dialog-centered">
+							        <div class="modal-content">
+							            <div class="modal-header">
+							                <h5 class="modal-title" id="showSuccessSendRequestModalLabel">
+							                    Издание <span class="publication_title"></span>
+							                </h5>
+							                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							            </div>
+							            <div class="modal-body">
+							                <h4>Успешно отправлено на модерацию</h4>
+
+							                <p>Вы можете продолжить работу, с вами свяжутся после просмотра запроса</p>
+							            </div>
+							            <div class="modal-footer">
+							                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+							            </div>
+							        </div>
+				    			</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+        <footer>
+			<div class="container bg-secondary">
+				
+			    <div class="row justify-content-between">
+			    	<div class="col-lg-2 col-12">
+						<svg width="137" height="85" viewBox="0 0 137 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M35.0814 0.420691C46.7614 0.420691 56.5081 4.48855 64.3217 12.6243C72.2157 20.6795 76.1628 30.7081 76.1628 42.7103C76.1628 54.7126 72.2157 64.7815 64.3217 72.9172C56.5081 80.9724 46.7614 85 35.0814 85H0.645517V0.420691H35.0814ZM35.0814 64.0968C40.9617 64.0968 45.7545 62.1636 49.4599 58.2971C53.1652 54.3501 55.0179 49.1545 55.0179 42.7103C55.0179 36.2662 53.1652 31.1109 49.4599 27.2444C45.7545 23.2974 40.9617 21.3239 35.0814 21.3239H22.8778V64.0968H35.0814ZM107.821 64.0968H136.94V85H86.1924V0.420691H107.821V64.0968Z" fill="white"/>
+						</svg>
+			    	</div>
+			        <div class="col-lg-4 col-12">
+			            <p style="font-size: 14px">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе по интеллектуальной собственности 15 марта 2022 года.
+			            </p>
+			            <p style="font-size: 12px">
+			            	Свидетельство о регистрации №2022620531
+			            </p>
+			            <p style="font-size: 14px">
+			               Программа для ЭВМ «DATALIB» зарегистрирована в Федеральной службе по интеллектуальной собственности 14 октября 2021 года
+			            </p>
+			            <p style="font-size: 12px">
+			            	Свидетельство о регистрации №2021666446
+			            </p>
+			            <p style="font-size: 14px;">
+			                        &copy; Общество с ограниченной ответственностью <br/> Компания «Ай Пи Ар Медиа»
+			            </p>
+			            
+			        </div>
+			        <div class="col-lg-6 col-12 mb-4" style="display: flex; flex-direction: column; ">
+			            <div class="row">
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number"style="font-size: 14px">
+			                        8 800 555-22-35</br>
+			                        <span> Звонок бесплатный</br>для всех регионов России
+			                                    </span>
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number" style="font-size: 14px">
+			                        <span class="phone-description">
+			                                        Отдел продаж:<br/>
+			                                        (добавочный 167)
+			                                    </span><br/>
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number" style="font-size: 14px">
+			                        <span class="phone-description">
+			                        				Техническая поддержка:</br>
+			                                        (добавочный 200)
+			                                    </span></br>
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-lg-8 col-12">
+			                    <p class="email" style="font-size: 14px">
+			                    	<span class="d-block mt-3">Электронная почта</span>
+			                        <a href="mailto:office@datalib.ru">office@datalib.ru</a>
+			                    </p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
