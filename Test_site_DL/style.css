@@ -1,0 +1,58 @@
+@import url("fonts/GilroyRegular/style.css");
+@import url("fonts/GilroyHeavy/style.css");
+@import url("fonts/GilroySemibold/style.css");
+.brandName {
+	font-family: Gilroy;
+	font-weight: 900;
+	color:#FFFFFF;
+}
+a.nav-link {
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-size: 14px;
+}
+header .btn{
+	color: #FFFFFF;
+	font-family: Gilroy;
+	font-size: 14px;
+}
+h2,h6,h3{
+	font-family: Gilroy;
+	color: #031E80;
+}
+main{
+	background: #DEE2EF;
+}
+
+p{
+	font-family: Gilroy;
+	font-size: 14px;
+}
+footer, nav {
+	background: #031E80;
+}
+footer p {
+	color: #FFFFFF;
+	font-size: 14px;
+}
+footer a {
+	color: #FFFFFF;
+}
+.sidebar{
+	background: #FFFFFF;
+	font-family: Gilroy;
+}
+
+.content{
+	background: #FFFFFF;
+}
+.border{
+	 border-radius: 25px;
+}
+label{
+	font-family: Gilroy;
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 600;
+}
+
+
