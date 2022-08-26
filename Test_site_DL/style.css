@@ -1,6 +1,6 @@
-@import url("fonts/GilroyRegular/style.css");
-@import url("fonts/GilroyHeavy/style.css");
-@import url("fonts/GilroySemibold/style.css");
+@import url("font/GilroyRegular/style.css");
+@import url("font/GilroyHeavy/style.css");
+@import url("font/GilroySemibold/style.css");
 .brandName {
 	font-family: Gilroy;
 	font-weight: 900;
