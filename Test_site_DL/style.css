@@ -1,15 +1,48 @@
 @import url("font/GilroyRegular/style.css");
 @import url("font/GilroyHeavy/style.css");
 @import url("font/GilroySemibold/style.css");
-.brandName {
-	font-family: Gilroy;
-	font-weight: 900;
-	color:#FFFFFF;
+
+input[type="text"]::placeholder {
+  font-family: Gilroy;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+input[type="text"]{
+  border-radius: 10px!important;  
+  border: 2px solid #CDD2E6!important;
+}
+input[type="text"]:focus{
+	box-shadow: none!important;
+	border: 2px solid #031E80!important;
+}
+textarea:focus{
+	box-shadow: none!important;
+	border: 2px solid #031E80!important;
+}
+textarea{
+	border-radius: 10px!important;  
+  	border: 2px solid #CDD2E6!important;
+}
+input[type="search"]::placeholder {
+  font-family: Gilroy;
+  color: rgba(255, 255, 255, 0.5)!important;
+}
+input[type="search"]{
+	background: rgba(255, 255, 255, 0.2); 
+	border:none; 
+	border-radius: 10px;
+}
+.datalib-btn-white:hover{
+	color: #FFFFFF!important;
 }
 a.nav-link {
     color: #FFFFFF;
     font-family: Gilroy;
     font-size: 14px;
+}
+a.nav-link:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 header .btn{
 	color: #FFFFFF;
@@ -27,6 +60,7 @@ main{
 p{
 	font-family: Gilroy;
 	font-size: 14px;
+	font-weight: 600!important;
 }
 footer, nav {
 	background: #031E80;
@@ -47,7 +81,8 @@ footer a {
 	background: #FFFFFF;
 }
 .border{
-	 border-radius: 25px;
+	 border-radius: 10px;
+	 border: 2px solid #CDD2E6!important;
 }
 label{
 	font-family: Gilroy;
@@ -56,12 +91,12 @@ label{
 }
 
 .btn-list[aria-expanded="true"]::before {
-    transform: rotate(180deg);
+    content: url("img/chevron-up.svg");
 }
 .btn-list::before {
     width: 1.25em;
     line-height: 0;
-    content: url("img/chevron-up.svg");
+    content: url("img/chevron-down.svg");
     transition: transform 0.35s ease;
     transform-origin: 0.5em 50%;
 }
@@ -87,6 +122,7 @@ a.list-sidebar{
 	color: #000000;
 	font-family: Gilroy;
 	font-weight: 600;
+	box-shadow: none!important;
 }
 .form-label-file {
   display: flex;
@@ -106,4 +142,21 @@ a.list-sidebar{
 
 .form-control-file {
   display: none;
+}
+
+.form-check-input:checked {
+    background-color: #031E80!important;
+    border-color: #031E80!important;
+    outline: 0!important;
+}
+
+.form-check-input {
+	width: 1.5em!important;
+    height: 1.5em!important;
+    background-size: auto!important;
+    box-shadow: none!important;
+    border: 1px solid #031E80!important;
+}
+.form-check-input:checked[type=checkbox]{
+	background-image: url("img/check.svg")!important;
 }
