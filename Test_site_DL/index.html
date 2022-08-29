@@ -17,7 +17,7 @@
 							</svg>
 						</a>
 	                    <form class="form-inline">
-		      				<input style="background: rgba(255, 255, 255, 0.2); border:none; border-radius: 10px;" class="form-control" type="search" placeholder="Поисковый запрос" aria-label="Search">
+		      				<input class="form-control" type="search" placeholder="Поисковый запрос" aria-label="Search">
 	    				</form>
 	                    <div class="d-flex">
 	                        <div class="pe-3 border-end">
@@ -55,16 +55,16 @@
 	        </nav>
 	    </header>
         <main>
-		    <div class="container pt-5">
+		    <div class="container pt-5 pb-5">
 		    	<div class="d-flex h-100">
 		    		<div class="row">
 			    		<div class="col-3">
-			                <div class="container sidebar main-sidebar " style="border-radius: 15px;">
+			                <div class="container sidebar main-sidebar border" >
 			                	<div class="pt-5 pb-2 ps-4">
 			                		<h6 style="font-weight: 600; color: #000000;">Панель управления</h6>
 			                	</div>
 						        <div class="sidebar-menu">
-						    		<ul class="border-top border-bottom list-unstyled mb-0 py-3 pt-2" style="border-top: 2px solid #CDD2E6!important;border-bottom: 2px solid #CDD2E6!important;">
+						    		<ul class="border-top border-bottom list-unstyled mb-0 py-3 pt-2" style="border-top: 2px solid #CDD2E6!important; border-bottom: 2px solid #CDD2E6!important;">
 						                <li class="pb-2">
 						            		<a href="https://dev.datalib.iprmedia.ru/profile" class="ps-4 list-sidebar">Профиль</a>
 						        		</li>
@@ -232,9 +232,9 @@
 							</div>
 						</div>
 						<div class="col-9">
-				        	<div class="content container ps-5 pe-5" style="border-radius: 15px;">
-					        	<div class=" p-3">
-					            	<div class="row">
+				        	<div class="content container ps-5 pe-5 border">
+					        	
+					            	<div class="row p-3">
 					                	<div class="col-12">
 					                		<div class="row">
 					                			<div class="col-8">
@@ -242,10 +242,10 @@
 								                        <h2 class="text-uppercase" style="font-weight: 600;">Запрос на добавление издания</h2>
 								                    </div>
 								                    <div class="shadow border pt-4 pb-4 ps-3" style="border: 2px solid #CDD2E6!important;">
-											            <p style="font-weight: 600;">
+											            <p>
 											                Уважаемый автор! Мы рады Вас приветствовать на первой платформе по подготовке кадров в цифровой экономике DATALIB.RU.
 											            </p>
-											            <p style="font-weight: 600;">
+											            <p>
 											                Если Вы хотите, чтобы Ваша работа была издана и опубликована на платформе DATALIB.RU,
 											                заполните заявку ниже, и с Вами свяжется сотрудник для согласования условий.
 											            </p>
@@ -276,7 +276,7 @@
 									                            </div>	
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col pt-3">
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="fio" type="text" name="fio" value="" class="form-control" placeholder="ФИО">
+									                                    <input id="fio" type="text" name="fio" value="" class="form-control" placeholder="ФИО">
 
 									                                    <div class="text-danger" id="fio_error"></div>
 									                                </div>
@@ -284,7 +284,7 @@
 
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="phone" type="text" name="phone" value="" class="form-control" placeholder="Телефон">
+									                                    <input id="phone" type="text" name="phone" value="" class="form-control" placeholder="Телефон">
 
 									                                    <div class="text-danger" id="phone_error"></div>
 									                                </div>
@@ -292,7 +292,7 @@
 
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col pb-4">
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="email" type="text" name="email" value="" class="form-control" placeholder="Email">
+									                                    <input id="email" type="text" name="email" value="" class="form-control" placeholder="Email">
 
 									                                    <div class="text-danger" id="email_error"></div>
 									                                </div>
@@ -301,7 +301,7 @@
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="position">Ученая степень, звание, должность</label>
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="position" type="text" name="position" value="" class="form-control" placeholder="">
+									                                    <input id="position" type="text" name="position" value="" class="form-control" placeholder="">
 
 									                                    <div class="text-danger" id="position_error"></div>
 									                                </div>
@@ -310,7 +310,7 @@
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="job">Место работы</label>
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="job" type="text" name="job" value="" class="form-control" placeholder="">
+									                                    <input id="job" type="text" name="job" value="" class="form-control" placeholder="">
 
 									                                    <div class="text-danger" id="job_error"></div>
 									                                </div>
@@ -330,7 +330,7 @@
 										                        <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="title">Название (с указанием вида издания)</label>
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="title" type="text" name="title" value="" class="form-control" placeholder="">
+									                                    <input id="title" type="text" name="title" value="" class="form-control" placeholder="">
 
 									                                    <div class="text-danger" id="title_error"></div>
 									                                </div>
@@ -340,7 +340,7 @@
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="volume">Объем</label>
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="volume" type="text" name="volume" value="" class="form-control" placeholder="">
+									                                    <input id="volume" type="text" name="volume" value="" class="form-control" placeholder="">
 
 									                                    <div class="text-danger" id="volume_error"></div>
 									                                </div>
@@ -349,7 +349,7 @@
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="annotation" class="form-label">Аннотация</label>
-									                                    <textarea style="border-radius: 10px;  border: 2px solid #CDD2E6;" class="form-control" id="annotation" rows="3"></textarea>
+									                                    <textarea class="form-control" id="annotation" rows="3"></textarea>
 
 									                                    <div class="text-danger" id="annotation_error"></div>
 									                                </div>
@@ -358,7 +358,7 @@
 									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
 									                                <div class="col">
 									                                    <label for="degree_of_readiness">Степень готовности</label>
-									                                    <input style="border-radius: 10px;  border: 2px solid #CDD2E6;" id="degree_of_readiness" type="text" name="degree_of_readiness" value="" class="form-control" placeholder="">
+									                                    <input id="degree_of_readiness" type="text" name="degree_of_readiness" value="" class="form-control" placeholder="">
 
 									                                    <div class="text-danger" id="degree_of_readiness_error"></div>
 									                                </div>
@@ -379,25 +379,29 @@
 									                        </div>
 									                    </div>          
 									                </div>
-									                <div class="row">
+									                
+									                <div class="row" >
 									                	<div class="col">
-									                        <div class="row border ms-1" style="border-radius: 15px; background: #CDD2E6;">
+									                		<div class="container border" style="background: #CDD2E6;">
+									                        <div class="row d-flex align-items-center">
 									                            <div class="col-10">
-									                                <p class="m-0 p-0" style="color: rgba(0, 0, 0, 0.6); font-weight: 600;">
+									                                <p class="mt-2 mb-2" style="color: rgba(0, 0, 0, 0.6); font-weight: 600; line-height: 1;">
 									                                    Я даю согласие на обработку<br> и хранение моих персональных данных
 									                                </p>
 									                            </div>
-									                            <div class="col-2 ">
-									                                <input class="form-check-input rounded-circle w-75 h-75" type="checkbox" id="sign" name="sign" value="" aria-label="...">
+									                            <div class="col-2">
+									                                <input class="form-check-input rounded-circle" type="checkbox" id="sign" name="sign" value="" aria-label="...">
 									                            </div>
 									                        </div>
+									                        </div>
 									                    </div>
-									                    <div class="col d-grid gap-1">
-									                        <button type="submit" style="border-radius: 15px; background: #031E80; color: #FFFFFF;" class="btn datalib-btn datalib-btn-blue border p-2" id="send_request_for_add_btn" >Отправить запрос</button>
+									                    <div class="col d-grid">
+									                        <button type="submit" style="border-radius: 10px; background: #031E80; color: #FFFFFF;" class="btn datalib-btn datalib-btn-blue border p-2" id="send_request_for_add_btn" >Отправить запрос</button>
 
 									                        <div class="text-danger" id="publication_send_error"></div>
 								                    	</div>
 							                        </div>
+							                    	
 						                    	</form>
 						                    </div>
 					                	</div>
@@ -423,7 +427,7 @@
 						    			</div>
 									</div>
 								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -441,19 +445,19 @@
 					</div>
 			    	</div>
 			        <div class="col-lg-4 col-12">
-			            <p style="line-height: 1;	">
-			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе по интеллектуальной собственности 15 марта 2022 года.
+			            <p style="line-height: 1.2;	">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
 			            </p>
 			            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">
 			            	Свидетельство о регистрации №2022620531
 			            </p>
-			            <p style="line-height: 1;	">
-			               Программа для ЭВМ «DATALIB» зарегистрирована в Федеральной службе по интеллектуальной собственности 14 октября 2021 года
+			            <p style="line-height: 1.2;	">
+			               Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
 			            </p>
 			            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">
 			            	Свидетельство о регистрации №2021666446
 			            </p>
-			            <p style="">
+			            <p>
 			                        &copy; Общество с ограниченной ответственностью <br> Компания «Ай Пи Ар Медиа»
 			            </p>
 			            
