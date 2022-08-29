@@ -157,7 +157,19 @@ a.list-sidebar{
     box-shadow: none!important;
     border: 1px solid #031E80!important;
 }
+
 .form-check-input:checked[type=checkbox]{
 	background-image: url("img/check.svg")!important;
 }
 
+.girl-container{
+	position:absolute;
+	display:block;
+	bottom: -2px;
+	right:-20px;
+}
+.text-container{
+	position: relative;
+	border-radius: 10px; 
+	border: 2px solid #CDD2E6;
+}
