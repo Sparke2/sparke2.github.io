@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DataLIB</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header class=" no-fixed mb-5">
+			<nav class="navbar navbar-expand-lg fixed-top header-nav">
+	        		<div class="container ">
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<svg width="145" height="29" viewBox="0 0 145 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.6 -1.90735e-06C15.4667 -1.90735e-06 18.6933 1.34666 21.28 4.04C23.8933 6.70667 25.2 10.0267 25.2 14C25.2 17.9733 23.8933 21.3067 21.28 24C18.6933 26.6667 15.4667 28 11.6 28H0.4V-1.90735e-06H11.6ZM11.6 21.84C13.8133 21.84 15.6 21.1333 16.96 19.72C18.3467 18.28 19.04 16.3733 19.04 14C19.04 11.6267 18.3467 9.73333 16.96 8.32C15.6 6.88 13.8133 6.16 11.6 6.16H6.8V21.84H11.6ZM43.1184 8H49.1184V28H43.1184V26.12C41.7051 27.7467 39.7184 28.56 37.1584 28.56C34.5184 28.56 32.2651 27.5467 30.3984 25.52C28.5318 23.4667 27.5984 20.96 27.5984 18C27.5984 15.04 28.5318 12.5467 30.3984 10.52C32.2651 8.46667 34.5184 7.44 37.1584 7.44C39.7184 7.44 41.7051 8.25333 43.1184 9.88V8ZM34.9184 21.56C35.7984 22.44 36.9451 22.88 38.3584 22.88C39.7718 22.88 40.9184 22.44 41.7984 21.56C42.6784 20.68 43.1184 19.4933 43.1184 18C43.1184 16.5067 42.6784 15.32 41.7984 14.44C40.9184 13.56 39.7718 13.12 38.3584 13.12C36.9451 13.12 35.7984 13.56 34.9184 14.44C34.0384 15.32 33.5984 16.5067 33.5984 18C33.5984 19.4933 34.0384 20.68 34.9184 21.56ZM65.2403 13.76H61.1203V20.84C61.1203 21.64 61.4403 22.1467 62.0803 22.36C62.7203 22.5733 63.7736 22.64 65.2403 22.56V28C61.427 28.4 58.787 28.04 57.3203 26.92C55.8536 25.7733 55.1203 23.7467 55.1203 20.84V13.76H51.9203V8H55.1203V4.2L61.1203 2.4V8H65.2403V13.76ZM82.7669 8H88.7669V28H82.7669V26.12C81.3535 27.7467 79.3669 28.56 76.8069 28.56C74.1669 28.56 71.9135 27.5467 70.0469 25.52C68.1802 23.4667 67.2469 20.96 67.2469 18C67.2469 15.04 68.1802 12.5467 70.0469 10.52C71.9135 8.46667 74.1669 7.44 76.8069 7.44C79.3669 7.44 81.3535 8.25333 82.7669 9.88V8ZM74.5669 21.56C75.4469 22.44 76.5935 22.88 78.0069 22.88C79.4202 22.88 80.5669 22.44 81.4469 21.56C82.3269 20.68 82.7669 19.4933 82.7669 18C82.7669 16.5067 82.3269 15.32 81.4469 14.44C80.5669 13.56 79.4202 13.12 78.0069 13.12C76.5935 13.12 75.4469 13.56 74.5669 14.44C73.6869 15.32 73.2469 16.5067 73.2469 18C73.2469 19.4933 73.6869 20.68 74.5669 21.56ZM99.7688 21.84H109.769V28H93.3688V-1.90735e-06H99.7688V21.84ZM112.588 -1.90735e-06H118.988V28H112.588V-1.90735e-06ZM141.158 13.48C143.452 14.9467 144.598 17.0533 144.598 19.8C144.598 22.2267 143.732 24.2 141.998 25.72C140.265 27.24 138.118 28 135.558 28H123.798V-1.90735e-06H134.758C137.265 -1.90735e-06 139.358 0.746665 141.038 2.24C142.745 3.70666 143.598 5.62667 143.598 8C143.598 10.24 142.785 12.0667 141.158 13.48ZM134.758 6H130.198V10.96H134.758C135.478 10.96 136.065 10.7333 136.518 10.28C136.972 9.8 137.198 9.2 137.198 8.48C137.198 7.76 136.972 7.17333 136.518 6.72C136.065 6.24 135.478 6 134.758 6ZM135.558 22C136.358 22 136.998 21.76 137.478 21.28C137.958 20.7733 138.198 20.12 138.198 19.32C138.198 18.52 137.958 17.88 137.478 17.4C136.998 16.8933 136.358 16.64 135.558 16.64H130.198V22H135.558Z" fill="white"/>
+							</svg>
+						</a>
+	                    <form class="form-inline">
+		      				<input class="form-control" type="search" placeholder="Поисковый запрос" aria-label="Search">
+	    				</form>
+	                    <div class="d-flex">
+	                        <div class="pe-3 border-end">
+	                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	                                <ul class="navbar-nav ml-auto align-items-center">
+	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
+	                                    <li><a class="nav-link" href="#">Каталог</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li><a class="nav-link" href="#">Информация</a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                       
+	                        <div class="collapse navbar-collapse justify-content-end ps-3" id="navbar">
+	                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.38283 1.41003L1.82833 1.63703L1.38283 1.41003ZM2.111 0.681656L2.338 1.12716L2.111 0.681656ZM2.111 15.3183L2.338 14.8728L2.111 15.3183ZM1.38283 14.59L0.937324 14.817H0.937324L1.38283 14.59ZM16.0197 14.59L15.5742 14.363L16.0197 14.59ZM15.291 15.3183L15.064 14.8728L15.291 15.3183ZM16.0197 1.41003L15.5742 1.63703L16.0197 1.41003ZM15.291 0.681656L15.518 0.236153V0.236153L15.291 0.681656ZM12.3678 15.5C12.3678 15.7761 12.5917 16 12.8678 16C13.144 16 13.3678 15.7761 13.3678 15.5H12.3678ZM4.03451 15.5C4.03451 15.7761 4.25836 16 4.53451 16C4.81065 16 5.03451 15.7761 5.03451 15.5H4.03451ZM8.70117 8.33333C7.5966 8.33333 6.70117 7.4379 6.70117 6.33333H5.70117C5.70117 7.99019 7.04432 9.33333 8.70117 9.33333V8.33333ZM6.70117 6.33333C6.70117 5.22876 7.5966 4.33333 8.70117 4.33333V3.33333C7.04432 3.33333 5.70117 4.67648 5.70117 6.33333H6.70117ZM8.70117 4.33333C9.80574 4.33333 10.7012 5.22876 10.7012 6.33333H11.7012C11.7012 4.67648 10.358 3.33333 8.70117 3.33333V4.33333ZM10.7012 6.33333C10.7012 7.4379 9.80574 8.33333 8.70117 8.33333V9.33333C10.358 9.33333 11.7012 7.99019 11.7012 6.33333H10.7012ZM15.7012 3.16663V12.8333H16.7012V3.16663H15.7012ZM13.5347 15H3.868V16H13.5347V15ZM1.70117 12.8333V3.16663H0.701172V12.8333H1.70117ZM3.868 1H13.5347V0H3.868V1ZM1.70117 3.16663C1.70117 2.69166 1.70156 2.36553 1.72222 2.11271C1.7424 1.86573 1.7794 1.73306 1.82833 1.63703L0.937324 1.18304C0.804599 1.44353 0.750774 1.72244 0.72554 2.03127C0.700783 2.33426 0.701172 2.70817 0.701172 3.16663H1.70117ZM3.868 0C3.40954 0 3.03554 -0.000388563 2.73246 0.0243665C2.42357 0.0495957 2.14453 0.103409 1.88401 0.236153L2.338 1.12716C2.43399 1.07825 2.56674 1.04123 2.81387 1.02105C3.0668 1.00039 3.39305 1 3.868 1V0ZM1.82833 1.63703C1.94025 1.41738 2.1186 1.23895 2.338 1.12716L1.88401 0.236153C1.47619 0.443944 1.14498 0.775484 0.937324 1.18304L1.82833 1.63703ZM3.868 15C3.39305 15 3.06681 14.9996 2.81388 14.9789C2.56676 14.9587 2.434 14.9217 2.338 14.8728L1.88401 15.7638C2.14452 15.8966 2.42356 15.9504 2.73245 15.9756C3.03554 16.0004 3.40953 16 3.868 16V15ZM0.701172 12.8333C0.701172 13.2918 0.700783 13.6657 0.725539 13.9687C0.750771 14.2776 0.804593 14.5565 0.937324 14.817L1.82833 14.363C1.77941 14.267 1.7424 14.1343 1.72222 13.8873C1.70156 13.6344 1.70117 13.3083 1.70117 12.8333H0.701172ZM2.338 14.8728C2.11855 14.761 1.94022 14.5826 1.82833 14.363L0.937324 14.817C1.14501 15.2246 1.47625 15.5561 1.88401 15.7638L2.338 14.8728ZM15.7012 12.8333C15.7012 13.3083 15.7008 13.6345 15.6802 13.8874C15.6601 14.1344 15.6231 14.2671 15.5742 14.363L16.4652 14.817C16.598 14.5565 16.6517 14.2775 16.6769 13.9686C16.7016 13.6656 16.7012 13.2917 16.7012 12.8333H15.7012ZM13.5347 16C13.9931 16 14.367 16.0004 14.6699 15.9756C14.9787 15.9504 15.2575 15.8965 15.518 15.7638L15.064 14.8728C14.9679 14.9218 14.8353 14.9588 14.5884 14.9789C14.3357 14.9996 14.0096 15 13.5347 15V16ZM15.5742 14.363C15.4625 14.5823 15.2838 14.7608 15.064 14.8728L15.518 15.7638C15.9254 15.5562 16.2573 15.225 16.4652 14.817L15.5742 14.363ZM16.7012 3.16663C16.7012 2.70822 16.7016 2.33431 16.6769 2.03135C16.6517 1.72255 16.598 1.44358 16.4652 1.18304L15.5742 1.63703C15.6231 1.733 15.6601 1.86563 15.6802 2.11263C15.7008 2.36548 15.7012 2.69161 15.7012 3.16663H16.7012ZM13.5347 1C14.0096 1 14.3357 1.00039 14.5884 1.02105C14.8353 1.04122 14.9679 1.07822 15.064 1.12716L15.518 0.236153C15.2575 0.103438 14.9787 0.0496056 14.6699 0.0243685C14.367 -0.000389099 13.9931 0 13.5347 0V1ZM16.4652 1.18304C16.2574 0.775151 15.9255 0.443774 15.518 0.236153L15.064 1.12716C15.2837 1.23912 15.4624 1.41771 15.5742 1.63703L16.4652 1.18304ZM13.3678 15.5C13.3678 12.9227 11.2785 10.8333 8.70117 10.8333V11.8333C10.7262 11.8333 12.3678 13.475 12.3678 15.5H13.3678ZM8.70117 10.8333C6.12384 10.8333 4.03451 12.9227 4.03451 15.5H5.03451C5.03451 13.475 6.67613 11.8333 8.70117 11.8333V10.8333Z" fill="white"/>
+								</svg>
+								<ul class="navbar-nav ml-auto align-items-center">
+	                                <li><a href="https://dev.datalib.iprmedia.ru/profile" class="btn datalib-btn-sm datalib-btn-white ps-1 pe-2">Профиль</a></li>
+	                                <li>
+	                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+	                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+	                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="btn datalib-btn-sm datalib-btn-white" onclick="event.preventDefault(); this.closest('form').submit();">
+	                                                <i class="mdi mdi-logout"></i> Выйти
+	                                            </a>
+	                                        </form>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	    </header>
+        <main>
+		    <div class="container pt-5 pb-5">
+		    	<div class="d-flex h-100">
+		    		<div class="row">
+			    		<div class="col-3">
+			                <div class="container sidebar main-sidebar border" >
+			                	<div class="pt-5 pb-2 ps-4">
+			                		<h6>Панель управления</h6>
+			                	</div>
+						        <div class="sidebar-menu">
+						    		<ul class="border-top border-bottom list-unstyled mb-0 py-3 pt-2">
+						                <li class="pb-2">
+						            		<a href="https://dev.datalib.iprmedia.ru/profile" class="ps-4 list-sidebar">Профиль</a>
+						        		</li>
+						        		<li class="pb-2">
+						            		<a href="https://dev.datalib.iprmedia.ru/profile/events" class="ps-4 list-sidebar">Мои мероприятия</a>
+						        		</li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublications" aria-expanded="false">
+									          Издания
+									        </button>
+						            		<div class="collapse" id="collapsePublications">
+							            		<ul class="list-unstyled ps-4">
+							                		<li>
+							                    		<a href="https://dev.datalib.iprmedia.ru/profile/publications/latest" class="list-no-active">Новые поступления</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/excluded" class="list-no-active">Исключенные издания</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/recommended" class="list-no-active">Рекомендации</a>
+									                </li>
+									            </ul>
+								        	</div>
+						       			</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseContentManagement" aria-expanded="false">
+									          Управление контентом
+									        </button>
+									        <div class="collapse show" id="collapseContentManagement">
+									            <ul class="list-unstyled ps-4">
+							                		<li>
+							                    		<a href="https://dev.datalib.iprmedia.ru/profile/content-management/request-for-add" class="active list-active">Запрос на добавление издания</a>
+									                </li>
+									            </ul>
+								            </div>
+						        		</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublicationsOnline" aria-expanded="false">
+									          Работа с изданиями on-line
+									        </button>
+									        <div class="collapse" id="collapsePublicationsOnline">
+									            <ul class="list-unstyled ps-4">
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/favorites" class="list-no-active">Избранные издания</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/bookmarks" class="list-no-active">Мои закладки</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/annotations" class="list-no-active">Мои конспекты</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/work-history" class="list-no-active">История работы</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/search-history" class="list-no-active">История поисковых запросов</a>
+									                </li>
+									            </ul>
+								        	</div>
+						       		 	</li>
+						       		 	<li>
+						       		 		<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseBaseQuestions" aria-expanded="false">
+									          База вопросов
+									        </button>
+						        			<div class="collapse" id="collapseBaseQuestions">
+							        			<ul class="list-unstyled ps-4">
+							        				<li>
+							        					<a href="#" class="list-no-active">Список вопросов</a>
+							        				</li>
+							        				<li>
+							        					<a href="#" class="list-no-active">Создать вопрос</a>
+							        				</li>
+							        			</ul>
+							        		</div>
+						        		</li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseTestConstructor" aria-expanded="false">
+									          Конструктор тестов
+									        </button>
+						        			<div class="collapse" id="collapseTestConstructor">
+							        			<ul class="list-unstyled ps-4">
+							        				<li>
+							        					<a href="#" class="list-no-active">Мои тесты</a>
+							        				</li>
+							        				<li>
+							        					<a href="#" class="list-no-active">Создать тест</a>
+							        				</li>
+							        			</ul>
+							        		</div>
+						        		</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseSelections" aria-expanded="false">
+									          Конструктор подборок
+									        </button>
+									        <div class="collapse" id="collapseSelections">
+									            <ul class="list-unstyled ps-4">
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/create" class="list-no-active">Создать подборку</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections" class="list-no-active">Мои подборки</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/recommended" class="list-no-active">Рекомендованные</a>
+									                </li>
+									            </ul>
+									        </div>
+								        </li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseOrganizationStructure" aria-expanded="false">
+									          Структура организации
+									        </button>
+									        <div class="collapse" id="collapseOrganizationStructure">
+									            <ul class="list-unstyled ps-4">
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/departments" class="list-no-active">Подразделения</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/groups" class="list-no-active">Группы</a>
+									                </li>
+									            </ul>
+								        	</div>
+								        </li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseStatistics" aria-expanded="false">
+									          Статистика
+									        </button>
+									        <div class="collapse " id="collapseStatistics">
+									            <ul class="list-unstyled ps-4">
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics" class="list-no-active">Сводная</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics/detailed" class="list-no-active">Детализированная</a>
+									                </li>
+									            </ul>
+								        	</div>
+								        </li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false">
+									          Пользователи
+									        </button>
+									        <div class="collapse " id="collapseUsers">
+									            <ul class="list-unstyled ps-4">
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users" class="list-no-active">Список пользователей</a>
+									                </li>
+							                		<li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users/invitation-codes" class="list-no-active">Коды приглашений</a>
+									                </li>
+									                <li>
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users/export" class="list-no-active">Экспорт пользователей</a>
+									                </li>
+							            		</ul>
+						            		</div>
+						        		</li>
+						    		</ul>
+						    		<form class="ps-4 pt-2 pb-5" method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+								                <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+								                <a href="https://dev.datalib.iprmedia.ru/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="list-sidebar">
+								                    Выйти
+								                </a>
+								    </form>
+								</div>
+							</div>
+						</div>
+						<div class="col-9">
+				        	<div class="content container ps-5 pe-5 border"> 
+									<div class="row p-3">
+					                	<div class="col-12">
+					                		<div class="row">
+								                <div class="profile-page-title pt-3 pb-4">
+								                    <h2 class="text-uppercase">Запрос на добавление издания</h2>
+								                </div>
+								            <div class="container">
+									            <div class="text-container shadow">
+									                <div class="col-8 ps-3 pt-5 pb-4">
+												            <p>
+												                Уважаемый автор! Мы рады Вас приветствовать на первой<br> платформе по подготовке кадров в цифровой экономике DATALIB.RU.
+												            </p>
+												            <p>
+												                Если Вы хотите, чтобы Ваша работа была издана<br> и опубликована на платформе DATALIB.RU,
+												                заполните заявку<br> ниже, и с Вами свяжется сотрудник для согласования условий.
+												            </p>
+									                   
+									                </div>
+									                <div class="girl-container">
+											            <img src="img/girl.svg" alt="">
+											        </div>
+											    </div>
+											</div>
+						                    <form id="send_request_for_add" action="https://dev.datalib.iprmedia.ru/profile/content-management/request-for-add" method="POST" enctype="multipart/form-data" class="pt-4">
+						                    		<div class="row">
+						                    			<div class="col">
+									                        <div class="border p-4 shadow">
+									                        	<div class="d-flex flex-row">
+									                        		<div class="flex-center pe-3">
+											                        	<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M14 19C14 19.5523 14.4477 20 15 20C15.5523 20 16 19.5523 16 19H14ZM0 19C0 19.5523 0.447715 20 1 20C1.55228 20 2 19.5523 2 19H0ZM16 19C16 14.5817 12.4183 11 8 11V13C11.3137 13 14 15.6863 14 19H16ZM8 11C3.58172 11 0 14.5817 0 19H2C2 15.6863 4.68629 13 8 13V11ZM8 8C6.34315 8 5 6.65685 5 5H3C3 7.76142 5.23858 10 8 10V8ZM5 5C5 3.34315 6.34315 2 8 2V0C5.23858 0 3 2.23858 3 5H5ZM8 2C9.65685 2 11 3.34315 11 5H13C13 2.23858 10.7614 0 8 0V2ZM11 5C11 6.65685 9.65685 8 8 8V10C10.7614 10 13 7.76142 13 5H11Z" fill="#031E80"/>
+																		</svg>
+																	</div>
+									                            <h3>Информация об авторе</h3>
+									                            </div>	
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col pt-3">
+									                                    <input id="fio" type="text" name="fio" value="" class="form-control" placeholder="ФИО">
+
+									                                    <div class="text-danger" id="fio_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <input id="phone" type="text" name="phone" value="" class="form-control" placeholder="Телефон">
+
+									                                    <div class="text-danger" id="phone_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col pb-4">
+									                                    <input id="email" type="text" name="email" value="" class="form-control" placeholder="Email">
+
+									                                    <div class="text-danger" id="email_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="position">Ученая степень, звание, должность</label>
+									                                    <input id="position" type="text" name="position" value="" class="form-control" placeholder="">
+
+									                                    <div class="text-danger" id="position_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="job">Место работы</label>
+									                                    <input id="job" type="text" name="job" value="" class="form-control" placeholder="">
+
+									                                    <div class="text-danger" id="job_error"></div>
+									                                </div>
+									                            </div>
+									                        </div>
+									                    </div>
+									                    <div class="col" >
+									                        <div class="border p-4 shadow">
+									                        	<div class="d-flex flex-row">
+									                        		<div class="flex-center pe-3">
+											                        	<svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M10 16L9.16801 16.5548C9.35349 16.833 9.66572 17.0001 10.0001 17C10.3344 17 10.6466 16.8329 10.8321 16.5547L10 16ZM10.575 15.1375L9.74299 14.5828L9.74298 14.5828L10.575 15.1375ZM18.8911 1.54602L18.0001 2.00001V2.00001L18.8911 1.54602ZM18.4539 1.10899L18.9079 0.217987L18.4539 1.10899ZM18.4539 12.891L17.9999 12L18.4539 12.891ZM18.8911 12.454L18.0001 12L18.8911 12.454ZM11.7008 13.6824L12.3358 14.4549L11.7008 13.6824ZM12.7339 13.1295L13.0245 14.0863H13.0245L12.7339 13.1295ZM10.327 2.63806L9.43597 2.18407L10.327 2.63806ZM11.6382 1.32698L11.1842 0.435974L11.6382 1.32698ZM9.4248 15.1375L8.59275 15.6922L8.59281 15.6922L9.4248 15.1375ZM1.10899 1.54602L2 2.00001L1.10899 1.54602ZM1.5459 1.10899L1.99989 2L1.5459 1.10899ZM1.5459 12.891L1.99989 12H1.99989L1.5459 12.891ZM1.10899 12.454L0.217987 12.908H0.217987L1.10899 12.454ZM8.29932 13.6824L8.93428 12.9098L8.29932 13.6824ZM7.26624 13.1295L6.97565 14.0863H6.97565L7.26624 13.1295ZM9.67285 2.63806L8.78185 3.09205L9.67285 2.63806ZM8.36217 1.32698L8.81616 0.435974V0.435974L8.36217 1.32698ZM9 5.80005V16H11V5.80005H9ZM10.8321 16.5547L11.4071 15.6921L9.74298 14.5828L9.16794 15.4454L10.8321 16.5547ZM14.5688 14H17.4V12H14.5688V14ZM20 11.4V2.59998H18V11.4H20ZM17.3998 0H14.7998V2H17.3998V0ZM20 2.59998C20 2.33655 20.0008 2.07876 19.9831 1.86192C19.9645 1.63337 19.9205 1.36356 19.7821 1.09203L18.0001 2.00001C17.9708 1.9424 17.9812 1.91953 17.9897 2.02447C17.9992 2.14111 18 2.30335 18 2.59998H20ZM17.3998 2C17.6963 2 17.8586 2.00078 17.9752 2.0103C18.0802 2.01888 18.0574 2.02932 17.9999 2L18.9079 0.217987C18.6364 0.0796756 18.3667 0.0356172 18.1381 0.0169443C17.9211 -0.000777483 17.6633 0 17.3998 0V2ZM19.7821 1.09203C19.5902 0.715298 19.2838 0.409526 18.9079 0.217987L17.9999 2L18.0001 2.00001L19.7821 1.09203ZM17.4 14C17.6635 14 17.9213 14.0008 18.1382 13.983C18.3668 13.9644 18.6365 13.9203 18.9079 13.782L17.9999 12C18.0574 11.9707 18.0801 11.9811 17.9753 11.9897C17.8587 11.9992 17.6965 12 17.4 12V14ZM18 11.4C18 11.6966 17.9993 11.8589 17.9897 11.9755C17.9812 12.0805 17.9707 12.0577 18.0001 12L19.7821 12.908C19.9205 12.6365 19.9645 12.3666 19.9831 12.1381C20.0008 11.9212 20 11.6634 20 11.4H18ZM18.9079 13.782C19.2837 13.5905 19.5901 13.2848 19.7821 12.908L18.0001 12L17.9999 12L18.9079 13.782ZM11.4071 15.6922C11.9625 14.8591 12.1334 14.6213 12.3358 14.4549L11.0659 12.9098C10.5799 13.3092 10.2296 13.8529 9.74299 14.5828L11.4071 15.6922ZM14.5688 12C13.6919 12 13.0452 11.9898 12.4433 12.1726L13.0245 14.0863C13.2751 14.0102 13.5674 14 14.5688 14V12ZM12.3358 14.4549C12.539 14.2879 12.773 14.1627 13.0245 14.0863L12.4433 12.1726C11.9401 12.3254 11.4721 12.576 11.0659 12.9098L12.3358 14.4549ZM11 5.80005C11 4.94347 11.0008 4.36117 11.0376 3.91108C11.0734 3.47266 11.1383 3.24845 11.218 3.09205L9.43597 2.18407C9.18868 2.66941 9.09012 3.18612 9.04419 3.74822C8.99922 4.29864 9 4.97647 9 5.80005H11ZM14.7998 0C13.9762 0 13.2985 -0.000778079 12.7481 0.0441948C12.1861 0.0901246 11.6695 0.1887 11.1842 0.435974L12.0922 2.21799C12.2486 2.13828 12.4727 2.07337 12.911 2.03755C13.361 2.00078 13.9432 2 14.7998 2V0ZM11.218 3.09205C11.4097 2.71581 11.7158 2.40978 12.0922 2.21799L11.1842 0.435974C10.4316 0.819424 9.81951 1.43134 9.43597 2.18407L11.218 3.09205ZM10.832 15.4453L10.2568 14.5827L8.59281 15.6922L9.16801 16.5548L10.832 15.4453ZM5.43122 12H2.6001V14H5.43122V12ZM2 11.4V2.59998H0V11.4H2ZM2.6001 2H5.2001V0H2.6001V2ZM2 2.59998C2 2.30345 2.00078 2.1412 2.0103 2.02463C2.01887 1.91974 2.0293 1.94251 2 2.00001L0.217987 1.09203C0.0796948 1.36344 0.0356238 1.63316 0.0169456 1.86176C-0.000777841 2.07867 0 2.33645 0 2.59998H2ZM2.6001 0C2.33656 0 2.07874 -0.000777125 1.86179 0.0169432C1.63322 0.0356117 1.36339 0.0796596 1.09191 0.217987L1.99989 2C1.94232 2.02933 1.91956 2.01889 2.0246 2.01031C2.14126 2.00078 2.30358 2 2.6001 2V0ZM2 2.00001L1.99989 2L1.09191 0.217987C0.715325 0.409865 0.409602 0.715964 0.217987 1.09203L2 2.00001ZM2.6001 12C2.30359 12 2.14127 11.9992 2.02462 11.9897C1.91959 11.9811 1.94233 11.9707 1.99989 12L1.09191 13.782C1.36337 13.9203 1.63319 13.9644 1.86177 13.983C2.07873 14.0008 2.33655 14 2.6001 14V12ZM0 11.4C0 11.6635 -0.000777602 11.9213 0.0169448 12.1382C0.0356196 12.3668 0.0796824 12.6366 0.217987 12.908L2 12C2.02931 12.0576 2.01888 12.0803 2.0103 11.9754C2.00078 11.8588 2 11.6965 2 11.4H0ZM1.99989 12L2 12L0.217987 12.908C0.409658 13.2842 0.715434 13.5902 1.09191 13.782L1.99989 12ZM10.2569 14.5828C9.77053 13.8533 9.42028 13.3093 8.93428 12.9098L7.66436 14.4549C7.86667 14.6212 8.03711 14.8587 8.59275 15.6922L10.2569 14.5828ZM5.43122 14C6.43269 14 6.72502 14.0102 6.97565 14.0863L7.55682 12.1726C6.95493 11.9898 6.30817 12 5.43122 12V14ZM8.93428 12.9098C8.52807 12.576 8.06003 12.3254 7.55682 12.1726L6.97565 14.0863C7.22718 14.1627 7.4612 14.2879 7.66436 14.4549L8.93428 12.9098ZM11 5.80005C11 4.97642 11.0007 4.29859 10.9557 3.74813C10.9097 3.186 10.8111 2.66935 10.5639 2.18407L8.78185 3.09205C8.86156 3.24851 8.92652 3.47277 8.96237 3.91116C8.99918 4.36122 9 4.94352 9 5.80005H11ZM5.2001 2C6.05668 2 6.639 2.00078 7.08911 2.03755C7.52757 2.07337 7.75179 2.1383 7.90818 2.21799L8.81616 0.435974C8.33081 0.188678 7.81408 0.0901172 7.25197 0.0441933C6.70152 -0.000777602 6.02368 0 5.2001 0V2ZM10.5639 2.18407C10.1805 1.4317 9.56909 0.81961 8.81616 0.435974L7.90818 2.21799C8.28422 2.40959 8.58996 2.71545 8.78185 3.09205L10.5639 2.18407Z" fill="#031E80"/>
+																		</svg>
+																	</div>
+										                            <h3>Информация о работе</h3>
+										                        </div>
+										                        <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="title">Название (с указанием вида издания)</label>
+									                                    <input id="title" type="text" name="title" value="" class="form-control" placeholder="">
+
+									                                    <div class="text-danger" id="title_error"></div>
+									                                </div>
+									                            </div>
+
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="volume">Объем</label>
+									                                    <input id="volume" type="text" name="volume" value="" class="form-control" placeholder="">
+
+									                                    <div class="text-danger" id="volume_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="annotation" class="form-label">Аннотация</label>
+									                                    <textarea class="form-control" id="annotation" rows="3"></textarea>
+
+									                                    <div class="text-danger" id="annotation_error"></div>
+									                                </div>
+									                            </div>
+
+									                            <div class="row row-cols-1 g-3 justify-content-between my-2">
+									                                <div class="col">
+									                                    <label for="degree_of_readiness">Степень готовности</label>
+									                                    <input id="degree_of_readiness" type="text" name="degree_of_readiness" value="" class="form-control" placeholder="">
+
+									                                    <div class="text-danger" id="degree_of_readiness_error"></div>
+									                                </div>
+									                            </div>
+								                        	</div>
+								                        </div>
+							                        </div>
+							                        <div class="row mt-4">
+									                    <div class="col">
+									                        <div class="mb-3">
+									                        	<label for="formFile" class="form-label-file ">
+									                            	<svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M11 23.25C11 23.8023 11.4477 24.25 12 24.25C12.5523 24.25 13 23.8023 13 23.25H11ZM12 14.5L12.5547 13.668C12.2188 13.444 11.7812 13.444 11.4453 13.6679L12 14.5ZM7.0703 16.5846C6.61077 16.891 6.4866 17.5118 6.79295 17.9714C7.0993 18.4309 7.72017 18.5551 8.1797 18.2487L7.0703 16.5846ZM15.8203 18.2487C16.2798 18.5551 16.9007 18.4309 17.2071 17.9714C17.5134 17.5118 17.3892 16.891 16.9297 16.5846L15.8203 18.2487ZM20.8419 7.29983L20.1347 8.00694L20.8419 7.29983ZM16.2839 2.74183L16.991 2.03472L16.2839 2.74183ZM6.45862 27.625V26.625V27.625ZM17.542 27.625V28.625V27.625ZM2.10956 26.0325L3.00057 25.5785L2.10956 26.0325ZM3.38387 27.3071L3.83786 26.4161L3.38387 27.3071ZM3.38387 1.6929L3.83786 2.5839H3.83786L3.38387 1.6929ZM2.10956 2.96756L1.21856 2.51357L1.21856 2.51357L2.10956 2.96756ZM15.2328 1.80483L14.7103 2.65747L15.2328 1.80483ZM14.3898 1.45559L14.6233 0.483218V0.483218L14.3898 1.45559ZM22.1272 9.19387L23.0995 8.96043L22.1272 9.19387ZM21.7782 8.35084L20.9255 8.87334L21.7782 8.35084ZM21.8907 26.0325L22.7818 26.4864L21.8907 26.0325ZM20.6155 27.3071L20.1615 26.4161L20.6155 27.3071ZM22.2086 11.125C22.7609 11.125 23.2086 10.6773 23.2086 10.125C23.2086 9.57272 22.7609 9.125 22.2086 9.125V11.125ZM18.1253 10.125V9.125V10.125ZM14.4583 1.375C14.4583 0.822715 14.0106 0.375 13.4583 0.375C12.906 0.375 12.4583 0.822715 12.4583 1.375H14.4583ZM15.0505 9.80706L15.5045 8.91605L15.0505 9.80706ZM13.7762 8.53245L14.6672 8.07846L13.7762 8.53245ZM13 23.25V14.5H11V23.25H13ZM8.1797 18.2487L12.5547 15.3321L11.4453 13.6679L7.0703 16.5846L8.1797 18.2487ZM11.4453 15.3321L15.8203 18.2487L16.9297 16.5846L12.5547 13.668L11.4453 15.3321ZM23.2083 22.9584V10.5997H21.2083V22.9584H23.2083ZM21.549 6.59272L16.991 2.03472L15.5767 3.44894L20.1347 8.00694L21.549 6.59272ZM12.984 0.375H6.45862V2.375H12.984V0.375ZM0.791667 6.04168V22.9583H2.79167V6.04168H0.791667ZM6.45862 28.625H17.542V26.625H6.45862V28.625ZM0.791667 22.9583C0.791667 23.7586 0.790889 24.4189 0.834725 24.9554C0.879516 25.5036 0.97581 26.01 1.21856 26.4864L3.00057 25.5785C2.92542 25.431 2.86277 25.2171 2.82808 24.7926C2.79244 24.3564 2.79167 23.7916 2.79167 22.9583H0.791667ZM6.45862 26.625C5.6254 26.625 5.06044 26.6242 4.62408 26.5886C4.19934 26.5539 3.98531 26.4912 3.83786 26.4161L2.92988 28.1981C3.40635 28.4408 3.91294 28.5371 4.46122 28.5819C4.9979 28.6258 5.65835 28.625 6.45862 28.625V26.625ZM1.21856 26.4864C1.59395 27.2232 2.1927 27.8225 2.92988 28.1981L3.83786 26.4161C3.47743 26.2324 3.18444 25.9393 3.00057 25.5785L1.21856 26.4864ZM6.45862 0.375C5.65837 0.375 4.99791 0.374223 4.46125 0.418056C3.91297 0.462838 3.40636 0.559112 2.92988 0.801892L3.83786 2.5839C3.98529 2.50879 4.19931 2.44611 4.62406 2.41142C5.06042 2.37578 5.62538 2.375 6.45862 2.375V0.375ZM2.79167 6.04168C2.79167 5.20844 2.79244 4.64365 2.82808 4.20746C2.86277 3.78295 2.92542 3.56904 3.00057 3.42155L1.21856 2.51357C0.975809 2.98999 0.879515 3.4964 0.834725 4.0446C0.790889 4.58112 0.791667 5.24144 0.791667 6.04168H2.79167ZM2.92988 0.801891C2.19265 1.17753 1.59393 1.77686 1.21856 2.51357L3.00057 3.42155C3.18446 3.06065 3.47748 2.76753 3.83786 2.5839L2.92988 0.801891ZM16.991 2.03472C16.5201 1.56388 16.174 1.20877 15.7553 0.952187L14.7103 2.65747C14.8803 2.76162 15.0387 2.91091 15.5767 3.44894L16.991 2.03472ZM12.984 2.375C13.745 2.375 13.9626 2.38143 14.1564 2.42796L14.6233 0.483218C14.1458 0.368573 13.6497 0.375 12.984 0.375V2.375ZM15.7553 0.952187C15.405 0.737511 15.0231 0.579194 14.6233 0.483218L14.1564 2.42796C14.3518 2.47488 14.5387 2.55231 14.7103 2.65747L15.7553 0.952187ZM23.2083 10.5997C23.2083 9.93247 23.2141 9.43762 23.0995 8.96043L21.1548 9.42732C21.2014 9.62147 21.2083 9.84013 21.2083 10.5997H23.2083ZM20.1347 8.00694C20.6719 8.54413 20.8212 8.70312 20.9255 8.87334L22.6308 7.82834C22.3744 7.40988 22.0207 7.06442 21.549 6.59272L20.1347 8.00694ZM23.0995 8.96043C23.0037 8.56122 22.8458 8.17916 22.6308 7.82834L20.9255 8.87334C21.0304 9.04444 21.1077 9.23131 21.1548 9.42732L23.0995 8.96043ZM21.2083 22.9584C21.2083 23.7917 21.2076 24.3565 21.1721 24.7927C21.1374 25.2173 21.0748 25.4311 20.9997 25.5785L22.7818 26.4864C23.0246 26.0099 23.1207 25.5034 23.1654 24.9553C23.2092 24.4188 23.2083 23.7585 23.2083 22.9584H21.2083ZM17.542 28.625C18.3422 28.625 19.0024 28.6258 19.5388 28.5819C20.087 28.5371 20.5932 28.4408 21.0695 28.1981L20.1615 26.4161C20.014 26.4912 19.8001 26.5539 19.3759 26.5886C18.9398 26.6242 18.3752 26.625 17.542 26.625V28.625ZM20.9997 25.5785C20.8162 25.9387 20.5226 26.2321 20.1615 26.4161L21.0695 28.1981C21.806 27.8228 22.406 27.2239 22.7818 26.4864L20.9997 25.5785ZM22.2086 9.125H18.1253V11.125H22.2086V9.125ZM14.4583 5.45833V1.375H12.4583V5.45833H14.4583ZM18.1253 9.125C17.2921 9.125 16.7271 9.12421 16.2908 9.08856C15.866 9.05386 15.652 8.99118 15.5045 8.91605L14.5965 10.6981C15.073 10.9408 15.5796 11.0371 16.1279 11.0819C16.6646 11.1258 17.325 11.125 18.1253 11.125V9.125ZM12.4583 5.45833C12.4583 6.25857 12.4576 6.91889 12.5014 7.45542C12.5462 8.00362 12.6425 8.51002 12.8852 8.98644L14.6672 8.07846C14.5921 7.93097 14.5294 7.71706 14.4948 7.29255C14.4591 6.85636 14.4583 6.29158 14.4583 5.45833H12.4583ZM15.5045 8.91605C15.1441 8.7324 14.8511 8.43932 14.6672 8.07846L12.8852 8.98644C13.2606 9.7232 13.8594 10.3225 14.5965 10.6981L15.5045 8.91605Z" fill="#031E80"/>
+																	</svg>
+																	<span class="ps-3">Прикрепите план-проспект работы<br>
+																		<span class="grey-text">
+																			(с содержанием и небольшой частью текста)
+																		</span>
+																	</span>
+																</label>
+									                            <input class="form-control-file" type="file" id="formFile" name="file">
+									                        </div>
+									                    </div>          
+									                </div>
+									                
+									                <div class="row" >
+									                	<div class="col">
+									                		<div class="container border bg-grey">
+									                        <div class="row d-flex align-items-center">
+									                            <div class="col-10">
+									                                <p class="mt-2 mb-2 grey-text">
+									                                    Я даю согласие на обработку<br> и хранение моих персональных данных
+									                                </p>
+									                            </div>
+									                            <div class="col-2">
+									                                <input class="form-check-input rounded-circle" type="checkbox" id="sign" name="sign" value="" aria-label="...">
+									                            </div>
+									                        </div>
+									                        </div>
+									                    </div>
+									                    <div class="col d-grid">
+									                        <button type="submit" class="btn datalib-btn datalib-btn-blue border p-2" id="send_request_for_add_btn" >Отправить запрос</button>
+
+									                        <div class="text-danger" id="publication_send_error"></div>
+								                    	</div>
+							                        </div>
+						                    </form>
+					                	</div>
+					            	</div>
+									<div class="modal fade" id="showSuccessSendRequestModal" tabindex="-1" aria-labelledby="showSuccessSendRequestModalLabel" aria-hidden="true">
+									    <div class="modal-dialog modal-lg modal-dialog-centered">
+									        <div class="modal-content">
+									            <div class="modal-header">
+									                <h5 class="modal-title" id="showSuccessSendRequestModalLabel">
+									                    Издание <span class="publication_title"></span>
+									                </h5>
+									                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									            </div>
+									            <div class="modal-body">
+									                <h4>Успешно отправлено на модерацию</h4>
+
+									                <p>Вы можете продолжить работу, с вами свяжутся после просмотра запроса</p>
+									            </div>
+									            <div class="modal-footer">
+									                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+									            </div>
+									        </div>
+						    			</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+        <footer>
+			<div class="container pt-3 pb-3">
+				
+			    <div class="row justify-content-between">
+			    	<div class="d-flex justify-content-center align-items-center col-lg-2 col-12">
+			    		<div class=" ">
+						<svg width="137" height="85" viewBox="0 0 137 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M35.0814 0.420691C46.7614 0.420691 56.5081 4.48855 64.3217 12.6243C72.2157 20.6795 76.1628 30.7081 76.1628 42.7103C76.1628 54.7126 72.2157 64.7815 64.3217 72.9172C56.5081 80.9724 46.7614 85 35.0814 85H0.645517V0.420691H35.0814ZM35.0814 64.0968C40.9617 64.0968 45.7545 62.1636 49.4599 58.2971C53.1652 54.3501 55.0179 49.1545 55.0179 42.7103C55.0179 36.2662 53.1652 31.1109 49.4599 27.2444C45.7545 23.2974 40.9617 21.3239 35.0814 21.3239H22.8778V64.0968H35.0814ZM107.821 64.0968H136.94V85H86.1924V0.420691H107.821V64.0968Z" fill="white"/>
+						</svg>
+					</div>
+			    	</div>
+			        <div class="col-lg-4 col-12">
+			            <p class="footer-white">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2022620531
+			            </p>
+			            <p class="footer-white">
+			               Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2021666446
+			            </p>
+			            <p>
+			                        &copy; Общество с ограниченной ответственностью <br> Компания «Ай Пи Ар Медиа»
+			            </p>
+			            
+			        </div>
+			        <div class="col-lg-6 col-12 mb-4">
+			            <div class="row">
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number">
+			                        8 800 555-22-35<br>
+			                        <span> Звонок бесплатный<br>для всех регионов России
+			                                    </span>
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number footer-pale-white">
+			                        <span class="phone-description footer-white">
+			                                        Отдел продаж:<br>
+			                                        (добавочный 167)
+			                                    </span><br>
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number footer-pale-white">
+			                        <span class="phone-description footer-white">
+			                        				Техническая поддержка:<br>
+			                                        (добавочный 200)
+			                                    </span><br>
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-lg-8 col-12">
+			                    <p class="email">
+			                    	<span class="d-block mt-3 footer-pale-white">Электронная почта</span>
+			                        <a href="mailto:office@datalib.ru">office@datalib.ru</a>
+			                    </p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
