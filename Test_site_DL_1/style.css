@@ -1,6 +1,20 @@
-@import url("font/GilroyRegular/style.css");
-@import url("font/GilroyHeavy/style.css");
-@import url("font/GilroySemibold/style.css");
+
+@import url("fonts/GilroyRegular/style.css");
+@import url("fonts/GilroyHeavy/style.css");
+@import url("fonts/GilroySemibold/style.css");
+@import url("fonts/GilroyMedium/style.css");
+
+
+@font-face {
+	font-family: 'Gilroy-Medium';
+	src: url('fonts/GilroyMedium/gilroy-medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/GilroyMedium/gilroy-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/GilroyMedium/gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/GilroyMedium/gilroy-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/GilroyMedium/gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/GilroyMedium/gilroy-medium.svg#gilroy-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 
 input[type="text"]::placeholder {
   	font-family: Gilroy;
@@ -28,9 +42,12 @@ input[type="search"]::placeholder {
 	color: rgba(255, 255, 255, 0.5)!important;
 }
 input[type="search"]{
-	background: rgba(255, 255, 255, 0.2); 
+	background: rgba(255, 255, 255, 0.2) url("img/search.svg") 10px 10px no-repeat;
 	border:none; 
 	border-radius: 10px;
+}
+.form-control{
+	font-size: 14px;
 }
 .datalib-btn-white:hover{
 	color: #FFFFFF!important;
@@ -55,8 +72,8 @@ h2,h3{
 	font-weight: 600!important;
 }
 h6{
-	font-family: Gilroy;
-	font-weight: 600!important; 
+	font-family: Gilroy-Medium!important;
+	font-weight: 500!important;
 	color: #000000;
 }
 main{
@@ -64,9 +81,11 @@ main{
 }
 
 p{
-	font-family: Gilroy;
+	font-family: 'Gilroy';
 	font-size: 14px;
-	font-weight: 600!important;
+	font-weight: 600;
+	line-height: 1.2;
+	font-style: normal;
 }
 footer, nav {
 	background: #031E80;
@@ -74,6 +93,7 @@ footer, nav {
 footer p {
 	color: #FFFFFF;
 	font-size: 14px;
+	font-weight: 500!important;
 }
 footer a {
 	color: #FFFFFF;
@@ -90,13 +110,18 @@ footer a {
 	border-radius: 10px;
 	border: 2px solid #CDD2E6!important;
 }
+.border-round{
+	border-radius: 10px;
+}
 label{
 	font-family: Gilroy;
 	color: rgba(0, 0, 0, 0.5);
 	font-weight: 600;
+	font-size: 14px;
 }
 .btn-list{
-	font-weight: 600!important;
+	font-family: Gilroy-Medium!important;
+	font-weight: 500!important;
 }
 .btn-list[aria-expanded="true"]::before {
     content: url("img/chevron-up.svg");
@@ -109,21 +134,23 @@ label{
     transform-origin: 0.5em 50%;
 }
 a.list-active{
-	font-family: Gilroy;
+	font-family: Gilroy-Medium!important;
+	font-weight: 500!important;
 	color: #031E80;
 	text-decoration: none;
 	font-weight: 600;
 }
 a.list-no-active{
-	font-family: Gilroy;
+	font-family: Gilroy-Medium!important;
+	font-weight: 500!important;
 	color: rgba(0, 0, 0, 0.55);
 	text-decoration: none;
 	font-weight: 600;
 }
 a.list-sidebar{
 	color: #000000;
-	font-family: Gilroy;
-	font-weight: 600;
+	font-family: Gilroy-Medium!important;
+	font-weight: 500!important;
 	text-decoration: none;
 }
 .btn-list{
@@ -210,4 +237,7 @@ button[type="submit"]{
 } 
 .border-bottom{
 	border-bottom: 2px solid #CDD2E6!important;
+}
+.btn:hover{
+	color: #FFFFFF;
 }
