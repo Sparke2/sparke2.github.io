@@ -2,7 +2,6 @@
 @import url("fonts/GilroyRegular/style.css");
 @import url("fonts/GilroyHeavy/style.css");
 @import url("fonts/GilroySemibold/style.css");
-@import url("fonts/GilroyMedium/style.css");
 
 
 @font-face {
@@ -42,9 +41,12 @@ input[type="search"]::placeholder {
 	color: rgba(255, 255, 255, 0.5)!important;
 }
 input[type="search"]{
-	background: rgba(255, 255, 255, 0.2) url("img/search.svg") 10px 10px no-repeat;
+	background: rgba(255, 255, 255, 0.2) url("img/search.svg") 10px 9px no-repeat;
 	border:none; 
 	border-radius: 10px;
+}
+.pt-6 {
+    padding-top: 4rem!important;
 }
 .form-control{
 	font-size: 14px;
@@ -66,10 +68,15 @@ header .btn{
 	font-family: Gilroy;
 	font-size: 14px;
 }
-h2,h3{
-	font-family: Gilroy;
+h2{
+	font-family: 'Gilroy';
 	color: #031E80;
 	font-weight: 600!important;
+}
+h4{
+	font-family: Gilroy-Medium!important;
+	color: #031E80;
+	font-weight: 500!important;
 }
 h6{
 	font-family: Gilroy-Medium!important;
@@ -211,9 +218,13 @@ a.list-sidebar{
 .footer-pale-white{
 	color: rgba(255, 255, 255, 0.7);
 }
-.footer-white{
+.footer-white-main{
 	color: #FFFFFF;
 	line-height: 1.2;
+}
+.footer-white{
+	color: #FFFFFF;
+	line-height: 1.5;
 }
 .footer-pale-white-mini{
 	color: rgba(255, 255, 255, 0.7);
@@ -238,6 +249,10 @@ button[type="submit"]{
 .border-bottom{
 	border-bottom: 2px solid #CDD2E6!important;
 }
-.btn:hover{
+.datalib-btn:hover{
 	color: #FFFFFF;
+}
+.btn:disabled{
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #031E80;;
+	opacity: 1!important;
 }
