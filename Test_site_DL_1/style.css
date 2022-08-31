@@ -1,4 +1,3 @@
-
 @import url("fonts/GilroyRegular/style.css");
 @import url("fonts/GilroyHeavy/style.css");
 @import url("fonts/GilroySemibold/style.css");
@@ -11,7 +10,6 @@
 		url('fonts/GilroyMedium/gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('fonts/GilroyMedium/gilroy-medium.svg#gilroy-medium') format('svg'); /* Chrome < 4, Legacy iOS */
 }
-
 
 input[type="text"]::placeholder {
   	font-family: Gilroy;
