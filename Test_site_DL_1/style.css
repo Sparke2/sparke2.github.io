@@ -2,8 +2,6 @@
 @import url("fonts/GilroyRegular/style.css");
 @import url("fonts/GilroyHeavy/style.css");
 @import url("fonts/GilroySemibold/style.css");
-
-
 @font-face {
 	font-family: 'Gilroy-Medium';
 	src: url('fonts/GilroyMedium/gilroy-medium.eot'); /* IE 9 Compatibility Mode */
@@ -207,7 +205,7 @@ a.list-sidebar{
 .girl-container{
 	position:absolute;
 	display:block;
-	bottom: -2px;
+	bottom: 0px;
 	right:-20px;
 }
 .text-container{
