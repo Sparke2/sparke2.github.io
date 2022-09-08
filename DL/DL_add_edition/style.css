@@ -11,7 +11,9 @@
 		url('fonts/GilroyMedium/gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('fonts/GilroyMedium/gilroy-medium.svg#gilroy-medium') format('svg'); /* Chrome < 4, Legacy iOS */
 }
-
+body{
+	position: relative;
+}
 input[type="text"]::placeholder {
   	font-family: Gilroy;
   	font-weight: 600;
@@ -78,10 +80,22 @@ h2{
 	color: #031E80;
 	font-weight: 600!important;
 }
+h3{
+	font-family: 'Gilroy';
+	color: #031E80;
+	font-weight: 700;
+	font-size: 16px;
+}
 h4{
 	font-family: Gilroy-Medium!important;
 	color: #031E80;
 	font-weight: 500!important;
+}
+h5{
+	font-family: Gilroy-Medium!important;
+	color: #031E80;
+	font-weight: 500!important;
+	font-size: 14px;
 }
 h6{
 	font-family: Gilroy-Medium!important;
@@ -161,7 +175,6 @@ a.list-no-active{
 	font-weight: 500!important;
 	color: rgba(0, 0, 0, 0.55);
 	text-decoration: none;
-	font-weight: 600;
 }
 a.list-sidebar{
 	color: #000000;
@@ -320,4 +333,161 @@ button[type="submit"]{
 	display:block;
 	top: 145px;
 	right: 0px;
+}
+.menu:before {
+    position: absolute;
+    left: 20px;
+    bottom: 95%;
+	content: '';
+    background-image: url('img/white_navbar_catalog.svg');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.menu {
+	position: absolute;
+	top: 70px;
+	left: 605px;
+	background: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+}
+.menu.open {
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
+}
+.menu-1:before {
+    position: absolute;
+    right: 30px;
+    bottom: 97%;
+	content: '';
+    background-image: url('img/white_navbar_catalog.svg');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.menu-1 {
+	position: absolute;
+	top: 70px;
+	right: 270px;
+	background: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+}
+.menu-1.open {
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
+}
+.nav-list{
+	color: #000000;
+	font-family: Gilroy-Medium!important;
+	font-weight: 500;
+	text-decoration: none;
+	font-size: 14px;
+}
+.nav-list:hover{
+	color: #000000;
+}
+.menu li:hover{
+	background: #E5E8F2;
+	border-radius: 15px;
+}
+.menu-1 li:hover{
+	background: #E5E8F2;
+	border-radius: 15px;
+}
+.btn-event{
+	text-decoration: none;
+	background-color: transparent;
+    border: 0px solid transparent;
+    padding: .375rem 0.75rem;
+    font-weight: 600;
+    font-size: 12px;
+	font-family: Gilroy;
+	color: rgba(0, 0, 0, 0.5);
+}
+.btn-event-active{
+	text-decoration: none;
+	background-color: transparent;
+    border: 0px solid transparent;
+    padding: .375rem 0.75rem;
+    font-weight: 600;
+    font-size: 12px;
+	font-family: Gilroy;
+	color: #031E80;
+}
+.event-active-right{
+	background: #CDD2E6;
+	border: 2px solid #CDD2E6;
+	border-radius: 0 10px 10px 0;
+}
+.event-active-left{
+	background: #CDD2E6;
+	border: 2px solid #CDD2E6;
+	border-radius: 10px 0 0 10px;
+}
+.event-no-active-left{
+	border: 2px solid #CDD2E6;
+	border-radius: 10px 0 0 10px;
+}
+.event-no-active-right{
+	border: 2px solid #CDD2E6;
+	border-radius: 0 10px 10px 0;
+}
+.all-event{
+	text-decoration: none;
+	border-radius: 10px;
+	background: #031E80;
+    border: 0px solid transparent;
+    padding: .375rem 0.75rem;
+    font-weight: 500;
+    font-size: 14px;
+	font-family: Gilroy;
+	color: #FFFFFF;
+}
+.event{
+	border-radius: 15px;
+	border: 2px solid #CDD2E6;
+	position: relative;
+}
+.hashtags{
+	text-decoration: none;
+	border-radius: 10px;
+	border: 0px solid transparent;
+	background: #CDD2E6;
+	font-family: Gilroy-Medium;
+	color: #031E80;
+	font-size: 12px;
+	font-weight: 500;
+}
+.hashtags-green{
+	text-decoration: none;
+	border-radius: 10px;
+	border: 0px solid transparent;
+	background: #C7E8E8;
+	font-family: Gilroy-Medium;
+	color: #031E80;
+	font-size: 12px;
+	font-weight: 500;
+}
+.btn-download {
+    height: 44px;
+    width: 398px;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.download-container{
+	position: absolute;
+	display:block;
+	bottom: -2px;
+	left: -2px;
+	height: 44px;
+    width: auto;
+    background: #031E80;
+	border-radius: 0px 0px 15px 15px;
 }
