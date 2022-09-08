@@ -282,24 +282,24 @@
 				        				<div class="col-6">
 				        					<div class="row">
 				        						<div class="col-6 pe-0">
-				        							<div class="event-active-left">
-				        								<button class="btn-event ps-3">Ближайшие мероприятия</button>
+				        							<div id="btn-upcoming-event-div" class="event-active-left">
+				        								<button id="btn-upcoming-event" class="btn-event ps-3" onclick="show_upcoming_event()">Ближайшие мероприятия</button>
 				        							</div>
 				        							
 				        						</div>
 				        						<div class="col-6 ps-0">
-				        							<div class="event-no-active-right">
-				        								<button class="btn-event">Прошедшие мероприятия</button>
+				        							<div id="btn-past-event-div" class="event-no-active-right">
+				        								<button id="btn-past-event" class="btn-event" onclick="show_past_event()">Прошедшие мероприятия</button>
 				        							</div>
 				        						</div>
 				        					</div>
 				        				</div>
 				        				<div class="col-6">
-				        					<button class="all-event pt-2 pb-2 ps-4 pe-4">Все мероприятия</button>
+				        					<button id="all-event" class="all-event pt-2 pb-2 ps-4 pe-4" onclick="show_all_event()">Все мероприятия</button>
 				        				</div>
 				        			</div>
 				        			<div class="row pt-4 gy-4">
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-09-08T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -309,7 +309,7 @@
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -329,8 +329,8 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
-				        					<div class="event">
+				        				<div class="col-6" id="2022-09-08T15:00">
+				        					<div class="event" >
 				        						<div class="ps-4 pt-3">
 					        						<div>
 						        						<button class="hashtags ps-2 pe-2">
@@ -339,7 +339,7 @@
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -359,7 +359,7 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-03-14T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -369,7 +369,7 @@
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -389,8 +389,8 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
-				        					<div class="event">
+				        				<div class="col-6" id="2022-09-08T15:00">
+				        					<div class="event" id="2022-09-08T15:00">
 				        						<div class="ps-4 pt-3">
 					        						<div>
 						        						<button class="hashtags ps-2 pe-2">
@@ -399,7 +399,7 @@
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-09-08T15:00">12.09.2022</time></span>
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -419,7 +419,7 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-03-14T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -429,7 +429,7 @@
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -449,7 +449,7 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-03-14T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -459,7 +459,7 @@
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -479,7 +479,7 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-03-14T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -489,7 +489,7 @@
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
 						        						</button>
 						        						<button class="hashtags-green ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -509,7 +509,7 @@
 					        					</div>
 				        					</div>
 				        				</div>
-				        				<div class="col-6">
+				        				<div class="col-6" id="2022-09-08T15:00">
 				        					<div class="event">
 				        						<div class="ps-4 pt-3">
 					        						<div>
@@ -519,7 +519,7 @@
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1">14.03.2022</span>
+						        							<span class="ps-1"><time datetime="2022-09-08T15:00">12.09.2022</time></span>
 						        						</button>
 						        						<button class="hashtags ps-2 pe-2">
 						        							<img src="img/time.svg" alt="">
@@ -666,6 +666,71 @@
 			        toggleMenu_1();
 			    }
 			});
+
+			//
+			function show_upcoming_event() {
+				document.getElementById("btn-upcoming-event").classList.toggle('btn-event-active');
+				
+				document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
+				document.getElementById("btn-past-event").classList.remove('btn-event-active');
+				document.getElementById("btn-past-event-div").classList.remove('event-active-right');
+			}
+			document.querySelector("[id='btn-upcoming-event']").addEventListener('click', function (e) {
+				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = elms[i].style.display === 'none' ? 'block' : 'none';
+				}
+				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = 'block';
+				}
+			})
+			document.querySelector("[id='btn-past-event']").addEventListener('click', function (e) {
+				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = elms[i].style.display === 'none' ? 'block' : 'none';
+				}
+				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = 'block';
+				}
+			})
+			document.querySelector("[id='all-event']").addEventListener('click', function (e) {
+				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = 'block';
+				}
+				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
+				for(var i = 0; i < elms.length; i++){ 
+				  elms[i].style.display = 'block';
+				}
+				
+			})
+
+			function show_past_event() {
+				document.getElementById("btn-past-event").classList.toggle('btn-event-active');
+				document.getElementById("btn-past-event-div").classList.toggle('event-active-right');
+				
+				if ( document.getElementById("btn-past-event-div").className.match(/(?:^|\s)event-active-right(?!\S)/) ){
+					document.getElementById("btn-upcoming-event-div").classList.add('event-no-active-left');
+					document.getElementById("btn-upcoming-event-div").classList.remove('event-active-left');
+				} else {
+					document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
+				}
+				document.getElementById("btn-upcoming-event").classList.remove('btn-event-active');
+				
+				
+			}
+			function show_all_event() {
+				document.getElementById("btn-upcoming-event").classList.add('btn-event');
+				document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
+				document.getElementById("btn-past-event").classList.add('btn-event');
+				document.getElementById("btn-past-event-div").classList.add('event-no-active-left');
+				document.getElementById("btn-upcoming-event").classList.remove('btn-event-active');
+				document.getElementById("btn-past-event").classList.remove('btn-event-active');
+				document.getElementById("btn-past-event-div").classList.remove('event-active-right');
+
+			}
         </script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	</body>
