@@ -253,7 +253,7 @@ a.list-sidebar{
 	font-size: 12px;
 }
 .grey-text{
-	color: rgba(0, 0, 0, 0.6);
+	color: rgba(0, 0, 0, 0.6)!important;
 	font-weight: 600; 
 	line-height: 1;"
 }
@@ -490,4 +490,72 @@ button[type="submit"]{
     width: auto;
     background: #031E80;
 	border-radius: 0px 0px 15px 15px;
+}
+
+::-webkit-datetime-edit{
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+}
+::-webkit-calendar-picker-indicator{
+	background: rgba(255, 255, 255, 0.2) url("img/close.svg") 0px 0px no-repeat;
+}
+::-webkit-clear-button{
+
+}
+input[type="date"]:focus{
+	border: 2px solid #031E80!important;
+}
+.list_line{
+	width: auto;
+	height: 3px;
+	background: #CDD2E6;
+}
+.black-text{
+	color: #000000!important;
+}
+.underline-div{
+	position: relative;
+}
+.underline-p-1::after { 
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  display: block;
+  height: 3px;
+  width: 50px;
+  background: #031E80;
+}
+.underline-p-2::after { 
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 350px;
+  display: block;
+  height: 3px;
+  width: 115px;
+  background: #031E80;
+}
+.underline-p-3::after { 
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 550px;
+  display: block;
+  height: 3px;
+  width: 60px;
+  background: #031E80;
+}
+.underline-p-4::after { 
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  display: block;
+  height: 3px;
+  width: 130px;
+  background: #031E80;
 }
