@@ -109,19 +109,19 @@
 						        <div class="sidebar-menu">
 						    		<ul class="border-top border-bottom list-unstyled mb-0 py-3 pt-2">
 						                <li class="pb-2">
-						            		<a href="https://dev.datalib.iprmedia.ru/profile" class="ps-4 list-sidebar">Профиль</a>
+						            		<a href="https://dev.datalib.iprmedia.ru/profile" class="ps-4 list-active">Профиль</a>
 						        		</li>
 						        		<li class="pb-2 pt-1">
-						            		<a href="https://dev.datalib.iprmedia.ru/profile/events" class="ps-4 list-active">Мои мероприятия</a>
+						            		<a href="https://dev.datalib.iprmedia.ru/profile/events" class="ps-4 list-sidebar">Мои мероприятия</a>
 						        		</li>
 						        		<li>
-						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublications" aria-expanded="false">
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublications" aria-expanded="true">
 									          Издания
 									        </button>
-						            		<div class="collapse" id="collapsePublications">
+						            		<div class="show collapse" id="collapsePublications">
 							            		<ul class="list-unstyled ps-4">
 							                		<li class="ps-2">
-							                    		<a href="https://dev.datalib.iprmedia.ru/profile/publications/latest" class="list-no-active">Новые поступления</a>
+							                    		<a href="https://dev.datalib.iprmedia.ru/profile/publications/latest" class="list-active">Новые поступления</a>
 									                </li>
 									                <li class="ps-2">
 									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/excluded" class="list-no-active">Исключенные издания</a>
@@ -275,271 +275,120 @@
 							</div>
 						</div>
 						<div class="col-9">
-				        	<div class="content container p-5 border-round">
+				        	<div class="content container profile p-5 border-round">
 				        		<div class="ps-4 pe-4">
-				        			<h1 class="text-uppercase">МЕРОПРИЯТИЯ, НА КОТОРЫЕ<br>ВЫ ЗАРЕГИСТРИРОВАНЫ</h1>
-				        			<div class="row pt-4 d-flex align-items-end">
-				        				<div class="col-6">
-				        					<div class="row">
-				        						<div class="col-6 pe-0">
-				        							<div id="btn-upcoming-event-div" class="event-active-left">
-				        								<button id="btn-upcoming-event" class="btn-event ps-3" onclick="show_upcoming_event()">Ближайшие мероприятия</button>
-				        							</div>
-				        							
-				        						</div>
-				        						<div class="col-6 ps-0">
-				        							<div id="btn-past-event-div" class="event-no-active-right">
-				        								<button id="btn-past-event" class="btn-event" onclick="show_past_event()">Прошедшие мероприятия</button>
-				        							</div>
-				        						</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6">
-				        					<button id="all-event" class="all-event pt-2 pb-2 ps-4 pe-4" onclick="show_all_event()">Все мероприятия</button>
+				        			<h1 class="text-uppercase">Новые поступления</h1>
+				        			
+				        			<div class="row">
+				        				<div class="col-6 d-flex flex-row">
+				        					<input class="event-no-active-left" type="date" value="2022-07-10">
+				        					<input class="event-no-active-right" type="date" value="2022-07-10">
 				        				</div>
 				        			</div>
-				        			<div class="row pt-4 gy-4">
-				        				<div class="col-6" id="2022-09-08T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/webinar.svg" alt="">
-						        							<span class="ps-1">вебинар</span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-09-08T15:00">
-				        					<div class="event" >
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/lecture.svg" alt="">
-						        							<span class="ps-1">лекция</span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-03-14T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/webinar.svg" alt="">
-						        							<span class="ps-1">вебинар</span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-09-08T15:00">
-				        					<div class="event" id="2022-09-08T15:00">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/lecture.svg" alt="">
-						        							<span class="ps-1">лекция</span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-09-08T15:00">12.09.2022</time></span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-03-14T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/webinar.svg" alt="">
-						        							<span class="ps-1">вебинар</span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-03-14T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/lecture.svg" alt="">
-						        							<span class="ps-1">лекция</span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-03-14T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/webinar.svg" alt="">
-						        							<span class="ps-1">вебинар</span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-03-14T15:00">14.03.2022</time></span>
-						        						</button>
-						        						<button class="hashtags-green ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
-				        				</div>
-				        				<div class="col-6" id="2022-09-08T15:00">
-				        					<div class="event">
-				        						<div class="ps-4 pt-3">
-					        						<div>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/lecture.svg" alt="">
-						        							<span class="ps-1">лекция</span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/date.svg" alt="">
-						        							<span class="ps-1"><time datetime="2022-09-08T15:00">12.09.2022</time></span>
-						        						</button>
-						        						<button class="hashtags ps-2 pe-2">
-						        							<img src="img/time.svg" alt="">
-						        							<span class="ps-1">15:00</span>
-						        						</button>
-					        						</div>
-					        						<h3 class="text-uppercase pt-3">
-					        							DATALIB Лекторий: Big data. <br>Технологии обработки больших данных
-					        						</h3>
-					        						<h5 class="pt-2 pb-5">Ведущий: Пилипенко Екатерина Юрьевна</h5>
-					        						<div class="download-container">
-					        							<button class="btn-download">
-					        								<img src="img/download.svg" alt="">
-					        								<span class="ps-2">Скачать сертификат</span>
-					        							</button>
-					        						</div>
-					        					</div>
-				        					</div>
+				        			<div class="row pt-3">
+				        				<div class="col-6 d-flex flex-row">
+				        					<button class="event-active-left btn-event ps-0 pe-0 container-fluid">
+					        					Все издания
+				        					</button>
+				        					<button class="event-no-active-right btn-event container-fluid">
+					        					Доступные
+				        					</button>
 				        				</div>
 				        			</div>
+				        			<div class="pt-3 pb-5 d-flex flex-row align-items-center justify-content-between">
+				        				<p class="m-0 black-text">За выбранный период найдено 0 новинок</p>
+				        				<div >
+				        						<img src="img/btn_list_active.svg" alt="">
+				        						<img src="img/btn_img.svg" alt="">
+				        				</div>
+				        			</div>
+				        			<div class="pt-5 d-flex flex-row justify-content-between underline-div">
+				        				<p class="col-3 underline-p-1">Книги</p>
+				        				<p class="col-2 d-flex justify-content-end pe-2 underline-p-2">Тип издания</p>
+				        				<p class="underline-p-3">ISBN</p>
+				        				<p class="underline-p-4">Дата добавления</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
 				        		</div>
 							</div>
 						</div>
@@ -668,69 +517,7 @@
 			});
 
 			//
-			function show_upcoming_event() {
-				document.getElementById("btn-upcoming-event").classList.toggle('btn-event-active');
-				
-				document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
-				document.getElementById("btn-past-event").classList.remove('btn-event-active');
-				document.getElementById("btn-past-event-div").classList.remove('event-active-right');
-			}
-			document.querySelector("[id='btn-upcoming-event']").addEventListener('click', function (e) {
-				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = elms[i].style.display === 'none' ? 'block' : 'none';
-				}
-				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = 'block';
-				}
-			})
-			document.querySelector("[id='btn-past-event']").addEventListener('click', function (e) {
-				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = elms[i].style.display === 'none' ? 'block' : 'none';
-				}
-				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = 'block';
-				}
-			})
-			document.querySelector("[id='all-event']").addEventListener('click', function (e) {
-				var elms = document.querySelectorAll("[id='2022-09-08T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = 'block';
-				}
-				var elms = document.querySelectorAll("[id='2022-03-14T15:00']");
-				for(var i = 0; i < elms.length; i++){ 
-				  elms[i].style.display = 'block';
-				}
-				
-			})
 
-			function show_past_event() {
-				document.getElementById("btn-past-event").classList.toggle('btn-event-active');
-				document.getElementById("btn-past-event-div").classList.toggle('event-active-right');
-				
-				if ( document.getElementById("btn-past-event-div").className.match(/(?:^|\s)event-active-right(?!\S)/) ){
-					document.getElementById("btn-upcoming-event-div").classList.add('event-no-active-left');
-					document.getElementById("btn-upcoming-event-div").classList.remove('event-active-left');
-				} else {
-					document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
-				}
-				document.getElementById("btn-upcoming-event").classList.remove('btn-event-active');
-				
-				
-			}
-			function show_all_event() {
-				document.getElementById("btn-upcoming-event").classList.add('btn-event');
-				document.getElementById("btn-upcoming-event-div").classList.add('event-active-left');
-				document.getElementById("btn-past-event").classList.add('btn-event');
-				document.getElementById("btn-past-event-div").classList.add('event-no-active-left');
-				document.getElementById("btn-upcoming-event").classList.remove('btn-event-active');
-				document.getElementById("btn-past-event").classList.remove('btn-event-active');
-				document.getElementById("btn-past-event-div").classList.remove('event-active-right');
-
-			}
         </script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	</body>
