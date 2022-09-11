@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DataLIB</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header class=" no-fixed mb-5">
+			<nav class="navbar navbar-expand-lg fixed-top header-nav">
+	        		<div class="container p-1">
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                    <form class="form-inline">
+		      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+	    				</form>
+	                    <div class="d-flex">
+	                        <div class="pe-3 border-end">
+	                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	                                <ul class="navbar-nav ml-auto align-items-center pe-2">
+	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat">Каталог</button>
+	                                    	<div class="menu shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat-1">Информация</button>
+	                                    	<div class="menu-1 shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <button class="btn-bell pe-2">
+	                                	
+	                                </button>
+	                                
+	                            </div>
+	                        </div>
+	                       
+	                        <div class="collapse navbar-collapse justify-content-end ps-3" id="navbar">
+								<ul class="navbar-nav ml-auto align-items-center">
+	                                <li><a href="https://dev.datalib.iprmedia.ru/profile" class="btn datalib-btn-sm datalib-btn-white ps-1 pe-2">Профиль</a></li>
+	                                <li>
+	                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+	                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+	                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="btn datalib-btn-sm datalib-btn-white" onclick="event.preventDefault(); this.closest('form').submit();">
+	                                                <i class="mdi mdi-logout"></i> Выйти
+	                                            </a>
+	                                        </form>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	    </header>
+        <main>
+		    <div class="container pt-6 pb-5">
+		    		<div class="row">
+			    		<div class="col-3">
+			                <div class="container sidebar main-sidebar border-round" >
+			                	<div class="pt-5 pb-2 ps-4">
+			                		<h6>Панель управления</h6>
+			                	</div>
+						        <div class="sidebar-menu">
+						    		<ul class="border-top border-bottom list-unstyled mb-0 py-3 pt-2">
+						                <li class="pb-2">
+						            		<a href="https://dev.datalib.iprmedia.ru/profile" class="ps-4 list-sidebar">Профиль</a>
+						        		</li>
+						        		<li class="pb-2 pt-1">
+						            		<a href="https://dev.datalib.iprmedia.ru/profile/events" class="ps-4 list-sidebar">Мои мероприятия</a>
+						        		</li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublications" aria-expanded="true">
+									          Издания
+									        </button>
+						            		<div class="show collapse" id="collapsePublications">
+							            		<ul class="list-unstyled ps-4">
+							                		<li class="ps-2">
+							                    		<a href="https://dev.datalib.iprmedia.ru/profile/publications/latest" class="list-no-active">Новые поступления</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/excluded" class="list-no-active">Исключенные издания</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications/recommended" class="list-active">Рекомендации</a>
+									                </li>
+									            </ul>
+								        	</div>
+						       			</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseContentManagement" aria-expanded="false">
+									          Управление контентом
+									        </button>
+									        <div class="collapse" id="collapseContentManagement">
+									            <ul class="list-unstyled ps-4">
+							                		<li class="ps-2">
+							                    		<a href="https://dev.datalib.iprmedia.ru/profile/content-management/request-for-add" class="list-no-active">Запрос на добавление издания</a>
+									                </li>
+									            </ul>
+								            </div>
+						        		</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapsePublicationsOnline" aria-expanded="false">
+									          Работа с изданиями on-line
+									        </button>
+									        <div class="collapse" id="collapsePublicationsOnline">
+									            <ul class="list-unstyled ps-4">
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/favorites" class="list-no-active">Избранные издания</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="h2tps://dev.datalib.iprmedia.ru/profile/publications-online/bookmarks" class="list-no-active">Мои закладки</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/annotations" class="list-no-active">Мои конспекты</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/work-history" class="list-no-active">История работы</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/publications-online/search-history" class="list-no-active">История поисковых запросов</a>
+									                </li>
+									            </ul>
+								        	</div>
+						       		 	</li>
+						       		 	<li>
+						       		 		<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseBaseQuestions" aria-expanded="false">
+									          База вопросов
+									        </button>
+						        			<div class="collapse" id="collapseBaseQuestions">
+							        			<ul class="list-unstyled ps-4">
+							        				<li class="ps-2">
+							        					<a href="#" class="list-no-active">Список вопросов</a>
+							        				</li>
+							        				<li class="ps-2">
+							        					<a href="#" class="list-no-active">Создать вопрос</a>
+							        				</li>
+							        			</ul>
+							        		</div>
+						        		</li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseTestConstructor" aria-expanded="false">
+									          Конструктор тестов
+									        </button>
+						        			<div class="collapse" id="collapseTestConstructor">
+							        			<ul class="list-unstyled ps-4">
+							        				<li class="ps-2">
+							        					<a href="#" class="list-no-active">Мои тесты</a>
+							        				</li>
+							        				<li class="ps-2">
+							        					<a href="#" class="list-no-active">Создать тест</a>
+							        				</li>
+							        			</ul>
+							        		</div>
+						        		</li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseSelections" aria-expanded="false">
+									          Конструктор подборок
+									        </button>
+									        <div class="collapse" id="collapseSelections">
+									            <ul class="list-unstyled ps-4">
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/create" class="list-no-active">Создать подборку</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections" class="list-no-active">Мои подборки</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/selections/recommended" class="list-no-active">Рекомендованные</a>
+									                </li>
+									            </ul>
+									        </div>
+								        </li>
+						                <li>
+						                	<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseOrganizationStructure" aria-expanded="false">
+									          Структура организации
+									        </button>
+									        <div class="collapse" id="collapseOrganizationStructure">
+									            <ul class="list-unstyled ps-4">
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/departments" class="list-no-active">Подразделения</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/organization/groups" class="list-no-active">Группы</a>
+									                </li>
+									            </ul>
+								        	</div>
+								        </li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseStatistics" aria-expanded="false">
+									          Статистика
+									        </button>
+									        <div class="collapse " id="collapseStatistics">
+									            <ul class="list-unstyled ps-4">
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics" class="list-no-active">Сводная</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/statistics/detailed" class="list-no-active">Детализированная</a>
+									                </li>
+									            </ul>
+								        	</div>
+								        </li>
+						        		<li>
+						        			<button class="btn btn-list d-flex align-items-center rounded p-1 pb-2" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false">
+									          Пользователи
+									        </button>
+									        <div class="collapse " id="collapseUsers">
+									            <ul class="list-unstyled ps-4">
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users" class="list-no-active">Список пользователей</a>
+									                </li>
+							                		<li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users/invitation-codes" class="list-no-active">Коды приглашений</a>
+									                </li>
+									                <li class="ps-2">
+									                    <a href="https://dev.datalib.iprmedia.ru/profile/users/export" class="list-no-active">Экспорт пользователей</a>
+									                </li>
+							            		</ul>
+						            		</div>
+						        		</li>
+						    		</ul>
+						    		<form class="ps-4 pt-2 pb-5" method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+								                <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+								                <a href="https://dev.datalib.iprmedia.ru/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="list-sidebar">
+								                    Выйти
+								                </a>
+								    </form>
+								</div>
+							</div>
+						</div>
+						<div class="col-9">
+				        	<div class="content container profile p-5 border-round">
+				        		<div class="ps-4 pe-4">
+				        			<h1 class="text-uppercase">РЕКОМЕНДОВАННЫЕ ИЗДАНИЯ</h1>
+				        			<div class="row d-flex justify-content-end">
+				        				<div class="col-4 d-flex flex-row">
+					        				<label>Преподаватель</label>
+				        				</div>
+				        				<div class="col-2"></div>
+				        			</div>
+				        			<div class="row">
+				        				<div class="col-6 d-flex flex-row">
+					        				<div class="col-6 date-left d-flex flex-row align-items-center">
+					        					<p class="mb-0 ps-2 pe-1 grey-text">от</p>
+					        					<input class="pe-5" id="date" type="date" value="2022-07-10">
+					        					<button class="btn-close" onclick="validate_date()"></button>
+					        				</div>
+					        				<div class="col-6 date-right d-flex flex-row align-items-center">
+					        					<p class="mb-0 ps-2 pe-1 grey-text">до</p>
+					        					<input class="pe-5" id="date-1" type="date" value="2022-07-10">
+					        					<button class="btn-close" onclick="validate_date_1()"></button>
+					        				</div>
+				        				</div>
+				        				<div class="col-4 d-flex flex-row justify-content-between">
+				        					<select class="select-item">
+												<option value="1" selected></option>
+												<option value="2">Вариант 2</option>
+												<option value="3">Вариант 3</option>
+											</select>
+				        				</div>
+				        			</div>
+				        			<div class="row pt-3">
+				        				<div class="col-4 d-flex flex-row justify-content-between">
+				        					<div class="div-book-active d-flex flex-row align-items-center justify-content-between ps-3 pe-3">
+				        						<p class="black-text mb-0">Книги</p>
+				        						<p class="black-text mb-0">12</p>
+				        					</div>
+				        					<div class="div-book d-flex flex-row align-items-center justify-content-between ps-3 pe-3">
+				        						<p class="grey-text mb-0">Курсы</p>
+				        						<p class="grey-text mb-0">12</p>
+				        					</div>
+				        				</div>
+				        				<div class="col-6 d-flex flex-row">
+				        					<button class="arrivals-active-left btn-event ps-0 pe-0 container-fluid">
+					        					Показать
+				        					</button>
+				        					<button class="arrivals-no-active-right btn-event container-fluid">
+					        					Очистить
+				        					</button>
+				        				</div>
+				        			</div>
+				        			<div class="pt-3 pb-5 d-flex flex-row align-items-center justify-content-between">
+				        				<p class="mb-0 grey-text">За выбранный период найдено 0 новинок</p>
+					        				<div>
+					        					<img src="img/btn_list_active.svg" alt="">
+					        					<img src="img/btn_img.svg" alt="">
+					        				</div>
+				        			</div>
+				        			<div class="pt-5 d-flex flex-row justify-content-between underline-div">
+				        				<p class="col-3 underline-p-1">Книги</p>
+				        				<p class="col-2 d-flex justify-content-end pe-2 underline-p-2">Тип издания</p>
+				        				<p class="underline-p-3">ISBN</p>
+				        				<p class="underline-p-4">Дата добавления</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Аддитивная имплантация ионов в переходные металлы, полупроводники, диэлектрики тонкопленочных структур</p>
+				        					<p class="grey-text">2022, Перинский В.В., Перинская И.В.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Монография</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">18.11.2021</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<div class="pt-3 d-flex flex-row justify-content-between">
+				        				<div class="col-4">
+				        					<p class="black-text">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+				        					<p class="grey-text">2022, Седов В.А., Седова Н.А.</p>
+				        				</div>
+				        				<p class="pt-5 black-text col-2 d-flex justify-content-center">Практикум</p>
+				        				<p class="pt-5 black-text col-2">978-5-4497-1414-5</p>
+				        				<p class="pt-5 black-text col-1 d-flex justify-content-end">03.02.2022</p>
+				        			</div>
+				        			<div class="list_line"></div>
+				        			<ul class="pt-5 mt-2 pagination d-flex justify-content-end">
+				        				<li class="page-item">
+									      <a class="page-link" href="#" aria-label="Previous">
+									        <img src="img/previous_start.svg" alt="">
+									      </a>
+									    </li>
+									    <li class="page-item">
+									      <a class="page-link" href="#" aria-label="Previous">
+									        <img src="img/previous.svg" alt="">
+									      </a>
+									    </li>
+									    <li class="page-item"><a class="page-link page-link-active" href="#">1</a></li>
+									    <li class="page-item"><a class="page-link" href="#">2</a></li>
+									    <li class="page-item"><a class="page-link" href="#">3</a></li>
+									    <li class="page-item">
+									      <a class="page-link" href="#" aria-label="Next">
+									        <img src="img/next.svg">
+									      </a>
+									    </li>
+									    <li class="page-item">
+									      <a class="page-link" href="#" aria-label="Next">
+									        <img src="img/next_end.svg">
+									      </a>
+									    </li>
+									</ul>
+				        		</div>
+							</div>
+						</div>
+					</div>
+			</div>
+        </main>
+        <footer>
+			<div class="container pt-3 pb-3">
+				
+			    <div class="row justify-content-between">
+			    	<div class="d-flex justify-content-center align-items-center col-lg-2 col-12">
+			    		<div>
+							<img src="img/footer_dl.svg" alt="">
+						</div>
+			    	</div>
+			        <div class="col-lg-4 col-12">
+			            <p class="footer-white-main mb-2">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2022620531
+			            </p>
+			            <p class="footer-white-main mb-2">
+			               Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2021666446
+			            </p>
+			            <p>
+			                        &copy; Общество с ограниченной ответственностью <br> Компания «Ай Пи Ар Медиа»
+			            </p>
+			            
+			        </div>
+			        <div class="col-lg-6 col-12 mb-4">
+			            <div class="row">
+			                <div class="col-lg-4 col-12">
+			                    <p class="phone-number mb-2">
+			                        8 800 555-22-35 
+			                    </p>
+			                    <p> 
+			                    	Звонок бесплатный<br>для всех регионов России
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                	<p class="phone-description footer-white mb-2">
+			                       Отдел продаж:             
+			                    </p>
+			                    <p class="mb-2 footer-white">
+			                    	(добавочный 167)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			                <div class="col-lg-4 col-12">
+			                	<p class="phone-description footer-white mb-2">
+			                        Техническая поддержка:                
+			                    </p>
+			                    <p class="mb-2">
+			                    	(добавочный 200)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-lg-8 col-12">
+			                    <p class="email mt-3 footer-pale-white mb-2">
+			                    	Электронная почта
+			                    </p>
+			                    <p>
+			                    	<a href="mailto:office@datalib.ru">office@datalib.ru</a>
+			                    </p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </footer>
+        <script>
+        	//При нажатии сбрасывает дату 
+        	function validate_date() {
+			  var date = document.getElementById("date");
+			  date.value = "";
+			}
+			//При нажатии сбрасывает дату на 2022-01-01
+			function validate_date_1() {
+			  var date = document.getElementById("date-1");
+			  date.value = "2022-01-01";
+			}
+			//При нажатии в navbar кнопку Каталог появляется блок, исчезает при нажатии на кнопку Каталог или поля вокруг него
+			const btnMenu = document.querySelector(".btn-cat");
+			const menu = document.querySelector(".menu");
+			const toggleMenu = function () {
+			    menu.classList.toggle("open");
+			}
+
+			btnMenu.addEventListener("click", function (e) {
+			    e.stopPropagation();
+			    toggleMenu();
+			});
+
+			document.addEventListener("click", function (e) {
+			    const target = e.target;
+			    const its_menu = target == menu || menu.contains(target);
+			    const its_btnMenu = target == btnMenu;
+			    const menu_is_active = menu.classList.contains("open");
+
+			    if (!its_menu && !its_btnMenu && menu_is_active) {
+			        toggleMenu();
+			    }
+			});
+
+			//При нажатии в navbar кнопку Информация появляется блок, исчезает при нажатии на кнопку Информация или поля вокруг него
+			const btnMenu_1 = document.querySelector(".btn-cat-1");
+			const menu_1 = document.querySelector(".menu-1");
+			const toggleMenu_1 = function () {
+			    menu_1.classList.toggle("open");
+			}
+
+			btnMenu_1.addEventListener("click", function (c) {
+			    c.stopPropagation();
+			    toggleMenu_1();
+			});
+
+			document.addEventListener("click", function (c) {
+			    const target_1 = c.target;
+			    const its_menu_1 = target_1 == menu_1 || menu_1.contains(target_1);
+			    const its_btnMenu_1 = target_1 == btnMenu_1;
+			    const menu_is_active_1 = menu_1.classList.contains("open");
+
+			    if (!its_menu_1 && !its_btnMenu_1 && menu_is_active_1) {
+			        toggleMenu_1();
+			    }
+			});
+        </script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
