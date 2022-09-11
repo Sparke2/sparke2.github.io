@@ -307,14 +307,14 @@
 				        			</div>
 				        			<div class="row pt-3">
 				        				<div class="col-4 d-flex flex-row justify-content-between">
-				        					<div class="div-book-active d-flex flex-row align-items-center justify-content-between ps-3 pe-3">
-				        						<p class="black-text mb-0">Книги</p>
-				        						<p class="black-text mb-0">12</p>
-				        					</div>
-				        					<div class="div-book d-flex flex-row align-items-center justify-content-between ps-3 pe-3">
-				        						<p class="grey-text mb-0">Курсы</p>
-				        						<p class="grey-text mb-0">12</p>
-				        					</div>
+				        					<button id="btn_book" class="div-book-active d-flex flex-row align-items-center justify-content-between ps-3 pe-3" onclick="btn_book()">
+				        						<span>Книги</span>
+				        						<span>12</span>
+				        					</button>
+				        					<button id="btn_lectures" class="div-book d-flex flex-row align-items-center justify-content-between ps-3 pe-3" onclick="btn_lectures()">
+				        						<span>Курсы</span>
+				        						<span>12</span>
+				        					</button>
 				        				</div>
 				        				<div class="col-6 d-flex flex-row">
 				        					<button class="arrivals-active-left btn-event ps-0 pe-0 container-fluid">
@@ -525,6 +525,20 @@
 			</div>
         </footer>
         <script>
+        	//Меняет цвет кнопки Книги
+        	function btn_book(){
+        		document.getElementById("btn_book").classList.remove('div-book');
+        		document.getElementById("btn_book").classList.add('div-book-active');
+        		document.getElementById("btn_lectures").classList.remove('div-book-active');
+        		document.getElementById("btn_lectures").classList.add('div-book');
+        	}
+        	//Меняет цвет кнопки Лекции
+        	function btn_lectures(){
+        		document.getElementById("btn_lectures").classList.remove('div-book');
+        		document.getElementById("btn_lectures").classList.add('div-book-active');
+        		document.getElementById("btn_book").classList.add('div-book');
+        		document.getElementById("btn_book").classList.remove('div-book-active');
+        	}
         	//При нажатии сбрасывает дату 
         	function validate_date() {
 			  var date = document.getElementById("date");
