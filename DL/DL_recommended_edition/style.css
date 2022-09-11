@@ -670,12 +670,19 @@ input[type="date"]{
 	border: 2px solid #CDD2E6;
 	border-radius: 10px;
 	font-size: 14px!important;
+	font-family: Gilroy;
+	font-weight: 600;
+	color: #000000!important;
 }
+
 .div-book{
 	height: 40px;
 	width: 120px;
-	background: transparent;
+	background: #FFFFFF;
 	border: 2px solid #CDD2E6;
 	border-radius: 10px;
 	font-size: 14px!important;
+	font-family: Gilroy;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.5)!important;
 }
