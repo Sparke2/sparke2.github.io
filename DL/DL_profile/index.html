@@ -8,8 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<header class=" no-fixed mb-5">
-			<nav class="navbar navbar-expand-lg fixed-top header-nav">
+		<header class="no-fixed mb-5">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav">
 	        		<div class="container p-1">
 	                    <a class="navbar-brand brandName" href="#">
 	                    	<img src="img/navbar_dl.svg" alt="">
@@ -19,7 +19,7 @@
 	    				</form>
 	                    <div class="d-flex">
 	                        <div class="pe-3 border-end">
-	                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	                            <div class="collapse navbar-collapse" id="navbarContent">
 	                                <ul class="navbar-nav ml-auto align-items-center pe-2">
 	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
 	                                    <li>
@@ -75,9 +75,7 @@
 	                                    </li>
 	                                </ul>
 	                                <button class="btn-bell pe-2">
-	                                	
 	                                </button>
-	                                
 	                            </div>
 	                        </div>
 	                       
@@ -97,11 +95,100 @@
 	                    </div>
 	                </div>
 	        </nav>
+	        <nav class="mobile navbar navbar-expand-xl fixed-top header-nav">
+	        		<div class="container p-1 d-flex flex-row justify-content-start">
+	        			<button class="navbar-toggler nav-icon collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      				<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+					        </svg>
+		    			</button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                   
+	                    <div class="container d-flex flex-col">
+	                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                        		 <form class="form-inline pt-2">
+					      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+				    				</form>
+	                                <ul class="navbar-nav ps-2 border-bottom pb-2">
+	                                    <li><a class="nav-link nav-mobile" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat" data-bs-toggle="collapse" href="#collapseNavMob" aria-expanded="false" aria-controls="collapseNavMob">Каталог</button>
+	                                    	<div class="collapse" id="collapseNavMob">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat-1" data-bs-toggle="collapse" href="#collapseNavMob_1" aria-expanded="false" aria-controls="collapseNavMob_1">Информация</button>
+	                                    	<div class="collapse" id="collapseNavMob_1">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <!-- https://dev.datalib.iprmedia.ru/profile -->
+	                                <div class="d-flex flex-row align-items-center ps-2" id="navbar">
+	                                	<button class="btn-bell pe-4"></button>
+										<ul class="navbar-nav d-flex flex-row">
+			                                <li><a href="#" class="m-0 pe-4 nav-link nav-mobile">Профиль</a></li>
+			                                <li>
+			                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+			                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+			                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="nav-link nav-mobile" onclick="event.preventDefault(); this.closest('form').submit();">
+			                                                <i class="mdi mdi-logout"></i> Выйти
+			                                            </a>
+			                                        </form>
+			                                </li>
+			                            </ul>
+			                        </div>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
 	    </header>
         <main>
 		    <div class="container pt-6 pb-5">
 		    		<div class="row">
-			    		<div class="col-3">
+			    		<div class="col-12 col-xxl-3 col-lg-4 col-md-6 col-sm-12">
 			                <div class="container sidebar main-sidebar border-round" >
 			                	<div class="pt-5 pb-2 ps-4">
 			                		<h6>Панель управления</h6>
@@ -274,32 +361,30 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="pt-4 pt-md-0 col-12 col-md-6 col-sm-12">
 				        	<div class="content container profile p-4 border-round">
 				        		<div class="edit-container">
 				        			<button class="btn-edit"></button>
 				        		</div> 
 								<div class="row pb-5">
-					                <div class="col-2">
+					                <div class="col-4 col-lg-2 col-sm-4">
 					                	<img src="img/no_profile_photo.svg" alt="">
 									</div>
-									<div class="col-10 ps-5">
+									<div class="col-6 lg-10 col-sm-6 ps-5">
 										<p>DATALIB</p>
 										<h1 class="m-0">Егор</h1>
 										<h1 class="m-0">Мордовин</h1>
 									</div>
 								</div>
-								<div class="profile-line">
-									<img src="img/profile_line.svg" alt="">
-								</div>
+								<div class="list_line_1"></div>
 								<div class="row pt-3">
-									<div class="col-3">
+									<div class="col-3 col-sm-2">
 										<p>ID:</p>
 										<p>Логин:</p>
 										<p>Email:</p>
 										<p>Номер телефона:</p>
 									</div>
-									<div class="col-9 grey-p ps-5">
+									<div class="col-9 col-sm-10 grey-p ps-5">
 										<p>34</p>
 										<p>odnoynogoyvmogile</p>
 										<p>odnoynogoyvmogile@yandex.ru</p>
@@ -315,12 +400,12 @@
 			<div class="container pt-3 pb-3">
 				
 			    <div class="row justify-content-between">
-			    	<div class="d-flex justify-content-center align-items-center col-lg-2 col-12">
+			    	<div class="d-flex justify-content-center align-items-center col-12 col-lg-2 pb-3 pb-lg-0">
 			    		<div>
 							<img src="img/footer_dl.svg" alt="">
 						</div>
 			    	</div>
-			        <div class="col-lg-4 col-12">
+			        <div class="col-12 col-lg-4 col-sm-6">
 			            <p class="footer-white-main mb-2">
 			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
 			            </p>
@@ -338,9 +423,9 @@
 			            </p>
 			            
 			        </div>
-			        <div class="col-lg-6 col-12 mb-4">
+			        <div class="col-12 col-lg-6 col-sm-6 mb-4">
 			            <div class="row">
-			                <div class="col-lg-4 col-12">
+			                <div class="col-12 col-lg-4">
 			                    <p class="phone-number mb-2">
 			                        8 800 555-22-35 
 			                    </p>
@@ -348,7 +433,7 @@
 			                    	Звонок бесплатный<br>для всех регионов России
 			                    </p>
 			                </div>
-			                <div class="col-lg-4 col-12">
+			                <div class="col-12 col-lg-4">
 			                	<p class="phone-description footer-white mb-2">
 			                       Отдел продаж:             
 			                    </p>
@@ -359,7 +444,7 @@
 			                        8 800 555-22-35
 			                    </p>
 			                </div>
-			                <div class="col-lg-4 col-12">
+			                <div class="col-12 col-lg-4">
 			                	<p class="phone-description footer-white mb-2">
 			                        Техническая поддержка:                
 			                    </p>
@@ -372,7 +457,7 @@
 			                </div>
 			            </div>
 			            <div class="row">
-			                <div class="col-lg-8 col-12">
+			                <div class="col-12 col-lg-8">
 			                    <p class="email mt-3 footer-pale-white mb-2">
 			                    	Электронная почта
 			                    </p>
