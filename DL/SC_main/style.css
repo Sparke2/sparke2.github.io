@@ -864,7 +864,7 @@ input[type="date"]{
 }
 .search-form input{
 	background: #CDD2E6 url("img/search_1.svg") 10px 9px no-repeat;
-	height: 40px;
+	height: 40px!important;
 }
 .search-form input::placeholder{
 	padding-left: 45px;
