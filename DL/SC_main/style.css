@@ -863,10 +863,11 @@ input[type="date"]{
 	background: #D9D9D9;
 }
 .search-form input{
-	background: #CDD2E6 url("img/search.svg") 10px 9px no-repeat;;
+	background: #CDD2E6 url("img/search_1.svg") 10px 9px no-repeat;
+	height: 40px;
 }
 .search-form input::placeholder{
-	padding-left: 30px;
+	padding-left: 45px;
 	color: rgba(0, 0, 0, 0.5)!important;
 	font-weight: 600;
 }
