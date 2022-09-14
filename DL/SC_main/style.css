@@ -602,9 +602,25 @@ button[type="submit"]{
 	border: 2px solid #CDD2E6;
 	position: relative;
 }
-.hashtags-sc{
+.hashtags-sc-img{
 	text-decoration: none;
 	border-radius: 10px;
+	border: 0px solid transparent;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.84)), rgba(3, 30, 128, 0.28);;
+	font-family: Gilroy;
+	color: #000000;
+	font-size: 12px;
+	font-weight: 600;
+}
+.div-hashtags-sc-img{
+	position: absolute;
+	/*padding-left: 200px;*/
+	top: 30px;
+	right: 40px;
+}
+.hashtags-sc{
+	text-decoration: none;
+	border-radius: 5px;
 	border: 0px solid transparent;
 	background: #CDD2E6;
 	font-family: Gilroy-Medium;
@@ -864,7 +880,7 @@ input[type="date"]{
 }
 .search-form input{
 	background: #CDD2E6 url("img/search_1.svg") 10px 9px no-repeat;
-	height: 40px!important;
+	height: 40px;
 }
 .search-form input::placeholder{
 	padding-left: 45px;
