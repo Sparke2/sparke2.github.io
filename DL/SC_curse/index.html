@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DataLIB</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header class="no-fixed mb-5">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav">
+	        		<div class="container p-1">
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                    <form class="form-inline">
+		      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+	    				</form>
+	                    <div class="d-flex">
+	                        <div class="pe-3 border-end">
+	                            <div class="collapse navbar-collapse" id="navbarContent">
+	                                <ul class="navbar-nav ml-auto align-items-center pe-2">
+	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat">Каталог</button>
+	                                    	<div class="menu shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat-1">Информация</button>
+	                                    	<div class="menu-1 shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <button class="btn-bell pe-2">
+	                                </button>
+	                            </div>
+	                        </div>
+	                       
+	                        <div class="collapse navbar-collapse justify-content-end ps-3" id="navbar">
+								<ul class="navbar-nav ml-auto align-items-center">
+	                                <li><a href="https://dev.datalib.iprmedia.ru/profile" class="btn datalib-btn-sm datalib-btn-white ps-1 pe-2">Профиль</a></li>
+	                                <li>
+	                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+	                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+	                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="btn datalib-btn-sm datalib-btn-white" onclick="event.preventDefault(); this.closest('form').submit();">
+	                                                <i class="mdi mdi-logout"></i> Выйти
+	                                            </a>
+	                                        </form>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	        <nav class="mobile navbar navbar-expand-xl fixed-top header-nav">
+	        		<div class="container p-1 d-flex flex-row justify-content-start">
+	        			<button class="navbar-toggler nav-icon collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      				<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+					        </svg>
+		    			</button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                   
+	                    <div class="container d-flex flex-col">
+	                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                        		 <form class="form-inline pt-2">
+					      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+				    				</form>
+	                                <ul class="navbar-nav ps-2 border-bottom pb-2">
+	                                    <li><a class="nav-link nav-mobile" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat" data-bs-toggle="collapse" href="#collapseNavMob" aria-expanded="false" aria-controls="collapseNavMob">Каталог</button>
+	                                    	<div class="collapse" id="collapseNavMob">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat-1" data-bs-toggle="collapse" href="#collapseNavMob_1" aria-expanded="false" aria-controls="collapseNavMob_1">Информация</button>
+	                                    	<div class="collapse" id="collapseNavMob_1">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <div class="d-flex flex-row align-items-center ps-2" id="navbar">
+	                                	<button class="btn-bell pe-4"></button>
+										<ul class="navbar-nav d-flex flex-row">
+			                                <li><a href="#" class="m-0 pe-4 nav-link nav-mobile">Профиль</a></li>
+			                                <li>
+			                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+			                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+			                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="nav-link nav-mobile" onclick="event.preventDefault(); this.closest('form').submit();">
+			                                                <i class="mdi mdi-logout"></i> Выйти
+			                                            </a>
+			                                        </form>
+			                                </li>
+			                            </ul>
+			                        </div>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	    </header>
+	    <main style="position: relative; background: #FFFFFF;">
+	    	<div style="background: #F5F7FE; height: 500px;">
+	    		<div class="container pt-5 pb-5">
+		    		<div class="row">
+		    			<div class="d-flex flex-row">
+				    			<p style="color: rgba(3, 30, 128, 0.6);">Главная / Каталог / SMART-КУРСЫ /</p>
+				    			<p style="color: rgba(3, 30, 128, 1);">Основы статистики и UI/UX</p>
+				    	</div>
+		    			<div class="col-12 col-lg-4 col-md-6 col-sm-12">
+		    				<div class="pt-4 mt-3 border-round shadow" style="background:#FFFFFF;">
+			    				<div class="d-flex justify-content-center">
+			    					<img class="img-curse" src="img/img-2.png" alt="">
+			    				</div>
+			    				<h1 class="ps-3 pt-4 pb-4 m-0">Основы<br>статистики и UI/UX</h1>
+			    				<div class="ps-3 pt-3 pb-4">
+			    					<button class="btn-start">
+				    					<span>начать</span>
+				    				</button>
+			    				</div>
+			    			</div>
+		    			</div>
+		    			<div class="d-none d-md-block col-12 col-lg-8 col-md-6 col-sm-12" style="padding-top: 250px;">
+		    				<div class="d-flex flex-row align-items-center pb-3">
+			    				<img src="img/university.svg" alt="">
+			    				<h1 class="m-0" style="padding-left: 15px;">DATALIB</h1>
+			    				<img style="padding-left: 15px;" src="img/arrow-blue.svg" alt="">
+			    			</div>
+			    			<h2 class="text-sc">
+			    				<span>Искусственный интеллект</span>
+			    			</h2>
+			    			<h2 class="text-sc">
+			    				<span>Технологии хранения и анализа больших данных</span>
+			    			</h2>
+		    			</div>
+		    		</div>
+		    	</div>
+	    	</div>
+	    	<div class="pt-5 pt-md-4 pt-sm-5 container pb-5">
+		    	<div class="row">
+		    		<div class="col-12 col-lg-4 col-md-6 col-sm-12 pt-5">
+		    			<div class="pt-6 mt-5">
+		    				<div class="d-flex flex-row align-items-center justify-content-between">
+		    					<div class="d-flex flex-row align-items-center">
+		    						<img src="img/video-lectures.svg" alt="">
+		    						<p class="m-0 p-blue padding-10px">Видеолкций</p>
+		    					</div>
+		    					<p class="m-0 p-blue">5</p>
+		    				</div>
+		    				<div class="list_line_2"></div>
+		    				<div class="pt-4 d-flex flex-row align-items-center justify-content-between">
+		    					<div class="d-flex flex-row align-items-center">
+		    						<img src="img/Clock.svg" alt="">
+		    						<p class="m-0 p-blue padding-10px">Длительность</p>
+		    					</div>
+		    					<p class="m-0 p-blue">11 часов</p>
+		    				</div>
+		    				<div class="list_line_2"></div>
+		    				<div class="pt-4 d-flex flex-row align-items-center justify-content-between">
+		    					<div class="d-flex flex-row align-items-center">
+		    						<img  src="img/exam.svg" alt="">
+		    						<p class="m-0 p-blue padding-10px">Итоговое тестирование</p>
+		    					</div>
+		    					<p class="m-0 p-blue">25 вопросов</p>
+		    				</div>
+		    				<div class="list_line_2"></div>
+		    				<div class="pt-4 d-flex flex-row align-items-center justify-content-between">
+		    					<div class="d-flex flex-row align-items-center">
+		    						<img src="img/certificate.svg" alt="">
+		    						<p class="m-0 p-blue padding-10px">Сертификтат</p>
+		    					</div>
+		    					<p class="m-0 p-blue">есть</p>
+		    				</div>
+		    				<div class="list_line_2"></div>
+		    				<div class="pt-4 d-flex flex-row align-items-center justify-content-between">
+		    					<div class="d-flex flex-row align-items-center">
+		    						<img src="img/level.svg" alt="">
+		    						<p class="m-0 p-blue padding-10px">Уровень</p>
+		    					</div>
+		    					<p class="m-0 p-blue">для начинающих</p>
+		    				</div>
+		    				<div class="list_line_2"></div>
+		    				<div class="pt-5">
+		    					<div class="pt-3 pb-3 container shadow border-round" style="position:relative;">
+			    					<div class="d-flex flex-row align-items-center justify-content-between">
+				    					<div>
+				    						<p class="m-0 p-blue">Просмотрено<br>видео</p>
+				    						<h1>4 из 5</h1>
+				    					</div>
+				    					<h1 class="big-h1">80%</h1>
+				    				</div>
+				    				<div class="percent-line-blue"></div>
+				    				<div class="percent-line"></div>
+			    				</div>
+		    				</div>
+		    				<div class="pt-4 pb-5">
+		    					<div class="pt-3 pb-3 container shadow border-round" style="position:relative;">
+			    					<div class="d-flex flex-row align-items-center justify-content-between">
+				    					<div>
+				    						<p class="m-0 p-blue">Отвечено <br>вопросов</p>
+				    						<h1>2 из 25</h1>
+				    					</div>
+				    					<h1 class="big-h1">8%</h1>
+				    				</div>
+				    				<div class="percent-line-blue-1"></div>
+				    				<div class="percent-line"></div>
+			    				</div>
+		    				</div>
+		    			</div>
+		    		</div>
+		    		<div class="col-12 col-lg-8 col-md-6 col-sm-12">
+		    			<h1 class="pb-2">О курсе:</h1>
+		    			<p class="col-lg-9 col-md-12">В рамках трехнедельного курса рассматриваются подходы к описанию получаемых<br> в исследованиях данных, основные методы и принципы статистического анализа, интерпретация и визуализация получаемых результатов. Слушатели познакомятся с такими методами статистического анализа как дисперсионный, регрессионный и кластерный анализ. Мы научимся сравнивать группы между собой, рассчитывать коэффициенты корреляции<br> и строить регрессионные уравнения.</p>
+
+						<p class="col-lg-9 col-md-12">Основной акцент делается на математических идеях, интуиции и логике, которые обуславливают методы и расчетные формулы. Изученный материал будет применим для решения широкого круга задач, возникающих в рамках исследовательской работы практически любого направления.</p>
+						<div>
+							<div class="row">
+								<div class="row pt-2">
+									<div class="col-12 col-xxl-6 col-xl-12">
+										<h1 class="pt-4">Авторы курса</h1>
+										<div class="row">
+											<div class="col-lg-6 col-md-12">
+												<img class="border-round" src="img/img-4.png" alt="">
+												<p class="pt-2 font-16" class="pt-3 m-0 pb-2">Егор Мордовин</p>
+											</div>
+											<div class="col-lg-6 col-md-12">
+												<img class="border-round" src="img/img-5.png" alt="">
+												<p class="pt-2 font-16" class="pt-3 m-0 pb-2">Николай Кузьмичев</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-xxl-6 col-xl-12">
+										<h1 class="pt-4 ps-0">Преподаватели курса</h1>
+										<div class="row">
+											<div class="col-lg-6 col-md-12">
+												<img class="border-round" src="img/img-6.png" alt="">
+												<p class="pt-3 m-0 pb-2 font-16">Колмогорова Анастасия<br>Владимировна</p>
+												<div class="list_line_black"></div>
+												<p class="pt-2 font-12">Заведующая кафедрой романских языков и прикладной лингвистики ИФ и ЯК Сибирского федерального университета</p>
+											</div>
+											<div class="col-lg-6 col-md-12">
+												<img class="border-round" src="img/img-7.png" alt="">
+												<p class="pt-3 m-0 pb-2 font-16">Антамошкин Олеслав<br>Александрович</p>
+												<div class="list_line_black"></div>
+												<p class="pt-2 font-12">Доктор технических наук, профессор, Сибирского федерального университета, член правления Российской ассоциации цифровых гуманитарных наук</p>
+											</div>
+										</div>
+									</div>
+							</div>
+							
+							<div class="accordion pt-2" id="accordion_sc_1">
+							  <div class="accordion-item" style="border-bottom: 1px solid #D1D1D1">
+							    <h2 class="accordion-header" id="headingOne">
+							      <button class="accordion-button collapsed pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							        Содержание курса
+							      </button>
+							    </h2>
+							    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+							      <div class="accordion-body">
+							        <ul class="ps-0 mb-2 font-ul"><strong>Модуль 1. Первый модуль в рамках первого курса</strong></ul>
+									<li class="font-li">Урок 1. Первый урок первого модуля в рамках первого курса</li>
+									<li class="font-li">Урок 2. Второй урок первого модуля в рамках первого курса</li>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="accordion-item pt-4" style="border-bottom: 1px solid #D1D1D1">
+							    <h2 class="accordion-header" id="headingOne">
+							      <button class="accordion-button collapsed pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+							        Рекомендуемая литература
+							      </button>
+							    </h2>
+							    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne">
+							      <div class="accordion-body">
+							        <div class="d-flex flex-row justify-content-between">
+							        	<div class="">
+							        		<img src="img/img-13.svg" alt="">
+							        		<p class="font-11 col-11 m-0 pt-3">Прикладное программирование на C# в среде VS.NET 2008: практикум</p>
+							        	</div>
+							        	<div class="">
+							        		<img src="img/img-13.svg" alt="">
+							        		<p class="font-11 col-11 m-0 pt-3">Периферийные устройства вычислительной техники: учебное пособие</p>
+							        	</div>
+							        	<div class="">
+							        		<img src="img/img-12.svg" alt="">
+							        		<p class="font-11 col-11 m-0 pt-3">Периферийные устройства вычислительной техники: учебное пособие</p>
+							        	</div>
+							        	<div class="">
+							        		<img src="img/img-13.svg" alt="">
+							        		<p class="font-11 col-11 m-0 pt-3">Прикладное программирование на C# в среде VS.NET 2008: практикум</p>
+							        	</div>
+							        	<div class="">
+							        		<img src="img/img-11.svg" alt="">
+							        		<p class="font-11 col-12 m-0 pt-3">Основы цифровой техники: учебное пособие</p>
+							        	</div>
+							        </div>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="accordion-item pt-4" style="border-bottom: 1px solid #D1D1D1">
+							    <h2 class="accordion-header" id="headingOne">
+							      <button class="accordion-button collapsed pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+							        Условия получения документов
+							      </button>
+							    </h2>
+							    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne">
+							      <div class="accordion-body">
+							        <p>Информация подгружается автоматически из настроек (Общий балл по курсу), <br>а также если есть документ гособразца: </p>
+							        <p>1. «Удостоверение о повышении квалификации» или «Диплом о профессиональной<br> переподготовке»;<br>2. «За курс» или «За цепочку курсов» <br>3. Продолжительность обучения.</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+		    </div>
+	    </main>
+	    <footer>
+			<div class="container pt-3 pb-3">
+				
+			    <div class="row justify-content-between">
+			    	<div class="d-flex justify-content-center align-items-center col-12 col-lg-2 pb-3 pb-lg-0">
+			    		<div>
+							<img src="img/footer_dl.svg" alt="">
+						</div>
+			    	</div>
+			        <div class="col-12 col-lg-4 col-sm-6">
+			            <p class="footer-white-main mb-2">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2022620531
+			            </p>
+			            <p class="footer-white-main mb-2">
+			               Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2021666446
+			            </p>
+			            <p>
+			                        &copy; Общество с ограниченной ответственностью <br> Компания «Ай Пи Ар Медиа»
+			            </p>
+			            
+			        </div>
+			        <div class="col-12 col-lg-6 col-sm-6 mb-4">
+			            <div class="row">
+			                <div class="col-12 col-lg-4">
+			                    <p class="phone-number mb-2">
+			                        8 800 555-22-35 
+			                    </p>
+			                    <p> 
+			                    	Звонок бесплатный<br>для всех регионов России
+			                    </p>
+			                </div>
+			                <div class="col-12 col-lg-4">
+			                	<p class="phone-description footer-white mb-2">
+			                       Отдел продаж:             
+			                    </p>
+			                    <p class="mb-2 footer-white">
+			                    	(добавочный 167)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			                <div class="col-12 col-lg-4">
+			                	<p class="phone-description footer-white mb-2">
+			                        Техническая поддержка:                
+			                    </p>
+			                    <p class="mb-2">
+			                    	(добавочный 200)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-12 col-lg-8">
+			                    <p class="email mt-3 footer-pale-white mb-2">
+			                    	Электронная почта
+			                    </p>
+			                    <p>
+			                    	<a href="mailto:office@datalib.ru">office@datalib.ru</a>
+			                    </p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </footer>
+        <script>
+			//При нажатии в navbar кнопку Каталог появляется блок, исчезает при нажатии на кнопку Каталог или поля вокруг него
+			const btnMenu = document.querySelector(".btn-cat");
+			const menu = document.querySelector(".menu");
+			const toggleMenu = function () {
+			    menu.classList.toggle("open");
+			}
+
+			btnMenu.addEventListener("click", function (e) {
+			    e.stopPropagation();
+			    toggleMenu();
+			});
+
+			document.addEventListener("click", function (e) {
+			    const target = e.target;
+			    const its_menu = target == menu || menu.contains(target);
+			    const its_btnMenu = target == btnMenu;
+			    const menu_is_active = menu.classList.contains("open");
+
+			    if (!its_menu && !its_btnMenu && menu_is_active) {
+			        toggleMenu();
+			    }
+			});
+
+			//При нажатии в navbar кнопку Информация появляется блок, исчезает при нажатии на кнопку Информация или поля вокруг него
+			const btnMenu_1 = document.querySelector(".btn-cat-1");
+			const menu_1 = document.querySelector(".menu-1");
+			const toggleMenu_1 = function () {
+			    menu_1.classList.toggle("open");
+			}
+
+			btnMenu_1.addEventListener("click", function (c) {
+			    c.stopPropagation();
+			    toggleMenu_1();
+			});
+
+			document.addEventListener("click", function (c) {
+			    const target_1 = c.target;
+			    const its_menu_1 = target_1 == menu_1 || menu_1.contains(target_1);
+			    const its_btnMenu_1 = target_1 == btnMenu_1;
+			    const menu_is_active_1 = menu_1.classList.contains("open");
+
+			    if (!its_menu_1 && !its_btnMenu_1 && menu_is_active_1) {
+			        toggleMenu_1();
+			    }
+			});
+        </script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
