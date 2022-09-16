@@ -1019,8 +1019,20 @@ input[type="date"]{
 	font-weight: 500; 
 	font-family: Gilroy!important;
 }
-.h1-40{
+.p-sc-40{
 	font-size: 40px;
+	color: #031E80;
+}
+.p-sc-24{
+	font-size: 24px;
+	color: #031E80;
+}
+.p-sc-main{
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	color: #031E80;
 }
 .content-blue{
 	background: #031E80;
@@ -1030,7 +1042,7 @@ input[type="date"]{
 	color: #FFFFFF;
 	font-weight: 500;
 }
-.content-blue h1{
+.content-blue-main-p{
 	color: #FFFFFF; 
 	font-size: 20px; 
 	font-weight: 500;
