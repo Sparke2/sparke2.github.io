@@ -1,8 +1,0 @@
-@font-face {
-	font-family: 'Gilroy-Medium';
-	src: url('gilroy-medium.eot'); /* IE 9 Compatibility Mode */
-	src: url('gilroy-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
-		url('gilroy-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('gilroy-medium.ttf') format('truetype'), /* Safari, Android, iOS */
-}
