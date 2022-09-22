@@ -14,6 +14,14 @@
 nav.mobile {
     display: none;
 }
+@media(min-width: 1400px){
+	.registration button{
+		background: #031E80 url(img/arrow-read.svg) 290px no-repeat!important;
+	}
+	.start button{
+		background: #031E80 url(img/arrow-white.svg) 350px no-repeat!important;
+	}
+}
 @media(max-width: 1400px){
 	.btn-download {
     height: 44px;
@@ -40,11 +48,16 @@ nav.mobile {
 	.label-select{
 		padding-right: 100px!important;
 	}
-	.btn-start{
+	.start button{
 	width: 320px!important;
+	background: #031E80 url(img/arrow-white.svg) 290px no-repeat!important;
 	}
 	.lesson-no-active-line{
 		width: 300px!important;
+	}
+	.registration button{
+		width: 451px!important;
+		background: #031E80 url(img/arrow-read.svg) 310px no-repeat!important;
 	}
 }
 @media(max-width: 1200px){
@@ -80,11 +93,20 @@ nav.mobile {
 	.label-select{
 		padding-right: 80px!important;
 	}
-	.btn-start{
-	width: 260px!important;
+	.start button{
+		width: 260px!important;
+		background: #031E80 url(img/arrow-white.svg) 230px no-repeat!important;
 	}
 	.lesson-no-active-line{
 		width: 250px!important;
+	}
+	.registration button{
+		width: 376px!important;
+		background: #031E80 url(img/arrow-read.svg) 270px no-repeat!important;
+	}
+	.padding-content{
+		margin-bottom: 60px!important;
+		margin-top: 60px!important;
 	}
 }
 @media(max-width: 992px){
@@ -107,11 +129,16 @@ nav.mobile {
 	width: 320px;
 	height: auto;
 	}
-	.btn-start{
+	.start button{
 	width: 300px!important;
+	background: #031E80 url(img/arrow-white.svg) 240px no-repeat!important;
 	}
 	.lesson-no-active-line{
 		width: 160px!important;
+	}
+	.padding-content{
+		margin-bottom: 60px!important;
+		margin-top: 600px!important;
 	}
 }
 
@@ -138,11 +165,22 @@ nav.mobile {
 	.lesson-no-active-line{
 		width: 180px!important;
 	}
+	.padding-content{
+		margin-bottom: 60px!important;
+		margin-top: 680px!important;
+	}
 }
 @media(max-width: 576px){
 	.btn-download {
     height: 44px;
     width: 372px!important;
+	}
+	.girl-follow{
+	 right: -30px;
+	}
+	.registration button{
+		width: 459px!important;
+		background: #031E80 url(img/arrow-read.svg) 320px no-repeat!important;
 	}
 }
 @media(max-width: 500px){
@@ -152,6 +190,10 @@ nav.mobile {
 	}
 	.lesson-no-active-line{
 		width: 160px!important;
+	}
+	.padding-content{
+		margin-bottom: 0px!important;
+		margin-top: 720px!important;
 	}
 }
 body{
@@ -658,6 +700,16 @@ button[type="submit"]{
 	font-size: 14px;
 	font-weight: 500;
 }
+.hashtags-light{
+	text-decoration: none;
+	border-radius: 10px;
+	border: 0px solid transparent;
+	background: #E5E8F2;
+	font-family: Gilroy-Medium;
+	color: #031E80;
+	font-size: 14px;
+	font-weight: 500;
+}
 .hashtags{
 	text-decoration: none;
 	border-radius: 10px;
@@ -927,27 +979,17 @@ input[type="date"]{
 .img-curse{
 	border-radius: 17px 17px 0 0;
 }
-.curse h1{
+.p-64{
 	font-size: 64px!important;
+	color: #031E80;
 }
-.curse h2{
+.p-20{
 	font-size: 20px; 
 	font-weight: 700!important;
+	color: #031E80;
 }
 .label-select{
 	padding-right: 130px;
-}
-.btn-start{
-	width: 380px;
-	height: 62px;
-	text-decoration: none;
-	border-radius: 10px;
-	border: 0px solid transparent;
-	background: #031E80 url(img/arrow-white.svg) 350px no-repeat;
-	font-family: Gilroy-Medium;
-	color: #FFFFFF;
-	font-size: 24px;
-	font-weight: 500;
 }
 .list_line_2{
 	width: auto;
@@ -976,6 +1018,7 @@ input[type="date"]{
 }
 .text-sc{
 	font-size: 24px;
+	color: #031E80;
 }
 .text-sc span{
 	padding: 0 10px;
@@ -986,6 +1029,9 @@ input[type="date"]{
 	width: auto;
 	height: 1px;
 	background: #000000;
+}
+.accordion-border-bottom{
+	border-bottom: 1px solid #D1D1D1;
 }
 .accordion-button:after{
 	background-image: url(img/plus.svg)!important;
@@ -1017,6 +1063,10 @@ input[type="date"]{
 .accordion-item: focus{
 	background: transparent!important; 
 	border: none;
+}
+.p-500{
+	font-family: Gilroy-Medium; 
+	font-weight: 500;
 }
 .p-blue{
 	color: #031E80;
@@ -1109,18 +1159,6 @@ input[type="date"]{
 	width: 350px;
 	height: 3px;
 }
-.btn-read{
-	width: 189px;
-	height: 40px;
-	text-decoration: none;
-	border-radius: 10px;
-	border: 0px solid transparent;
-	background: #031E80 url(img/arrow-read.svg) 150px no-repeat;
-	font-family: Gilroy-Medium;
-	color: #FFFFFF;
-	font-size: 14px;
-	font-weight: 500;
-}
 .p-bottom-line{
 	border-bottom: 1px solid #031E80;
 	font-size: 12px;
@@ -1168,4 +1206,110 @@ input[type="date"]{
 .select-custom-content li:hover{
 	background: #E5E8F2;
 	border-radius: 10px;
+}
+.date-line-step{
+	height: 40px;
+	background: #F5F7FE;
+	border-radius: 10px 10px 0px 0px;
+	border-bottom: 3px solid #CDD2E6;
+}
+.date-line-step p{
+	font-size: 14px;
+	color: #031E80;
+	text-align: center;
+	padding-bottom: 0px;
+}
+.date-step-active{
+	padding-top: 3px;
+	width: 50px;
+	border-bottom: 3px solid #031E80;
+}
+.p-16{
+	font-size: 16px;
+	font-weight: 700;
+}
+.p-16-normal{
+	font-size: 16px;
+}
+.event p{
+	color: #031E80;
+}
+.list_line_event{
+	width: auto;
+	height: 1px;
+	background: #CDD2E6;
+}
+.border-end-date {
+	height: 30px;
+    border-right: 2px solid #CDD2E6!important;
+}
+.bg-blue{
+	background: #F5F7FE; 
+	height: 500px;
+}
+.bg-blue-1{
+	background: #F5F7FE; 
+	height: 412px;
+}
+.bg-grey-light{
+	background: #E5E8F2; 
+}
+.bg-grey{
+	background:#CDD2E6;
+}
+.p-18{
+	font-size: 18px;
+	font-weight: 700;
+}
+.p-18-normal{
+	font-size: 18px;
+}
+.girl-follow{
+	position: absolute;
+	top: -49px;
+}
+.content-follow{
+	height: 94px;
+	border: 2px solid #CDD2E6; 
+	position: relative;
+}
+.list_line_2{
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background: #CDD2E6;
+}
+.btn-datalib{
+	text-decoration: none;
+	border-radius: 10px;
+	color: #FFFFFF;
+	border: 0px solid transparent;
+	font-family: Gilroy-Medium;
+}
+.btn-datalib.arrow{
+	background: #031E80 url(img/arrow-read.svg) 150px no-repeat;
+}
+.registration button{
+	width: 415px;
+	height: 40px;
+	font-size: 14px;
+	font-weight: 500;
+}
+.read button{
+	width: 189px;
+	height: 40px;
+	font-size: 14px;
+	font-weight: 500;
+}
+.start button{
+	width: 380px;
+	height: 62px;
+	font-size: 24px;
+	font-weight: 500;
+}
+.black-a{
+	color: #000000;
+}
+.black-a:hover{
+	color: #000000;
 }
