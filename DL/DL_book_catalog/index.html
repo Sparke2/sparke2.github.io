@@ -185,7 +185,7 @@
 	        </nav>
 	    </header>
         <main>
-        	<div class="container-fluid" style="background:#F5F7FE;">
+        	<div class="container-fluid" style="background:#E6E9F2;">
         	<div class="container curse pt-6 pb-5">
         		<p class="ps-0 pt-5 text-uppercase p-64">
         			Каталог книг
@@ -199,82 +199,355 @@
 		      				<input class="form-control" type="search" placeholder="Поиск по названию" aria-label="Search">
 	    				</form>
 	    				<form>
-		    				<div class="pt-4 col-xl-11 col-12">
-					        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
-					        		<p class="black-text mb-0">Искать во всём каталоге</p>
-					        		 <input class="form-check-input rounded-circle" type="checkbox" value="" aria-label="">
-					        	</div>
-					        </div>
-					        <div class="pt-3 col-xl-11 col-12">
-					        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
-					        		<p class="black-text mb-0">Сквозные технологии</p>
-					        		 <input class="form-check-input rounded-circle" type="checkbox" value="" aria-label="">
-					        	</div>
-					        </div>
-					        <div class="pt-3 col-xl-11 col-12">
-					        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
-					        		<p class="black-text mb-0">Отрасли знаний</p>
-					        		 <input class="form-check-input rounded-circle" type="checkbox" value="" aria-label="">
-					        	</div>
-					        </div>
-					        <div class="pt-3 col-xl-11 col-12">
-					        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
-					        		<p class="black-text mb-0">Специальные разделы</p>
-					        		 <input class="form-check-input rounded-circle" type="checkbox" value="" aria-label="">
-					        	</div>
-					        </div>
-					        <div class="pt-4 col-xl-11 col-12">
-					        	<div class="bg-grey p-4 border-round">
-					        		<div class="pb-2">
-					        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
-					        				<div class="col-3 p-0">
-					        					<img class="mx-auto d-block img-fluid" src="img/c_box.svg" alt="">
-					        				</div>
-							        		<div class="col-9 ps-2 pe-1">
-							        			<p class="p-blue m-0">Технологии хранения<br> и анализа больших данных</p>
-							        		</div>
+	                        <div class="nav" id="nav-tab" role="tablist">
+				    				<div class="pt-4 col-xl-11 col-12" id="nav-all-tab" role="tab" data-bs-toggle="tab" data-bs-target="#nav-all" aria-controls="nav-all" aria-selected="true">
+							        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
+							        		<p class="black-text mb-0">Искать во всём каталоге</p>
+							        		<input class="form-check-input rounded-circle" type="radio" id="all" name="typeCategories" checked>
 							        	</div>
-					        		</div>
-					        		<div class="pb-2">
-					        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
-					        				<div class="col-3 p-0">
-					        					<img class="mx-auto d-block img-fluid" src="img/c_internet.svg" alt="">
-					        				</div>
-							        		<div class="col-9 ps-2 pe-1">
-							        			<p class="p-blue m-0">Технологии беспроводной связи и «интернета вещей»</p>
-							        		</div>
+							        </div>
+							        <div class="pt-3 col-xl-11 col-12" id="nav-technologies-tab" role="tab" data-bs-toggle="tab" data-bs-target="#nav-technologies" aria-controls="nav-technologies" aria-selected="false">
+							        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
+							        		<p class="black-text mb-0">Сквозные технологии</p>
+							        		<input class="form-check-input rounded-circle" type="radio" id="technologies" name="typeCategories">
 							        	</div>
-					        		</div>
-					        		<div class="pb-2">
-					        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
-					        				<div class="col-3 p-0">
-					        					<img class="mx-auto d-block img-fluid" src="img/c_robot.svg" alt="">
-					        				</div>
-							        		<div class="col-9 ps-2 pe-1">
-							        			<p class="p-blue m-0">Технологии компонентов робототехники, мехатроники и сенсорики</p>
-							        		</div>
+							        </div>
+							        <div class="pt-3 col-xl-11 col-12" id="nav-knowledge-tab" role="tab" data-bs-toggle="tab" data-bs-target="#nav-knowledge" aria-controls="nav-knowledge" aria-selected="false">
+							        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
+							        		<p class="black-text mb-0">Отрасли знаний</p>
+							        		<input class="form-check-input rounded-circle" type="radio" id="knowledge" name="typeCategories">
 							        	</div>
-					        		</div>
-					        		<div class="pb-2">
-					        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
-					        				<div class="col-3 p-0">
-					        					<img class="mx-auto d-block img-fluid" src="img/c_quantum.svg" alt="">
-					        				</div>
-							        		<div class="col-9 ps-2 pe-1">
-							        			<p class="p-blue m-0">Технологии <br>квантовой коммуникации</p>
-							        		</div>
+							        </div>
+							        <div class="pt-3 col-xl-11 col-12" id="nav-spec-tab" role="tab" data-bs-toggle="tab" data-bs-target="#nav-spec" aria-controls="nav-spec" aria-selected="false">
+							        	<div class="div-check-mark container-fluid d-flex align-items-center justify-content-between">
+							        		<p class="black-text mb-0">Специальные разделы</p>
+							        		<input class="form-check-input rounded-circle" type="radio" id="spec" name="typeCategories">
 							        	</div>
-					        		</div>
-					        		<div>
-					        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
-					        				<div class="col-3 p-0">
-					        					<img class="mx-auto d-block img-fluid" src="img/c_finger_print.svg" alt="">
-					        				</div>
-							        		<div class="col-9 ps-2 pe-1">
-							        			<p class="p-blue m-0">Технологии доверенного взаимодействия и информационная безопасность</p>
+							        </div>
+							</div>
+							<div class="tab-content pt-4 col-xl-11 col-12" id="nav-tabContent">
+					        		<div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab"></div>
+						        	<div class="tab-pane fade show" id="nav-technologies" role="tabpanel" aria-labelledby="nav-technologies-tab">
+						        			<div class="scroller bg-grey p-4 border-round">
+						        				<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_1.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии хранения<br> и анализа больших данных</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_2.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии беспроводной связи и «интернета вещей»</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_3.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии компонентов робототехники, мехатроники и сенсорики</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_4.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии <br>квантовой коммуникации</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_5.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии доверенного взаимодействия и информационная безопасность</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_6.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Квантовые технологии</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_7.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Искусственный интеллект</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_8.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии создания новых и портативных источников энергии</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_9.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии управления свойствами биологических объектов</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_10.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии машинного обучения и когнитивные технологии</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_11.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Новые производственные технологии TechNet</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_12.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Молекулярная инженерия в науках о жизни</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_13.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии распределенных реестров</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_14.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Нейротехнологии, технологии виртуальной и дополненной реальностей</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div>
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/c_15.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Технологии транспортировки электроэнергии и распределенных интеллектуальных энергосистем</p>
+										        		</div>
+										        	</div>
+								        		</div>
+						        			</div>
+						        </div>
+						        <div class="tab-pane fade" id="nav-knowledge" role="tabpanel" aria-labelledby="nav-knowledge-tab">
+						        			<div class="scroller bg-grey p-4 border-round">
+							        			<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_1.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Строительство</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_2.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Информационные технологии и информационная безопасность</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_3.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Системы связи, телекоммуникационные и квантовые технологии</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_4.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Энергетическая инфраструктура</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_5.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Добыча и обработка полезных ископаемых</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_6.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Транспорт и транспортная инфраструктура</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_7.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Здравоохранение</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_8.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Химические технологии и продукты</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_9.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Сельское хозяйство</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_10.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Городское хозяйство и финансовые услуги</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_11.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Общество и государство</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_12.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Педагогика, <br>образование, наука</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/a_13.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Производство и промышленность</p>
+										        		</div>
+										        	</div>
+								        		</div>
 							        		</div>
-							        	</div>
-					        		</div>
+							    </div>
+						        <div class="tab-pane fade" id="nav-spec" role="tabpanel" aria-labelledby="nav-spec-tab">
+						        			<div class="bg-grey p-4 border-round">
+							        			<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/b_1.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Основы информатики<br> и программирования</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/b_2.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Комбинаторика</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        		<div class="pb-2">
+								        			<div class="content row d-flex align-items-center border-round pt-3 pb-3 ps-2 pe-2">
+								        				<div class="col-3 p-0">
+								        					<img class="mx-auto d-block img-fluid" src="img/b_3.svg" alt="">
+								        				</div>
+										        		<div class="col-9 ps-2 pe-1">
+										        			<p class="p-blue m-0">Цифровая педагогика<br> и образовательные технологии</p>
+										        		</div>
+										        	</div>
+								        		</div>
+								        	</div>
 						        </div>
 					        </div>
 					    </form>
