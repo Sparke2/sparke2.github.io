@@ -429,7 +429,9 @@ a.list-sidebar{
 .form-check-input:checked[type=checkbox]{
 	background-image: url("img/check.svg");
 }
-
+.form-check-input:checked[type=radio]{
+	background-image: url("img/check.svg");
+}
 .girl-container{
 	position:absolute;
 	display:block;
@@ -1368,4 +1370,24 @@ input[type="date"]{
 .pagination-position{
 	display: flex;
 	justify-content: flex-end;
+}
+.scroller{
+  height: 495px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+.scroller::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #707EB4;
+  border-radius: 10px;
+  border: 0px solid #FFFFFF;
 }
