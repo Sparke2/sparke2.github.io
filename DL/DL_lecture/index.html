@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DataLIB</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header class="no-fixed mb-5">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav">
+	        		<div class="container p-1">
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                    <form class="form-inline">
+		      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+	    				</form>
+	                    <div class="d-flex">
+	                        <div class="pe-3 border-end">
+	                            <div class="collapse navbar-collapse" id="navbarContent">
+	                                <ul class="navbar-nav ml-auto align-items-center pe-2">
+	                                    <li><a class="nav-link" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat">Каталог</button>
+	                                    	<div class="menu shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="btn-nav d-flex align-items-center btn-cat-1">Информация</button>
+	                                    	<div class="menu-1 shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <button class="btn-bell pe-2">
+	                                </button>
+	                            </div>
+	                        </div>
+	                       
+	                        <div class="collapse navbar-collapse justify-content-end ps-3" id="navbar">
+								<ul class="navbar-nav ml-auto align-items-center">
+	                                <li><a href="https://dev.datalib.iprmedia.ru/profile" class="btn datalib-btn-sm datalib-btn-white ps-1 pe-2">Профиль</a></li>
+	                                <li>
+	                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+	                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+	                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="btn datalib-btn-sm datalib-btn-white" onclick="event.preventDefault(); this.closest('form').submit();">
+	                                                <i class="mdi mdi-logout"></i> Выйти
+	                                            </a>
+	                                        </form>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	        <nav class="mobile navbar navbar-expand-xl fixed-top header-nav">
+	        		<div class="container p-1 d-flex flex-row justify-content-start">
+	        			<button class="navbar-toggler nav-icon collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      				<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+					        </svg>
+		    			</button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/navbar_dl.svg" alt="">
+						</a>
+	                   
+	                    <div class="container d-flex flex-col">
+	                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                        		 <form class="form-inline pt-2">
+					      				<input class="form-control" type="search" placeholder="      Поисковый запрос" aria-label="Search">
+				    				</form>
+	                                <ul class="navbar-nav ps-2 border-bottom pb-2">
+	                                    <li><a class="nav-link nav-mobile" href="/initiative">Инициатива</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat" data-bs-toggle="collapse" href="#collapseNavMob" aria-expanded="false" aria-controls="collapseNavMob">Каталог</button>
+	                                    	<div class="collapse" id="collapseNavMob">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>	
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/catalog/courses">SMART-курсы</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/lectoriy">Лекторий</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/universities">Университеты</a></li>
+	                                    <li><a class="nav-link nav-mobile" href="https://dev.datalib.iprmedia.ru/events">Мероприятия</a></li>
+	                                    <li>
+	                                    	<button class="ps-0 pt-1 pb-1 btn-nav-1 d-flex align-items-center btn-cat-1" data-bs-toggle="collapse" href="#collapseNavMob_1" aria-expanded="false" aria-controls="collapseNavMob_1">Информация</button>
+	                                    	<div class="collapse" id="collapseNavMob_1">
+							            		<ul class="list-unstyled ps-3">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-link nav-mobile p-0">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-link nav-mobile p-0">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div>
+	                                    </li>
+	                                </ul>
+	                                <div class="d-flex flex-row align-items-center ps-2" id="navbar">
+	                                	<button class="btn-bell pe-4"></button>
+										<ul class="navbar-nav d-flex flex-row">
+			                                <li><a href="#" class="m-0 pe-4 nav-link nav-mobile">Профиль</a></li>
+			                                <li>
+			                                        <form method="POST" action="https://dev.datalib.iprmedia.ru/logout">
+			                                            <input type="hidden" name="_token" value="VSf3SBixD2j3NPz4LIZpYeEnTpUZwGMz223HNFxy">
+			                                            <a href="https://dev.datalib.iprmedia.ru/logout" class="nav-link nav-mobile" onclick="event.preventDefault(); this.closest('form').submit();">
+			                                                <i class="mdi mdi-logout"></i> Выйти
+			                                            </a>
+			                                        </form>
+			                                </li>
+			                            </ul>
+			                        </div>
+	                        </div>
+	                    </div>
+	                </div>
+	        </nav>
+	    </header>
+	    <main>
+	    	<div class="bg-grey-white-1">
+	    		<div class="container pt-5 pb-5">
+		    		<div class="row">
+		    			<div class="d-flex flex-row">
+				    			<p class="p-nav">Главная / Лекторий/ Записи лекций / 
+				    				<span class="p-nav-active">Sap Analytic Cloud: Интеллектуальный анализ данных</span>
+				    			</p>
+				    	</div>
+				    	<div class="col-xl-3 col-lg-4 col-md-6 col-12 pt-4">
+				    		<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2 lecture">
+					        	<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        	<div class="card-body">
+					        		<button class="hashtags-lecture ps-2 pe-2">
+								    	<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								    </button>
+								    <button class="hashtags-lecture ps-2 pe-2">
+								    	<span>большие данные</span>
+								    </button>
+								    <div class="pt-2">
+					        			<button class="hashtags-lecture ps-2 pe-2">
+									    	<span>общество и государство</span>
+									    </button>
+					        		</div>
+						        	<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        	<p class="pt-3 m-0"><a href="#">Назаров Дмитрий Михайлович</a></p>
+						        	<p class="pt-2 m-0"><a href="#">ФГБОУ ВО «Уральский государственный экономический университет»</a></p>
+					        	</div>
+					        </div>
+					        <div class="book pt-3">
+					    		<button class="btn-datalib btn-blue">
+					    			<img src="img/favorites.svg" alt="">
+					    			<span class="ps-2">в избранное</span>
+					    		</button>
+					    	</div>
+				    		<div class="book pt-2">
+				    			<button class="btn-datalib btn-blue">
+					    			<span>добавить в подборку</span>
+					    		</button>
+					    	</div>
+					    	<div class="book pt-2">
+					    		<button class="btn-datalib btn-blue">
+					    			<img src="img/recomended.svg" alt="">
+					    			<span class="ps-2">добавить в SMART-КУРС</span>
+					    		</button>
+				    		</div>
+				    	</div>
+				    	<div class="col-xl-8 col-lg-8 col-md-6 col-12 ps-4 pt-4">
+				    		<div><img class="img-fluid" src="img/img-31.svg" alt=""></div>
+				    		<div class="row gy-3 d-flex justify-content-center">
+				    			<p class="pt-5 w-700 text-sc">Другие лекции по теме</p>
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>			
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-xxl-4 col-xl-4 col-lg-6 col-12">
+					        			<div class="card content border-round shadow pt-3 pb-3 pe-2 ps-2">
+					        				<img class="card-img-top img-fluid d-block mx-auto img-round pb-2" src="img/img-30.svg" alt="">
+					        				<div class="card-body">
+					        					<button class="hashtags-sc ps-2 pe-2">
+								        			<img src="img/date.svg" alt="">
+								        			<span class="ps-1"><time datetime="2022-09-12T15:00">12.09.2022</time></span>
+								        		</button>
+						        				<p class="pt-2 p-blue p-16 text-uppercase m-0">Sap Analytic Cloud: Интеллектуальный анализ данных</p>
+						        				<p class="pt-2 m-0">Назаров Дмитрий Михайлович</p>
+						        				<p class="pt-2 m-0">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+					        				</div>
+					        			</div>
+					        		</div>	
+					        	</div>
+		    				<p class="pt-4 w-700 text-sc">Книги по теме</p>
+		    				<div class="col-11">
+		    					<div class="row pb-5">
+		    						<div class="col-12 col-xxl-3 col-xl-4 col-lg-6 col-12 pt-xxl-0 pt-3">
+					        			<div class="bottom-line-arrival">
+						        			<img class="mb-3 shadow" src="img/img_arrivals.svg" alt="">
+						        			<p class="black-text mb-2 p-12">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+						        			<p class="grey-text mb-2 p-12">2022, Седов В.А., Седова Н.А.</p>
+						        			<div class="d-flex flex-row">
+						        				<p class="grey-text p-12">Практикум</p>
+						        				<p class="ps-3 grey-text p-12">03.02.2022</p>
+						        			</div>
+					        			</div>
+					        		</div>		
+					        		<div class="col-12 col-xxl-3 col-xl-4 col-lg-6 col-12 pt-xxl-0 pt-3">
+					        			<div class="bottom-line-arrival">
+						        			<img class="mb-3 shadow" src="img/img_arrivals.svg" alt="">
+						        			<p class="black-text mb-2 p-12">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+						        			<p class="grey-text mb-2 p-12">2022, Седов В.А., Седова Н.А.</p>
+						        			<div class="d-flex flex-row">
+						        				<p class="grey-text p-12">Практикум</p>
+						        				<p class="ps-3 grey-text p-12">03.02.2022</p>
+						        			</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-12 col-xxl-3 col-xl-4 col-lg-6 col-12 pt-xxl-0 pt-3">
+					        			<div class="bottom-line-arrival">
+						        			<img class="mb-3 shadow" src="img/img_arrivals.svg" alt="">
+						        			<p class="black-text mb-2 p-12">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+						        			<p class="grey-text mb-2 p-12">2022, Седов В.А., Седова Н.А.</p>
+						        			<div class="d-flex flex-row">
+						        				<p class="grey-text p-12">Практикум</p>
+						        				<p class="ps-3 grey-text p-12">03.02.2022</p>
+						        			</div>
+					        			</div>
+					        		</div>	
+					        		<div class="col-12 col-xxl-3 col-xl-4 col-lg-6 col-12 pt-xxl-0 pt-3">
+					        			<div class="bottom-line-arrival">
+						        			<img class="mb-3 shadow" src="img/default_img_arrivals.svg" alt="">
+						        			<p class="black-text mb-2 p-12">Алгебра логики в симуляторе <br>цифровых логических схем LogicCircuit</p>
+						        			<p class="grey-text mb-2 p-12">2022, Седов В.А., Седова Н.А.</p>
+						        			<div class="d-flex flex-row">
+						        				<p class="grey-text p-12">Практикум</p>
+						        				<p class="ps-3 grey-text p-12">03.02.2022</p>
+						        			</div>
+					        			</div>
+					        		</div>	
+		    					</div>
+		    				</div>
+		    		</div>
+		    	</div>
+		    </div>	  			
+	    </main>
+	    <footer>
+			<div class="container pt-3 pb-3">
+				
+			    <div class="row justify-content-between">
+			    	<div class="d-flex justify-content-center align-items-center col-12 col-lg-2 pb-3 pb-lg-0">
+			    		<div>
+							<img src="img/footer_dl.svg" alt="">
+						</div>
+			    	</div>
+			        <div class="col-12 col-lg-4 col-sm-6">
+			            <p class="footer-white-main mb-2">
+			                База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2022620531
+			            </p>
+			            <p class="footer-white-main mb-2">
+			               Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
+			            </p>
+			            <p class="footer-pale-white-mini">
+			            	Свидетельство о регистрации №2021666446
+			            </p>
+			            <p>
+			                        &copy; Общество с ограниченной ответственностью <br> Компания «Ай Пи Ар Медиа»
+			            </p>
+			            
+			        </div>
+			        <div class="col-12 col-lg-6 col-sm-6 mb-4">
+			            <div class="row">
+			                <div class="col-12 col-lg-4">
+			                    <p class="phone-number mb-2">
+			                        8 800 555-22-35 
+			                    </p>
+			                    <p> 
+			                    	Звонок бесплатный<br>для всех регионов России
+			                    </p>
+			                </div>
+			                <div class="col-12 col-lg-4">
+			                	<p class="phone-description footer-white mb-2">
+			                       Отдел продаж:             
+			                    </p>
+			                    <p class="mb-2 footer-white">
+			                    	(добавочный 167)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			                <div class="col-12 col-lg-4">
+			                	<p class="phone-description footer-white mb-2">
+			                        Техническая поддержка:                
+			                    </p>
+			                    <p class="mb-2">
+			                    	(добавочный 200)
+			                    </p>
+			                    <p class="phone-number footer-pale-white">
+			                        8 800 555-22-35
+			                    </p>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-12 col-lg-8">
+			                    <p class="email mt-3 footer-pale-white mb-2">
+			                    	Электронная почта
+			                    </p>
+			                    <p>
+			                    	<a href="mailto:office@datalib.ru">office@datalib.ru</a>
+			                    </p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+        </footer>
+        <script>
+			//При нажатии в navbar кнопку Каталог появляется блок, исчезает при нажатии на кнопку Каталог или поля вокруг него
+			const btnMenu = document.querySelector(".btn-cat");
+			const menu = document.querySelector(".menu");
+			const toggleMenu = function () {
+			    menu.classList.toggle("open");
+			}
+
+			btnMenu.addEventListener("click", function (e) {
+			    e.stopPropagation();
+			    toggleMenu();
+			});
+
+			document.addEventListener("click", function (e) {
+			    const target = e.target;
+			    const its_menu = target == menu || menu.contains(target);
+			    const its_btnMenu = target == btnMenu;
+			    const menu_is_active = menu.classList.contains("open");
+
+			    if (!its_menu && !its_btnMenu && menu_is_active) {
+			        toggleMenu();
+			    }
+			});
+
+			//При нажатии в navbar кнопку Информация появляется блок, исчезает при нажатии на кнопку Информация или поля вокруг него
+			const btnMenu_1 = document.querySelector(".btn-cat-1");
+			const menu_1 = document.querySelector(".menu-1");
+			const toggleMenu_1 = function () {
+			    menu_1.classList.toggle("open");
+			}
+
+			btnMenu_1.addEventListener("click", function (c) {
+			    c.stopPropagation();
+			    toggleMenu_1();
+			});
+
+			document.addEventListener("click", function (c) {
+			    const target_1 = c.target;
+			    const its_menu_1 = target_1 == menu_1 || menu_1.contains(target_1);
+			    const its_btnMenu_1 = target_1 == btnMenu_1;
+			    const menu_is_active_1 = menu_1.classList.contains("open");
+
+			    if (!its_menu_1 && !its_btnMenu_1 && menu_is_active_1) {
+			        toggleMenu_1();
+			    }
+			});
+        </script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
