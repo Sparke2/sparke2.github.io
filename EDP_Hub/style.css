@@ -1,0 +1,170 @@
+@import url("font/stylesheet.css");
+
+* {
+	font-weight: 500;
+	font-family: Gilroy;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+}
+h3 {
+	font-weight: 700;
+}
+h5 {
+	font-weight: 700;
+}
+.box-shadow-none {
+	box-shadow: none!important;
+}
+.text-left {
+	text-align: left;
+}
+.mt-minus-4 {
+	margin-top: -4px;
+}
+.mt-minus-3 {
+	margin-top: -3px;
+}
+.mt-minus-10 {
+	margin-top: -10px;
+}
+.lh-14 {
+	line-height: 14px;
+}
+.lh-19 {
+	line-height: 19px;
+}
+.fs-12 {
+	font-size: 12px;
+}
+.fs-14 {
+	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
+}
+.fs-20 {
+	font-size: 20px;
+}
+.fs-24 {
+	font-size: 24px;
+}
+.text-grey{
+	color: #5B5B5B;
+}
+.text-blue{
+	color: #0F3C73;
+}
+.text-black {
+	color: #000;
+}
+.shadow-1 {
+	box-shadow: 0px 3px 23px rgba(3, 30, 128, 0.1);
+}
+.shadow-2 {
+	box-shadow: 0px 11px 15px rgba(3, 30, 128, 0.05);
+}
+.br-grey-dark-1 {
+	border: 1px solid #CACACA;
+}
+.br-blue-badge {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.br-none {
+	border: none;
+}
+.btlr-30 {
+	border-top-left-radius: 30px !important;
+} 
+.bblr-30 {
+	border-bottom-left-radius: 30px !important;
+}
+.btrr-30 {
+	border-top-right-radius: 30px !important;
+}
+.bbrr-30 {
+	border-bottom-right-radius: 30px !important;
+}
+.br-40 {
+	border-radius: 40px;
+}
+.br-30 {
+	border-radius: 30px;
+}
+.br-100{
+	border-radius: 100px;
+}
+.br-10{
+	border-radius: 10px;
+}
+.br-grey-1 {
+	border: 1px solid #CDCFD3;
+}
+.br-grey-light-1 {
+	border: 2px solid #E2E2E2;
+}
+.btn-bell {
+	background-image: url('img/bell_active.svg');
+	background-repeat: no-repeat;
+}
+.nav-link {
+	font-size: 14px;
+	color: #000;
+}
+.nav-link:hover {
+	color: #000;
+}
+.hover-shadow:hover {
+	box-shadow: 0px 11px 15px rgba(3, 30, 128, 0.05);
+}
+.btn {
+	font-weight: 500;
+    line-height: 1.6;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+}
+.btn:focus {
+	box-shadow: none!important;
+}
+.btn-nav {
+	border: none;
+	background: url('img/arrow-down.svg') right center no-repeat;
+	padding-right: 18px;
+}
+input[type="radio"]:checked + .badge {
+    background:	linear-gradient(88.92deg, rgba(255, 163, 46, 0.1) 0.54%, rgba(252, 57, 85, 0.1) 104.37%), #FFFFFF;
+}
+
+input[type="radio"]:hover + .badge {
+  	background:	linear-gradient(88.92deg, rgba(255, 163, 46, 0.1) 0.54%, rgba(252, 57, 85, 0.1) 104.37%), #FFFFFF;
+}
+.form-control:focus {
+	box-shadow: none;
+	border-color: #CACACA;
+}
+.form-control:focus::placeholder {
+	padding-left: 0;
+}
+.form-control::placeholder {
+    padding-left: 3rem;
+    color: rgba(3, 30, 128, 0.4);
+    font-size: 16px;
+    font-weight: 500;
+}
+.bg-white {
+	background: #FFF;
+}
+.bg-dark-white {
+	background: rgba(0, 0, 0, 0.05);
+}
+.bg-grey-light {
+	background: #F3F7FB;
+}
+.bg-blue-light {
+	background: rgba(56, 160, 254, 0.1);
+}
+.badge {
+	font-weight: 500;
+}

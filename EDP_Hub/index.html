@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>EDP Hub</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header style="margin-bottom: 55px;">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav bg-white shadow-1 p-0">
+	        		<div class="container align-items-center">
+	        			<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+								</svg>
+					    </button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/edp.svg" alt="">
+						</a>
+	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+	                        <ul class="navbar-nav align-items-center text-left">
+	                            <li><a class="nav-link" href="#">О компании и  ресурсах</a></li>
+	                            <li>
+	                               	<button class="btn-nav d-flex align-items-center btn-cat"><span class="fs-14">Каталоги</span></button>
+	                                    	<!-- <div class="menu shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">Каталог книг</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Подборки</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Записи лекций</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Реестр изданий для обновления ОПОП</a>
+									                </li>
+									            </ul>
+								        	</div> -->
+	                            </li>	
+	                            <li><a class="nav-link" href="#">График мероприятий</a></li>
+	                            <li>
+	                              	<button class="btn-nav d-flex align-items-center btn-cat-1"><span class="fs-14">Партнерство</span></button>
+	                                <!--     	<div class="menu-1 shadow" >
+							            		<ul class="list-unstyled p-2">
+							                		<li class="p-1 rounded">
+							                    		<a href="#" class="nav-list ps-2 pe-2">О нас</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для университетов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для преподавателей</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для издательств</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Для авторов</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Информация, необходимая для установки и эксплуатации ПО</a>
+									                </li>
+									                <li class="p-1 rounded">
+									                    <a href="#" class="nav-list ps-2 pe-2">Варианты подписки</a>
+									                </li>
+									            </ul>
+								        	</div> -->
+	                            </li>
+	                            <li><a class="nav-link" href="#">Персональный помощник</a></li>
+	                            <li><a class="nav-link" href="#">Презентация</a></li>
+	                            <li><a class="nav-link" href="#">Контакты</a></li>
+	                            <li class="pe-2 ps-xxl-5 ps-2"><button class="btn btn-bell pe-2"></button></li>
+		                        <li class="br-40 br-grey-1"><a href="#" class="badge nav-link"><span class="fs-12 text-black ps-1 pe-1">профиль</span></a></li>
+                                <li class="p-2"></li>
+	                            <li class="br-40 br-grey-1 ps-1">
+		                          	<a href="#" class="badge nav-link">
+		                           		<img class="rounded-circle" src="img/kz.svg" alt="">
+		                           		<span class="ps-2 fs-12 text-black pe-1">kaz</span>
+		                           	</a>
+		                        </li>
+	                        </ul>
+	                        
+	                    </div>
+	                    <div class="navbar-collapse collapse justify-content-end" id="navbar">                         		
+							
+	                   	</div>
+	                </div> 
+	        </nav>
+	    </header>
+	    <main>
+	    	<div class="container text-center pb-5">
+	    		<img class="img-fluid" src="img/img_main.svg" style="padding-top: 85px;">
+	    		<h1 class="text-blue pt-3 pb-3">Первая образовательная платформа<br> для подготовки высококвалифицированных  кадров</h1>
+	    		<div class="">
+                        <form action="" method="" style="padding: 30px 15%;">
+                            <div class="input-group input-group-lg shadow-2 br-30 br-grey-dark-1">
+                            	<input type="text" name="q" value="" class="form-control btlr-30 bblr-30 br-none" placeholder="Искать по всем ресурсам...">
+	                            <button class="btn btrr-30 bbrr-30 pe-5" type="submit" id="search">
+	                                <img src="img/search-icon.svg" alt="search">
+	                            </button>
+                            </div>
+                        </form>
+                        <div class="btn-group pt-4" role="group" aria-label="Basic radio toggle button group" style="padding-bottom: 200px;">
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+							<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradio1">книги</label>
+							<span class="p-2"></span>
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+							<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradio2">журналы</label>
+							<span class="p-2"></span>
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+							<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradio3">лекции</label>
+							<span class="p-2"></span>
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+							<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradio4">курсы</label>
+						</div>
+                    </div>
+                <div class="row">
+                	<div class="col-md-6 col-12 text-left" style="padding-top: 180px;">
+                		<h1 class="text-blue">Лучшие курсы<br>ждут тебя <br>на нашей платформе</h1>
+                		<p class="text-blue fs-16 m-0">Небольшой приятный текст, о плюсах и качествах<br>и тд, небольшой приятный текст, <br>о плюсах и качествах</p>
+                		<img src="img/arrow_2.svg" alt="" class="img-fluid d-md-block d-none" style="padding-left: 250px;">
+                	</div>
+                	<div class="col-lg-3 col-md-6 col-12 pt-5">
+                		<div class="card br-10 br-grey-light-1 hover-shadow">
+						  <img class="card-img-top" src="img/img_2.svg" alt="">
+						  <div class="card-body text-left">
+						  	<div class="border-bottom d-flex justify-content-between pb-2">
+						  		<span class="fs-12 text-blue"><img src="img/timer.svg" alt="" class="mt-minus-3 pe-1"> 11 часов</span>
+						  		<span class="fs-12 text-blue"><img src="img/play_circle.svg" alt="" class="mt-minus-3 pe-1"> 5 Видеолекций</span>
+						  	</div>
+						    <h5 class="card-title text-blue fs-16 pt-4 mb-4">Промышленное и гражданское строительство</h5>
+						   	<p class="text-blue fs-12 m-0">Авторы: Егор Мордовин, Николай Кузьмичев</p>
+						   	<p class="card-text text-blue fs-12">Дата создания: 22.07.2022</p>
+						  </div>
+						</div>
+						<div class="pt-5">
+							<div class="card br-10 br-grey-light-1 hover-shadow">
+							  <img class="card-img-top" src="img/img_2.svg" alt="">
+							  <div class="card-body text-left">
+							  	<div class="border-bottom d-flex justify-content-between pb-2">
+							  		<span class="fs-12 text-blue"><img src="img/timer.svg" alt="" class="mt-minus-3 pe-1"> 11 часов</span>
+							  		<span class="fs-12 text-blue"><img src="img/play_circle.svg" alt="" class="mt-minus-3 pe-1"> 5 Видеолекций</span>
+							  	</div>
+							    <h5 class="card-title text-blue fs-16 pt-4 mb-4">Промышленное и гражданское строительство</h5>
+							   	<p class="text-blue fs-12 m-0">Авторы: Егор Мордовин, Николай Кузьмичев</p>
+							   	<p class="card-text text-blue fs-12">Дата создания: 22.07.2022</p>
+							  </div>
+							</div>
+						</div>
+                	</div>
+                	<div class="col-3 d-lg-block d-none">
+                		<div class="card br-10 br-grey-light-1 hover-shadow">
+						  <img class="card-img-top" src="img/img_2.svg" alt="">
+						  <div class="card-body text-left">
+						  	<div class="border-bottom d-flex justify-content-between pb-2">
+						  		<span class="fs-12 text-blue"><img src="img/timer.svg" alt="" class="mt-minus-3 pe-1"> 11 часов</span>
+						  		<span class="fs-12 text-blue"><img src="img/play_circle.svg" alt="" class="mt-minus-3 pe-1"> 5 Видеолекций</span>
+						  	</div>
+						    <h5 class="card-title text-blue fs-16 pt-4 mb-4">Промышленное и гражданское строительство</h5>
+						   	<p class="text-blue fs-12 m-0">Авторы: Егор Мордовин, Николай Кузьмичев</p>
+						   	<p class="card-text text-blue fs-12">Дата создания: 22.07.2022</p>
+						  </div>
+						</div>
+						<div class="pt-5 pb-3">
+							<div class="card br-10 br-grey-light-1 hover-shadow">
+							  <img class="card-img-top" src="img/img_2.svg" alt="">
+							  <div class="card-body text-left">
+							  	<div class="border-bottom d-flex justify-content-between pb-2">
+							  		<span class="fs-12 text-blue"><img src="img/timer.svg" alt="" class="mt-minus-3 pe-1"> 11 часов</span>
+							  		<span class="fs-12 text-blue"><img src="img/play_circle.svg" alt="" class="mt-minus-3 pe-1"> 5 Видеолекций</span>
+							  	</div>
+							    <h5 class="card-title text-blue fs-16 pt-4 mb-4">Промышленное и гражданское строительство</h5>
+							   	<p class="text-blue fs-12 m-0">Авторы: Егор Мордовин, Николай Кузьмичев</p>
+							   	<p class="card-text text-blue fs-12">Дата создания: 22.07.2022</p>
+							  </div>
+							</div>
+						</div>
+						<span class="badge ps-3 pe-3 br-blue-badge fs-12 br-100 text-blue">все курсы<img src="img/arrow-right.svg" alt=""></span>
+                	</div>
+                </div>
+            </div>
+            <div class="bg-grey-light pt-5 pb-5">
+            	<div class="container">
+            		<span class="badge ps-3 pe-3 br-blue-badge fs-12 br-100 text-blue bg-white">все мероприятия</span>
+            		<div class="row pt-3">
+            			<div class="col-lg-3 col-md-6">
+	            			<div class="card br-10 br-grey-light-1 hover-shadow">
+								  <img class="card-img-top pt-3 ps-3 pe-3" src="img/img_event.svg" alt="">
+								  <div class="card-body text-left">
+								  	<span class="badge br-blue-badge br-100 fs-14 text-blue bg-dark-white ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-4"> 06.09.2022</span>
+								  	<span class="badge br-blue-badge br-100 fs-14 text-blue bg-dark-white ps-2 pe-2">
+								  		<img src="img/clock.svg" alt="" class="pe-2 mt-minus-4"> 12:00 - 13:00</span>
+								    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Промышленное и гражданское строительство</h5>
+								   	<p class="text-blue fs-12 m-0 pt-2">Ведущий: Пилипенко Екатерина</p>
+								  </div>
+							</div>
+            			</div>
+            			<div class="col-3 d-lg-block d-none">
+            				<div class="card br-10 br-grey-light-1 hover-shadow">
+							  <img class="card-img-top pt-3 ps-3 pe-3" src="img/img_event.svg" alt="">
+							  <div class="card-body text-left">
+							  		<span class="badge br-blue-badge br-100 fs-14 text-blue bg-dark-white ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-4"> 06.09.2022</span>
+								  	<span class="badge br-blue-badge br-100 fs-14 text-blue bg-dark-white ps-2 pe-2">
+								  		<img src="img/clock.svg" alt="" class="pe-2 mt-minus-4"> 12:00 - 13:00</span>
+							    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Промышленное и гражданское строительство</h5>
+							   	<p class="text-blue fs-12 m-0 pt-2">Ведущий: Пилипенко Екатерина</p>
+							  </div>
+							</div>
+            			</div>
+            			<div class="col-xxl-3 col-lg-4 col-md-6 ps-md-5 ps-3 pt-md-0 pt-3">
+            				<h1 class="text-blue ps-md-5 ps-0">Мероприятия текст лида</h1>
+            				<p class="text-blue ps-md-5 ps-0">Небольшой приятный текст, о плюсах и качествах и тд</p>
+            				<img src="img/arrow_3.svg" class="img-fluid d-md-block d-none" alt="">
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <div class="pt-5 pb-5">
+            	<div class="container">
+            		<div class="d-flex justify-content-between align-items-center">
+            			<h3 class="fs-24 text-blue m-0">Новые поступления контента</h3>
+            			<div><span class="badge ps-3 pe-3 br-blue-badge fs-12 br-100 text-blue">все новинки<img src="img/arrow-right.svg" alt=""></span></div>
+            		</div>
+                	<div class="btn-group pt-4" role="group" aria-label="Basic radio toggle button group">
+						<input type="radio" class="btn-check" name="btnradiomain" id="btnradiomain1" autocomplete="off" checked>
+						<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradiomain1">книги</label>
+						<span class="p-2"></span>
+						<input type="radio" class="btn-check" name="btnradiomain" id="btnradiomain2" autocomplete="off">
+						<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradiomain2">журналы</label>
+						<span class="p-2"></span>
+						<input type="radio" class="btn-check" name="btnradiomain" id="btnradiomain3" autocomplete="off">
+						<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradiomain3">лекции</label>
+						<span class="p-2"></span>
+						<input type="radio" class="btn-check" name="btnradiomain" id="btnradiomain4" autocomplete="off">
+						<label class="badge fs-16 text-black br-grey-dark-1 br-100 bg-white" for="btnradiomain4">курсы</label>
+					</div>
+                	<div class="row pt-4">
+                		<div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                			<div class="card br-10 br-grey-dark-1 hover-shadow">
+							  	<div class="card-body text-left">
+							  		<span class="badge br-blue-badge br-100 fs-14 text-blue bg-blue-light ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-3"> 06.09.2022</span>
+								    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Sap Analytic Cloud: Интеллектуальный анализ данных</h5>
+								   	<div class="d-flex pt-3">
+								   		<img class="rounded-circle" src="img/img_1.svg">
+								   		<p class="text-blue fs-12 m-0 ps-3 w-75 lh-14 pt-3">Ведет: Егор Мордовин, Николай Кузьмичев</p>
+								   	</div>
+								   	<p class="text-blue fs-12 pt-3 m-0 lh-14">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+							  	</div>
+							</div>
+                		</div>
+                		<div class="col-xl-3 col-lg-4 col-6 d-sm-block d-none">
+                			<div class="card br-10 br-grey-dark-1 hover-shadow">
+							  	<div class="card-body text-left">
+							  		<span class="badge br-blue-badge br-100 fs-14 text-blue bg-blue-light ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-3"> 06.09.2022</span>
+								    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Sap Analytic Cloud: Интеллектуальный анализ данных</h5>
+								   	<div class="d-flex pt-3">
+								   		<img class="rounded-circle" src="img/img_1.svg">
+								   		<p class="text-blue fs-12 m-0 ps-3 w-75 lh-14 pt-3">Ведет: Егор Мордовин, Николай Кузьмичев</p>
+								   	</div>
+								   	<p class="text-blue fs-12 pt-3 m-0 lh-14">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+							  	</div>
+							</div>
+                		</div>
+                		<div class="col-xl-3 col-4 d-lg-block d-none">
+                			<div class="card br-10 br-grey-dark-1 hover-shadow">
+							  	<div class="card-body text-left">
+							  		<span class="badge br-blue-badge br-100 fs-14 text-blue bg-blue-light ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-3"> 06.09.2022</span>
+								    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Sap Analytic Cloud: Интеллектуальный анализ данных</h5>
+								   	<div class="d-flex pt-3">
+								   		<img class="rounded-circle" src="img/img_1.svg">
+								   		<p class="text-blue fs-12 m-0 ps-3 w-75 lh-14 pt-3">Ведет: Егор Мордовин, Николай Кузьмичев</p>
+								   	</div>
+								   	<p class="text-blue fs-12 pt-3 m-0 lh-14">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+							  	</div>
+							</div>
+                		</div>
+                		<div class="col-3 d-xl-block d-none">
+                			<div class="card br-10 br-grey-dark-1 hover-shadow">
+							  	<div class="card-body text-left">
+							  		<span class="badge br-blue-badge br-100 fs-14 text-blue bg-blue-light ps-2 pe-2">
+								  		<img src="img/calendar.svg" alt="" class="pe-2 mt-minus-3"> 06.09.2022</span>
+								    <h5 class="card-title text-blue fs-16 pt-4 m-0 pb-3 border-bottom">Sap Analytic Cloud: Интеллектуальный анализ данных</h5>
+								   	<div class="d-flex pt-3">
+								   		<img class="rounded-circle" src="img/img_1.svg">
+								   		<p class="text-blue fs-12 m-0 ps-3 w-75 lh-14 pt-3">Ведет: Егор Мордовин, Николай Кузьмичев</p>
+								   	</div>
+								   	<p class="text-blue fs-12 pt-3 m-0 lh-14">ФГБОУ ВО «Уральский государственный экономический университет»</p>
+							  	</div>
+							</div>
+                		</div>
+                	</div>
+                </div>
+            </div>
+	    	<div class="bg-grey-light pt-5 pb-5">
+	    		<div class="container">
+	    			<h3 class="fs-24 text-blue">Авторам и правообладателям</h3>
+	    			<div class="row pt-3">
+	    				<div class="col-md-4 col-12">
+	    					<div class="card br-10 br-grey-dark-1 p-3 hover-shadow">
+			    				<img class="card-img-top" src="img/img_education.svg" alt="">
+								<div class="card-body text-center">
+									<h5 class="card-title text-blue fs-16 pt-4 mb-4">Образовательным организациям</h5>
+								</div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 col-12 pt-md-0 pt-4">
+	    					<div class="card br-10 br-grey-dark-1 p-3 hover-shadow">
+			    				<img class="card-img-top" src="img/img_autor.svg" alt="">
+								<div class="card-body text-center">
+									<h5 class="card-title text-blue fs-16 pt-4 mb-4">Авторам</h5>
+								</div>
+							</div>
+			    		</div>
+			    		<div class="col-md-4 col-12 pt-md-0 pt-4">
+	    					<div class="card br-10 br-grey-dark-1 p-3 hover-shadow">
+			    				<img class="card-img-top" src="img/img_initiative.svg" alt="">
+								<div class="card-body text-center">
+									<h5 class="card-title text-blue fs-16 pt-4 mb-4">Конкурсы и инициативы</h5>
+								</div>
+							</div>
+			    		</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </main>
+	    <footer>
+	    	<div class="border-top pt-1">
+	    		<div class="container">
+		    		<div class="row">
+		    			<div class="col-2 d-flex align-items-center">
+			    			<img src="img/edp_footer.svg" alt="">
+			    		</div>
+			    		<div class="col-lg-4 col-md-6 col-12 pt-md-0 pt-3 d-flex align-items-center">
+			    			<span class="lh-19">Товарищество с ограниченной<br> ответственностью «EDP Hub (Идипи Хаб)»</span>
+			    		</div>
+			    		<div class="col-lg-6 col-md-4 col-12">
+			    			<div class="row pt-3">
+				    			<div class="col-xl-4 col-lg-6 col-12">
+				    				<p class="fs-12 text-grey lh-14 mb-1">Контакты:</p>
+					    			<p class="m-0">+7 (927) 125 3360</p>
+					    			<p class="mb-3">+7 (776) 485 8811</p>
+				    			</div>
+				    			<div class="col-xl-5 col-lg-6 col-12">
+				    				<p class="fs-12 text-grey lh-14 mb-1">Адрес:</p>
+				    				<p class="lh-19 mb-3">Республика Казахстан, г. Алматы, ул. Сатпаева, 35А</p>
+				    			</div>
+				    		</div>
+				    		<div class="row">
+				    			<div class="col-xl-4 col-lg-6 col-12">
+					    			<p class="fs-12 text-grey mb-1">Почта:</p>
+					    			<p>edp_hub@mail.kz</p>
+					    		</div>
+					    		<div class="col-xl-5 col-lg-6 col-12">
+					    			<div class="d-flex">
+					    				<p class="fs-12 text-grey m-0">Мы на facebook:</p>
+					    				<div class="ps-3"><img src="img/f.svg" alt="" class="mt-minus-10"></div>
+					    			</div>
+					    		</div>
+				    		</div>
+			    		</div>
+		    		</div>
+		    	</div>
+	    	</div>
+	    </footer>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
