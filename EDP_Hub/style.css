@@ -122,6 +122,9 @@ h5 {
 .br-grey-light-1 {
 	border: 2px solid #E2E2E2;
 }
+.br-black-1 {
+	border: 1px solid #000;
+}
 .btn-bell {
 	background-image: url('img/bell_active.svg');
 	background-repeat: no-repeat;
