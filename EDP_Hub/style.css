@@ -64,6 +64,9 @@ h5 {
 .pt-11 {
 	padding-top: 11rem;
 }
+.ps-15 {
+	padding-left: 15rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -150,6 +153,7 @@ h5 {
 	background-repeat: no-repeat;
 	width: 20px;
 	height: 20px;
+	padding: 3px 10px;
 }
 .nav-link {
 	font-size: 14px;
@@ -213,7 +217,12 @@ a.dropdown-item {
 	background-color: #0F3C73;
 	border-radius: 10px;
 }
-
+.dropdown-menu {
+	min-width: 8rem;
+}
+.border-bottom-nav {
+	border-bottom: 1px solid #EAEBF0;
+}
 input[type="radio"]:checked + .badge {
     background:	linear-gradient(88.92deg, rgba(255, 163, 46, 0.1) 0.54%, rgba(252, 57, 85, 0.1) 104.37%), #FFFFFF;
 }
@@ -268,6 +277,9 @@ input[type="radio"]:hover + .badge {
 	}
 	header nav .dropdown-menu.show {
 		box-shadow: none !important;
+	}
+	.ps-15 {
+		padding-left: 8rem;
 	}
 }
 @media (max-width: 767px) {
