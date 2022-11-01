@@ -20,10 +20,10 @@
 	                    	<img src="img/edp.svg" alt="">
 						</a>
 	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
-	                        <ul class="navbar-nav align-items-center text-left">
+	                        <ul class="navbar-nav" style="align-items: baseline;">
 	                            <li><a class="nav-link" href="#">О компании и  ресурсах</a></li>
 	                            <li class="position-relative">
-	                               	<a class="nav-link dropdown-toggle btn-nav-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+	                               	<a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
 			                            Каталоги
 			                        </a>
 			                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
@@ -34,7 +34,7 @@
 	                            </li>	
 	                            <li><a class="nav-link" href="#">График мероприятий</a></li>
 	                            <li class="position-relative">
-	                            	<a class="nav-link dropdown-toggle btn-nav-arr" href="#" id="navbarDropdownPartnership" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+	                            	<a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownPartnership" role="button" data-bs-toggle="dropdown" aria-expanded="true">
 			                            Партнерство
 			                        </a>
 			                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownPartnership" data-bs-popper="none">
@@ -73,7 +73,9 @@
 	                            <li><a class="nav-link" href="#">Презентация</a></li>
 	                            <li><a class="nav-link" href="#">Контакты</a></li>
 	                            <li class="pe-2 ps-xxl-5 ps-2 position-relative">
-	                            	<a class="btn btn-bell dropdown-toggle" href="#" id="navbarDropdownBell" role="button" data-bs-toggle="dropdown" aria-expanded="true"></a>
+	                            	<a class="" href="#" id="navbarDropdownBell" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+	                            		<span class="btn btn-bell dropdown-toggle" id="btn_bell"></span>
+	                            	</a>
 	                            	<ul class="dropdown-menu" aria-labelledby="navbarDropdownBell" data-bs-popper="none">
 			                            <li class="dropdown-item">
 			                            	<div class="d-flex border-bottom ">
@@ -104,12 +106,19 @@
 			                            </li>
 			                        </ul>
 	                            </li>
-		                        <li class="br-40 br-grey-1" style="padding-top: 2px; padding-bottom: 2px;"><a href="#" class="badge nav-link"><span class="fs-14 text-black ps-1 pe-1">профиль</span></a></li>
-                                <li class="p-2"></li>
-	                            <li class="br-40 br-grey-1 ps-1 position-relative" style="padding-top: 2px; padding-bottom: 2px;">
-		                          	<a href="#" class="badge nav-link dropdown-toggle" id="navbarDropdownBell" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-		                           		<img class="rounded-circle" src="img/kz.svg" alt="">
-		                           		<span class="ps-2 fs-14 text-black pe-1">kaz</span>
+		                        <li>
+		                        	<a href="#" class="nav-link">
+		                        		<span class="badge br-40 br-grey-1"  style="padding-top: 7px; padding-bottom: 7px;">
+		                        			<span class="fs-14 text-black ps-1 pe-1">профиль</span>
+		                        		</span>
+		                        	</a>
+		                        </li>
+	                            <li class="position-relative">
+		                          	<a href="#" class="nav-link" id="navbarDropdownBell" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+		                           		<span class="dropdown-toggle badge br-40 br-grey-1"  style="padding-top: 7px; padding-bottom: 7px;">
+			                            		<img class="rounded-circle" src="img/kz.svg" alt="">
+		                           				<span class="ps-2 fs-14 text-black pe-1">kaz</span>
+			                            </span>
 		                           	</a>
 		                           	<ul class="dropdown-menu" aria-labelledby="navbarDropdownBell" data-bs-popper="none">
 			                            <li class="dropdown-item">
@@ -133,7 +142,6 @@
 			                        </ul>
 		                        </li>
 	                        </ul>
-	                        
 	                    </div>
 	                    <div class="navbar-collapse collapse justify-content-end" id="navbar">                         		
 							
