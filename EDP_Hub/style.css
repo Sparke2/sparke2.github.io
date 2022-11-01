@@ -248,6 +248,9 @@ input[type="radio"]:hover + .badge {
 	}
 }
 @media (max-width: 767px) {
+	.pt-11 {
+		padding-top: 0;
+	}
 	h1 {
 		font-size: 30px;
 	}
