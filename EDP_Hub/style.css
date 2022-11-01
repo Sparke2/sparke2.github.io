@@ -1,5 +1,26 @@
 @import url("font/stylesheet.css");
 
+.box-shadow-none {
+	box-shadow: none!important;
+}
+.btlr-30 {
+	border-top-left-radius: 30px !important;
+} 
+.bblr-30 {
+	border-bottom-left-radius: 30px !important;
+}
+.btrr-30 {
+	border-top-right-radius: 30px !important;
+}
+.bbrr-30 {
+	border-bottom-right-radius: 30px !important;
+}
+.btn:focus {
+	box-shadow: none!important;
+}
+.dropdown-toggle::after {
+	border: none !important;
+}
 * {
 	font-weight: 500;
 	font-family: Gilroy;
@@ -28,9 +49,6 @@ h5 {
 }
 .pt-11 {
 	padding-top: 11rem;
-}
-.box-shadow-none {
-	box-shadow: none!important;
 }
 .text-left {
 	text-align: left;
@@ -92,18 +110,6 @@ h5 {
 .br-none {
 	border: none;
 }
-.btlr-30 {
-	border-top-left-radius: 30px !important;
-} 
-.bblr-30 {
-	border-bottom-left-radius: 30px !important;
-}
-.btrr-30 {
-	border-top-right-radius: 30px !important;
-}
-.bbrr-30 {
-	border-bottom-right-radius: 30px !important;
-}
 .br-40 {
 	border-radius: 40px;
 }
@@ -142,6 +148,9 @@ h5 {
 .nav-link:visited {
 	color: #000;
 }
+.nav-link:focus {
+	color: #000;
+}
 header nav .dropdown-menu.show {
     top: 130%;
     border: none;
@@ -170,15 +179,10 @@ header nav .dropdown-menu.show:before {
     font-size: 1rem;
     border-radius: 0.75rem;
 }
-.btn:focus {
-	box-shadow: none!important;
-}
+
 a.dropdown-item {
 	font-size: 14px;
 	font-weight: 500;
-}
-.dropdown-toggle::after {
-	border: none !important;
 }
 .dropdown-item {
 	padding: 0.5rem 1rem;
