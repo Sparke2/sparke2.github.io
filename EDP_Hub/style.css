@@ -18,6 +18,7 @@
 .btn:focus {
 	box-shadow: none!important;
 }
+
 .dropdown-toggle::after {
 	border: none !important;
 }
@@ -210,6 +211,9 @@ input[type="radio"]:checked + .badge {
 input[type="radio"]:hover + .badge {
   	background:	linear-gradient(88.92deg, rgba(255, 163, 46, 0.1) 0.54%, rgba(252, 57, 85, 0.1) 104.37%), #FFFFFF;
 }
+.search-form-p {
+	padding: 30px 15%;
+}
 .form-control:focus {
 	box-shadow: none;
 	border-color: #CACACA;
@@ -237,4 +241,24 @@ input[type="radio"]:hover + .badge {
 }
 .badge {
 	font-weight: 500;
+}
+@media (max-width: 960px) {
+	.search-form-p {
+		padding: 30px;
+	}
+}
+@media (max-width: 767px) {
+	h1 {
+		font-size: 30px;
+	}
+}
+@media (max-width: 576px) {
+	.form-control::placeholder {
+    	padding-left: 0.5rem;
+	}
+}
+@media (max-width: 415px) {
+	h1 {
+		font-size: 25px;
+	}
 }
