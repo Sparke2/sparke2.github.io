@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ВКР Смарт</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header style="margin-bottom: 120px;">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav bg-white brb-green-light-2 py-4">
+	        		<div class="container align-items-center">
+	        			<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+								</svg>
+					    </button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/VKR.svg" alt="">
+						</a>
+	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+	                        <ul class="navbar-nav" style="align-items: baseline;">
+	                            <li><a class="nav-link" href="#">Главная</a></li>
+	                            <li><a class="nav-link" href="#">Хранение работ</a></li>
+	                            <li><a class="nav-link" href="#">Поиск заимствований</a></li>
+	                            <li><a class="nav-link" href="#">Портфолио</a></li>
+	                            <li><a class="nav-link" href="#">Проверка справки</a></li>
+	                            <li><a class="nav-link" href="#">API</a></li>
+		                        <li>
+		                        	<a href="#" class="nav-link">
+		                        		<span class="badge br-40 br-green-1"  style="padding-top: 7px; padding-bottom: 7px;">
+		                        			<span class="fs-16 text-black ps-1 pe-1">вход</span>
+		                        		</span>
+		                        	</a>
+		                        </li>
+	                           
+	                        </ul>
+	                    </div>
+	                    <div class="navbar-collapse collapse justify-content-end" id="navbar">                         		
+							
+	                   	</div>
+	                </div> 
+	        </nav>
+	    </header>
+	    <main>
+	    	<div class="container py-5">
+	    		<div class="row justify-content-center pb-3">
+	                <div class="col-xl-5 col-lg-6">
+	                	<div class="bg-grey br-40 p-5">
+	                		<div class="text-before-form">
+	                        <h2 class="">Авторизация</h2>
+	                        <p class="mb-5 text-grey fs-14 lh-17">Для авторизации в системе введите данные, полученные от Вашего персонального менеджера или полученные в виде текстового сообщения на адрес электронной почты</p>
+	                    </div>
+	                    <form class="auth" action="" method="POST">
+	                        <div class="form-group">
+	                            <label for="login">Имя пользователя</label>
+	                            <input id="login" type="text" name="login" placeholder="" class="form-control">
+	                        </div>
+	                         <div class="form-group mt-3">
+	                            <label for="password">Пароль</label>
+	                            <input id="password" type="text" name="password" placeholder="" class="form-control">
+	                        </div>
+	                        <div class="form-check mt-5 mb-2">
+	                            <input id="remember_me" type="checkbox" name="remember" value="1" class="form-check-input">
+	                            <label for="remember_me" class="form-check-label">Запомнить меня</label>
+                        	</div>
+	                    </form>
+	                    <button type="button" class="btn br-100 btn-primary w-100">войти</button>
+	                    <p class="fs-14 text-center pt-3 m-0">Забыли пароль? <a href="#" class="text-green">Восстановить</a></p>
+	                	</div>
+	                </div>
+	                <div class="col-xl-5 col-lg-6 mt-lg-0 mt-5">
+	                	<div class="bg-grey br-40 p-5">
+	                		<div class="text-before-form">
+	                        <h2 class="">Регистрация <br>по приглашению</h2>
+	                        <p class="mb-5 text-grey fs-14 lh-17">Чтобы пройти регистрацию, <br> введите выданный вам код приглашения</p>
+	                    </div>
+	                    <form class="auth mb-5" action="" method="POST">
+	                        <div class="form-group">
+	                            <label for="code">код приглашения</label>
+	                            <input id="code" type="text" name="code" placeholder="" class="form-control">
+	                        </div>
+	                    </form>
+	                    <button type="button" class="btn br-100 btn-primary w-100">продолжить</button>
+	                	</div>
+	                </div>
+	            </div>
+	    	</div>
+	    </main>
+	    <footer>
+	    	<div class="bg-green py-5">
+	    		<div class="container py-4">
+		    		<div class="row g-4">
+		    			<div class="col-lg-3 align-items-center">
+			    			<img src="img/VKR.svg" alt="">
+			    			<p class="pt-1"><a href="#">Установка кнопки на ваш сайт</a></p>
+			    			<p class="fs-24 fw-700 mb-2">8 (8452) 24-77-96</p>
+			    			<p class="m-0 fs-14">Звонок по России бесплатный</p>
+			    		</div>
+			    		<div class="col-xxl-7 col-lg-6 col-sm-8 col-12">
+			    			<p class="lh-18 fs-12">Программа для ЭВМ «ВКР -СМАРТ» — «умная» система проверки на заимствования и хранения ВКР», зарегистрирована Федеральной службой по интеллектуальной собственности 01.09.2021 г. свидетельство о государственной регистрации программы для ЭВМ № 2 021 664 219</p>
+			    			<p class="lh-18 fs-12 m-0">ООО «Профобразование» включено в Реестр аккредитованных IT компаний, на основании РЕШЕНИЯ о предоставлении государственной аккредитации организации, осуществляющей деятельность в области информационных технологий от 17.03.2022 № АО-20 220 316-3 829 208 820-3, выданного МИНИСТЕРСТВОМ ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ ФЕДЕРАЦИИ.</p>
+			    		</div>
+			    		<div class="col-xxl-2 col-lg-3 col-sm-4 col-12 d-flex flex-column align-items-sm-end justify-content-center">
+			    			<p class="fw-700">Мы в социальных сетях</p>
+				    		<div>
+				    			<img src="img/vk.svg" alt="Вконтакте">
+				    			<img src="img/youtube.svg" alt="YouTube">
+				    			<img src="img/tg.svg" alt="Telegram">
+				    		</div>
+				    		<div class="pt-3">
+				    			<img src="img/16.svg" alt="16+">
+				    		</div>
+			    		</div>
+		    		</div>
+		    	</div>
+	    	</div>
+	    </footer>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
