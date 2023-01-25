@@ -330,3 +330,9 @@ label {
 		width: 100%;
 	}
 }
+@media (max-width: 430px) {
+	.fs-m h2 {
+		font-size: 30px;
+		line-height: 26px;
+	}
+}
