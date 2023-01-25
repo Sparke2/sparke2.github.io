@@ -299,15 +299,6 @@ p {
 	border: 1px solid #D4D4D4;
 	border-radius: 100px;
 }
-.form-check-input[type=checkbox] {
-    border-radius: 100px;
-    background-color: #F1F1F1;
-    border: 1px solid #00A2B0;
-    box-shadow: none;
-}
-.form-check-input:checked {
-    background-color: #00A2B0;
-}
 label {
 	font-size: 14px;
 }
@@ -337,5 +328,11 @@ label {
 	}
 	.block-75 {
 		width: 100%;
+	}
+}
+@media (max-width: 430px) {
+	.fs-m h2 {
+		font-size: 30px;
+		line-height: 26px;
 	}
 }
