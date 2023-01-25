@@ -47,7 +47,7 @@
 	    	<div class="container py-5">
 	    		<div class="row pb-3">
 	                <div class="col-xl-5 col-lg-6">
-	                	<div class="bg-grey br-40 p-5">
+	                	<div class="bg-grey br-40 p-sm-5 p-4">
 	                		<div class="text-before-form">
 	                        <h2 class="pb-5">Тестовый доступ</h2>
 	                    </div>
@@ -79,8 +79,8 @@
 			                            <input id="phone" type="tel" name="phone" placeholder="+7 000 000 00 00" class="form-control">
 			                        </div>
 	                        	</div>
-	                        	<div class="col-6">
-	                        		 <div class="form-group mt-3">
+	                        	<div class="col-6 mt-auto">
+	                        		 <div class="form-group">
 			                            <label for="email">E-mail</label>
 			                            <input id="email" type="text" name="email" placeholder="" class="form-control">
 			                        </div>
@@ -92,10 +92,23 @@
 	                            <input id="number_students" type="text" name="number_students" placeholder="" class="form-control">
 	                        </div>
 	                        <p class="fs-14 pt-3 mb-2">Желаемый срок предоставления тестового доступа</p>
-	                        <div class="btn-group w-100" role="group">
+	                        <div class="btn-group w-100 d-sm-inline-flex d-none" role="group">
 							  <button type="button" class="btn btn-secondary fs-14">Стандартный<span class="text-grey fs-12"><br>2 недели</span></button>
 							  <button type="button" class="btn btn-secondary fs-14">Расширенный<span class="text-grey fs-12"><br>1 месяц</span></button>
 							  <button type="button" class="btn btn-secondary fs-14">Длительный<span class="text-grey fs-12"><br>по согласованию</span></button>
+							</div>
+							<div class="btn-group d-sm-none d-block" role="group">
+							    <div class="row g-3">
+							        <div class="col-12">
+							             <button type="button" class="btn btn-secondary w-100 fs-14">Стандартный<span class="text-grey fs-12"><br>2 недели</span></button>
+							        </div>
+							        <div class="col-12">
+							             <button type="button" class="btn btn-secondary w-100 fs-14">Расширенный<span class="text-grey fs-12"><br>1 месяц</span></button>
+							        </div>
+							        <div class="col-12">
+							            <button type="button" class="btn btn-secondary w-100 fs-14">Длительный<span class="text-grey fs-12"><br>по согласованию</span></button>
+							        </div>
+							    </div>
 							</div>
 	                        <div class="form-check mt-5 mb-2">
 	                            <input id="agree" type="checkbox" name="agree" value="1" class="form-check-input">
