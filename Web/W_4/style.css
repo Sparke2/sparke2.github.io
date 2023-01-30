@@ -1,0 +1,55 @@
+span {
+  color: red;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+body {
+  width: 600px;
+  line-height: 30px;
+}
+
+form {
+  border-radius: 30px;
+  background: #9AE3EC;
+  padding: 30px;
+  align-items: center;
+}
+
+fieldset input {
+  margin-bottom: 10px;
+    border: 0;
+}
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+legend {
+  font-weight: 100;
+}
+
+.btn input {
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  color: grey;
+  border: 0;
+}

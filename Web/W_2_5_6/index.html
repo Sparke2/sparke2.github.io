@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.google.com/specimen/Ubuntu?subset=cyrillic&noto.script=Cyrl">
+</head>
+<body>
+	<header>
+		<h1>Зачем учить JavaScript и где он пригодится</h1>
+	</header>
+	<main>
+		<div class="main_content">
+			<h2>Что такое JavaScript?</h2>
+			<div class="flex-row">
+				<div class="lin"></div>
+				<div class="content-f">
+					<p><b>JavaScript</b> – это язык программирования, который <i>добавляет интерактивность</i> на ваш веб-сайт (например: игры, отклик при нажатии кнопок или при вводе данных в формы, динамические стили, анимация). Этот сайт даст вам представление о том, на что он способен.</p>
+					<p>JavaScript сам по себе довольно компактный, но очень гибкий. Разработчиками написано большое количество инструментов поверх основного языка JavaScript, которые разблокируют огромное количество дополнительных функций с очень небольшим усилием. К ним относятся:</p>
+					<ul>
+						<li>
+							Программные интерфейсы приложения (API), встроенные в браузеры, обеспечивающие различные функциональные возможности, такие как динамическое создание HTML и установку CSS стилей, захват и манипуляция видеопотоком, работа с веб-камерой пользователя или генерация 3D графики и аудио сэмплов.
+						</li>
+						<li>
+							Сторонние API позволяют разработчикам внедрять функциональность в свои сайты от других разработчиков, таких как Twitter или Facebook.
+						</li>
+						<li>
+							Также вы можете применить к вашему HTML сторонние фреймворки и библиотеки, что позволит вам ускорить создание сайтов и приложений.
+						</li>
+					</ul>
+					<p><b>JavaScript</b> — это лучший друг HTML и CSS. HTML задает разметку сайта, CSS отвечает за внешний вид, а <i>JavaScript все это оживляет</i>. С помощью кода на JavaScript программист определяет, как страница отреагирует на действия пользователя.</p>
+				</div>
+			</div>
+			
+			<h2>Как работает JavaScript?</h2>
+
+			<div class="flex-row">
+				<div class="content-s">
+					<p>Любое действие пользователя на странице порождает событие. Программирование на JavaScript — это обработка событий.<br> Вот как выглядит обычный сценарий:</p>
+					<ul class="list">
+						<li>Пользователь что-то сделал на странице</li>
+						<li><span class="arrow">↓</span></li>
+						<li>В браузере сработало событие</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Запустился JavaScript-код, который назначен на событие</li>
+						<li><span class="arrow">↓</span></li>
+						<li>JavaScript изменил что-то на странице.</li>
+					</ul>
+					<p>Программист пишет обработчик только для тех событий, на которые стоит реагировать:</p>
+					<ul class="list">
+						<li>Пользователь кликнул мышью</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Сработало событие onclick</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Запустилась функция changePhoto</li>
+						<li><span class="arrow">↓</span></li>
+						<li>В галерее сменилось фото</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Пользователь нажал клавишу</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Сработало событие onkeydown</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Программист не назначил обработчик события</li>
+						<li><span class="arrow">↓</span></li>
+						<li>Ничего не произошло</li>
+					</ul>
+				</div>
+				<div class="lin-s"></div>
+			</div>
+			<h2>Пример работы JavaScript:</h2>
+			<ul class="fs-20 dec">
+				<li>
+					<a class="fs-20 menu" onclick="showHide('block_1')">Попросите пользователя представиться и поприветствуйте его</a>
+					<div id="block_1" class="d-none">
+						<p>Для решения задач нужен prompt и alert</p>
+						<input type="button" id="button" value="Кнопка" onclick="Work();">
+					</div>
+				</li>
+				<li class="pt-20">
+					<a class="fs-20 menu"  onclick="showHide('block_2')">Попросите пользователя ввести основание и высоту треугольника, посчитайте и верните площадь треугольника с заданными параметрами</a>
+					<div id="block_2" class="d-none">
+						<p>Для решения задач нужен prompt и alert</p>
+						<input type="button" id="button" value="Кнопка" onclick="Square();">
+					</div>
+				</li>
+				<li class="pt-20">
+					<a class="fs-20 menu"  onclick="showHide('block_3')">Попросите пользователя ввести 2 строки, сравните количество символов, если количество совпало, выдайте true, в противном случае false</a>
+					<div id="block_3" class="d-none">
+						<p>Для решения задач нужен prompt, alert и if</p>
+						<input type="button" id="button" value="Кнопка" onclick="Equals();">
+					</div>
+				</li>
+				<li class="pt-20">
+					<a class="fs-20 menu"  onclick="showHide('block_4')">Попросите пользователя ввести массив из 5 элементов. Выдайте ему минимальное, максимальное значение массива.</a>
+					<div id="block_4" class="d-none">
+						<p>Для решения задач нужен prompt, alert, push, for, if</p>
+						<input type="button" id="button" value="Кнопка" onclick="Elem();">
+					</div>
+				</li>
+				<li class="pt-20">
+					<a class="fs-20 menu"  onclick="showHide('block_5')">Создайте тест из 10 вопросов по JS для пользователя. После прохождения пользователь видит свой результат. </a>
+					<div id="block_5" class="d-none">
+						<p>Для решения задач нужен getElementById и if</p>
+						<p>Выполните задания теста:</p>
+						<p>JavaScript это язык программирования?<br> <input type="text" id="z_1"></p>
+						<p>Нужен ли JavaScript для создания чего-то интерактивного на сайте?<br> <input type="text" id="z_2"></p>
+						<p>Можно ли разработать сайт не используя JavaScript?<br><input type="text" id="z_3"></p>
+						<p>Можно ли разработать сайт для игры на JavaScript?<br><input type="text" id="z_4"></p>
+						<p>Можно ли анимировать изображение с помощью JavaScript?<br><input type="text" id="z_5"></p>
+						<p>Можно ли создать динамически обновляемый контент с помощью JavaScript?<br><input type="text" id="z_6"></p>
+						<p>Точка с запятой используется для разделения операторов в JavaScript?<br><input type="text" id="z_7"></p>
+						<p>Оператор строгого равенства === проверяет равенство без приведения типов в JavaScript?<br><input type="text" id="z_8"></p>
+						<p>Для сравнения используется двойной знак равенства == в JavaScript?<br><input type="text" id="z_9"></p>
+						<p>В каком году появился JavaScript?<br><input type="text" id="z_10"></p>
+						<input type="button" id="button" onclick="proverit();" value="Проверить">
+						<div id="rezultat"></div>
+					</div>
+				</li>
+				<li class="pt-20">
+					<a class="fs-20 menu"  onclick="showHide('block_6')">При нажатии на кнопку появляется заставка на весь экран с красивым фоном,текущей датой и именем пользователя. 
+					При нажатии на любое место экран исчазает и сайт опять появляется</a>
+					<div id="block_6" class="d-none">
+						<p>Для решения задач нужен querySelector, classList.toggle, new Date(), switch, case</p>
+						<input type="button" class="btn" id="button" value="Кнопка" onclick="popupToggle();">
+						<div id="popup" class="popup">
+							<div class="content">
+								<h2 class="text-white">Пользователь: <br> <span  id="block"></span></h2>
+								<p class="text-white" id="block2"></p>
+								<p class="text-white" id="block3"></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<footer>
+			<div class="lin-t"></div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+	</html>

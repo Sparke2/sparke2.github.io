@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <form class="registr" action="check.php" method="post">
+      <fieldset>
+        <legend> Личная информация </legend>
+        <label for="surname"> Фамилия<span>*</span> </label> <br>
+        <input type="text" name="surname" value="" placeholder="Иванов" required pattern="^[А-Яа-яЁё\s]+$">
+          <br>
+        <label for="name"> Имя<span>*</span> </label> <br>
+        <input type="text" name="name" value="" placeholder="Иван" required pattern="^[А-Яа-яЁё\s]+$">
+          <br>
+        <label for="secname"> Отчество </label> <br>
+        <input type="text" name="secname" value="" placeholder="Иванович" pattern="^[А-Яа-яЁё\s]+$">
+          <br>
+        <label for="sex"> Пол<span>*</span> </label> <br>
+        <input type="radio" name="sex" value="male" checked> мужской
+        <input type="radio" name="sex" value="female"> женский
+          <br>
+        <label for="date">Дата рождения<span>*</span></label> <br>
+        <input type="date" name="date" value="" min="1922-01-01" max="2005-01.01" required>
+          <br>
+        <label for="age"> Возраст </label> <br>
+        <input type="number" name="age" value="" min="18" max="100">
+          <br>
+        <label for="place"> Место рождения<span>*</span> </label> <br>
+        <input list="place" name="place" required pattern="^[А-Яа-яЁё\s]+$">
+        <datalist id="place">
+          <option value="Москва"> Московская область </option>
+          <option value="Санкт-Петербург"> Ленинградская область </option>
+          <option value="Саратов"> Саратовская область </option>
+          <option value="Самара"> Самарская область </option>
+          <option value="Казань"> Республика Татарстан </option>
+          <option value="Пенза"> Пензенская область </option>
+        </datalist>
+          <br>
+        <label for="pasport"> Первая страница паспорта<span>*</span> </label> <br>
+        <input type="file" name="pasport" value="" required enctype=’multipart/form-data’ accept="image/jpeg">
+      </fieldset>
+
+      <fieldset>
+        <legend> Контактная информация </legend>
+        <label for="index"> Индекс<span>*</span> </label> <br>
+        <input type="text" name="index" value="" pattern="[0-9]{6}"  required>
+          <br>
+        <label for="address"> Домашний адрес<span>*</span> </label> <br>
+        <input type="text" name="address" value=""  required>
+          <br>
+        <label for="registr_date">Дата регистрации<span>*</span></label> <br>
+        <input type="date" name="registr_date" value="" min="1922-01-01" max="2005-01.01" required>
+          <br>
+          <label for="phone"> Номер телефона<span>*</span> </label> <br>
+          <input type="tel" name="phone"  class="tel" value="" required
+                 placeholder="+7(___)___-__-__">
+          <br>
+         <label for="email"> E-mail<span>*</span> </label> <br>
+         <input type="email" name="" value="" required>
+      </fieldset>
+
+      <fieldset>
+        <legend> Общая информация </legend>
+        <label for="about_shop"> Откуда вы узнали о нашем магазине? </label> <br>
+        <input type="checkbox" name="about_shop" value="friend">от друга/родственника
+        <input type="checkbox" name="about_shop" value="ad">из рекламы<br>
+        <input type="checkbox" name="about_shop" value="net">случайно нашел в интернете
+      </fieldset>
+
+      <input type="checkbox" name="agree" value="agree" required>Я согласен на обработку персональных данных<span>*</span>
+        <br>
+      <div class="btn">
+        <input type="submit" name="sent" value="Отправить">
+        <input type="reset" name="res" value="Очистить">
+      </div>
+
+    </form>
+  <script src="script.js"></script>
+  </body>
+</html>
