@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>РКИ</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="desktop navbar navbar-expand-lg fixed-top header-nav">
+                    <div class="container align-items-center">
+                        <button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" style="color: #FFF;">
+                                  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                                </svg>
+                        </button>
+                        <a class="navbar-brand brandName" href="#">
+                            <img src="img/RKI.svg" alt="">
+                        </a>
+                        <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+                            <ul class="navbar-nav" style="align-items: baseline;">
+                                <li><a class="nav-link nav-link-active" href="#">О Проекте</a></li>
+                                <li><a class="nav-link" href="#">Авторам</a></li>
+                                <li class="position-relative">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                       Каталог
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+                                        <li><a class="dropdown-item" href="#">Литература</a></li>
+                                        <li><a class="dropdown-item" href="#">Мультимедиа</a></li>
+                                        <li><a class="dropdown-item" href="#">Тесты</a></li>
+                                        <li><a class="dropdown-item" href="#">Лексический минимум</a></li>
+                                    </ul>
+                                </li>
+                                <li class="position-relative">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                       ТРКИ
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+                                        <li><a class="dropdown-item" href="#">О ТРКИ</a></li>
+                                        <li><a class="dropdown-item" href="#">Определительный тест на уровни A0-C2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="nav-link" href="#">Новости</a></li>
+                                <li>
+                                    <a href="#" class="nav-link">
+                                        <span class="badge br-40 br-white-1"  style="padding-top: 7px; padding-bottom: 7px;">
+                                            <span class="fs-16 text-white ps-1 pe-1">Личный Кабинет</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="position-relative">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                      Ru
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+                                        <li><a class="dropdown-item" href="#">Ru</a></li>
+                                        <li><a class="dropdown-item" href="#">En</a></li>
+                                        <li><a class="dropdown-item" href="#">De</a></li>
+                                        <li><a class="dropdown-item" href="#">Fr</a></li>
+                                        <li><a class="dropdown-item" href="#">Ar</a></li>
+                                        <li><a class="dropdown-item" href="#">Zh</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                       <!--  <div class="navbar-collapse collapse justify-content-end" id="navbar">                                 
+                            
+                        </div> -->
+                    </div> 
+            </nav>
+        </header>
+        <main class="position-relative" style="background: #F8F3F3;">
+            <div class="container py-5">
+                <div id="breadcrumbs">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" class="text-pale-red td-none">главная</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-red td-none">Онлайн-курсы</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3">
+                        <div class="sidebar-menu py-5 br-10">
+                            <ul class="list-none lh-19 m-0">
+                                <li>Личный кабинет</li>
+                                <li>Студенты</li>
+                                <li>Учебные планы и уроки</li>
+                                <li>Мои материалы</li>
+                                <li>Работа с изданиями</li>
+                                <li>Мобильное приложение</li>
+                                <li class="text-red">Онлайн-курсы</li>
+                                <li>Новые поступления</li>
+                                <li>Инструкции по работе <br>с платформой</li>
+                                <li class="pb-0">Рабочие программы <br>дисциплин</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="profileCoruses" class="profile-content bg-white p-5 br-10">
+                            <h3 class="fs-32 text-red pb-2">Онлайн-курсы</h3>
+                            <div class="filter mb-4">
+                                <form id="filter" action="" method="GET">
+                                    <input type="hidden" name="organization_id" value="2">
+                                    <div class="search col-xl-8 mb-4">
+                                        <input id="search" type="text" name="search" class="form-control form-search-control" placeholder="Поиск курса по названию">
+                                    </div>
+                                    <div class="row g-3 d-md-flex d-block justify-content-between">
+                                        <div class="col-xxl-8 col-xl-9">
+                                            <div class="radio-btn-group d-block d-md-flex justify-content-between">
+                                                <input type="radio" class="btn-check" name="status" value="all" id="all" autocomplete="off" checked="">
+                                                <label class="btn btn-grey-light" for="all">все</label>
+
+                                                <input type="radio" class="btn-check" name="status" value="is_draft" id="draft" autocomplete="off">
+                                                <label class="btn btn-grey-light m-md-0 m-3" for="draft">черновики</label>
+
+                                                <input type="radio" class="btn-check" name="status" value="awaiting_moderation" id="awaitModeration" autocomplete="off">
+                                                <label class="btn btn-grey-light" for="awaitModeration">на модерации</label>
+
+                                                <input type="radio" class="btn-check" name="status" value="published" id="published" autocomplete="off">
+                                                <label class="btn btn-grey-light" for="published">опубликованные</label>
+
+                                                <input type="radio" class="btn-check" name="status" value="deleted" id="deleted" autocomplete="off">
+                                                <label class="btn btn-grey-light m-md-0 m-3" for="deleted">удаленные</label>
+                                            </div>
+                                        </div>
+                                        <div class="col add-course text-right">
+                                            <a href="https://dev.datalib.ru/profile/courses/create" class="btn btn-primary br-10 fs-12">создать курс</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div>
+                                <!-- <div class="totalItems">
+                                    <p class="text-red fs-14">Курсы: <span class="num-courses ps-3">11</span></p>
+                                </div> -->
+                                <div id="listCourses" class="">
+                                    <div class="card br-l-l-red-2 br-10 mb-3 shadow-hover">             
+                                        <div class="card-body">                 
+                                            <div class="row">                     
+                                                <div class="col-md-2 col-4">                         
+                                                    <img src="img/img_course_default.png" alt="" class="img-fluid rounded">                     
+                                                </div>                     
+                                                <div class="col-8 col-md-6 col-xl-7">                         
+                                                <p><a href="#" class="fs-14 fw-700 text-red td-none">Вводно-фонетический курс</a></p>                         
+                                                    <div class="">                             
+                                                        <p class="mb-0 fs-14"><span class="fw-400">Курс создан: </span>08.09.2022</p>                             
+                                                        <p class="fs-14"><span class="fw-400">Автор(ы) курса: </span>Ольга Крайнова</p>
+                                                        <p class="fs-14 m-0"><span class="fw-400">Статус: </span>опубликован</p>                         
+                                                    </div>                     
+                                                </div>                     
+                                                <div class="col-6 col-md-4 col-xl-3 my-auto mt-md-0 mt-4">                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Посмотреть превью курса">                                 
+                                                            <img src="img/show.png">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" title="Список зарегистрированных пользователей">           
+                                                            <img src="img/users.svg" alt="Список зарегистрированных пользователей">                             
+                                                        </a>                             
+                                                        <a class="mb-3 td-none" href="#" title="Содержание курса">                                 
+                                                            <img src="img/contents.svg" alt="Содержание курса">                             
+                                                        </a>                         
+                                                    </div>                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#">
+                                                            <img src="img/edit.svg" alt="Редактировать курс">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Публикация курса">                                 
+                                                            <img src="img/published.svg" alt="">                             
+                                                        </a>                             
+                                                        <a class="d-inline td-none" href="#" title="Удаление курса">                                 
+                                                            <img src="img/delete.svg" alt="Удаление курса">                             
+                                                        </a>                         
+                                                    </div>                                            
+                                                </div>                 
+                                            </div>             
+                                        </div>         
+                                    </div>
+                                    <div class="card br-l-l-red-2 br-10 mb-3 shadow-hover">             
+                                        <div class="card-body">                 
+                                            <div class="row">                     
+                                                <div class="col-md-2 col-4">                         
+                                                    <img src="img/img_course_default.png" alt="" class="img-fluid rounded">                     
+                                                </div>                     
+                                                <div class="col-8 col-md-6 col-xl-7">                         
+                                                <p><a href="#" class="fs-14 fw-700 text-red td-none">Вводно-фонетический курс</a></p>                         
+                                                    <div class="">                             
+                                                        <p class="mb-0 fs-14"><span class="fw-400">Курс создан: </span>08.09.2022</p>                             
+                                                        <p class="fs-14"><span class="fw-400">Автор(ы) курса: </span>Ольга Крайнова</p>
+                                                        <p class="fs-14 m-0"><span class="fw-400">Статус: </span>опубликован</p>                         
+                                                    </div>                     
+                                                </div>                     
+                                                <div class="col-6 col-md-4 col-xl-3 my-auto mt-md-0 mt-4">                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Посмотреть превью курса">                                 
+                                                            <img src="img/show.png">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" title="Список зарегистрированных пользователей">           
+                                                            <img src="img/users.svg" alt="Список зарегистрированных пользователей">                             
+                                                        </a>                             
+                                                        <a class="mb-3 td-none" href="#" title="Содержание курса">                                 
+                                                            <img src="img/contents.svg" alt="Содержание курса">                             
+                                                        </a>                         
+                                                    </div>                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#">
+                                                            <img src="img/edit.svg" alt="Редактировать курс">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Публикация курса">                                 
+                                                            <img src="img/published.svg" alt="">                             
+                                                        </a>                             
+                                                        <a class="d-inline td-none" href="#" title="Удаление курса">                                 
+                                                            <img src="img/delete.svg" alt="Удаление курса">                             
+                                                        </a>                         
+                                                    </div>                                            
+                                                </div>                 
+                                            </div>             
+                                        </div>         
+                                    </div>
+                                    <div class="card br-l-l-red-2 br-10 mb-3 shadow-hover">             
+                                        <div class="card-body">                 
+                                            <div class="row">                     
+                                                <div class="col-md-2 col-4">                         
+                                                    <img src="img/img_course_default.png" alt="" class="img-fluid rounded">                     
+                                                </div>                     
+                                                <div class="col-8 col-md-6 col-xl-7">                         
+                                                <p><a href="#" class="fs-14 fw-700 text-red td-none">Вводно-фонетический курс</a></p>                         
+                                                    <div class="">                             
+                                                        <p class="mb-0 fs-14"><span class="fw-400">Курс создан: </span>08.09.2022</p>                             
+                                                        <p class="fs-14"><span class="fw-400">Автор(ы) курса: </span>Ольга Крайнова</p>
+                                                        <p class="fs-14 m-0"><span class="fw-400">Статус: </span>опубликован</p>                         
+                                                    </div>                     
+                                                </div>                     
+                                                <div class="col-6 col-md-4 col-xl-3 my-auto mt-md-0 mt-4">                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Посмотреть превью курса">                                 
+                                                            <img src="img/show.png">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" title="Список зарегистрированных пользователей">           
+                                                            <img src="img/users.svg" alt="Список зарегистрированных пользователей">                             
+                                                        </a>                             
+                                                        <a class="mb-3 td-none" href="#" title="Содержание курса">                                 
+                                                            <img src="img/contents.svg" alt="Содержание курса">                             
+                                                        </a>                         
+                                                    </div>                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#">
+                                                            <img src="img/edit.svg" alt="Редактировать курс">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Публикация курса">                                 
+                                                            <img src="img/published.svg" alt="">                             
+                                                        </a>                             
+                                                        <a class="d-inline td-none" href="#" title="Удаление курса">                                 
+                                                            <img src="img/delete.svg" alt="Удаление курса">                             
+                                                        </a>                         
+                                                    </div>                                            
+                                                </div>                 
+                                            </div>             
+                                        </div>         
+                                    </div>
+                                    <div class="card br-l-l-red-2 br-10 mb-3 shadow-hover">             
+                                        <div class="card-body">                 
+                                            <div class="row">                     
+                                                <div class="col-md-2 col-4">                         
+                                                    <img src="img/img_course_default.png" alt="" class="img-fluid rounded">                     
+                                                </div>                     
+                                                <div class="col-8 col-md-6 col-xl-7">                         
+                                                <p><a href="#" class="fs-14 fw-700 text-red td-none">Вводно-фонетический курс</a></p>                         
+                                                    <div class="">                             
+                                                        <p class="mb-0 fs-14"><span class="fw-400">Курс создан: </span>08.09.2022</p>                             
+                                                        <p class="fs-14"><span class="fw-400">Автор(ы) курса: </span>Ольга Крайнова</p>
+                                                        <p class="fs-14 m-0"><span class="fw-400">Статус: </span>опубликован</p>                         
+                                                    </div>                     
+                                                </div>                     
+                                                <div class="col-6 col-md-4 col-xl-3 my-auto mt-md-0 mt-4">                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Посмотреть превью курса">                                 
+                                                            <img src="img/show.png">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" title="Список зарегистрированных пользователей">           
+                                                            <img src="img/users.svg" alt="Список зарегистрированных пользователей">                             
+                                                        </a>                             
+                                                        <a class="mb-3 td-none" href="#" title="Содержание курса">                                 
+                                                            <img src="img/contents.svg" alt="Содержание курса">                             
+                                                        </a>                         
+                                                    </div>                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#">
+                                                            <img src="img/edit.svg" alt="Редактировать курс">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Публикация курса">                                 
+                                                            <img src="img/published.svg" alt="">                             
+                                                        </a>                             
+                                                        <a class="d-inline td-none" href="#" title="Удаление курса">                                 
+                                                            <img src="img/delete.svg" alt="Удаление курса">                             
+                                                        </a>                         
+                                                    </div>                                            
+                                                </div>                 
+                                            </div>             
+                                        </div>         
+                                    </div>
+                                    <div class="card br-l-l-red-2 br-10 mb-3 shadow-hover">             
+                                        <div class="card-body">                 
+                                            <div class="row">                     
+                                                <div class="col-md-2 col-4">                         
+                                                    <img src="img/img_course_default.png" alt="" class="img-fluid rounded">                     
+                                                </div>                     
+                                                <div class="col-8 col-md-6 col-xl-7">                         
+                                                <p><a href="#" class="fs-14 fw-700 text-red td-none">Вводно-фонетический курс</a></p>                         
+                                                    <div class="">                             
+                                                        <p class="mb-0 fs-14"><span class="fw-400">Курс создан: </span>08.09.2022</p>                             
+                                                        <p class="fs-14"><span class="fw-400">Автор(ы) курса: </span>Ольга Крайнова</p>
+                                                        <p class="fs-14 m-0"><span class="fw-400">Статус: </span>опубликован</p>                         
+                                                    </div>                     
+                                                </div>                     
+                                                <div class="col-6 col-md-4 col-xl-3 my-auto mt-md-0 mt-4">                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Посмотреть превью курса">                                 
+                                                            <img src="img/show.png">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" title="Список зарегистрированных пользователей">           
+                                                            <img src="img/users.svg" alt="Список зарегистрированных пользователей">                             
+                                                        </a>                             
+                                                        <a class="mb-3 td-none" href="#" title="Содержание курса">                                 
+                                                            <img src="img/contents.svg" alt="Содержание курса">                             
+                                                        </a>                         
+                                                    </div>                         
+                                                    <div class="mb-3 text-end">                             
+                                                        <a class="mr-3 d-inline td-none" href="#">
+                                                            <img src="img/edit.svg" alt="Редактировать курс">                             
+                                                        </a>                             
+                                                        <a class="mr-3 d-inline td-none" href="#" target="_blank" title="Публикация курса">                                 
+                                                            <img src="img/published.svg" alt="">                             
+                                                        </a>                             
+                                                        <a class="d-inline td-none" href="#" title="Удаление курса">                                 
+                                                            <img src="img/delete.svg" alt="Удаление курса">                             
+                                                        </a>                         
+                                                    </div>                                            
+                                                </div>                 
+                                            </div>             
+                                        </div>         
+                                    </div>
+                                    <nav class="d-flex justify-content-end mt-5">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true"><img src="img/prev.svg" alt="назад"></span>
+                                          </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true"><img src="img/next.svg" alt="вперёд"></span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row g-4 py-4">
+                        <div class="col-lg-4 col-md-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <p class="mb-2 fs-16 fw-600">Единый номер для звонков по России</p>
+                                <p class="mb-3 fw-700">8 800 555 22 35</p>
+                                <p class="fs-16 mb-2 fw-600">Для звонков из зарубежных стран</p>
+                                <p class="fw-700 m-0">+7 (8452) 24 77 96</p>
+                            </div>
+                            <div class="">
+                                <p class="fw-600 pt-3 mb-2">Юридический адрес:</p>
+                                <p class="mb-1">123022<br> Москва,  Ходынская 2, офис 151</p>
+                                <p class="m-0">Тел./факс: +7 (8452) 24 77 96</p>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 col-lg-3 col-md-4 col-6">
+                            <div class="br-footer mb-3">
+                                <p class="fs-14 fw-600 mb-2">Отдел продаж:</p>
+                                <p class="text-grey fs-14 mb-2">доб. 131, 145, 166</p>
+                                <p class="text-grey fs-14 m-0">e-mail: v.kutueva@iprmedia.ru</p>
+                            </div>
+                            <div class="br-footer mb-3">
+                                <p class="fs-14 fw-600 mb-2">Техническая поддержка:</p>
+                                <p class="text-grey fs-14 mb-2">доб. 100, 111</p>
+                                <p class="text-grey fs-14 m-0">e-mail: support@ros-edu.ru</p>
+                            </div>
+                            <div class="br-footer">
+                                <p class="fs-14 fw-600 mb-2">Отдел по работе с авторами:</p>
+                                <p class="text-grey fs-14 mb-2">доб. 160, 227</p>
+                                <p class="text-grey fs-14 m-0">e-mail: author@ros-edu.ru</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 d-lg-block d-none"></div>
+                        <div class="col d-flex flex-column align-items-start justify-content-center">
+                            <img src="img/rki_footer.svg" alt="РКИ">
+                            <p class="fw-600 pt-5 mb-2">Социальные сети:</p>
+                            <div>
+                                <a href="https://vk.com/iprmedia" class="td-none"><img src="img/vk_red.svg" alt="Вконтакте" class="pe-3"></a>
+                                <a href="https://www.youtube.com/channel/UCCg8ZtY-VO4hgY3GqYKp6lg" class="td-none"><img src="img/youtube_red.svg" alt="YouTube" class="pe-3"></a>
+                                <a href="https://t.me/+IIQ7y2oGQd81MDli" class="td-none"><img src="img/tg_red.svg" alt="Telegram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
