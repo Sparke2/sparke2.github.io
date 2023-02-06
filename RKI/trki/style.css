@@ -548,4 +548,7 @@ main .search input::placeholder, main .search input[placeholder] {
 		font-size: 30px;
 		line-height: 28px;
 	}
+	.nav-link-f {
+		font-size: 12px !important;
+	}
 }
