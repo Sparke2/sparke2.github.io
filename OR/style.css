@@ -1,0 +1,332 @@
+@import url("font/stylesheet.css");
+@import url("font_gilroy/stylesheet.css");
+
+.box-shadow-none {
+	box-shadow: none!important;
+}
+.btn:focus {
+	box-shadow: none!important;
+}
+* {
+	font-weight: 500;
+	font-family: 'Gilroy';
+}
+p,a,span {
+	color: #000;
+}
+h1,h2,h3,h4,h5,h6,.nav-link, .nav-link:hover, .nav-link:active, .nav-link:focus {
+	color: #333;
+	font-family: 'Gosha Sans';
+}
+h1 {
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 121%;
+}
+h2 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 104%;
+}
+h3 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 37px;
+}
+h4 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+}
+h6 {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 22px;
+}
+p {
+	line-height: 125%;
+}
+.f-2 {
+	font-family: 'Gosha Sans';
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700 !important;
+}
+.lh-14 {
+	line-height: 14px;
+}
+.lh-18 {
+	line-height: 18px;
+}
+.lh-19 {
+	line-height: 19px;
+}
+.lh-24 {
+	line-height: 24px;
+}
+.lh-55 {
+	line-height: 55px;
+}
+
+.fs-12 {
+	font-size: 12px;
+}
+.fs-14 {
+	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
+}
+.fs-20, .nav-link {
+	font-size: 20px !important;
+}
+.fs-24 {
+	font-size: 24px;
+}
+.fs-26 {
+	font-size: 26px;
+}
+.fs-28 {
+	font-size: 28px;
+}
+
+.text-black {
+	color: #000;
+}
+.br-none {
+	border: none;
+}
+.br-100{
+	border-radius: 100px !important;
+}
+.br-10{
+	border-radius: 10px !important;
+}
+.br-15 {
+	border-radius: 15px;
+}
+.br-black-2 {
+	border: 2px solid #333333;
+}
+.btn {
+	font-weight: 500;
+    line-height: 1.2;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.bg-white {
+	background: #FFF;
+}
+.bg-black {
+	background-color: #333;
+}
+.bg-green {
+	background-color: #28A569;
+}
+.badge {
+	font-weight: 500;
+}
+.btn-primary, .btn-primary:active, .btn-primary:focus  {
+    color: #fff;
+    background-color: #28A569;
+    border-color: #28A569;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #28A569;
+    border-color: #28A569;
+    opacity: 0.8;
+}
+.t-0 {
+	top:0;
+}
+.r-0 {
+	right: 0;
+}
+.l-0 {
+	left: 0;
+}
+.b-0 {
+	bottom: 0;
+}
+.z-1 {
+	z-index: -1;
+}
+header {
+	margin-bottom: 70px;
+}
+.form-control {
+	box-shadow: none !important;
+	border: 4px solid #333333;;
+}
+.form-control:focus {
+    border-color: #28A569;
+}
+input::placeholder, input[placeholder] {
+  font-family: 'Gosha Sans';
+  color: #333333 !important;
+  font-size: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.td-none {
+	text-decoration: none;
+}
+.badge {
+	border: 1px solid #000000;
+	color: #000;
+	font-size: 20px;
+	line-height: 24px;
+	border-radius: 100px;
+}
+.navbar-nav {
+	align-items: baseline;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.block-1 {
+	width: 110%;
+}
+.block-2 {
+	width: 90%;
+}
+.img-1 {
+	top: 75%;
+}
+.img-2 {
+	top: 90%; 
+	left: 40%;
+}
+.img-3 {
+	top: 65%;
+}
+.pb-16 {
+	padding-bottom: 16rem;
+}
+.pt-16 {
+	padding-top: 16rem;
+}
+.dot {
+	width:27px; 
+	height: 27px;
+}
+.mr-2 {
+	margin-right: 2em;
+}
+.b-10 {
+	bottom: 10%;
+}
+.img-4 {
+	width: 67%; 
+	left: 3%; 
+	top: -8%;
+}
+.img-5 {
+	width: 64%; 
+	left: 3%;
+}
+.block-4 {
+	padding-bottom: 7rem; 
+	padding-top: 20em;
+}
+.pt-7 {
+	padding-top: 7rem;
+}
+@media (max-width:1811px) {
+	.d-6 {
+		display: none;
+	}
+}
+@media (max-width:1611px) {
+	.d-5 {
+		display: none;
+	}
+}
+@media (max-width:1399px) {
+	.block-1 {
+		width: 100%;
+	}
+	.block-2 {
+		width: 100%;
+	}
+	.img-4 {
+		top: -3%;
+	}
+}
+@media (max-width:1311px) {
+	.d-4 {
+		display: none;
+	}
+}
+@media (max-width:1199px) {
+	.img-4 {
+		width: 64%; 
+		top: 2%;
+	}
+	.img-5 {
+		bottom: 5%;
+	}
+}
+@media (max-width: 992px) {
+	.block-3 {
+		padding-top: 3rem;
+	}
+	.img-1 {
+		top: 93%;
+	}
+	.img-2 {
+		top: 90%; 
+		left: 40%;
+	}
+	.b-10 {
+		bottom: 105%;
+	}
+	.pt-7 {
+		padding-top: 0;
+	}
+	.block-4 {
+		padding-top: 15rem;
+	}
+}
+@media (max-width: 972px) {
+	.d-3, .d-2, .d-1, .d-img {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	h1 {
+		font-size: 40px;
+		line-height: 47px;
+	}
+	.pb-16 {
+		padding-bottom: 0;
+	}
+	.pt-16 {
+		padding-top: 0;
+	}
+	.block-4 {
+		padding-top: 3rem;
+		padding-bottom: 0;
+	}
+}
+@media (max-width: 600px) {
+	h2 {
+		font-size: 35px !important;
+		line-height: 28px !important;
+	}
+}
+
