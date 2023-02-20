@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>РКИ</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav">
+	        		<div class="container align-items-center">
+	        			<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" style="color: #FFF;">
+								  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+								</svg>
+					    </button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/RKI.svg" alt="">
+						</a>
+	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+	                        <ul class="navbar-nav" style="align-items: baseline;">
+	                            <li><a class="nav-link nav-link-active" href="#">О Проекте</a></li>
+	                            <li><a class="nav-link" href="#">Авторам</a></li>
+	                            <li class="position-relative">
+	                               	<a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+			                           Каталог
+			                        </a>
+			                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+			                            <li><a class="dropdown-item" href="#">Литература</a></li>
+			                            <li><a class="dropdown-item" href="#">Мультимедиа</a></li>
+			                            <li><a class="dropdown-item" href="#">Тесты</a></li>
+			                            <li><a class="dropdown-item" href="#">Лексический минимум</a></li>
+			                        </ul>
+	                            </li>
+	                            <li class="position-relative">
+	                               	<a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+			                           ТРКИ
+			                        </a>
+			                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+			                            <li><a class="dropdown-item" href="#">О ТРКИ</a></li>
+			                            <li><a class="dropdown-item" href="#">Определительный тест на уровни A0-C2</a></li>
+			                        </ul>
+	                            </li>
+	                            <li><a class="nav-link" href="#">Новости</a></li>
+		                        <li>
+		                        	<a href="#" class="nav-link">
+		                        		<span class="badge br-40 br-white-1"  style="padding-top: 7px; padding-bottom: 7px;">
+		                        			<span class="fs-16 text-white ps-1 pe-1">Личный Кабинет</span>
+		                        		</span>
+		                        	</a>
+		                        </li>
+	                            <li class="position-relative">
+	                               	<a class="nav-link dropdown-toggle dropdown-toggle-arr" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+			                          Ru
+			                        </a>
+			                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog" data-bs-popper="none">
+			                            <li><a class="dropdown-item" href="#">Ru</a></li>
+			                            <li><a class="dropdown-item" href="#">En</a></li>
+			                            <li><a class="dropdown-item" href="#">De</a></li>
+			                            <li><a class="dropdown-item" href="#">Fr</a></li>
+			                            <li><a class="dropdown-item" href="#">Ar</a></li>
+			                            <li><a class="dropdown-item" href="#">Zh</a></li>
+			                        </ul>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                </div> 
+	        </nav>
+	    </header>
+	    <main class="position-relative">
+	    	<div class="container py-5">
+	    		<div class="row g-4 d-flex justify-content-center pt-5">
+	    			<div class="col-lg-6">
+	    				<div class="bg-black p-5 br-15 d-flex flex-column align-items-center">
+	    					<div class="">
+	    						<p class="text-white fs-96 fw-700">А1</p>
+		    					<p class="text-white fs-20 pt-3 d-flex align-items-center"><img src="img/timer_white.svg" alt="" class="pe-2 mt--4">9 минут</p>
+								<p class="text-white fs-20">правильных ответов 15 <span class="text-d-grey">из 35</span></p>
+								<p class="text-white fs-20 m-0">владением языком на уровне А1-</p>
+	    					</div>
+							<button class="btn btn-primary fs-24 p-b br-100 w-100 mt-5">пройти еще раз</button>
+	    				</div>
+	    				<p class="fs-24 text-black-0 pt-4">Результаты прохождения теста</p>
+	    				<div class="row g-4">
+	    						<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-light-red text-black fs-14 br-100 py-2">ошибка</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 q-w p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-green text-black fs-14 br-100 py-2">правильный ответ</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 q-r p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-light-red text-black fs-14 br-100 py-2">ошибка</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 q-w p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-green text-black fs-14 br-100 py-2">правильный ответ</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 q-r p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-green text-black fs-14 br-100 py-2">правильный ответ</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 q-r p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				<div class="col-12">
+	    							<div class="bg-black br-15 p-4">
+			    						<div class="row g-4">
+			    							<div class="col d-flex flex-column justify-content-between">
+				    							<div class="">
+				    								<p class="fs-24 fw-700 text-white">1 <span class="text-d-grey fw-700">из 35</span></p>
+					    							<span class="badge bg-green text-black fs-14 br-100 py-2">правильный ответ</span>
+				    							</div>
+					    						<div class="pt-3">
+					    							<p class="text-white">- <span class="br-b-white-1 pe-5 me-2"></span>?</p>
+													<p class="text-white m-0">- Она учитель. </p>
+					    						</div>
+				    						</div>
+											<div class="col">
+												<div class="row g-4 text-end">
+						    						<div class="col">
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивый</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 q-r p-b-test" disabled>красивая</button>
+						    						</div>
+						    						<div>
+						    							<button class="btn btn-test fs-16 p-b-test" disabled>красивое</button>
+						    						</div>
+					    						</div>
+											</div>
+			    						</div>
+			    					</div>
+			    				</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </main>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+			    $('.form-select').select2();
+			});
+	    </script>
+	</body>
+</html>
