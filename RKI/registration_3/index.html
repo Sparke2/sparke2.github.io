@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>РКИ</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	    <main class="position-relative">
+	    	<div class="container py-5">
+	    		<div class="row g-4 d-flex justify-content-center pt-5">
+	    			<div class="col-lg-6">
+	    				<div class="bg-black p-4 br-15 text-center mx-xxl-4">
+	    					<img src="img/rki_login.svg" alt="РКИ" class="pt-5">
+	    					<p class="text-white fs-24 py-4">Регистрация</p>
+	    					<div class="mb-4">
+	    						<span class="badge bg-login-green fs-12 text-green br-100 p-2"><span class="bg-login-green-green br-100 me-2 p-login-step-s"><img src="img/check_white.svg" alt=""></span>шаг</span>
+	    						<img src="img/line_login_green.svg" class="px-1">
+	    						<span class="badge bg-login-green fs-12 text-green br-100 p-2"><span class="bg-login-green-green br-100 me-2 p-login-step-s"><img src="img/check_white.svg" alt=""></span>шаг</span>
+	    						<img src="img/line_login_green.svg" class="px-1">
+	    						<span class="badge bg-light-red fs-12 text-black br-100 p-2"><span class="bg-red br-100 me-2 text-white p-login-step">3</span>шаг</span>
+	    					</div>
+	    					<div class="row g-5 text-start">
+	    						<div class="col-12">
+			    					<form class="auth" action="" method="POST">
+			    						<div class="form-group">
+				                            <label for="fio" class="fs-20 text-white ps-4">Ф.И.О</label>
+				                            <input id="fio" type="text" name="fio" placeholder="Ф.И.О" class="form-control br-100 bg-grey-book p-f-login">
+				                        </div>
+				                        <div class="form-group mt-3">
+				                            <label for="email" class="fs-20 text-white ps-4">E-mail</label>
+				                            <input id="email" type="text" name="email" placeholder="E-mail" class="form-control br-100 bg-grey-book p-f-login">
+				                        </div>
+				                        <div class="form-group mt-3 mb-5">
+				                            <label for="phone" class="fs-20 text-white ps-4">Мобильный телефон</label>
+				                            <input id="phone" type="text" name="phone" placeholder="+7 000 000 00 00" class="form-control br-100 bg-grey-book p-f-login">
+				                        </div>
+		    							<div class="br-d-grey-3 br-15 p-4">
+		    								<p class="text-white fs-20">Пароль</p>
+		    								<p class="fs-14 text-white lh-17">Используйте заглавные буквы и символы <br>для безопасности учетной записи</p>
+		    								<p class="fs-14 text-white lh-17">Возможно оставить поле пустым <br>— система сгенерирует безопасный пароль автоматически</p>
+		    								 <div class="form-group mt-3">
+					                            <label for="password" class="d-none">Пароль</label>
+					                            <input id="password" type="text" name="password" placeholder="Your pasword" class="form-control br-100 bg-grey-book p-f-login">
+					                        </div>
+		    							</div>
+		    						</form>
+	    						</div>
+	    						<div class="col-12">
+	    							<div class="form-check ms-4">
+				                        <input id="agree" type="checkbox" name="agree" value="1" class="form-check-input">
+				                        <label for="agree" class="form-check-label text-white fs-14 fw-400">согласен с условиями пользовательского соглашения</label>
+			                        </div>
+	    						</div>
+	    						
+	    					</div>
+		                    <button class="btn btn-primary fs-24 p-b br-100 w-100 mt-2">зарегестрироваться</button>
+		                    <button class="btn btn-br-grey fs-24 p-b br-100 w-100 mt-4">← назад</button>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </main>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+			    $('.form-select').select2();
+			});
+	    </script>
+	</body>
+</html>
