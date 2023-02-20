@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>РКИ</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	    <main class="position-relative">
+	    	<div class="container py-5">
+	    		<div class="row g-4 d-flex justify-content-center pt-5">
+	    			<div class="col-lg-6">
+	    				<div class="bg-black p-4 br-15 text-center mx-xxl-4">
+	    					<img src="img/rki_login.svg" alt="РКИ" class="pt-5">
+	    					<p class="text-white fs-24 pt-4 fw-400">Авторизация</p>
+	    					<p class="text-white pb-5 m-0">Используйте email-адрес, указанный вами<br> при персональной регистрации или данные,<br> предоставленные вашему учебному заведению для регистрации</p>
+	    					<form class="auth" action="" method="POST">
+		                        <div class="form-group">
+		                            <label for="login" class="d-none">Имя пользователя</label>
+		                            <input id="login" type="text" name="login" placeholder="E-mail or username" class="form-control br-100 bg-grey-book p-f-login">
+		                        </div>
+		                         <div class="form-group mt-3">
+		                            <label for="password" class="d-none">Пароль</label>
+		                            <input id="password" type="text" name="password" placeholder="Your pasword" class="form-control br-100 bg-grey-book p-f-login">
+		                        </div>
+		                        <button class="btn btn-primary fs-24 p-b br-100 w-100 mt-5">вход</button>
+		                       	<div class="d-flex justify-content-between align-items-center mt-2 mx-3">
+									<div class="form-check">
+			                            <input id="remember_me" type="checkbox" name="remember" value="1" class="form-check-input">
+			                            <label for="remember_me" class="form-check-label text-white fs-14 fw-400">Запомнить меня / Remember me</label>
+		                        	</div>
+									<a href="#" class="text-white fs-14 td-none fw-400">Забыли пароль?</a>
+								</div>
+		                    </form>
+							
+							
+							<div class="br-15 p-3 mt-5 bg-black-light-login">
+								<a class="text-white fs-20 fw-400" href="#">Регистрация</a>
+								<p class="text-white lh-17 m-0 pt-3">Если у вас есть код приглашения, либо вы хотите<br> создать учетную запись с выбором своей организации</p>
+							</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </main>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+			    $('.form-select').select2();
+			});
+	    </script>
+	</body>
+</html>
