@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ВКР Смарт</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header style="margin-bottom: 88px;">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav bg-white brb-green-light-2 py-2 px-5">
+	        			<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+								</svg>
+					    </button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/VKR.svg" alt="">
+						</a>
+	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+	                        <ul class="navbar-nav" style="align-items: baseline;">
+	                            <li><a class="nav-link text-black-black" href="#">Главная</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Хранение работ</a></li>
+	                           
+	                            <li><a class="nav-link text-black-black" href="#">Поиск заимствований</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Портфолио</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Проверка справки</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">API</a></li>
+		                        <li>
+		                        	<a href="#" class="nav-link">
+		                        		<span class="badge br-40 br-green-1"  style="padding-top: 7px; padding-bottom: 7px;">
+		                        			<span class="fs-16 ps-1 pe-1 text-black-black">вход</span>
+		                        		</span>
+		                        	</a>
+		                        </li>
+	                        </ul>
+	                    </div>
+	        </nav>
+	    </header>
+	    <main class="position-relative">
+	    	<div class="row me-md-1 me-0">
+	    		<div class="col-xl-3 col-lg-4 col-md-5 col-12 pe-md-3 pe-0">
+		    		<div class="bg-grey-light p-5 menu">
+		    			<div class="list-custom-1 accordion" id="accordionTwo">
+			    			<div class="accordion-item">
+			    				<p class="accordion-header setting" id="headingOne">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span style="width: 40px; height: 24px;" class="pe-3"></span>Настройки</button>
+							    </p>
+			    				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#collapseOne" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">Структура <br>организации</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Настройка <br>доступа</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Генерация <br>кодов приглашений</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Управление <br>пользователями</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Управление <br>справочниками</a></li>
+						   					<li class="list-select"><a href="#" class="select-a">Оформление</a></li>
+						   					<li class="list-select"><a href="#" class="list-select-active select-a">Интеграция</a></li>
+						   					<li class="list-select"><a href="#" class="select-a">API ключ</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<div class="accordion-item">
+			    				<p class="accordion-header work" id="headingTwo">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span style="width: 40px; height: 24px;" class="pe-3"></span>Работы</button>
+							    </p>
+			    				<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionTwo" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">Загруженные <br>сотрудниками</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Загруженные <br>студентами</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<div class="accordion-item">
+			    				<p class="accordion-header portfolio" id="headingThree">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span style="width: 40px; height: 24px;" class="pe-3"></span>Электронное <br>портфолио</button>
+							    </p>
+			    				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#collapseThree" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">портфолио<br>преподавателей</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">портфолио<br>обучающихся</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<p class="text-grey fw-600"><img src="img/Chart_Line.svg" alt="" class="pe-3"><a href="#" class="text-grey text-grey-hover fw-600 td-none">Отчеты</a></p>
+				   			<p class="text-grey fw-600"><img src="img/File_Document.svg" alt="" class="pe-3"><a href="#" class="text-grey text-grey-hover fw-600 td-none">Документация</a></p>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	<div class="col-xl-9 col-lg-8 col-md-7 col-12">
+		    			<div class="row px-5 pt-5 g-3">
+		    				<div class="col-xxl-6 col-lg-10 col-12">
+		    					<p class="fw-600">Настройка интеграции системы со сторонними платформами</p>
+		    					<p class="fs-14 text-grey lh-17 col-9">Для Вашей организации зарезервированы следующие параметры, необходимые для проведения интеграции со сторонними платформами в рамках бесшовных переходов:</p>
+		    					<div class="d-flex flex-inline">
+		    						<p class="fs-14 text-grey lh-17 pe-3">Идентификатор<br> домена организации:</p>
+			    					<div class="input-group mb-3" style="width: max-content;">
+									  <input type="text" class="form-control form-copy" id="content" value="595" size="2" aria-describedby="button-addon2" readonly>
+									  <button id="copy" class="btn copy_btn" type="button" id="button-addon2"></button>
+									</div>
+		    					</div>
+		    					<p class="fs-14 text-grey lh-17 mb-2">Ключевая фраза, необходимая <br>для шифрования исходных данных:</p>
+		    					<div class="input-group" style="width: max-content;">
+								  <input type="text" class="form-control form-copy" id="content_1" value="JSQvqtezPKmWLpCvzftmkBy87Krdhpuq" aria-describedby="button-addon3" readonly>
+								  <button id="copy_1" class="btn copy_btn" type="button" id="button-addon3"></button>
+								</div>
+		    					
+		    				</div>
+		    			</div>
+		    			<div class="row p-5">
+		    				<div class="col-12">
+		    					<p class="fw-600">Для проведения интеграции с внешним порталом необходимо:</p>
+		    					<ol type="1" class="text-grey fs-14 ps-3">
+		    						<li>Предоставить порталу указанные выше зарезервированные данные: домен и ключ.</li>
+		    						<li>Реализовать функционал бесшовного перехода из портала в систему ВКР-ВУЗ.РФ, согласно следующей спецификации:</li>
+		    					</ol>
+		    					<p class="text-grey fs-14 lh-17 mb-2">Полученный секретный код участвует в формировании нового ключа, зависящего от даты его генерации.</p>
+		    					<p class="text-grey fs-14 lh-17 mb-2">На страницу <a href="#" class="text-grey">сервиса автоматического входа</a> обязательно должны быть переданы следующие параметры:</p>
+		    					<ul class="text-grey fs-14">
+		    						<li>Идентификатор портала (&domain={$domain}).</li>
+		    						<li>ID пользователя портала (&uid={$uid}).</li>
+		    						<li>Дата в специальном формате YYYYMMDDHHMMSS (&time={$time}).</li>
+		    						<li>Уникальный ключ, сфомированный как MD5({$uid}.{$secret_key}.{$time}). $secret_key – ключевая фраза, указанная выше.</li>
+		    					</ul>
+		    					<p class="fw-600 pt-4">Пример ссылки перехода:</p>
+		    					<p class="text-grey fs-14 mb-1">*для проверки ссылки, откройте ее в другом браузере</p>
+		    					<a href="http://www.vkr-vuz.ru/autologin?&domain=595&id=31252&time=20230217181850&sign=a38647e6ab5be848682afc0975e62d70" class="text-grey fs-14 td-none ww-break">http://www.vkr-vuz.ru/autologin?&domain=595&id=31252&time=20230217181850&sign=a38647e6ab5be848682afc0975e62d70</a>
+		    				</div>
+		    			</div>
+		    	</div>
+	    	</div>
+	    </main>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script type="text/javascript">
+			//Копировать объект
+			document.getElementById("copy").onclick = function() {
+			    let text = document.getElementById("content").value;
+			    navigator.clipboard.writeText(text);
+			}
+			document.getElementById("copy_1").onclick = function() {
+			    let text = document.getElementById("content_1").value;
+			    navigator.clipboard.writeText(text);
+			}
+	    </script>
+	</body>
+</html>
