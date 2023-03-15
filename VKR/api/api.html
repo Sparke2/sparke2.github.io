@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ВКР Смарт</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header style="margin-bottom: 88px;">
+			<nav class="desktop navbar navbar-expand-lg fixed-top header-nav bg-white brb-green-light-2 py-2 px-5">
+	        			<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+								</svg>
+					    </button>
+	                    <a class="navbar-brand brandName" href="#">
+	                    	<img src="img/VKR.svg" alt="">
+						</a>
+	                    <div class="navbar-collapse collapse justify-content-end" id="bdNavbar">
+	                        <ul class="navbar-nav" style="align-items: baseline;">
+	                            <li><a class="nav-link text-black-black" href="#">Главная</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Хранение работ</a></li>
+	                           
+	                            <li><a class="nav-link text-black-black" href="#">Поиск заимствований</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Портфолио</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">Проверка справки</a></li>
+	                            <li><a class="nav-link text-black-black" href="#">API</a></li>
+		                        <li>
+		                        	<a href="#" class="nav-link">
+		                        		<span class="badge br-40 br-green-1"  style="padding-top: 7px; padding-bottom: 7px;">
+		                        			<span class="fs-16 ps-1 pe-1 text-black-black">вход</span>
+		                        		</span>
+		                        	</a>
+		                        </li>
+	                        </ul>
+	                    </div>
+	        </nav>
+	    </header>
+	    <main class="position-relative">
+	    	<div class="row me-md-1 me-0">
+	    		<div class="col-xl-3 col-lg-4 col-md-5 col-12 pe-md-3 pe-0">
+		    		<div class="bg-grey-light p-5 menu">
+		    			<div class="list-custom-1 accordion" id="accordionTwo">
+			    			<div class="accordion-item">
+			    				<p class="accordion-header setting" id="headingOne">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span style="width: 40px; height: 24px;" class="pe-3"></span>Настройки</button>
+							    </p>
+			    				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#collapseOne" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">Структура <br>организации</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Настройка <br>доступа</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Генерация <br>кодов приглашений</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Управление <br>пользователями</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Управление <br>справочниками</a></li>
+						   					<li class="list-select"><a href="#" class="select-a">Оформление</a></li>
+						   					<li class="list-select"><a href="#" class="select-a">Интеграция</a></li>
+						   					<li class="list-select"><a href="#" class="list-select-active select-a">API ключ</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<div class="accordion-item">
+			    				<p class="accordion-header work" id="headingTwo">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span style="width: 40px; height: 24px;" class="pe-3"></span>Работы</button>
+							    </p>
+			    				<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionTwo" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">Загруженные <br>сотрудниками</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">Загруженные <br>студентами</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<div class="accordion-item">
+			    				<p class="accordion-header portfolio" id="headingThree">
+							      <button class="accordion-button fs-16 fw-600 box-shadow-none px-0 py-2 m-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span style="width: 40px; height: 24px;" class="pe-3"></span>Электронное <br>портфолио</button>
+							    </p>
+			    				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#collapseThree" style="">
+							      	<div class="accordion-body p-0">
+					    				<ul class="list-custom-1 m-0">
+					    					<li class="list-select"><a href="#" class="select-a">портфолио<br>преподавателей</a></li>
+						    				<li class="list-select"><a href="#" class="select-a">портфолио<br>обучающихся</a></li>
+						   				</ul>
+					   				</div>
+					   			</div>
+				   			</div>
+				   			<p class="text-grey fw-600"><img src="img/Chart_Line.svg" alt="" class="pe-3"><a href="#" class="text-grey text-grey-hover fw-600 td-none">Отчеты</a></p>
+				   			<p class="text-grey fw-600"><img src="img/File_Document.svg" alt="" class="pe-3"><a href="#" class="text-grey text-grey-hover fw-600 td-none">Документация</a></p>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	<div class="col-xl-9 col-lg-8 col-md-7 col-12">
+		    			<div class="row px-5 pt-5 g-3">
+		    				<div class="col-xxl-6 col-lg-10 col-12">
+		    					<div class="br-green-light-2 br-15 p-3 mb-3">
+		    						<div class="row g-4">
+		    							<div class="col">
+		    								<img src="img/VKR-logo.svg" alt="">
+		    							</div>
+		    							<div class="col d-flex flex-column justify-content-between">
+		    								<p class="fs-16"><img src="img/href.svg" alt="" class="pe-2"><a href="#" class="text-grey td-none text-grey-hover fw-600">ВКР-ВУЗ API</a></p>
+		    								<div class="">
+		    									<p class="fs-16 m-0"><img src="img/href.svg" alt="" class="pe-2"><a href="#" class="text-grey td-none text-grey-hover fw-600">Документация к сервису</a></p>
+		    									<p class="text-grey fs-14 m-0">основной перечень запросов ВКР-ВУЗ API</p>
+		    								</div>
+		    							</div>
+		    						</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="row">
+		    				<div class="col-xxl-5 col-xl-6 col-lg-7 mb-lg-0 mb-md-5 mb-0 p-5 col-12">
+		    					<p class="fw-600">«Подключение и настройка»</p>
+		    					<p class="fs-14 text-grey lh-17">Для подключения к сервису Вам необходимы 3 параметра:<br>2 специальных ключа и идентификатор клиента, которые вы передадите в отдел разработки ПО вашей организации.</p>
+		    					<p class="fs-14 text-grey lh-17">Сформировать ключи и получить ID клиента:</p>
+		    					<div class="mb-3">
+								  <label for="id" class="form-label">ID клиента</label>
+								  <input type="text" class="form-control bg-grey-form" id="id" value="тестовое значение" readonly>
+								</div>
+								<div class="mb-3">
+								  <label for="X_APIKey" class="form-label">X-APIKey</label>
+								  <input type="text" class="form-control bg-grey-form" id="X_APIKey" value="тестовое значение" readonly>
+								</div>
+								<div class="mb-3">
+			    					<label for="password" class="form-label">SECRET KEY</label>
+									<div class="password">
+										<input type="password" id="password-input" class="form-control bg-grey-form" name="password" value="тестовое значение" readonly>
+									<a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+									</div>
+								</div>
+								<button class="btn btn-secondary w-100 mt-3">сформировать запрос<br> на создание ключа защиты API</button>
+		    				</div>
+		    			</div>
+		    	</div>
+	    	</div>
+	    </main>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script type="text/javascript">
+	    	//Скрыть/показать значение в input
+	    	function show_hide_password(target){
+				let input = document.getElementById('password-input');
+				if (input.getAttribute('type') == 'password') {
+					target.classList.add('view');
+					input.setAttribute('type', 'text');
+				} else {
+					target.classList.remove('view');
+					input.setAttribute('type', 'password');
+				}
+				return false;
+			}
+	    </script>
+	</body>
+</html>
