@@ -1,0 +1,1096 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="DataLIB">
+    <meta name="keywords" content="DataLIB">
+    <meta name="csrf-token" content="iZqlNq1ExpS8pBVIkxdWsWs92EUnOP2Rz7UfcfUT"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>DataLIB</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+   <!--  <link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.1/css/all.css" />
+    <link href="/static/plugin/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://dev.datalib.ru/bootstrap/v5.1.3/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://dev.datalib.ru/plugins/toastr/css/toastr.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://dev.datalib.ru/plugins/bootstrap-select/v1.14.0/css/bootstrap-select.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://dev.datalib.ru/plugins/owl-carousel/css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="font/stylesheet.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_new.css">
+    <link rel="stylesheet" href="tmp.css">
+    <link rel="stylesheet" href="font/coolicons.v4.1/Webfont/coolicons.css">
+     
+    <!-- <link rel="stylesheet" href="https://dev.datalib.ru/assets/site/datalib/css/tmp.css"> -->
+    <!-- <link rel="stylesheet" href="https://dev.datalib.ru/assets/site/datalib/css/simplePagination.css"> -->
+   <!--  <link rel="stylesheet" href="https://dev.datalib.ru/css/auth/auth.css">
+    <link rel="stylesheet" href="https://dev.datalib.ru/assets/site/datalib/css/addit.css"> -->
+</head>
+<body>
+    <header class="no-fixed">
+        <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container p-1">
+        <div>
+            <button class="navbar-toggler nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                </svg>
+            </button>
+            <a class="navbar-brand brandName" href="https://dev.datalib.ru">
+                <img src="/assets/site/datalib/img/navbar_dl.svg" alt="Datalib logo">
+            </a>
+        </div>
+        <div class="notifications d-block d-lg-none pe-4">
+                                            <span><i class="bi bi-bell"></i></span>
+                    </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="search pe-3">
+                <form action="/search" class="form-inline" method="get">
+                    <label for="search" class="d-none">Поиск по сайту</label>
+                    <input id="search" name="q" type="search" class="form-control" placeholder="Поисковый запрос" aria-label="Search">
+                </form>
+            </div>
+            <div class="nav-menu d-flex align-items-center pe-3 border-end ms-auto">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCatalog">
+                            <li><a class="dropdown-item" href="https://dev.datalib.ru/catalog/books">Каталог книг</a></li>
+
+                            <li><a class="dropdown-item" href="https://dev.datalib.ru/lectures">Записи лекций</a></li>
+                            <li><a class="dropdown-item" href="https://www.iprbookshop.ru/119101.html">Реестр изданий для обновления ОПОП</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://dev.datalib.ru/catalog/courses">SMART-курсы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://dev.datalib.ru/lectoriy">Лекторий</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://dev.datalib.ru/universities">Университеты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://dev.datalib.ru/events">Мероприятия</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Информация
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownInfo">
+                            <li><a class="dropdown-item" href="/about-us">О нас</a></li>
+                            <li><a class="dropdown-item" href="/for-university">Для университетов</a></li>
+                            <li><a class="dropdown-item" href="/for-teachers">Для преподавателей</a></li>
+                            <li><a class="dropdown-item" href="/for-publishers">Для издательств</a></li>
+                            <li><a class="dropdown-item" href="/for-authors">Для авторов</a></li>
+                            <li><a class="dropdown-item" href="/how-use">Информация, необходимая для установки и эксплуатации ПО</a></li>
+                            <li><a class="dropdown-item" href="/subscribe">Варианты подписки</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                                    <div class="notifications d-none d-lg-block">
+                                                <i class="bi bi-bell"></i>
+                    </div>
+                            </div>
+            <div class="ps-3" id="navbar">
+                <ul class="auth-nav navbar-nav ml-auto align-items-center">
+                                                                        <li><a href="https://dev.datalib.ru/profile" class="nav-link ps-1 pe-2">Профиль</a></li>
+                            <li>
+                                <form method="POST" action="https://dev.datalib.ru/logout">
+                                    <input type="hidden" name="_token" value="iZqlNq1ExpS8pBVIkxdWsWs92EUnOP2Rz7UfcfUT">                                    <a href="https://dev.datalib.ru/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class="mdi mdi-logout"></i> Выйти
+                                    </a>
+                                </form>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    </header>
+    <main class="content">     
+    <div id="university" class="page-wrapper pb-0">
+        <div class="container">
+            <div id="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item text-grey"><a href="https://dev.datalib.ru">Главная</a></li>
+                        <li class="breadcrumb-item text-grey"><a href="https://dev.datalib.ru/universities">Университеты</a></li>
+                        <li class="breadcrumb-item text-grey">ФГБОУ ВО «Саратовский национальный исследовательский государственный университет имени Н.Г. Чернышевского»</li>
+                        <li class="breadcrumb-item text-blue">Цифровая кафедра </li>
+                    </ol>
+                </nav>
+            </div>
+           <div class="border-grey-top border-grey-bottom row">
+               <div class="col text-center py-5">
+                   <img src="img/mgsu.png" alt="" class="img-fluid">
+               </div>
+                <div class="col-md-7 col-12 border-grey-left ps-0 pt-5">
+                    <div class="px-4 border-grey-bottom">
+                         <p class="text-blue fs-48 fw-700 lh-52 pb-5 mb-0">Цифровая кафедра МГСУ</p>
+                    </div>
+                    <div class="px-4 pb-5" id="text_block_blue"> 
+                        <p class="fs-20 pt-5" id="about_uni_text">О кафедре</p>
+                        <p class="fs-20 lh-24 show-text mb-0">«Цифровые кафедры» — проект по реализации программ профессиональной переподготовки. Эти программы — часть федерального проекта «Развитие кадрового потенциала ИТ-отрасли», который, в свою очередь, входит в нацпрограмму «Цифровая экономика Российской Федерации». Детали проекта описаны в концепции его реализации. Проект предполагает, что студенты вузов, где открыты цифровые кафедры, помимо своей основной специальности, получат дополнительную квалификацию по IT-профилю</p>
+                    </div>
+                    <div class="border-grey-top">
+                        <button class="btn btn-primary btn-xl br-100 w-100">
+                            <span class="d-inline-flex align-items-center">
+                                <span class="fs-30 text-white pe-3">присоединиться к цифровой кафедре</span> <i class="ci-Add_Plus text-white fs-30"></i>
+                            </span>
+                        </button>
+                    </div>
+               </div>
+            </div>
+            <div class="row border-grey-bottom">
+                <div class="col-lg-7 border-grey-right py-5 brr-md-none">
+                    <p class="text-blue fs-48 fw-700 lh-52">Университет</p>
+                    <p class="fs-20 pe-5 pt-3 m-0">ФГБОУ ВО «Саратовский национальный исследовательский государственный университет имени Н. Г. Чернышевского»</p>
+                </div>
+                <div class="col py-5 text-center d-lg-block d-none">
+                   <img src="img/uni-img-bg.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue-light py-5">
+            <div class="container py-5">
+                <div class="video-wrap py-5 my-5">                        
+                    <iframe width="100%" height="650" src="https://youtube.com/embed/-rbcUby56nM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <p class="text-blue fs-48 fw-700">Компетенции</p>
+            <div class="carousel-wrap border-grey-bottom border-grey-top">
+                <div class="owl-carousel competence-carousel owl-loaded owl-drag owl-theme">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">    
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0 height-300">           
+                                    <div class="card-body text-center">                     
+                                        <div class="img-compete d-flex justify-content-center">
+                                            <img src="img/course_page_2.png">
+                                        </div>                   
+                                        <div class="content">      
+                                            <p class="fs-20 fw-600 lh-24 text-center pt-4">Технологии хранения и анализа больших данных</p>                    
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0 height-300">           
+                                    <div class="card-body text-center">                     
+                                        <div class="img-compete d-flex justify-content-center">
+                                            <img src="img/course_page_3.png">
+                                        </div>                   
+                                        <div class="content">      
+                                            <p class="fs-20 fw-600 lh-24 text-center pt-4">Искусственный интеллект</p>                    
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0 height-300">           
+                                    <div class="card-body text-center">                     
+                                        <div class="img-compete d-flex justify-content-center">
+                                            <img src="img/course_page_2.png">
+                                        </div>                   
+                                        <div class="content">      
+                                            <p class="fs-20 fw-600 lh-24 text-center pt-4">Технологии хранения и анализа больших данных</p>                    
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0 height-300">           
+                                    <div class="card-body text-center">                     
+                                        <div class="img-compete d-flex justify-content-center">
+                                            <img src="img/course_page_3.png">
+                                        </div>                   
+                                        <div class="content">      
+                                            <p class="fs-20 fw-600 lh-24 text-center pt-4">Искусственный интеллект</p>                    
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0 height-300">           
+                                    <div class="card-body text-center">                     
+                                        <div class="img-compete d-flex justify-content-center">
+                                            <img src="img/course_page_2.png">
+                                        </div>                   
+                                        <div class="content">      
+                                            <p class="fs-20 fw-600 lh-24 text-center pt-4">Технологии хранения и анализа больших данных</p>                    
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 border-grey-right py-5 brr-md-none">
+                    <p class="text-blue fs-48 fw-700 lh-52 mb-2">Программы<br> обучения</p>
+                    <p class="fs-20 pe-5 pt-3">Богатый набор лекций, которые помогут преодолеть препятствия на пути к получению образования</p>
+                    <div class="br-blue br-40 fs-16 p-2 px-3 text-blue-light blue-hover-badge-arr d-inline-flex align-items-center cursor-pointer mt-4">все программы обучения <div class="img-long-arr ms-3"></div></div>
+                </div>
+                <div class="col">
+                    <div class="row border-grey-bottom py-5 px-3 blue-hover cursor-pointer" data-bs-toggle="offcanvas" href="#offcanvasDD" role="button" aria-controls="offcanvasDD">
+                        <div class="col-lg-6 col-md-5">
+                            <div class="col">
+                                <img src="img/dd_img.png" alt="">
+                            </div>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">ДПО</span>                            
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">Заочно</span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1 my-3">11 дней</span>        
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <p class="fs-16 fw-700 lh-19 pt-3">Организация архитектурно-строительного проектирования для главного инженера проекта (гипа)</p>
+                            <p class="text-grey-light mb-0">Руководитель: Назаров Дмитрий Михайлович</p>
+                        </div>
+                    </div>
+                    <div class="row border-grey-bottom py-5 px-3 blue-hover cursor-pointer">
+                        <div class="col-lg-6 col-md-5">
+                            <div class="col">
+                                <img src="img/dd_img.png" alt="">
+                            </div>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">ДПО</span>                            
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">Заочно</span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1 my-3">11 дней</span>        
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <p class="fs-16 fw-700 lh-19 pt-3">Организация архитектурно-строительного проектирования для главного инженера проекта (гипа)</p>
+                            <p class="text-grey-light mb-0">Руководитель: Назаров Дмитрий Михайлович</p>
+                        </div>
+                    </div>
+                    <div class="row border-grey-bottom py-5 px-3 blue-hover cursor-pointer">
+                        <div class="col-lg-6 col-md-5">
+                            <div class="col">
+                                <img src="img/dd_img.png" alt="">
+                            </div>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">ДПО</span>                            
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">Заочно</span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1 my-3">11 дней</span>        
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <p class="fs-16 fw-700 lh-19 pt-3">Организация архитектурно-строительного проектирования для главного инженера проекта (гипа)</p>
+                            <p class="text-grey-light mb-0">Руководитель: Назаров Дмитрий Михайлович</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row border-grey-bottom">
+                <div class="col-lg-7 border-grey-right py-5 brr-md-none">
+                    <p class="text-blue fs-48 fw-700 lh-52">Курсы кафедры</p>
+                    <p class="fs-20 pe-5 pt-3 m-0">Коллекция изданий, которые предоставляют подробную информацию о дисциплинах, работах, правилах и процедурах. В нашей библиотеке есть книги, посвященные характерным для университета темам, а также последние издания журналов по образовательным и научным темам.</p>                   
+                </div>
+                <div class="col py-5 text-center blue-hover cursor-pointer">
+                    <i class="ci-Arrow_Up_Right_LG fs-240 text-blue-light"></i>
+                </div>
+            </div>
+            <div class="carousel-wrap border-grey-bottom">
+                <div class="owl-carousel owl-carousel-course owl-loaded owl-drag owl-theme">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">    
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0">           
+                                    <div class="card-body">                     
+                                        <div class="image mb-3">                         
+                                            <a href="/catalog/courses/64">                             
+                                                <img src="img/course_cover.png" alt="cover">                         
+                                            </a>                     
+                                        </div>                     
+                                        <div class="content">      
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">11 часов</span>
+                                                </span>
+                                            </span>                
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">5 Видеолекций</span>
+                                                </span>
+                                            </span>              
+                                            <a href="/catalog/courses/64">                             
+                                                <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                            </a>                         
+                                            <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                            <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0">           
+                                    <div class="card-body">                     
+                                        <div class="image mb-3">                         
+                                            <a href="/catalog/courses/64">                             
+                                                <img src="img/course_cover.png" alt="cover">                         
+                                            </a>                     
+                                        </div>                     
+                                        <div class="content">      
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">11 часов</span>
+                                                </span>
+                                            </span>                
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">5 Видеолекций</span>
+                                                </span>
+                                            </span>              
+                                            <a href="/catalog/courses/64">                             
+                                                <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                            </a>                         
+                                            <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                            <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0">           
+                                    <div class="card-body">                     
+                                        <div class="image mb-3">                         
+                                            <a href="/catalog/courses/64">                             
+                                                <img src="img/course_cover.png" alt="cover">                         
+                                            </a>                     
+                                        </div>                     
+                                        <div class="content">      
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">11 часов</span>
+                                                </span>
+                                            </span>                
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">5 Видеолекций</span>
+                                                </span>
+                                            </span>              
+                                            <a href="/catalog/courses/64">                             
+                                                <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                            </a>                         
+                                            <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                            <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0">           
+                                    <div class="card-body">                     
+                                        <div class="image mb-3">                         
+                                            <a href="/catalog/courses/64">                             
+                                                <img src="img/course_cover.png" alt="cover">                         
+                                            </a>                     
+                                        </div>                     
+                                        <div class="content">      
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">11 часов</span>
+                                                </span>
+                                            </span>                
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">5 Видеолекций</span>
+                                                </span>
+                                            </span>              
+                                            <a href="/catalog/courses/64">                             
+                                                <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                            </a>                         
+                                            <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                            <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                            <div class="owl-item border-grey-right">
+                                <div class="card card-course br-none py-5 blue-hover br-0">           
+                                    <div class="card-body">                     
+                                        <div class="image mb-3">                         
+                                            <a href="/catalog/courses/64">                             
+                                                <img src="img/course_cover.png" alt="cover">                         
+                                            </a>                     
+                                        </div>                     
+                                        <div class="content">      
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">11 часов</span>
+                                                </span>
+                                            </span>                
+                                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                                <span class="d-flex align-items-center">
+                                                    <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                                    <span class="ps-2">5 Видеолекций</span>
+                                                </span>
+                                            </span>              
+                                            <a href="/catalog/courses/64">                             
+                                                <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                            </a>                         
+                                            <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                            <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                        </div>                 
+                                    </div>             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row img-box-round-small">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="bg-blue-light py-5">
+                       <div class="container py-5 my-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="pt-5 mt-5 text-center col-xxl-11">
+                                    <p class="text-blue fs-48 fw-700">Преподаватели</p>
+                                    <p class="fs-20 pb-5">Специалистах, которые приложили свои усилия к созданию курса. Авторы постоянно вносят свои мысли и идеи, которые помогут достичь успеха в будущем.</p>
+                                </div>
+                            </div>
+                            <div class="position-relative d-flex mx-auto pb-5 mb-5 ps-5">
+                                <div class="img-box-round img-box-round-img"></div>
+                                <div class="img-box-round img-box-round-img position-absolute img-2"></div>
+                                <div class="img-box-round img-box-round-img position-absolute img-3"></div>
+                                <div class="img-box-round img-box-round-img position-absolute d-sm-block d-none img-4"></div>
+                                <div class="img-box-round img-box-round-text d-flex flex-column justify-content-center position-absolute cursor-pointer">
+                                    <p class="m-0 text-white fw-700 text-center fs-32">+ 450</p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="py-5">
+                       <div class="container py-5 my-5">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="pt-5 mt-5 text-center col-xl-7">
+                                    <p class="text-blue fs-48 fw-700">Эксперты</p>
+                                    <p class="fs-20 pb-5">Эксперты постоянно вносят свои мысли и идеи, которые помогут достичь успеха в будущем.</p>
+                                </div>
+                            </div>
+                            <div class="position-relative d-flex mx-auto pb-5 mb-5 ps-5">
+                                <div class="img-box-round img-box-round-img"></div>
+                                <div class="img-box-round img-box-round-img position-absolute img-2"></div>
+                                <div class="img-box-round img-box-round-img position-absolute img-3"></div>
+                                <div class="img-box-round img-box-round-img position-absolute d-sm-block d-none img-4"></div>
+                                <div class="img-box-round img-box-round-text d-flex flex-column justify-content-center position-absolute cursor-pointer">
+                                    <p class="m-0 text-white fw-700 text-center fs-32">+ 120</p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 border-grey-right py-5 brr-md-none">
+                    <p class="text-blue fs-48 fw-700 lh-52 mb-2 pe-5 me-5">Мероприятия<br> <span class="text-blue-light fs-48 fw-700">цифровой кафедры</span></p>
+                    <p class="fs-20 pe-5 pt-3">Богатый набор лекций, которые помогут преодолеть препятствия на пути к получению образования</p>
+                    <div class="br-blue br-40 fs-16 p-2 px-3 text-blue-light blue-hover-badge-arr d-inline-flex align-items-center cursor-pointer mt-4">все мероприятия <div class="img-long-arr ms-3"></div></div>
+                </div>
+                <div class="col">
+                    <div class="row border-grey-bottom py-5 px-3 blue-hover">
+                        <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-4">
+                            <p class="fw-700 fs-48">14 марта</p>
+                             <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-3 py-1 mb-3">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">15:00</span>
+                                </span>
+                            </span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Users_Group.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">лекция</span>
+                                </span>
+                            </span>      
+                        </div>
+                        <div class="col">
+                            <p class="fs-16 fw-700 lh-19 pt-3">DATALIB Лекторий: Автоматизированные координатные измерения в машиностроении</p>
+                            <p class="text-grey-light mb-0">Ведущий: Пилипенко Екатерина Юрьевна</p>
+                            <p class="text-grey-light m-0">Серия: Тематическое видео</p>
+                        </div>
+                    </div>
+                    <div class="row border-grey-bottom py-5 px-3 blue-hover">
+                        <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-4">
+                            <p class="fw-700 fs-48">20 марта</p>
+                             <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-3 py-1 mb-3">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">15:00</span>
+                                </span>
+                            </span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Users_Group.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">лекция</span>
+                                </span>
+                            </span>      
+                        </div>
+                        <div class="col">
+                            <p class="fs-16 fw-700 lh-19 pt-3">DATALIB Лекторий: Автоматизированные координатные измерения в машиностроении</p>
+                            <p class="text-grey-light mb-0">Ведущий: Пилипенко Екатерина Юрьевна</p>
+                            <p class="text-grey-light m-0">Серия: Тематическое видео</p>
+                        </div>
+                    </div>
+                    <div class="row py-5 px-3 blue-hover">
+                        <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-4">
+                            <p class="fw-700 fs-48">24 марта</p>
+                             <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-3 py-1 mb-3">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Clock.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">15:00</span>
+                                </span>
+                            </span>
+                            <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1">
+                                <span class="d-flex align-items-center">
+                                    <img src="img/Users_Group.svg" alt="" class="s-20"> 
+                                    <span class="ps-2">лекция</span>
+                                </span>
+                            </span>      
+                        </div>
+                        <div class="col">
+                            <p class="fs-16 fw-700 lh-19 pt-3">DATALIB Лекторий: Автоматизированные координатные измерения в машиностроении</p>
+                            <p class="text-grey-light mb-0">Ведущий: Пилипенко Екатерина Юрьевна</p>
+                            <p class="text-grey-light m-0">Серия: Тематическое видео</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue-light py-5">
+            <div class="container py-5">
+                <div class="row py-5 my-5">
+                    <div class="col">
+                        <div class="d-flex flex-column justify-content-center h-100">
+                            <p class="fs-32 fw-600 text-blue lh-38">Для связи<br> и уточнения информации</p>
+                            <div class="d-flex align-items-center pt-4">
+                                <i class="ci-Mail fs-24 text-blue-light pe-3"></i>
+                                <p class="fs-20 m-0">pochta@datalib.ru</p>
+                            </div>
+                            <div class="d-flex align-items-center pt-3">
+                                <i class="ci-Phone fs-24 text-blue-light pe-3"></i>
+                                <p class="fs-20 m-0">+7 000 000 00 00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="img/uni_img_information.svg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDD" style="width: 1086px;">
+            <div class="offcanvas-header border-grey-bottom justify-content-end">
+                <button type="button" class="btn-close pe-5 py-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ci-Close_LG fs-24 text-blue"></i></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <div class="row border-grey-bottom">
+                    <div class="col border-grey-right d-flex flex-column justify-content-center align-items-center py-5">
+                        <div>
+                            <div class="col">                                
+                                <img src="img/dd_img.png" alt="">
+                            </div>
+                            <div>
+                                <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">ДПО</span>                         
+                                <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-2 py-1 my-3">Заочно</span>
+                                <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1 my-3">11 дней</span>
+                                <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 py-1 my-3">Русскиий язык</span>    
+                            </div>   
+                        </div>    
+                    </div>
+                    <div class="col py-5">
+                        <p class="fs-36 fw-700 lh-44 text-blue m-0">Организация архитектурно-строительного проектирования для главного инженера проекта (гипа)</p>
+                    </div>
+                </div>
+                <div class="row px-2 pb-5 border-grey-bottom" id="text_block_blue_1"> 
+                        <p class="fs-20 pt-5" id="about_uni_text_1">О программе обучения</p>
+                        <p class="fs-20 lh-24 show-text-1 mb-0">Программа обучения — это структурированный и систематический подход к обучению людей определенному предмету или набору навыков. Программа обычно предназначена для предоставления всестороннего обзора предмета, начиная с основ и переходя к более сложным темам.
+                        В зависимости от характера предмета программа обучения может быть реализована с помощью различных средств, включая очные лекции, онлайн-курсы, интерактивные семинары и другие форматы обучения. Программа также может включать различные формы оценивания, такие как тесты, задания и проекты, для оценки понимания и усвоения учащимся предмета.
+                        В целом программа обучения предназначена для обеспечения всестороннего образования по определенной теме с целью дать учащемуся возможность развить глубокое понимание и набор навыков, которые можно применить в реальных ситуациях.</p>
+                </div>
+                <div class="row px-2 border-grey-bottom">
+                    <div class="col-lg-6 border-grey-right py-5 brr-md-none">
+                        <p class="text-blue fs-48 fw-700 lh-52">Направления<br> подготовки</p>
+                        <p class="fs-20 pe-5 pt-3 m-0">Направление подготовки — это определенное направление в образовании, которое объединяет несколько специальностей, связанных общими областями знаний и навыков. Оно представляет собой основу для организации обучения на определенном учебном заведении, а также для дальнейшей карьеры студента.<br>
+                        Выбор направления подготовки очень важен, так как он определяет дальнейшую профессиональную деятельность студента. При выборе следует учитывать личные интересы и склонности, а также перспективы рынка труда.</p>                   
+                    </div>
+                    <div class="col px-0">
+                        <div class="d-flex align-items-center blue-hover cursor-pointer px-3 py-5 border-grey-bottom">
+                            <p class="fs-32 m-0">Архитектурное проектирование</p>
+                            <i class="ci-Arrow_Up_Right_LG fs-32 text-blue-light"></i>
+                        </div>
+                        <div class="d-flex align-items-center blue-hover cursor-pointer px-3 py-5 border-grey-bottom">
+                            <p class="fs-32 m-0">Инженерия программного обеспечения</p>
+                            <i class="ci-Arrow_Up_Right_LG fs-32 text-blue-light"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between blue-hover cursor-pointer px-3 py-5 border-grey-bottom">
+                            <p class="fs-32 m-0">Машиностроение</p>
+                            <i class="ci-Arrow_Up_Right_LG fs-32 text-blue-light"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between blue-hover cursor-pointer px-3 py-5">
+                            <p class="fs-32 m-0">Гражданское строительство</p>
+                            <i class="ci-Arrow_Up_Right_LG fs-32 text-blue-light"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-2 border-grey-bottom">
+                    <div class="col-lg-7 border-grey-right py-5 brr-md-none">
+                        <p class="text-blue fs-48 fw-700 lh-52">SMART-курсы</p>
+                        <p class="fs-20 pe-5 pt-3 m-0">Коллекция изданий, которые предоставляют подробную информацию о дисциплинах, работах, правилах и процедурах. В нашей библиотеке есть книги, посвященные характерным для университета темам, а также последние издания журналов по образовательным и научным темам.</p>                   
+                    </div>
+                    <div class="col py-5 text-center blue-hover cursor-pointer">
+                        <i class="ci-Arrow_Up_Right_LG fs-240 text-blue-light"></i>
+                    </div>
+                </div>
+                <div class="row border-grey-bottom">
+                    <div class="col px-0 border-grey-right">
+                        <div class="card card-course br-none py-4 blue-hover br-0 px-2">           
+                            <div class="card-body">                     
+                                <div class="image mb-3">                         
+                                    <a href="/catalog/courses/64">                             
+                                        <img src="img/course_cover.png" alt="cover">                         
+                                    </a>                     
+                                </div>                     
+                                <div class="content">      
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Clock.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">11 часов</span>
+                                        </span>
+                                    </span>                
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">5 Видеолекций</span>
+                                        </span>
+                                    </span>              
+                                    <a href="/catalog/courses/64">                             
+                                        <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                    </a>                         
+                                    <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                    <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                </div>                 
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="col px-0 border-grey-right">
+                        <div class="card card-course br-none py-4 blue-hover br-0 px-2">           
+                            <div class="card-body">                     
+                                <div class="image mb-3">                         
+                                    <a href="/catalog/courses/64">                             
+                                        <img src="img/course_cover.png" alt="cover">                         
+                                    </a>                     
+                                </div>                     
+                                <div class="content">      
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Clock.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">11 часов</span>
+                                        </span>
+                                    </span>                
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">5 Видеолекций</span>
+                                        </span>
+                                    </span>              
+                                    <a href="/catalog/courses/64">                             
+                                        <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                    </a>                         
+                                    <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                    <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                </div>                 
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="col px-0 border-grey-right d-sm-block d-none">
+                        <div class="card card-course br-none py-4 blue-hover br-0 px-2">           
+                            <div class="card-body">                     
+                                <div class="image mb-3">                         
+                                    <a href="/catalog/courses/64">                             
+                                        <img src="img/course_cover.png" alt="cover">                         
+                                    </a>                     
+                                </div>                     
+                                <div class="content">      
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Clock.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">11 часов</span>
+                                        </span>
+                                    </span>                
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">5 Видеолекций</span>
+                                        </span>
+                                    </span>              
+                                    <a href="/catalog/courses/64">                             
+                                        <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                    </a>                         
+                                    <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                    <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                </div>                 
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="col px-0 d-md-block d-none">
+                        <div class="card card-course br-none py-4 blue-hover br-0 px-2">           
+                            <div class="card-body">                     
+                                <div class="image mb-3">                         
+                                    <a href="/catalog/courses/64">                             
+                                        <img src="img/course_cover.png" alt="cover">                         
+                                    </a>                     
+                                </div>                     
+                                <div class="content">      
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 me-5 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Clock.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">11 часов</span>
+                                        </span>
+                                    </span>                
+                                    <span class="badge bg-blue-light text-black fs-14 br-grey-blue-badge br-40 mt-2 py-1">
+                                        <span class="d-flex align-items-center">
+                                            <img src="img/Monitor_Play.svg" alt="" class="s-20"> 
+                                            <span class="ps-2">5 Видеолекций</span>
+                                        </span>
+                                    </span>              
+                                    <a href="/catalog/courses/64">                             
+                                        <p class="mt-4 mb-2 fs-16 fw-700 text-uppercase">основы статистики и UI/UX</p>                         
+                                    </a>                         
+                                    <p class="mb-2 fw-500 text-grey-light">Авторы: Егор Мордовин, Николай Кузьмичев</p>                         
+                                    <p class="mb-0 fw-500 text-grey-light">Дата создания: 22.07.2022</p>                     
+                                </div>                 
+                            </div>             
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-blue-light px-2 border-grey-bottom">
+                    <div class="col-lg-7 border-grey-right py-5 brr-md-none">
+                        <p class="text-blue fs-48 fw-700 lh-52">Руководитель программы</p>             
+                    </div>
+                    <div class="col py-5 d-flex justify-content-center">
+                        <div class="card br-none px-4 py-5 bg-none">
+                            <div class="position-relative">
+                                <img src="img/course_page_lector_1.png" alt="" class="br-15">
+                                <div class="position-absolute info-badge-teacher">
+                                    <span class="bg-white px-2 py-1 br-40 br-primary text-blue-light">Автор</span>
+                                    <img src="img/info_white.svg" alt="Информация">
+                                </div>
+                            </div>
+                            <div class="brb-course-grey mb-2 pt-4">
+                                <p class="fs-20 lh-24 fw-600">Перфильев<br> Дмитрий Альбертович</p>
+                            </div>
+                            <p class="fs-16">кандидат технических наук</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-2 border-grey-bottom">
+                    <div class="col-lg-7 border-grey-right py-5 brr-md-none">
+                        <p class="text-blue fs-48 fw-700 lh-52">Преподаватели</p>
+                        <p class="fs-20 pe-5 pt-3 m-0">Специалистах, которые приложили свои усилия к созданию курса. Авторы постоянно вносят свои мысли и идеи, которые помогут достичь успеха в будущем.</p>                   
+                    </div>
+                    <div class="col py-5 text-center blue-hover cursor-pointer">
+                        <i class="ci-Arrow_Up_Right_LG fs-240 text-blue-light"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col border-grey-right px-0">
+                        <div class="card br-none px-4 py-5">
+                            <div class="position-relative">
+                                <img src="img/course_page_lector_1.png" alt="" class="br-15">
+                                <div class="position-absolute info-badge-teacher">
+                                    <span class="bg-white px-2 py-1 br-40 br-primary text-blue-light">Автор</span>
+                                    <img src="img/info_white.svg" alt="Информация">
+                                </div>
+                            </div>
+                            <div class="brb-course-grey mb-2 pt-4">
+                                <p class="fs-20 lh-24 fw-600">Перфильев<br> Дмитрий Альбертович</p>
+                            </div>
+                            <p class="fs-16">кандидат технических наук</p>
+                        </div>
+                    </div>
+                    <div class="col border-grey-right px-0">
+                        <div class="card br-none px-4 py-5">
+                            <div class="position-relative">
+                                <img src="img/course_page_lector_4.png" alt="" class="br-15">
+                                <div class="position-absolute info-badge-teacher">
+                                    <span class="bg-white px-2 py-1 br-40 br-primary text-blue-light">Автор</span>
+                                    <img src="img/info_white.svg" alt="Информация">
+                                </div>
+                            </div>
+                            <div class="brb-course-grey mb-2 pt-4">
+                                <p class="fs-20 lh-24 fw-600">Перфильев<br> Дмитрий Альбертович</p>
+                            </div>
+                            <p class="fs-16">кандидат технических наук</p>
+                        </div>
+                    </div>
+                    <div class="col d-md-block d-none border-grey-right px-0">
+                        <div class="card br-none px-4 py-5">
+                            <div class="position-relative">
+                                <img src="img/course_page_lector_1.png" alt="" class="br-15">
+                                <div class="position-absolute info-badge-teacher">
+                                    <span class="bg-white px-2 py-1 br-40 br-primary text-blue-light">Автор</span>
+                                    <img src="img/info_white.svg" alt="Информация">
+                                </div>
+                            </div>
+                            <div class="brb-course-grey mb-2 pt-4">
+                                <p class="fs-20 lh-24 fw-600">Перфильев<br> Дмитрий Альбертович</p>
+                            </div>
+                            <p class="fs-16">кандидат технических наук</p>
+                        </div>
+                    </div>
+                    <div class="col d-lg-block d-none px-0">
+                        <div class="card br-none px-4 py-5">
+                            <div class="position-relative">
+                                <img src="img/course_page_lector_4.png" alt="" class="br-15">
+                                <div class="position-absolute info-badge-teacher">
+                                    <span class="bg-white px-2 py-1 br-40 br-primary text-blue-light">Автор</span>
+                                    <img src="img/info_white.svg" alt="Информация">
+                                </div>
+                            </div>
+                            <div class="brb-course-grey mb-2 pt-4">
+                                <p class="fs-20 lh-24 fw-600">Перфильев<br> Дмитрий Альбертович</p>
+                            </div>
+                            <p class="fs-16">кандидат технических наук</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+        <footer>
+        <div class="container pt-3 pb-3">
+            <div class="row justify-content-between">
+                <div class="d-flex justify-content-center align-items-center col-lg-2 col-12">
+                    <div>
+                        <img src="/assets/site/datalib/img/footer_dl.svg" alt="" class="footer-logo">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <p class="footer-white-main mb-2">
+                        База данных «DATALIB» – БИБЛИОТЕКА ЦИФРОВОЙ ЭКОНОМИКИ» зарегистрирована в Федеральной службе<br> по интеллектуальной собственности 15 марта 2022 года.
+                    </p>
+                    <p class="footer-pale-white-mini">
+                        Свидетельство о регистрации №2022620531
+                    </p>
+                    <p class="footer-white-main mb-2">
+                        Программа для ЭВМ «DATALIB» зарегистрирована<br> в Федеральной службе по интеллектуальной<br> собственности 14 октября 2021 года
+                    </p>
+                    <p class="footer-pale-white-mini">
+                        Свидетельство о регистрации №2021666446
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <p class="phone-number mb-2">
+                                8 800 555-22-35
+                            </p>
+                            <p>
+                                Звонок бесплатный<br>для всех регионов России
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <p class="phone-description footer-white mb-2">
+                                Отдел продаж:
+                            </p>
+                            <p class="mb-2 footer-white">
+                                (добавочный 167)
+                            </p>
+                            <p class="phone-number footer-pale-white">
+                                8 800 555-22-35
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <p class="phone-description footer-white mb-2">
+                                Техническая поддержка:
+                            </p>
+                            <p class="mb-2">
+                                (добавочный 200)
+                            </p>
+                            <p class="phone-number footer-pale-white">
+                                8 800 555-22-35
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <p class="email mt-3 footer-pale-white mb-2">
+                                Электронная почта
+                            </p>
+                            <p>
+                                <a href="mailto:office@datalib.ru">office@datalib.ru</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-12 offset-lg-2">
+                    <p class="m-0">&copy; Общество с ограниченной ответственностью Компания «Ай Пи Ар Медиа»</p>
+                    <p class="m-0">123022,г. Москва, улица Ходынская , дом 2</p>
+                    <p class="m-0">ИНН/ОГРН: 6454085119/1076454002305</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+    //Функция читать ещё
+    $(document).ready(function() {
+        var showChar = 217;
+        var dots = ".... ";
+        var moreText = "Читать полностью";
+        var lessText = "Скрыть";
+
+        $('.show-text').each(function() {
+            var content = $(this).html();
+
+            if(content.length > showChar) {
+
+                var cont = content.substr(0, showChar);
+                var restOfTheText = content.substr(showChar, content.length - showChar);
+
+                var html = cont + '<span class="dots fs-20 lh-24">' + dots + '</span><span class="morecontent"><span class="fs-20 lh-24 pe-2">' + restOfTheText + '</span><a href="" class="morelink fs-16 lh-24 pt-3 text-grey-uni">' + moreText + '</a></span>';
+
+                $(this).html(html);
+            }
+
+        });
+        $(".morelink").click(function() {
+            if($(this).hasClass("test")) {
+                $(this).removeClass("test");
+                $(this).html(moreText);
+                $('#text_block_blue').css('background-color', '#fff');
+                $('#about_uni_text').css('color', 'rgba(0, 0, 0, 0.85)');
+                $('.show-text').css('color', 'rgba(0, 0, 0, 0.7)');
+            } else {
+                $(this).addClass("test");
+                $(this).html(lessText);
+                $('#text_block_blue').css('background-color', '#031E80');
+                $('#about_uni_text').css('color', '#fff');
+                $('.show-text').css('color', 'rgba(255, 255, 255, 0.75)');
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+    });
+    //Функция читать ещё для offcanvas
+    $(document).ready(function() {
+        var showChar = 392;
+        var dots = ".... ";
+        var moreText = "Читать полностью";
+        var lessText = "Скрыть";
+
+        $('.show-text-1').each(function() {
+            var content = $(this).html();
+
+            if(content.length > showChar) {
+
+                var cont = content.substr(0, showChar);
+                var restOfTheText = content.substr(showChar, content.length - showChar);
+
+                var html = cont + '<span class="dots fs-20 lh-24">' + dots + '</span><span class="morecontent"><span class="fs-20 lh-24 pe-2">' + restOfTheText + '</span><a href="" class="morelink-1 fs-16 lh-24 pt-3 text-grey-uni">' + moreText + '</a></span>';
+
+                $(this).html(html);
+            }
+
+        });
+        $(".morelink-1").click(function() {
+            if($(this).hasClass("test")) {
+                $(this).removeClass("test");
+                $(this).html(moreText);
+                $('#text_block_blue_1').css('background-color', '#fff');
+                $('#about_uni_text_1').css('color', 'rgba(0, 0, 0, 0.85)');
+                $('.show-text-1').css('color', 'rgba(0, 0, 0, 0.7)');
+            } else {
+                $(this).addClass("test");
+                $(this).html(lessText);
+                $('#text_block_blue_1').css('background-color', '#031E80');
+                $('#about_uni_text_1').css('color', '#fff');
+                $('.show-text-1').css('color', 'rgba(255, 255, 255, 0.75)');
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+    });
+    </script>
+    <script src="https://dev.datalib.ru/plugins/owl-carousel/js/owl.carousel.min.js"></script>    
+    <script>
+        $('.owl-carousel-course').owlCarousel({
+            items: 6,
+            margin: 30,
+            loop: true,
+            dots: true,
+            nav: true,
+            navText: ["<i class='ci-Arrow_Left_MD text-blue-light fs-24 nav-btn prev-slide'></i>","<i class='ci-Arrow_Right_MD text-blue-light fs-24 nav-btn next-slide'></i>"],
+            responsive:{
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1024: {
+                    items: 3
+                },
+                1440: {
+                    items: 4
+                }
+            }
+        });
+        $('.competence-carousel').owlCarousel({
+            items: 6,
+            margin: 30,
+            loop: true,
+            dots: true,
+            nav: true,
+            navText: ["<i class='ci-Arrow_Left_MD text-blue-light fs-24 nav-btn prev-slide'></i>","<i class='ci-Arrow_Right_MD text-blue-light fs-24 nav-btn next-slide-1'></i>"],
+            responsive:{
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1024: {
+                    items: 3
+                },
+                1440: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+    <script>
+        //Положение правой кнопки owl-carousel
+        let c1 = document.querySelector('.owl-carousel').offsetWidth + (((document.querySelector('.owl-carousel').offsetWidth)/100)*3);
+        let c = "-" + c1 + "px";
+        document.querySelector('.next-slide').style.right = c;
+        document.querySelector('.next-slide-1').style.right = c;
+    </script>
+</body>
+</html>

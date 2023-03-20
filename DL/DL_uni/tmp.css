@@ -1,0 +1,1249 @@
+.badge {
+  padding: 3px 10px;
+  font-weight: 500;
+  border-radius: 15px;
+  white-space: normal;
+}
+.badge.green {
+  background-color: #C7E8E8;
+}
+.badge.grey {
+  background-color: #CDD2E6;
+}
+
+main .card {
+  border-radius: 10px;
+}
+main .card.card-course img {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main .card.card-course .content .badge {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+main .card.card-course .content p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.simple-pagination ul {
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+}
+.simple-pagination ul li.active {
+  color: #031E80 !important;
+}
+.simple-pagination .page-link {
+  color: #AEAEAE;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none !important;
+}
+.simple-pagination span.current {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  color: #031E80 !important;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none !important;
+}
+
+#course .course-passing-stat .d-flex > div > p, #coursePassing .course-passing-stat .d-flex > div > p {
+  margin: 0;
+  color: #031E80;
+}
+#course .course-passing-stat .d-flex > div > p:first-child, #coursePassing .course-passing-stat .d-flex > div > p:first-child {
+  width: 50%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+#course .course-passing-stat .d-flex > div > p:last-child, #course .course-passing-stat .d-flex > div > p:last-child span, #coursePassing .course-passing-stat .d-flex > div > p:last-child, #coursePassing .course-passing-stat .d-flex > div > p:last-child span {
+  font-size: 30px;
+  font-weight: 700;
+}
+#course .course-passing-stat .d-flex > div.percent p, #coursePassing .course-passing-stat .d-flex > div.percent p {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+}
+#course .course-passing-stat .course-progress-bar .progress, #coursePassing .course-passing-stat .course-progress-bar .progress {
+  height: 5px;
+  border-radius: 17px;
+}
+#course .course-passing-stat .course-progress-bar .progress-bar, #coursePassing .course-passing-stat .course-progress-bar .progress-bar {
+  background-color: #031E80;
+}
+
+#course .status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+}
+#course .status-indicator.red {
+  background-color: #E0A7A7;
+}
+#course .status-indicator.green {
+  background-color: #B9E0A7;
+}
+#course .course-description p {
+  font-size: 20px;
+  line-height: 24px;
+}
+#course .price {
+  margin-top: 40px;
+}
+#course .price span {
+  padding: 3px 15px;
+  border-radius: 5px;
+  background-color: #E5E8F2;
+}
+#course p {
+  color: rgba(0, 0, 0, 0.85);
+}
+#course .text-opacity-grey {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+#course .btn-transperent:active {
+  border-color: transparent !important;
+}
+#course .morecontent span {
+  display: none;
+}
+#course .morelink {
+  display: block;
+  width: 100%;
+}
+#course .btn-arrow {
+  background: #031E80 url(/images/chevron_right_course.svg?4396a9926c596f3bfe0b36dac22e54a8) 85% 50% no-repeat;
+  color: #fff;
+  border: none;
+}
+#course .btn-p {
+  padding: 0.6rem 0.5rem;
+}
+#course .course-page-box {
+  border-right: 2px solid #E9E9E9;
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+#course .course-page-list li {
+  margin-top: 2rem;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+#course .info-badge-teacher {
+  bottom: 8px;
+  left: 5px;
+}
+#course ul.course-page-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+#course ul.course-page-list li {
+  padding-left: 3rem;
+  background-image: url(/images/ellipse_blue.svg?ff773cf4a0e230ce57d20391ec7b4146);
+  background-position: 0 0.4rem;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+#course .brb-course-grey {
+  border-bottom: 2px solid #F5F7FE;
+}
+#course .owl-nav {
+  top: 8%;
+  position: absolute;
+}
+#course .owl-carousel .nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+#course .owl-carousel .prev-slide {
+  background: url(/images/owl_left.svg?5f596f793b19e2395b2e258e589f6127) no-repeat;
+  left: -33px;
+}
+#course .owl-carousel .next-slide {
+  background: url(/images/owl_right.svg?038d5cb5a00604c8da99eff2312f3990) no-repeat;
+  right: -33px;
+}
+#course .accordion-button:not(.collapsed)::after {
+  background-image: url(/images/course_page_x.svg?a28f02ef75981628c9ba1fe7ab254c6d);
+}
+#course .accordion-button::after {
+  background-image: url(/images/course_page_plus.svg?1df8915d6ab3457ad5f28481de7a0aa7);
+}
+#course .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+#course .accordion-button, #course #course_page .accordion-body {
+  padding-left: 0;
+}
+#course .block-w-50 {
+  width: 50%;
+}
+#course .flex-block {
+  display: flex;
+}
+@media (max-width: 1400px) {
+  #course .fs-48 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 992px) {
+  #course .block-w-50 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #course .owl-carousel .prev-slide, #course .owl-carousel .next-slide {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  #course .flex-block {
+    display: block;
+  }
+}
+
+#coursePassing #accordionCourseNavigation .accordion-item, #coursePassing #accordionCourseNavigation .accordion-button {
+  color: #fff;
+  background-color: transparent;
+}
+#coursePassing #accordionCourseNavigation .accordion-button {
+  border-bottom: solid 1px #fff;
+}
+#coursePassing .lesson-step {
+  overflow-x: scroll;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #F5F7FE;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#coursePassing .lesson-step::-webkit-scrollbar {
+  width: 0;
+}
+#coursePassing .lesson-step .simplePagination ul {
+  padding: 0 30px;
+  margin: 0;
+  border-bottom: solid 3px #CDD2E6;
+}
+#coursePassing .lesson-step .simplePagination li > * {
+  padding: 1rem 1.5rem;
+  font-size: 24px;
+}
+#coursePassing .lesson-step .simplePagination li.active span {
+  font-weight: bold;
+}
+#coursePassing .lesson-step .simplePagination li.active span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background-color: #031E80;
+  z-index: 2000;
+}
+#coursePassing .lesson-step .simplePagination li.disabled span {
+  display: block;
+  color: #CDD2E6;
+  font-weight: 600;
+  border: none;
+  box-shadow: none !important;
+}
+#coursePassing .lesson-step .simplePagination li .page-link {
+  font-size: 24px;
+  color: #031E80;
+  background-color: transparent;
+}
+
+#university {
+  position: relative;
+}
+#university .section-title {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#university .section-title h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #031E80;
+}
+#university .section-title .more {
+  margin-left: 30px;
+}
+#university .section-title .more a {
+  display: inline-flex;
+  padding: 3px 10px;
+  gap: 15px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #031E80;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 28px;
+  background-color: #CDD2E6;
+}
+/*#university:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 565px;
+  background-color: #CDD2E6;
+}*/
+
+#universityDigitalDepartment {
+  background-color: #CDD2E6;
+}
+#universityDigitalDepartment .section-title {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#universityDigitalDepartment .section-title h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #031E80;
+  text-transform: none;
+}
+#universityDigitalDepartment .section-title .more {
+  margin-left: 30px;
+}
+#universityDigitalDepartment .section-title .more a {
+  display: inline-flex;
+  padding: 3px 10px;
+  gap: 15px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #031E80;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 28px;
+  background-color: #CDD2E6;
+}
+
+#about_us .about {
+  position: relative;
+  padding: 40px 30px;
+}
+#about_us .about > div {
+  width: 70%;
+}
+#about_us .about img {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+#about_us #categories {
+  padding: 40px 0;
+  background-color: #DEE2EF;
+}
+#about_us #initiative {
+  padding: 60px 0;
+}
+#about_us #initiative .block {
+  padding: 30px;
+}
+
+#forUniversity .grant-program {
+  padding: 40px 30px;
+}
+#forUniversity .grant-program > div {
+  width: 60%;
+}
+#forUniversity .grant-program img {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+#forUniversity .datalib-composition * {
+  color: #031E80;
+}
+#forUniversity .form-request-test-access {
+  padding: 50px 100px;
+}
+#forUniversity .form-request-test-access input[type=text], #forUniversity .form-request-test-access textarea, #forUniversity .form-request-test-access select {
+  background-color: #E5E8F2 !important;
+  border: 1px solid rgba(3, 30, 128, 0.27);
+  border-radius: 10px;
+}
+#forUniversity .form-request-test-access input[type=text], #forUniversity .form-request-test-access button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#forTeachers .invite {
+  padding: 40px 30px;
+}
+#forTeachers .invite div {
+  width: 60%;
+}
+#forTeachers .invite div * {
+  color: #031E80;
+}
+#forTeachers .invite div button {
+  margin-top: 20px;
+  max-width: 100%;
+  width: 380px;
+  color: #fff;
+}
+#forTeachers .invite img {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+#forTeachers .access p {
+  color: #031E80;
+}
+#forTeachers .access .btn {
+  max-width: 100%;
+  width: 380px;
+}
+
+#forPublishers .invite {
+  padding: 40px 30px;
+}
+#forPublishers .invite div {
+  width: 60%;
+}
+#forPublishers .invite img {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+#forAuthors .grant-program {
+  padding: 40px 30px;
+}
+#forAuthors .grant-program div {
+  width: 60%;
+}
+#forAuthors .grant-program img {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+#modalListenerInfo #listUserAnswers .answer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.sidebar-menu h2 {
+  padding-left: 10px;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+}
+.sidebar-menu a {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.sidebar-menu > ul > li > button {
+  padding: 0 0 0 10px;
+  font-weight: bold;
+  text-align: left;
+}
+.sidebar-menu > ul > li > button:before {
+  display: none;
+}
+.sidebar-menu > ul > li > button[aria-expanded=true]:before {
+  display: none;
+}
+.sidebar-menu > ul > li.list-sidebar {
+  margin-left: 0;
+  padding-left: 12px;
+}
+.sidebar-menu > ul > li.list-sidebar a {
+  color: rgba(0, 0, 0, 0.6);
+}
+.sidebar-menu > ul > li a.list-no-active {
+  padding-left: 0;
+  color: rgba(3, 30, 128, 0.5);
+  line-height: 1.4;
+}
+.sidebar-menu > ul > li a.list-active {
+  margin-left: 0;
+  font-weight: bold;
+  color: #031E80 !important;
+  line-height: 1.4;
+}
+.sidebar-menu > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapsing > ul {
+  padding-top: 10px;
+  padding-left: 40px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > button, .sidebar-menu > ul > li > div.collapsing > ul > li > button {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  text-align: left;
+  color: #031E80;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > button:before, .sidebar-menu > ul > li > div.collapsing > ul > li > button:before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.5rem;
+  background-color: #031e80;
+  border-radius: 50%;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > button.align-items-start:before, .sidebar-menu > ul > li > div.collapsing > ul > li > button.align-items-start:before {
+  margin-top: 10px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > button[aria-expanded=true]:before, .sidebar-menu > ul > li > div.collapsing > ul > li > button[aria-expanded=true]:before {
+  content: "";
+}
+.sidebar-menu > ul > li > div.collapse > ul > li a.list-sidebar, .sidebar-menu > ul > li > div.collapsing > ul > li a.list-sidebar {
+  padding-left: 2px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul {
+  padding-left: 40px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > button, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > button, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > button, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > button {
+  padding: 0;
+  text-align: left;
+  color: #031E80;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > button:before, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > button:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > button:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > button:before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.5rem;
+  background-color: #031e80;
+  border-radius: 50%;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > button.align-items-start:before, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > button.align-items-start:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > button.align-items-start:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > button.align-items-start:before {
+  margin-top: 10px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > button[aria-expanded=true]:before, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > button[aria-expanded=true]:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > button[aria-expanded=true]:before, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > button[aria-expanded=true]:before {
+  content: "";
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > div.collapsing > ul, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > div.collapsing > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > div.collapsing > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > div.collapse > ul, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > div.collapsing > ul {
+  padding-left: 40px;
+}
+.sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > div.collapse > ul > li, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapse > ul > li > div.collapsing > ul > li, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > div.collapse > ul > li, .sidebar-menu > ul > li > div.collapse > ul > li > div.collapsing > ul > li > div.collapsing > ul > li, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > div.collapse > ul > li, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapse > ul > li > div.collapsing > ul > li, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > div.collapse > ul > li, .sidebar-menu > ul > li > div.collapsing > ul > li > div.collapsing > ul > li > div.collapsing > ul > li {
+  color: orange;
+}
+
+.profile-content {
+  padding: 40px 30px;
+}
+.profile-content .profile-page-title {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.profile-content .user-info div.about-user * {
+  color: rgba(0, 0, 0, 0.6);
+}
+.profile-content .sections ul.nav {
+  border-bottom: 2px solid #dee2e6;
+}
+.profile-content .sections ul.nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  color: #000;
+  border-radius: 0;
+}
+.profile-content .sections ul.nav .nav-item .nav-link.active {
+  color: #031E80;
+  border-bottom: solid 2px #031E80;
+  background-color: transparent;
+}
+.profile-content .sections .tab-content .tab-pane {
+  padding: 20px;
+}
+.profile-content#cmAddRequest .add-publication-welcome {
+  display: flex;
+}
+.profile-content#cmAddRequest .add-publication-welcome > div {
+  width: 60%;
+}
+.profile-content#cmAddRequest .add-publication-welcome img {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+.profile-content #digitalDepartmentInfo div.dd-logo img {
+  width: 35%;
+}
+.profile-content #digitalDepartmentInfo .digital-department-info .dd-title span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #031E80;
+  text-transform: uppercase;
+}
+.profile-content #digitalDepartmentInfo .digital-department-info .dd-description * {
+  font-size: 1rem;
+  color: #031E80;
+}
+.profile-content .users-list .users-actions {
+  display: none;
+  transition: all 0.5s ease;
+}
+.profile-content .users-list #listUsers button.dropdown-toggle:after {
+  display: none;
+}
+.profile-content #listUsersGroups button.dropdown-toggle:after {
+  display: none;
+}
+.profile-content .join-requests-list .requests-actions {
+  display: none;
+  transition: all 0.5s ease;
+}
+.profile-content .competences-passport .competence-type-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.profile-content .competences-passport .competence-progress {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-content .competences-passport .competence-progress .progress {
+  width: 100%;
+  border-radius: 20px;
+}
+.profile-content .competences-passport .competence-progress .progress .progress-bar {
+  border-radius: 20px;
+  background-color: #CDD2E6;
+}
+#profileLessonEdit #listLessonMaterials .lesson-material, #profileLessonConstructor #listLessonMaterials .lesson-material {
+  padding: 15px;
+  border-radius: 10px;
+  background: #E5E8F2;
+}
+#profileLessonEdit #listLessonMaterials .lesson-material .block-controls, #profileLessonConstructor #listLessonMaterials .lesson-material .block-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+#profileLessonEdit #listLessonMaterials .lesson-material .block-controls div.button, #profileLessonConstructor #listLessonMaterials .lesson-material .block-controls div.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: #CDD2E6;
+  cursor: pointer;
+}
+#profileLessonEdit #listLessonMaterials .lesson-material .block-controls div.button:not(:last-child), #profileLessonConstructor #listLessonMaterials .lesson-material .block-controls div.button:not(:last-child) {
+  margin-right: 10px;
+}
+#profileLessonEdit .constructor, #profileLessonConstructor .constructor {
+  position: relative;
+}
+#profileLessonEdit .constructor .loading, #profileLessonConstructor .constructor .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+}
+#profileLessonEdit .constructor .toolbar, #profileLessonConstructor .constructor .toolbar {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #031E80;
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section, #profileLessonConstructor .constructor .toolbar .toolbar-section {
+  padding: 0 15px;
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section:not(:last-child), #profileLessonConstructor .constructor .toolbar .toolbar-section:not(:last-child) {
+  border-right: solid 1px #969fd8;
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-title, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #969fd8;
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1600px) {
+  #profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link {
+    font-size: 14px;
+  }
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-size: cover;
+}
+@media only screen and (max-width: 1600px) {
+  #profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link:before {
+    width: 20px;
+    height: 20px;
+  }
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.title:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.title:before {
+  background-image: url(/images/title_white.png?f7843ac38981732c60b92059b6ee158d);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.title.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.title.active:before {
+  background-image: url(/images/title_aqua.png?732ed39a8d33547a6304977e2e261d61);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.text:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.text:before {
+  background-image: url(/images/text_white.png?e831988b17a0c9b46646a2f5d6d66701);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.text.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.text.active:before {
+  background-image: url(/images/text_aqua.png?81c816c4363e1ef0a96979d483dec97d);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.picture:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.picture:before {
+  background-image: url(/images/picture_white.png?83bdfd667a1abe4e8034d0b7ec4732f5);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.picture.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.picture.active:before {
+  background-image: url(/images/picture_aqua.png?271bfe82d1a8ef919334c55f7ccfcefa);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.video:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.video:before {
+  background-image: url(/images/video_white.png?a6e34826492df72aeae1c7af29f78ca3);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.video.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.video.active:before {
+  background-image: url(/images/video_aqua.png?5eca9f4b6d54429890164e53c869fb8e);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.book:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.book:before {
+  background-image: url(/images/book_white.png?fcef675b55890e75933d0ed55c86c7d4);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.book.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.book.active:before {
+  background-image: url(/images/book_aqua.png?7946395ca64b650ea43c3c8b4b765ea3);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.link:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.link:before {
+  background-image: url(/images/link_white.png?7dcce958324f2cd8b82656a142291971);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.link.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.link.active:before {
+  background-image: url(/images/link_aqua.png?02c154be71fc48a678a96537d9670425);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.file:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.file:before {
+  background-image: url(/images/file_white.png?1ed7f405deeb23b59e0e22bd596f1a70);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.file.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.file.active:before {
+  background-image: url(/images/file_aqua.png?b3eb851c2bdfc325b11fbf12e602f2ab);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.test:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.test:before {
+  background-image: url(/images/question_white.png?85e557c76335ac4bbdae9f1ead5c530a);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.test.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.test.active:before {
+  background-image: url(/images/question_aqua.png?65155776924764a10c2bb9542eef9073);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.answer:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.answer:before {
+  background-image: url(/images/answer_white.png?70477cab1bd4494175e753f51bfa5161);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.answer.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.answer.active:before {
+  background-image: url(/images/answer_aqua.png?f5768d9da481c093297cf57bc2f73c9e);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.webinar:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.webinar:before {
+  background-image: url(/images/webinar_white.png?1ff9f0eadda81ebc2d3710b75b8bf2ee);
+}
+#profileLessonEdit .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.webinar.active:before, #profileLessonConstructor .constructor .toolbar .toolbar-section .toolbar-section-buttons button.nav-link.webinar.active:before {
+  background-image: url(/images/webinar_aqua.png?ba1279fcebe6ca530447a41471fe6577);
+}
+#profileLessonEdit .constructor .nav-tabs, #profileLessonConstructor .constructor .nav-tabs {
+  border: none;
+  background-color: #031E80;
+}
+#profileLessonEdit .constructor .nav-tabs .divider, #profileLessonConstructor .constructor .nav-tabs .divider {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#profileLessonEdit .constructor .nav-tabs .nav-link, #profileLessonConstructor .constructor .nav-tabs .nav-link {
+  padding: 0.5rem 1.5rem 0 0;
+  color: #fff;
+}
+#profileLessonEdit .constructor .nav-tabs .nav-link.active, #profileLessonConstructor .constructor .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #031E80;
+  border: none;
+}
+#profileLessonEdit .constructor .nav-tabs .nav-link:hover, #profileLessonConstructor .constructor .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+#profileLessonEdit .constructor .content-section .content-block, #profileLessonConstructor .constructor .content-section .content-block {
+  position: relative;
+  margin: 0;
+  padding: 15px;
+}
+#profileLessonEdit .constructor .content-section .content-block .content-block-control, #profileLessonConstructor .constructor .content-section .content-block .content-block-control {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+#profileLessonEdit .constructor .content-section .content-block .content-block-control button, #profileLessonConstructor .constructor .content-section .content-block .content-block-control button {
+  border: none;
+  background-color: #fff;
+}
+#profileLessonEdit .constructor .content-section .content-block .content-block-control button i, #profileLessonConstructor .constructor .content-section .content-block .content-block-control button i {
+  color: #5c5c5c;
+}
+#profileLessonEdit .constructor .content-section .content-block .form-construct, #profileLessonConstructor .constructor .content-section .content-block .form-construct {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+#profileLessonEdit .constructor .content-section .content-block .form-construct:focus, #profileLessonConstructor .constructor .content-section .content-block .form-construct:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#profileLessonEdit .constructor .content-section .content-block input[name=header], #profileLessonConstructor .constructor .content-section .content-block input[name=header] {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#profileLessonEdit .constructor .content-section .content-block #drop-area, #profileLessonConstructor .constructor .content-section .content-block #drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  margin: 50px auto;
+  padding: 20px;
+}
+#profileLessonEdit .constructor .content-section .content-block #drop-area.highlight, #profileLessonConstructor .constructor .content-section .content-block #drop-area.highlight {
+  border-color: purple;
+}
+#profileLessonEdit .constructor .content-section .content-block #drop-area #gallery, #profileLessonConstructor .constructor .content-section .content-block #drop-area #gallery {
+  margin-top: 10px;
+}
+#profileLessonEdit .constructor .content-section .content-block #drop-area #gallery img, #profileLessonConstructor .constructor .content-section .content-block #drop-area #gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.form-attach__wrapper {
+  position: relative;
+  padding: 30px 15px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 0.375rem;
+  min-height: 50px;
+}
+
+.form-attach__wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  z-index: 1050;
+}
+
+.form-attach__description {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  color: #757575;
+}
+
+.form-attach__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-attach__item {
+  flex: 0 0 25%;
+  overflow: hidden;
+  flex: 0 1 calc((100% / 4) - 0.5rem);
+  margin: 0.25rem;
+  font-size: 0.75rem;
+  border: 1px solid #eee;
+  padding: 1.625rem 0.25rem;
+  border-radius: 0.25rem;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-attach__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eee;
+}
+
+.form-attach__name {
+  margin-top: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  color: #757575;
+  text-align: center;
+}
+
+.form-attach__size {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 6px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.form-attach__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.375rem 0.5rem;
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.form-attach__item.is-valid {
+  border-color: #28a745;
+}
+
+.form-attach__item.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-error {
+  position: relative;
+  padding: 0.5rem 1rem 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  color: #dc3545;
+  background-color: #dc35450d;
+  border: 1px solid #dc3545;
+}
+
+.form-error_hide {
+  display: none;
+}
+
+.form-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.form-success_hide {
+  display: none;
+}
+
+#profileCourseChainsEdit .list-courses-in-chain table thead .table-secondary th {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#profileCourseChainsEdit .list-courses-in-chain table thead .table-secondary th.actions {
+  width: 150px;
+  text-align: center;
+}
+#profileCourseChainsEdit .list-courses-in-chain table tbody .actions {
+  width: 150px;
+  text-align: center;
+}
+
+#modalSelectCourse .modal-body table.list-items .table-secondary th {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#modalSelectCourse .modal-body table.list-items .table-secondary th.checkbox {
+  width: 40px;
+}
+#modalSelectCourse .modal-body table.list-items .table-secondary th.actions {
+  width: 150px;
+  text-align: center;
+}
+#modalSelectCourse .modal-body table.list-items tbody td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#modalSelectCourse .modal-body table.list-items tbody td.checkbox {
+  width: 40px;
+}
+#modalSelectCourse .modal-body table.list-items tbody td.checkbox input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+#modalSelectCourse .modal-body table.list-items tbody td.actions {
+  width: 150px;
+  text-align: center;
+}
+#modalSelectCourse .modal-body table.list-items tbody td.actions button {
+  padding: 0.25rem 0.5rem;
+}
+
+#course .course-chains ul li > ul {
+  padding-left: 3.5rem;
+}
+#course .course-chains ul li > ul li {
+  list-style: none;
+  border-bottom: none;
+}
+#course .course-chains ul li > ul li:last-child {
+  padding-bottom: 15px;
+}
+
+#statistics #statCourseTabs {
+  margin-bottom: 30px;
+  border-bottom: none;
+}
+#statistics #statCourseTabs li button {
+  font-size: 20px;
+  color: #031E80;
+  border: none;
+  border-bottom: solid 4px #CDD2E6;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: #DEE2EF;
+}
+#statistics #statCourseTabs li button.active {
+  background-color: #E5E8F2;
+  border-bottom: solid 4px #031E80;
+}
+#statistics #statEventsTabs {
+  margin-bottom: 30px;
+  border-bottom: none;
+}
+#statistics #statEventsTabs li button {
+  font-size: 20px;
+  color: #031E80;
+  border: none;
+  border-bottom: solid 4px #CDD2E6;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: #DEE2EF;
+}
+#statistics #statEventsTabs li button.active {
+  background-color: #E5E8F2;
+  border-bottom: solid 4px #031E80;
+}
+
+#tasks .tasks-list .task-block, #userTasks .tasks-list .task-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #CDD2E6;
+  background-color: #F9F9F9;
+}
+#tasks .tasks-list .task-block .task-logo, #userTasks .tasks-list .task-block .task-logo {
+  width: 100px;
+}
+#tasks .tasks-list .task-block .task-info, #userTasks .tasks-list .task-block .task-info {
+  width: 100%;
+}
+#tasks .tasks-list .task-block .task-info .about-task p, #userTasks .tasks-list .task-block .task-info .about-task p {
+  color: grey;
+}
+#tasks .tasks-list .task-block .task-status, #userTasks .tasks-list .task-block .task-status {
+  width: 330px;
+  text-align: right;
+}
+#tasks .tasks-list .task-block .task-status .actions, #userTasks .tasks-list .task-block .task-status .actions {
+  text-align: right;
+}
+#tasks .tasks-list .task-block .task-status .actions a:not(:last-child), #userTasks .tasks-list .task-block .task-status .actions a:not(:last-child) {
+  margin-right: 10px;
+}
+
+#practicalTasks .practical-tasks-list .practical-task-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #CDD2E6;
+  background-color: #F9F9F9;
+}
+#practicalTasks .practical-tasks-list .practical-task-block .practical-task-logo {
+  width: 100px;
+}
+#practicalTasks .practical-tasks-list .practical-task-block .practical-task-info {
+  width: 100%;
+}
+#practicalTasks .practical-tasks-list .practical-task-block .practical-task-info .about-task p {
+  color: grey;
+}
+#practicalTasks .practical-tasks-list .practical-task-block .practical-task-status {
+  width: 200px;
+}
+
+#personalProjects .personal-projects-list .personal-project-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #CDD2E6;
+  background-color: #F9F9F9;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-logo {
+  width: 100px;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-info {
+  width: 100%;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-info .about-task p {
+  color: grey;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-status {
+  width: 330px;
+  text-align: right;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-status .actions {
+  text-align: right;
+}
+#personalProjects .personal-projects-list .personal-project-block .personal-project-status .actions a:not(:last-child) {
+  margin-right: 10px;
+}
+
+#personalProject .tasks-list .task-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #CDD2E6;
+  background-color: #F9F9F9;
+}
+#personalProject .tasks-list .task-block .task-logo {
+  width: 100px;
+}
+#personalProject .tasks-list .task-block .task-info {
+  width: 100%;
+}
+#personalProject .tasks-list .task-block .task-info .about-task p {
+  color: grey;
+}
+#personalProject .tasks-list .task-block .task-actions {
+  width: 330px;
+  text-align: right;
+}
+#personalProject .tasks-list .task-block .task-actions .actions {
+  text-align: right;
+}
+#personalProject .tasks-list .task-block .task-actions .actions a:not(:last-child) {
+  margin-right: 10px;
+}
+
+#userProjects .projects-list .project-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #CDD2E6;
+  background-color: #F9F9F9;
+}
+#userProjects .projects-list .project-block .task-logo {
+  width: 100px;
+}
+#userProjects .projects-list .project-block .task-info {
+  width: 100%;
+}
+#userProjects .projects-list .project-block .task-info .about-task p {
+  color: grey;
+}
+#userProjects .projects-list .project-block .task-status {
+  width: 330px;
+  text-align: right;
+}
+#userProjects .projects-list .project-block .task-status .actions {
+  text-align: right;
+}
+#userProjects .projects-list .project-block .task-status .actions a:not(:last-child) {
+  margin-right: 10px;
+}
+
+#showUserCommentsModal .comment .logo div, #showUserAnswerModal .comment .logo div {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #edeef4;
+}
+#showUserCommentsModal .comment .text div, #showUserAnswerModal .comment .text div {
+  width: auto;
+  max-width: 600px;
+  padding: 5px 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: all 0.5s;
+}
+#showUserCommentsModal .comment .text div.unread, #showUserAnswerModal .comment .text div.unread {
+  background: #d3f2d3;
+}
+#showUserCommentsModal .comment .text div.self-message, #showUserAnswerModal .comment .text div.self-message {
+  border-color: #CDD2E612;
+  background: #E5E8F2;
+}
+
+.modal.showQuestion h5, .modal.editQuestion h5 {
+  font-size: 1.5rem;
+}
+.modal.showQuestion h5 span.question, .modal.editQuestion h5 span.question {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#showUserInfoModal .user-info > div {
+  padding: 6px 12px;
+}
+#showUserInfoModal .user-info > div > div:first-child {
+  min-width: 175px;
+  font-weight: 700;
+}
+#showUserInfoModal .user-info > div > div:last-child p {
+  margin: 0;
+}
