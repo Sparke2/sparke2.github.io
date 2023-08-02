@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IPR SMART</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+		<link rel="stylesheet" href="https://datalib.dev.datalib.ru/fonts/coolicons/v4.1/coolicons.css" />
+		<link id="aos-css-file" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+ 			<nav class="navbar navbar-expand-xl fixed-top header-nav">
+	        		<div class="container-fluid align-items-center d-block">
+	        			<div class="d-flex justify-content-between">
+	        				<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+						      <i class="ci-Menu_Alt_04"></i>
+						    </button>
+						    <a class="navbar-brand brandName d-xl-none d-block" href="#">
+				                <img src="img/main/logo.png" alt="">
+							</a>
+	        			</div>
+	                    <div class="navbar-collapse collapse" id="bdNavbar">
+	                    	<div class="w-100 d-flex justify-content-between align-items-center align-content-between flex-wrap py-2">
+	                    		<button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+							      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+									</svg>
+						    	</button>
+			                    <a class="navbar-brand brandName d-xl-block d-none" href="#">
+			                    	<img src="img/main/logo.png" alt="">
+								</a>
+			                    <form class="my-auto search-header w-25">
+									<input type="text" name="search-header" class="form-control" placeholder="Поиск...">
+								</form>
+								<p class="m-0">sales@iprmedia.ru</p>
+								<p class="m-0">+7 800 555-22-35</p>
+								<button class="btn"><i class="ci-Shopping_Cart_02"></i></button>
+								<button class="btn"><i class="fa-solid fa-eye"></i></button>
+								<button class="btn"><p class="m-0">Тестовый доступ</p></button>
+								<button class="btn"><i class="ci-User_Circle"></i></button>
+	                    	</div>
+	                    </div>
+	                    <div class="collapse" id="collapseMenu">
+	                    		<div class="row" style="border-top: 1px solid #ccc;">
+								  <div class="col-lg-4 col-6">
+								  	<div class="nav flex-column nav-pills py-sm-5 py-2 pe-4" style="border-right: 1px solid #ccc;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+								    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Библиотека</button>
+								    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Коллекции</button>
+								    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">Альтернативные виды обучения</button>
+								    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Наша разработка</button>
+								    <a href="#" class="nav-link text-center">Интеграция в ЭИОС</a>
+								    <a href="#" class="nav-link text-center">Правообладателям</a>
+								    <button class="nav-link" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="false">Информация</button>
+								    <a href="#" class="nav-link text-center">Мобильное приложение</a>
+								  </div>
+								  </div>
+								  <div class="col">
+								  	<div class="tab-content pt-sm-5 pt-2" id="v-pills-tabContent">
+									    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+									    	<div class="row g-4">
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Эксклюзивные издания</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Новые издания</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Издания</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Журналы</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Архивные фонды</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Тематика</a></div></div>
+									    	</div>
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+									    	<div class="row g-4">
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Новые коллекции</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Коллекция ИИ</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Коллекции от издательств</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Коллекции от университетов</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Коллекции ПРО</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Популрные коллекции</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">НАУЧНО-ОБРАЗОВАТЕЛЬНЫЕ ПЛАТФОРМЫ</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Создать свою коллекию</a></div></div>
+									    	</div>
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
+									    	<div class="row g-4">
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Онлайн курсы</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Аудиоиздания</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Лекториум</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Видеоресурсы</a></div></div>
+									    	</div>
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+									    	<div class="row g-4">
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Дата либ</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">РКИ</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Проф образование</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">ВКР смарт</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Айпиар букс WV риадер</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">НАУЧНО-ОБРАЗОВАТЕЛЬНЫЕ ПЛАТФОРМЫ</a></div></div>
+									    	</div>
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab" tabindex="0">
+									    	<div class="row g-4">
+									    		<div class="col-12"><div class="text-center link-tab"><a href="#">О компании</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Адаптивные технологии</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Шаблоны и документы</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Контакты</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Инструкции</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Курс  “ДПО по цифровизации”</a></div></div>
+									    		<div class="col-lg-6"><div class="text-center link-tab"><a href="#">Часто задаваемые вопросы</a></div></div>
+									    	</div>
+									    </div>
+								  	</div>
+								</div>
+							</div>
+	                    </div>
+	                </div> 
+	        </nav> 
+	    </header>
+	    <main class="position-relative">
+	    	<div class="container-fluid">
+	    		<div class="col-lg-6 bg-1-div d-xl-block d-none">
+			    	<img class="bg-1 img-fluid" src="img/main/bg-1.svg" alt="">
+			    </div>
+	    		<div class="row">
+	    			<div class="col-xxl-5 col-xl-6 pt-sm-5 mt-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+	    				<h2 class="text-uppercase">Интеграция УНИВЕРСИТЕТА <br> за пару кликов</h2>
+			    		<p class="text-grey fs-36">Простые инструменты для <span class="fw-500 text-grey">объединения систем</span></p>
+			    	</div>
+			    </div>
+			    <div class="row pt-5">
+			    	<div class="col-xl-6" data-aos="fade-right">
+			    		<h1 class="m-0">IPR SMART —</h1>
+			    		<p class="text-uppercase fw-bold fs-36 m-0">Мир твоих компетенций и знаний</p>
+			    		<form class="py-5">
+			    			<div class="input-group search-main">
+			    				<input type="text" name="search" class="form-control" placeholder="Введите наименование издания...">
+				    			<button class="btn" type="submit" id="search">
+				    				<img src="img/main/Search.png" alt="поиск">
+				    			</button>
+			    			</div>
+			    		</form>
+	    			</div>
+	    		</div>
+	    		<div class="d-flex flex-row align-content-between flex-wrap  justify-content-md-between align-items-center mb-md-5">
+	    			<div class="block-lin lin-1 mb-lg-0 mb-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0">
+		    			<p class="text-uppercase text-white">издания</p>
+		    		</div>
+		    		<div class="block-lin lin-2 mb-lg-0 mx-4 mb-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
+		    			<p class="text-uppercase text-white">Журналы</p>
+		    		</div>
+		    		<div class="block-lin lin-3 mb-lg-0 mb-4 text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+		    			<p class="text-uppercase text-white">Альтернативные виды обучения</p>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="container block">
+	    		<h3 class="text-center pt-md-5 mt-md-5">КОМУ ПОЛЕЗНА ПЛАТФОРМА</h3>
+	    		<div class="row g-4 mx-0 px-md-0 px-4">
+	    			<div class="col-xxl-3 col-lg-6">
+	    				<div class="block-ron b-1 text-center h-100" data-aos="fade-up" data-aos-anchor-placement="top-center">
+			    			<img src="img/main/el-1.png" alt="">
+			    			<h4 class="text-white pt-5 mb-3">СТУДЕНТАМ</h4>
+			    			<p class="text-white">Большой выбор книг, курсов, аудио и видеоматериалов для успешного обучения, а также  сдачи экзаменов и зачетов</p>
+			    		</div>
+	    			</div>
+		    		<div class="col-xxl-3 col-lg-6">
+		    			<div class="block-ron b-2 text-center h-100" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="100">
+			    			<img src="img/main/el-2.png" alt="">
+			    			<h4 class="text-white pt-5 mb-3">ПРЕПОДАВАТЕЛЯМ</h4>
+			    			<p class="text-white">Эффективная поддержка преподавателя: связь с личными кабинетами студентов, современный контент и удобные инструменты</p>
+			    		</div>
+		    		</div>
+		    		<div class="col-xxl-3 col-lg-6">
+		    			<div class="block-ron b-3 text-center h-100" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="200">
+			    			<img src="img/main/el-3.png" alt="">
+			    			<h4 class="text-white pt-5 mb-3">АДМИНИСТРАТОРАМ</h4>
+			    			<p class="text-white">Полное обеспечение учебного процесса: комплектование, электронная и печатная литература, отчеты и аналитические инструменты </p>
+			    		</div>
+		    		</div>
+		    		<div class="col-xxl-3 col-lg-6">
+		    			<div class="block-ron b-4 text-center h-100" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300">
+			    			<img src="img/main/el-4.png" alt="">
+			    			<h4 class="text-white pt-5 mb-3">УНИВЕРСИТЕТАМ</h4>
+			    			<p class="text-white">Ключевой элемент ЭИОС университета, обеспечивающий легкое прохождение аккредитации и эффективное функционирование</p>
+			    		</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="container block stat-block">
+	    		<div class="row g-4 mx-0 px-md-0 px-4">
+	    			<div class="col-lg-3 px-0">
+	    				<h3 class="m-0">IPR SMART<br><span>В ЦИФРАХ<span></h3>
+	    			</div>
+	    			<div class="col-lg-9 pb-4">
+	    				<div class="div-stat b-2" data-aos="fade-up" data-aos-anchor-placement="bottom-center"><p><span>164 358</span> единиц контента</p></div>
+	    			</div>
+	    		</div>
+	    		<div class="row g-4 mx-0 px-md-0 px-4">
+	    			<div class="col-lg-3">
+	    				<div class="div-stat b-1 h-100"  data-aos="fade-left" data-aos-anchor-placement="top-center"><p><span style="white-space: nowrap;">47 437</span> учебных изданий<p></div>
+	    			</div>
+	    			<div class="col-lg-9">
+	    				<div class="row g-4">
+	    					<div class="col-md-7">
+	    						<div class="div-stat b-3 h-100" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="200"><p class="m-0"><span>12 938</span></p><p class="pb-5">научных изданий</p></div>
+	    					</div>
+	    					<div class="col-md-5">
+	    						<div class="div-stat b-4 h-100" data-aos="fade-left" data-aos-anchor-placement="top-center"><p class="m-0"><span>799</span></p><p>всего журналов</p></div>
+	    					</div>
+	    					<div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+	    						<div class="div-stat b-5 h-100"><p class="m-0 pb-5"><span>1 171</span> аудио- изданий</p></div>
+	    					</div>
+	    					<div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">
+	    						<div class="div-stat b-6 h-100"><p class="m-0"><span>469</span> журналов вак</p></div>
+	    					</div>
+	    					<div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+	    						<div class="div-stat b-7 h-100"><p class="m-0"><span>894</span> коллекции</p></div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<p class="fs-22 pt-4 px-md-0 px-4">*данные на июль 2023 года</p>
+	    	</div>
+	    	<div class="container block lid">
+	    		<h3 class="fs-47">БЫТЬ В ЛИДЕРАХ — <span>ЗНАЧИТ</span> БЫТЬ С НАМИ</h3>
+	    		<div class="row g-4 mx-0 px-md-0 px-4">
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-1 h-100">
+	    					<div class="lin lin-1 h-100">
+	    						<p class="m-0"><span>01</span></p>
+	    						<p>июня</p>
+	    						<h6 class="pt-3">ДАЙДЖЕСТ ВЕБИНАРОВ IPR MEDIA В ИЮНЕ 2023<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-2 h-100">
+	    					<div class="lin lin-2 h-100">
+	    						<p class="m-0"><span>07</span></p>
+	    						<p>июня</p>
+	    						<h6 class="pt-3">Вебинар «Платформа IPR SMART: современный контент и сервисы для организации эффективного образовательного процесса»<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-3 h-100">
+	    					<div class="lin lin-3 h-100">
+	    						<p class="m-0"><span>14</span></p>
+	    						<p>июня</p>
+	    						<h6 class="pt-3">Вебинар «DATALIB: платформа для цифровых кафедр и возможности для университетов-лидеров»<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-4 h-100">
+	    					<div class="lin lin-4 h-100">
+	    						<p class="m-0"><span>16</span></p>
+	    						<p>июня</p>
+	    						<h6 class="pt-3">Платформа РКИ: библиотека возможностей для изучения русского языка и развития международных отношений в сфере образования»<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-5 h-100">
+	    					<div class="lin lin-5 h-100">
+	    						<p class="m-0"><span>21</span></p>
+	    						<p>июня</p>
+	    						<h6 class="pt-3">Издательские проекты IPR MEDIA или как университету эффективно выполнить издательский план<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-xl-4 col-md-6">
+	    				<div class="custom-div-br b-6 h-100">
+	    					<div class="lin lin-6 h-100">
+	    						<p class="m-0"><span>26</span></p>
+	    						<p>октября</p>
+	    						<h6 class="pt-3">VI Образовательный интенсив IPR EDU 2023<h6>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="position-relative block-1">
+	    		<div class="bg-2-div d-xxl-block d-none">
+	    			<img class="bg-2 img-fluid" src="img/main/bg-2.svg" alt="">
+	    		</div>
+	    		<div class="container">
+		    		<div class="row justify-content-end mx-0 px-md-0 px-4">
+		    			<div class="col-xxl-8">
+		    				<div class="amb-head">
+		    					<div class="d-md-flex text-center">
+				    				<h3 class="m-0">АМБАССАДОРЫ</h3> 
+				    				<div class="badge mt-md-0 mt-4"><a href="#">СТАТЬ АМБАССАДОРОМ</a></div>
+				    			</div>
+		    					<p class="pt-3">Кто это и какие преимущества существуют для амбассадоров IPR SMART? </p>
+		    				</div>
+		    				<div class="row g-4 pt-5">
+		    					<div class="col-md-5">
+		    						<div class="amb-block position-relative" data-aos="zoom-in-up" data-aos-anchor-placement="bottom-bottom">
+		    							<div class="badge lin-1">ДЛЯ ЧЕГО?</div>
+		    							<p>Участие в программе — это возможность <span>упростить рабочие процессы, используя инновационные продукты IPR MEDIA.</span></p>
+		    						</div>
+		    					</div>
+		    					<div class="col-md-7">
+		    						<div class="amb-block h-100 position-relative" data-aos="zoom-in-up" data-aos-delay="100" data-aos-anchor-placement="bottom-bottom">
+		    							<div class="badge lin-2">БОНУСЫ</div>
+		    							<p>За активность у каждого амбассадора <span>есть возможность пройти обучение на платформе, обозначить для себя и преподаваемой дисциплины точки роста.</span></p>
+		    						</div>
+		    					</div>
+		    					<div class="col-12">
+		    						<div class="amb-block position-relative" data-aos="zoom-in-up" data-aos-delay="200" data-aos-anchor-placement="bottom-bottom">
+		    							<div class="badge lin-3">ЗАДАЧА</div>
+		    							<p>Амбассадор  представляют бренд группы компаний <span>IPR MEDIA и ее проектов в позитивном свете.</span> Участие в волонтерском обединении могут принимать студенты, магистранты, аспиранты, преподаватели, а также университеты. У амбассадоров есть возможность <span>обменяться опытом на семинарах и вебинарах IPR MEDIA.</span></p>
+		    						</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    		</div>
+		    		<h4 class="text-center my-5 pt-5 fs-30">НАС РЕКОМЕНДУЮТ</h4>
+		    		<div class="owl-carousel-padding">
+		    			<div class="owl-carousel owl-carousel-comp">
+							<div class="item"><img src="img/main/logo-a.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-b.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-c.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-d.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-i.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-f.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-a.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-b.png" alt=""></div>
+							<div class="item"><img src="img/main/logo-c.png" alt=""></div>
+						</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="container block new-platform">
+	    		<h3 class="fs-47 text-left mb-3 px-md-0 px-4">НОВИНКИ ПЛАТФОРМЫ</h3>
+	    		<p class="px-md-0 px-4">Эксклюзив <span>IPR MEDIA</span> и новинки курсов</p>
+	    		<div class="owl-carousel-padding">
+		    		<div class="position-relative">
+		    			<div class="bg-1"></div>
+		    			<div class="owl-carousel owl-theme owl-carousel-book">
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-book">
+										<img src="img/main/book.png" alt="" class="book-img">
+									</div>
+									<h6>“Новое пособие по механике” (2022)</h6>
+									<p>И.И. Иванов</p>
+									<p>(ACADEMIA)</p>
+								</div>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+				<div class="owl-carousel-padding">
+		    		<div class="position-relative">
+		    			<div class="bg-2"></div>
+		    			<div class="owl-carousel owl-theme owl-carousel-video">
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-item position-relative">
+									<div class="position-absolute block-img-video">
+										<img src="img/main/video.png" alt="" class="video-img">
+									</div>
+									<h6>Курс по истории искусств</h6>
+									<p>Преподаватель</p>
+									<p>И.И. Иванов</p>
+								</div>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+	    	</div>
+	    	<div class="container block" id="eco-system">
+	    		<h3>ЭКОСИСТЕМА</h3>
+	    		<div class="bg-ipr">
+	    			<div class="row g-4 mx-0 px-md-0 px-4">
+	    				<div class="col-xl-4 col-md-6 mx-auto p-xl-0 p-4">
+	    					<img src="img/main/logo-ipr.png" alt="" class="img-fluid mb-4">
+	    					<p><span>IPR SMART</span> — самая крупная цифровая библиотека с удобными сервисами для преподавания и обучения на одной платформе.</p>
+	    				</div>
+	    				<div class="col-xl-4 col-md-6 mx-auto p-xl-0 p-4">
+	    					<div class="d-flex">
+	    						<div class="me-4">
+	    							<img src="img/main/logo-prof.png" alt="" >
+	    						</div>
+	    						<p><span>PROFобразование</span> — ресурс, обеспечивающий полноценный образовательный процесс обучающихся любой формы обучения в учреждениях СПО.</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="row mt-xl-5 pt-xl-5 mx-0 px-md-0 px-4">
+		    			<div class="col-xl-3 col-md-6 p-xl-0 p-4">
+		    				<img src="img/main/logo-rki.png" alt="" class="img-fluid mb-4">
+		    				<p><span>ЭОР «Русский как иностранный»</span> — Мультиязычная образовательная платформа для обучения русскому языку и культуре иностранных студентов для международных служб университета, центров ТРКИ, кафедр русского языка и РКИ.</p>
+		    			</div>
+		    			<div class="col-xl-3 col-md-6 ms-auto p-xl-0 p-4">
+		    				<img src="img/main/logo-dl.png" alt="" class="img-fluid mb-4">
+		    				<p><span>DataLIB</span> — первая образовательная платформа-маркетплейс с библиотекой и smart-курсами  от ведущих преподавателей с университетов по всему миру по различным направлениям.</p>
+		    			</div>
+		    		</div>
+		    		<div class="row mt-xl-5 pt-xl-5 mx-0 px-md-0 px-4">
+		    			<div class="col-xl-4 col-md-6 mx-auto p-xl-0 p-4">
+		    				<img src="img/main/logo-vkr.png" alt="" class="img-fluid mb-4">
+		    				<p><span>ВКР-ВУЗ</span> — это платформа нового поколения, предназначенная для хранения работобучающихся, поиска заимствований, ведения электронного портфолио, учета и отчетности.</p>
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="block-1 position-relative world mb-0">
+	    		<div class="col-6 bg-3-div d-xxl-block d-none">
+	    			<img src="img/main/bg-3.png" alt="" class="img-fluid">
+	    		</div>
+	    		<div class="container block">
+	    			<h3 class="fs-47 text-center mb-3">IPR SMART — <span>ОТКРОЙ ДЛЯ СЕБЯ МИР ЗНАНИЙ!</span></h3>
+	    		    <p class="text-center pb-5">Новинки книг и курсов, мероприятия и интересные новости в мире образования!</p>
+	    		    <div class="row g-4 pt-xxl-5 mt-xxl-5 mx-0 px-md-0 px-4">
+	    		    	<div class="col text-center">
+	    		    		<button class="btn btn-subscribe position-relative">ПОДПИСАТЬСЯ</button>
+	    		    	</div>
+	    		    	<div class="col-xxl-5 text-end">
+	    		    		<div class="video-bg text-center p-5">
+	    		    			<img src="img/main/video-1.png" class="img-fluid">
+	    		    		</div>
+	    		    		<h6 class="pt-5 mt-5 pb-3">IPT SMART <span>В СОЦИАЛЬНЫХ СЕТЯХ</span></h6>
+	    		    		<div class="social">
+	    		    			<a href="#"><img src="img/main/vk.png" alt="" class="img-fluid"></a>
+		    		    		<a href="#"><img src="img/main/tg.png" alt="" class="img-fluid"></a>
+		    		    		<a href="#"><img src="img/main/youtube.png" alt="" class="img-fluid"></a>
+		    		    		<a href="#"><img src="img/main/qr.png" alt="" class="img-fluid"></a>
+	    		    		</div>
+	    		    	</div>
+	    		    </div>
+	    		</div>
+	    	</div>
+	    </main>
+	    <footer>
+	    	<div class="py-5">
+	    		<div class="container">
+		    		<div class="row py-4 g-4">
+		    			<div class="col-md-4">
+		    				<p>База данных «Цифровая библиотека IPRsmart (IRPsmart ONE)» зарегистрирована в Федеральной службе по интеллектуальной собственности 10 февраля 2022 г.</p>
+		    				<p class="text-white">Свидетельство о государственной регистрации № 2 022 620 333.</p>
+		    				<p>Программа для ЭВМ «Автоматизированная система управления Цифровой библиотекой IPRsmart» зарегистрирована в Федеральной службе по интеллектуальной собственности 27 августа 2021 г.</p>
+							<p class="text-white">Свидетельство о государственной регистрации № 2021664034.</p>
+							<p class="text-white">© Общество с ограниченной ответственностью Компания «Ай Пи Ар Медиа»</p>
+		    			</div>
+		    			<div class="col-xl-2 col-md-3 mx-auto ps-md-0">
+		    				<p class="mb-1">support@iprmedia.ru</p>
+		    				<p class="text-white fs-20 mb-1">8 800 555-22-35</p>
+		    				<p>Звонок бесплатный для всех регионов России</p>
+		    				<p class="m-0">143405, Московская область,</p>
+		    				<p class="m-0"> г.о. Красногорск, г. Красногорск,</p>
+		    				<p class="m-0"> ш. Ильинское, д. 1А,</p>
+		    				<p class="m-0"> помещ. 17,6/ком. 5</p>
+		    			</div>
+		    			<div class="col-xl-2 col-md-3 ms-auto">
+		    				<div class="mb-4">
+		    					<a href="https://www.iprbookshop.ru/getsharelink?link_id=1" target="_blank" title="Vkontakte">
+		    						<img src="img/main/vk-white.png" alt="">
+		    					</a>
+		    					<a href="https://www.iprbookshop.ru/getsharelink?link_id=4" target="_blank" title="Youtube">
+		    						<img src="img/main/youtube-white.png" alt="">
+		    					</a>
+		    					<a href="https://www.iprbookshop.ru/getsharelink?link_id=5" target="_blank" title="Telegram">
+		    						<img src="img/main/tg-white.png" alt="">
+		    					</a>
+		    				</div>
+		    				<p><a href="#">Пользовательское соглашение</a></p>
+		    				<p><a href="#">Политика конфиденциальности</a></p>
+		    				<p><a href="#">Сведения об организации</a></p>
+		    			</div>
+		    		</div>
+		    		<div class="row g-4">
+		    			<div class="col-md-5">
+		    				<p>ООО Компания «Ай Пи Ар Медиа» включено в Реестр аккредитованных IT компаний, на основании РЕШЕНИЯ о предоставлении государственной аккредитации организации, осуществляющей деятельность в области информационных технологий от 11.03.2022 г. № АО-20 220 310-3 775 333 561-3, выданного МИНИСТЕРСТВОМ ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ ФЕДЕРАЦИИ.</p>
+		    			</div>
+		    			<div class="col-md-5 ms-md-4">
+		    				<p>Программа для ЭВМ зарегистрирована в Едином реестре российского программ для электронно-вычислительных машин и баз данных <span>https://reestr.digital.gov.ru</span>, запись в реестре <span>№ 13 509 от 11.05.2022 г.</span> произведена на основании поручения Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11.05.2022 г. по протоколу заседания экспертного совета от <span>29.04.2022 № 570пр.</span></p>
+		    			</div>
+		    		</div>
+		    	</div>
+
+	    	</div>
+	    </footer>
+	   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	    <script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+	    <script>
+  			AOS.init();
+		</script>
+	    <script type="text/javascript">
+	    	$(document).ready(function ($) {
+	    		if (window.innerWidth < 767) {
+				  function removeAos() {
+				    var elem = document.getElementById('aos-css-file');
+				    elem.parentNode.removeChild(elem);
+				    return false;
+				  }
+				  removeAos();
+				}
+				$(".owl-carousel-comp").owlCarousel({
+					loop: true,
+					margin: 10,
+					dots: false,
+					nav: true,
+					autoplay:true,
+    				slideTransition: 'linear',
+            		autoplayTimeout: 6000,
+            		autoplaySpeed: 6000,
+            		autoplayHoverPause: true,
+					responsive:{
+				        0:{
+				            items:1
+				        },
+				        767:{
+				            items:3
+				        },            
+				        960:{
+				            items:5
+				        },
+				        1200:{
+				            items:5
+				        },
+				        1785:{
+				        	items:6
+				        }
+				    }
+				});
+				$(".owl-carousel-book").owlCarousel({
+					loop: true,
+					margin: 20,
+					dots: false,
+					nav: true,
+					responsive:{
+				        0:{
+				            items:1
+				        },
+				        767:{
+				            items:2
+				        },            
+				        960:{
+				            items:3
+				        },
+				        1200:{
+				            items:4
+				        },
+				        1785:{
+				            items:5
+				        }
+				    }
+				});
+				$(".owl-carousel-video").owlCarousel({
+					loop: true,
+					margin: 20,
+					dots: false,
+					nav: true,
+					responsive:{
+				        0:{
+				            items:1
+				        },
+				        767:{
+				            items:2
+				        },            
+				        960:{
+				            items:3
+				        },
+				        1200:{
+				            items:4
+				        },
+				        1785:{
+				            items:5
+				        }
+				    }
+				});
+			});
+
+	    </script>
+
+	</body>
+</html>
