@@ -7,7 +7,6 @@
 	font-style: normal;
 	color: #263238;
 	line-height: normal;
-/*	border: 1px solid red;*/
 }
 a {
 	text-decoration: none;
@@ -81,7 +80,7 @@ main h4 {
 .input-group.search-main input {
 	border-radius: 53px;
 	font-size: 24px;
-	margin: 0 2rem;
+	margin: 0 0 0 2rem;
 	border: 1px solid transparent;
 	padding: 1.1rem 0.75rem;
 }
@@ -593,16 +592,22 @@ footer p {
  }
 
  .search-header input {
- 	border-radius: 53px;
-    background: #FFF url("img/main/search.png") no-repeat 95% 50%;
+ 	border-radius: 10px;
+    background: #FFF;
+    border-right: none;
  }
-  .search-header input:focus {
+ .search-header input:focus {
     background: #FFF;
     border: 1px solid #FF9900;
  }
- .search-header {
- 	border-radius: 53px;
- 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.41);
+ .search-header i {
+ 	font-size: 20px !important;
+ }
+ .search-header button {
+ 	padding: 0 1rem;
+ 	border: 1px solid #ced4da;
+ 	border-left: none;
+ 	border-radius: 10px;
  }
  header .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
@@ -653,6 +658,12 @@ header .link-tab {
 }
 .modal-content {
 	border-radius: 1.5rem;
+}
+.carousel-inner {
+	overflow: visible;
+}
+.carousel-content {
+	height: 328px;
 }
 @media(max-width: 1784px) {
 	main h1 {
@@ -727,6 +738,9 @@ header .link-tab {
 	.navbar .container-fluid {
 		padding: 0 3rem;
 	}
+	.carousel-content {
+		height: 260px;
+	}
 }
 @media(max-width: 1199px) {
 	#eco-system .bg-ipr {
@@ -736,6 +750,9 @@ header .link-tab {
 	.block-lin {
 	    font-size: 16px;
 	    padding: 1rem;
+	}
+	.carousel-content {
+		height: 150px;
 	}
 }
 @media(max-width: 991px) {
@@ -750,6 +767,9 @@ header .link-tab {
 	}
 	.search-header {
 		width: 325px !important;
+	}
+	.carousel-content {
+		height: 180px;
 	}
 }
 @media(max-width: 767px) {
@@ -777,18 +797,18 @@ header .link-tab {
 	.world p {
 		font-size: 20px;
 	}
-	.input-group.search-main input {
-		margin: 0 0 0 2rem;
-	}
 	.social img {
 		width: 15%;
+	}
+	.carousel-content {
+		height: 190px;
 	}
 }
 @media(max-width: 565px) {
 	main h1 {
 		font-size: 30px;
 	}
-	main h2, main h2.fs-62, main h2.fs-60, main h2.fs-74, main h2.fs-80 {
+	main h2, main h2.fs-55, main h2.fs-60, main h2.fs-74, main h2.fs-80 {
 		font-size: 24px;
 	}
 	main h3, main h3.fs-47 {
@@ -796,6 +816,9 @@ header .link-tab {
 	}
 	main .fs-36 {
 		font-size: 20px;
+	}
+	.carousel-content {
+		height: 170px;
 	}
 	.world h6, .world h6 span {
 		font-size: 16px;
