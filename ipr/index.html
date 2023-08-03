@@ -788,13 +788,10 @@
 	    		$icon.toggleClass( "fa-xmark");
 			});
 	    	$(document).ready(function ($) {
-	    		$('#carouselMain').bind('mousewheel', function() {
+	    		$('#carouselMain').bind('mousewheel', function(event) {
 				    $(this).carousel('next');
-				});
-				$('#carouselMain').on('mouseenter', function (event) {
-				   $("body").css("overflow","hidden"); 
-				}).on('mouseleave',  function(){
-				   $("body").css("overflow","auto");
+				     event.stopPropagation();
+        			 event.preventDefault();
 				});
 	    		if (window.innerWidth < 767) {
 				  function removeAos() {
