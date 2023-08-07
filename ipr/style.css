@@ -7,6 +7,7 @@
 	font-style: normal;
 	color: #263238;
 	line-height: normal;
+/*	border: 1px solid red;*/
 }
 a {
 	text-decoration: none;
@@ -16,7 +17,7 @@ nav.navbar {
 	box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.14);
 }
 header {
-	margin-bottom: 75px;
+	margin-bottom: 57px;
 }
 main h1 {
 	font-size: 110px;
@@ -96,7 +97,7 @@ input, button {
 	border-radius: 53px;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 	font-size: 28px;
-	padding: 1rem 4rem;
+	padding: 1rem;
 }
 .block-lin p {
 	font-weight: 600;
@@ -280,7 +281,9 @@ input, button {
   text-align: center;
   margin: 0.5rem 2rem;
   padding: 1.3em 2em;
-  box-shadow: 0px 0px 17px 0px rgba(255, 153, 0, 0.44);
+}
+.amb-head .badge:hover {
+	box-shadow: 0px 0px 17px 0px rgba(255, 153, 0, 0.44);
 }
 .amb-head .badge a {
   color: #FE7101;
@@ -535,12 +538,14 @@ input, button {
 .world .btn-subscribe {
 	border-radius: 67px;
 	background: linear-gradient(90deg, #E362D5 0%, #D722F5 0.01%, #FF8A00 100%);
-	box-shadow: 0px 0px 52px 0px rgba(255, 92, 0, 0.44) !important;
 	color: #FFF;
 	font-size: 28px;
 	font-weight: 600;
 	padding: 1rem 3rem;
 	z-index: 100;
+}
+.world .btn-subscribe:hover {
+	box-shadow: 0px 0px 52px 0px rgba(255, 92, 0, 0.44) !important;
 }
 #eco-system .bg-ipr {
 	background-image: url("img/main/ipr.png");
@@ -667,19 +672,20 @@ header .link-tab {
 }
 @media(max-width: 1784px) {
 	main h1 {
-		font-size: 80px;
+		font-size: 70px;
 	}
-	main h2, main h2.fs-60, main h2.fs-74, main h2.fs-80 {
+	main h2.fs-60, main h2.fs-74, main h2.fs-80 {
 		font-size: 50px;
 	}
-	main h2.fs-55 {
+	main h2.fs-55, main h2 {
 		font-size: 40px;
 	}
 	main .fs-36 {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.block-lin {
 	    font-size: 24px;
+	    padding: 0.6rem;
 	}
 	header p {
  		font-size: 16px;
@@ -693,6 +699,41 @@ header .link-tab {
 	.owl-carousel-padding {
 		padding: 0 7rem;
 	}
+	.carousel-content {
+		height: 260px;
+	}
+	.input-group.search-main input::placeholder, .input-group.search-main input {
+		font-size: 20px;
+		padding: 0.7rem 0.75rem;
+	}
+	.carousel-item img.bg-1 {
+		width: 95%;
+	}
+	.block-ron h4 {
+		font-size: 20px;
+	}
+	.block-ron p {
+		font-size: 14px;
+		padding: 0 1rem;
+	}
+	.block-ron {
+		padding: 1.8rem 1rem 3rem 1rem;
+	}
+	.div-stat {
+		padding: 1rem;
+	}
+	.lid p span {
+		font-size: 55px;
+	}
+	.custom-div-br .lin {
+	    padding: 1rem 2rem;
+	}
+	.lid h6 {
+		font-size: 16px;
+	}
+	/*#eco-system {
+		scale: 0.6;
+	}*/
 }
 @media(max-width: 1399px) {
 	.block-ron {
@@ -700,7 +741,6 @@ header .link-tab {
 	}
 	.block-lin {
 	    font-size: 20px;
-	    padding: 1rem 3rem;
 	}
 	main h1 {
 		font-size: 60px;
@@ -716,9 +756,6 @@ header .link-tab {
 	}
 	main .fs-36 {
 		font-size: 24px;
-	}
-	.input-group.search-main input::placeholder, .input-group.search-main input {
-		font-size: 20px;
 	}
 	.stat-block p {
 		font-size: 28px;
@@ -749,11 +786,13 @@ header .link-tab {
 	}
 	.block-lin {
 	    font-size: 16px;
-	    padding: 1rem;
 	}
 	.carousel-content {
 		height: 150px;
 	}
+	/*#eco-system {
+		scale: 1;
+	}*/
 }
 @media(max-width: 991px) {
 	header .tab-pane a {
@@ -803,6 +842,9 @@ header .link-tab {
 	.carousel-content {
 		height: 190px;
 	}
+	.block-lin {
+	    font-size: 12px;
+	}
 }
 @media(max-width: 565px) {
 	main h1 {
@@ -822,10 +864,6 @@ header .link-tab {
 	}
 	.world h6, .world h6 span {
 		font-size: 16px;
-	}
-	.block-lin {
-	    font-size: 12px;
-	    padding: 0.5rem 1rem;
 	}
 	.search-main .btn img {
 		width: 60%;
