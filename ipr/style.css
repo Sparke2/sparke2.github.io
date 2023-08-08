@@ -664,11 +664,14 @@ header .link-tab {
 .modal-content {
 	border-radius: 1.5rem;
 }
-.carousel-inner {
+.swiper {
 	overflow: visible;
 }
 .carousel-content {
 	height: 328px;
+}
+.swiper img.bg-1 {
+	width: 95%;
 }
 @media(max-width: 1784px) {
 	main h1 {
@@ -706,8 +709,8 @@ header .link-tab {
 		font-size: 20px;
 		padding: 0.7rem 0.75rem;
 	}
-	.carousel-item img.bg-1 {
-		width: 95%;
+	.swiper img.bg-1 {
+		width: 89%;
 	}
 	.block-ron h4 {
 		font-size: 20px;
@@ -731,9 +734,6 @@ header .link-tab {
 	.lid h6 {
 		font-size: 16px;
 	}
-	/*#eco-system {
-		scale: 0.6;
-	}*/
 }
 @media(max-width: 1399px) {
 	.block-ron {
@@ -790,9 +790,6 @@ header .link-tab {
 	.carousel-content {
 		height: 150px;
 	}
-	/*#eco-system {
-		scale: 1;
-	}*/
 }
 @media(max-width: 991px) {
 	header .tab-pane a {
