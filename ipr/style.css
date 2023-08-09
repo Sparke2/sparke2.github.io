@@ -761,6 +761,9 @@ header .link-tab {
 	font-weight: 600; 
 	font-size: 17px;
 }
+.review .modal-body {
+	padding: 0;
+}
 @media(max-width: 1784px) {
 	main h1 {
 		font-size: 70px;
