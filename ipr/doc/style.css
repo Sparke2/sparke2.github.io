@@ -803,6 +803,7 @@ header .link-tab {
 #doc .head-page-doc p {
 	color: #7B7B7B;
 	font-size: 20px;
+	font-weight: 500;
 }
 .badge-primary {
 	border-radius: 67px;
