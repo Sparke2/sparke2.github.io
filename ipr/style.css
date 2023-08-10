@@ -711,9 +711,7 @@ header .link-tab {
 .carousel-content {
 	height: 328px;
 }
-.swiper img.bg-1 {
-	width: 95%;
-}
+
 .modal-dialog.review {
     background-image: url("img/main/bg-modal.svg");
     background-position: center;
@@ -764,6 +762,9 @@ header .link-tab {
 .review .modal-body {
 	padding: 0;
 }
+.swiper img.bg-1 {
+	max-width: 900px;
+}
 @media(max-width: 1784px) {
 	main h1 {
 		font-size: 70px;
@@ -801,7 +802,7 @@ header .link-tab {
 		padding: 0.7rem 0.75rem;
 	}
 	.swiper img.bg-1 {
-		width: 89%;
+		max-width: 730px;
 	}
 	.block-ron h4 {
 		font-size: 20px;
@@ -833,6 +834,9 @@ header .link-tab {
 	}
 }
 @media(max-width: 1399px) {
+	.swiper img.bg-1 {
+		max-width: 650px;
+	}
 	.block-ron {
 		border-radius: 4rem;
 	}
