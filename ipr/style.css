@@ -546,7 +546,7 @@ input, button {
 }
 .world .bg-3-div {
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 }
 .world .video-bg {
