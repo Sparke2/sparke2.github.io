@@ -16,41 +16,44 @@ nav.navbar {
 	background-color: #fff;
 	box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.14);
 }
-header {
+#main-page header {
 	margin-bottom: 57px;
 }
-main h1 {
+header {
+	margin-bottom: 66px;
+}
+#main-page h1 {
 	font-size: 110px;
 	font-weight: bold;
 }
-main h2 {
+#main-page h2 {
 	font-size: 64px;
 	line-height: 116.4%;
 	font-weight: bold;
 	color: #FF9900;
 }
-main h2.fs-55 {
+#main-page h2.fs-55 {
 	font-size: 55px;
 }
-main h2.fs-60 {
+#main-page h2.fs-60 {
 	font-size: 60px;
 }
-main h2.fs-74 {
+#main-page h2.fs-74 {
 	font-size: 74px;
 }
-main h2.fs-80 {
+#main-page h2.fs-80 {
 	font-size: 80px;
 }
-main h3 {
+#main-page h3 {
 	text-align: center;
 	font-size: 55px;
 	font-weight: 700;
 	line-height: 116.4%;
 }
-main h3.fs-47 {
+#main-page h3.fs-47 {
 	font-size: 47px;
 }
-main h4 {
+#main-page h4 {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 116.4%;
@@ -413,7 +416,7 @@ input, button {
 	margin: 0;
 }
 .text-left {
-	text-align: left;
+	text-align: left !important;
 }
 .new-platform p {
 	color: #7B7B7B;
@@ -546,7 +549,7 @@ input, button {
 }
 .world .bg-3-div {
 	position: absolute;
-	bottom: -1px;
+	bottom: -13px;
 	left: 0;
 }
 .world .video-bg {
@@ -765,17 +768,81 @@ header .link-tab {
 .swiper img.bg-1 {
 	max-width: 900px;
 }
+
+
+#doc .table-bg {
+	border-radius: 25px;
+	background-image: url(img/doc/bg-table.png);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#doc .table-content {
+	background-color: #fff;
+	border-radius: 24px;
+}
+#doc .text-red {
+	color: #AC2C25;
+	font-weight: 700;
+	margin: 0;
+}
+#doc .text-red span {
+	color: #AC2C25;
+	font-weight: 500;
+}
+#doc .table p {
+	font-size: 14px;
+}
+#doc h2 {
+	font-size: 46px;
+	font-weight: 700;
+}
+#doc h1 {
+	font-size: 36px;
+	font-weight: 700;
+}
+#doc .head-page-doc p {
+	color: #7B7B7B;
+	font-size: 20px;
+	font-weight: 500;
+}
+.badge-primary {
+	border-radius: 67px;
+	background: linear-gradient(113deg, #E64EFF 0%, #FF7A00 100%);
+	padding: 1.3em 2em;
+}
+.badge-primary a {
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 700;
+}
+.wrap {
+	white-space: normal;
+}
+.table p {
+	color: #000;
+	font-weight: 500;
+}
+.table p span {
+	color: #000;
+	font-weight: 600;
+}
+.table p span.fw-700 {
+	font-weight: 700;
+}
+.br-none {
+	border: none;
+}
 @media(max-width: 1784px) {
-	main h1 {
+	#main-page h1 {
 		font-size: 70px;
 	}
-	main h2.fs-60, main h2.fs-74, main h2.fs-80 {
+	#main-page h2.fs-60, #main-page h2.fs-74, #main-page h2.fs-80 {
 		font-size: 50px;
 	}
-	main h2.fs-55, main h2 {
+	#main-page h2.fs-55, #main-page h2 {
 		font-size: 40px;
 	}
-	main .fs-36 {
+	#main-page .fs-36 {
 		font-size: 25px;
 	}
 	.block-lin {
@@ -834,28 +901,28 @@ header .link-tab {
 	}
 }
 @media(max-width: 1399px) {
+	#main-page .block-ron h4 {
+		font-size: 20px;
+	}
 	.swiper img.bg-1 {
 		max-width: 650px;
-	}
-	.block-ron {
-		border-radius: 4rem;
 	}
 	.block-lin {
 	    font-size: 20px;
 	}
-	main h1 {
+	#main-page h1 {
 		font-size: 60px;
 	}
-	main h2, main h2.fs-60, main h2.fs-74, main h2.fs-80 {
+	#main-page h2, #main-page h2.fs-60, #main-page h2.fs-74, #main-page h2.fs-80 {
 		font-size: 40px;
 	}
-	main h2.fs-55 {
+	#main-page h2.fs-55 {
 		font-size: 36px;
 	}
-	main h3, main h3.fs-47 {
+	#main-page h3, #main-page h3.fs-47 {
 		font-size: 40px;
 	}
-	main .fs-36 {
+	#main-page .fs-36 {
 		font-size: 24px;
 	}
 	.stat-block p {
@@ -879,8 +946,37 @@ header .link-tab {
 	.carousel-content {
 		height: 260px;
 	}
+	.stat-block p span {
+		font-size: 40px;
+	}
+	.stat-block p {
+		font-size: 22px;
+	}
+	.lid h6 {
+		font-size: 14px;
+	}
+	.lid p span {
+		font-size: 40px;
+	}
+	#eco-system .bg-ipr {
+		background-position: top;
+		background-size: 58%;
+		height: 490px;
+	}
+	#eco-system img {
+		width: 25%;
+	}
+	#eco-system .bg-ipr p {
+		font-size: 16px;
+	}
+	#eco-system img.prof {
+		width: 60px;
+	}
 }
 @media(max-width: 1199px) {
+	.block-ron {
+		border-radius: 4rem;
+	}
 	#eco-system .bg-ipr {
 		background-image: none;
 		height: auto;
@@ -908,6 +1004,9 @@ header .link-tab {
 	.carousel-content {
 		height: 180px;
 	}
+	.badge-primary {
+		max-width: fit-content;
+	}
 }
 @media(max-width: 767px) {
 	.container.block {
@@ -928,7 +1027,7 @@ header .link-tab {
 	header .nav-link {
 	    font-size: 14px;
 	}
-	main h3, main h3.fs-47 {
+	#main-page h3, #main-page h3.fs-47 {
 		font-size: 30px;
 	}
 	.world p {
@@ -945,16 +1044,16 @@ header .link-tab {
 	}
 }
 @media(max-width: 565px) {
-	main h1 {
+	#main-page h1 {
 		font-size: 30px;
 	}
-	main h2, main h2.fs-55, main h2.fs-60, main h2.fs-74, main h2.fs-80 {
+	#main-page h2, #main-page h2.fs-55, #main-page h2.fs-60, #main-page h2.fs-74, #main-page h2.fs-80 {
 		font-size: 24px;
 	}
-	main h3, main h3.fs-47 {
+	#main-page h3, #main-page h3.fs-47 {
 		font-size: 20px;
 	}
-	main .fs-36 {
+	#main-page .fs-36 {
 		font-size: 20px;
 	}
 	.carousel-content {
@@ -975,10 +1074,10 @@ header .link-tab {
 	.amb-head .badge {
 		margin: 0;
 	}
-	.amb-head .badge a, .world .btn-subscribe, .main-btn.badge a {
+	.amb-head .badge a, .world .btn-subscribe, .main-btn.badge a, .badge-primary a {
 		font-size: 14px;
 	}
-	.amb-head .badge, .world .btn-subscribe, .main-btn.badge {
+	.amb-head .badge, .world .btn-subscribe, .main-btn.badge, .badge-primary {
 		padding: 0.5em 2em;
 	}
 	.container-fluid {
@@ -992,6 +1091,15 @@ header .link-tab {
 	}
 	.nav-link {
 		padding: 0.4rem 0rem;
+	}
+
+	#doc h2 {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	#doc h1 {
+		font-size: 30px;
+		font-weight: 700;
 	}
 }
 
