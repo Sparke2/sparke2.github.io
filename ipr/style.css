@@ -652,23 +652,47 @@ footer p {
  	border-radius: 10px;
  }
  header .nav-pills .nav-link.active {
+	position: relative;
+	border-radius: 67px;
+	background: #fff;
+	text-align: left;
+	width: fit-content;
+	transition: 0.5s;
+	padding: 1rem;
+}
+
+header .nav-pills .nav-link.active span {
 	background: linear-gradient(90deg, #E362D5 0%, #D722F5 0.01%, #FF8A00 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-header .nav-link {
+  
+header .nav-pills .nav-link.active::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: linear-gradient(180deg, #FF8A00 0%, #FE5B00 100%);
+	border-radius: 67px;
+	z-index: -1;
+}
+header .nav-link span {
     color: #263238;
     font-weight: 500;
     font-size: 32px;
     margin: 0.3rem;
     padding: 0.6rem;
 	font-weight: 700;
-	text-align: start;
-	text-align-last: left;
 	width: fit-content;
 }
-header .nav-link:hover {
+header .nav-link {
+	text-align: left;
+	padding: 1rem 0;
+}
+header .nav-link span:hover {
 	color: #FF8A00;
 	transition: 0.3s;
 }
@@ -893,7 +917,7 @@ header .link-tab {
 	.lid h6 {
 		font-size: 16px;
 	}
-	header .nav-link {
+	header .nav-link span {
 		font-size: 25px;
 	}
 	header .tab-pane a {
@@ -995,8 +1019,14 @@ header .link-tab {
 	header .link-tab {
 		padding: 1rem;
 	}
-	header .nav-link {
+	header .nav-link span {
 	    font-size: 16px;
+	}
+	header .nav-link {
+	    padding: 0.5rem;
+	}
+	header .nav-pills .nav-link.active {
+		padding: 0.5rem;
 	}
 	.search-header {
 		width: 325px !important;
@@ -1024,8 +1054,17 @@ header .link-tab {
 	header .link-tab {
 		padding: 0.5rem;
 	}
-	header .nav-link {
+	header .nav-link span {
 	    font-size: 14px;
+	}
+	header .nav-link {
+	    padding: 0.3rem;
+	}
+	header .nav-pills .nav-link.active {
+		padding: 0.3rem;
+	}
+	header .nav-link span {
+		padding: 0;
 	}
 	#main-page h3, #main-page h3.fs-47 {
 		font-size: 30px;
@@ -1083,7 +1122,7 @@ header .link-tab {
 	.container-fluid {
 		padding: 0 2rem;
 	}
-	header .tab-pane a, header .nav-link {
+	header .tab-pane a, header .nav-link span {
 		font-size: 12px;
 	}
 	header .link-tab {
