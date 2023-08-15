@@ -915,6 +915,12 @@ header .link-tab {
 #chzv  .nav-link {
 	font-size: 13px;
 }
+header .qr-header img {
+	width: 180px;
+}
+.world .social img  {
+	width: 75px;
+}
 @media(min-width: 1650px) {
 	#eco-system .block-2, #eco-system .block-3 {
 		margin: 3rem 0 0 0 !important;
@@ -1028,9 +1034,6 @@ header .link-tab {
 	}
 	.lid h6 {
 		font-size: 14px;
-	}
-	.world .social img {
-		width: 15%;
 	}
 }
 @media(max-width: 1399px) {
@@ -1146,6 +1149,9 @@ header .link-tab {
 	.badge-primary {
 		max-width: fit-content;
 	}
+	header .qr-header img {
+		width: 30%;
+	}
 }
 @media(max-width: 767px) {
 	.container.block {
@@ -1254,6 +1260,9 @@ header .link-tab {
 	#doc h1 {
 		font-size: 30px;
 		font-weight: 700;
+	}
+	header .qr-header img {
+		width: 50%;
 	}
 }
 
