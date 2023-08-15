@@ -832,15 +832,15 @@ header .link-tab {
 	font-size: 20px;
 	font-weight: 500;
 }
-#doc .nav-link.active {
+#doc .nav-link.active, #chzv .nav-link.active {
 	border-radius: 67px;
 	background: linear-gradient(113deg, #E64EFF 0%, #FF7A00 100%);
 	color: #FFF;
 }
-#doc .nav-link.active::before {
+#doc .nav-link.active::before, #chzv .nav-link.active::before {
 	display: none;
 }
-#doc .nav-link {
+#doc .nav-link, #chzv .nav-link {
 	position: relative;
 	border-radius: 67px;
 	background: #fff;
@@ -853,7 +853,7 @@ header .link-tab {
 	letter-spacing: 0.27px;
 	transition: 0.4s;
 }
-#doc .nav-link::before {
+#doc .nav-link::before, #chzv .nav-link::before {
 	content: "";
 	position: absolute;
 	top: -2px;
@@ -882,9 +882,16 @@ header .link-tab {
 	border: none;
 }
 #doc .doc {
-	background-image: url(img/doc/doc-1.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
+	height: 300px;
+	padding: 4rem 0.5rem 0 0.5rem;
+}
+#doc .doc.doc-1 {
+	background-image: url(img/doc/doc-1.svg);
+}
+#doc .doc.doc-2 {
+	background-image: url(img/doc/doc-2.svg);
 }
 #doc .doc h4 {
 	font-size: 24px;
@@ -896,6 +903,23 @@ header .link-tab {
 	text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25);
 	color: #fff;
 	font-weight: 600;
+}
+#chzv .nav {
+	flex-wrap: nowrap;
+	align-items: center;
+}
+#chzv h2 {
+	font-size: 40px;
+	font-weight: 700;
+}
+#chzv  .nav-link {
+	font-size: 13px;
+}
+header .qr-header img {
+	width: 180px;
+}
+.world .social img  {
+	width: 75px;
 }
 @media(min-width: 1650px) {
 	#eco-system .block-2, #eco-system .block-3 {
@@ -1011,9 +1035,6 @@ header .link-tab {
 	.lid h6 {
 		font-size: 14px;
 	}
-	.world .social img {
-		width: 15%;
-	}
 }
 @media(max-width: 1399px) {
 	#main-page .block-ron h4 {
@@ -1128,6 +1149,9 @@ header .link-tab {
 	.badge-primary {
 		max-width: fit-content;
 	}
+	header .qr-header img {
+		width: 30%;
+	}
 }
 @media(max-width: 767px) {
 	.container.block {
@@ -1171,6 +1195,12 @@ header .link-tab {
 	}
 	.block-lin {
 	    font-size: 12px;
+	}
+	#doc .doc h4 {
+		font-size: 20px;
+	}
+	#doc .doc p {
+		font-size: 12px;
 	}
 }
 @media(max-width: 565px) {
@@ -1230,6 +1260,9 @@ header .link-tab {
 	#doc h1 {
 		font-size: 30px;
 		font-weight: 700;
+	}
+	header .qr-header img {
+		width: 50%;
 	}
 }
 
