@@ -68,28 +68,27 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="nav flex-column nav-pills py-sm-5 py-2 pe-4"
-								style="background: #FFF;
-								box-shadow: 41px 45px 42px -36px rgba(0, 0, 0, 0.09);" id="v-pills-tab" role="tablist"
+								style="box-shadow: 41px 45px 42px -36px rgba(0, 0, 0, 0.09);" id="v-pills-tab" role="tablist"
 								aria-orientation="vertical">
 								<button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
 									data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-									aria-selected="true">Библиотека</button>
+									aria-selected="true"><span>Библиотека</span></button>
 								<button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
 									data-bs-target="#v-pills-profile" type="button" role="tab"
-									aria-controls="v-pills-profile" aria-selected="false">Коллекции</button>
+									aria-controls="v-pills-profile" aria-selected="false"><span>Коллекции</span></button>
 								<button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
 									data-bs-target="#v-pills-disabled" type="button" role="tab"
-									aria-controls="v-pills-disabled" aria-selected="false">Альтернативные виды
-									обучения</button>
+									aria-controls="v-pills-disabled" aria-selected="false"><span>Альтернативные виды
+										обучения</span></button>
 								<button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
 									data-bs-target="#v-pills-messages" type="button" role="tab"
-									aria-controls="v-pills-messages" aria-selected="false">Наша разработка</button>
-								<a href="#" class="nav-link">Интеграция в ЭИОС</a>
-								<a href="#" class="nav-link">Правообладателям</a>
+									aria-controls="v-pills-messages" aria-selected="false"><span>Наша разработка</span></button>
+								<a href="#" class="nav-link"><span>Интеграция в ЭИОС</span></a>
+								<a href="#" class="nav-link"><span>Правообладателям</span></a>
 								<button class="nav-link" id="v-pills-info-tab" data-bs-toggle="pill"
 									data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info"
-									aria-selected="false">Информация</button>
-								<a href="#" class="nav-link">Мобильное приложение</a>
+									aria-selected="false"><span>Информация</span></button>
+								<a href="#" class="nav-link"><span>Мобильное приложение</span></a>
 							</div>
 						</div>
 						<div class="col-6">
@@ -236,119 +235,158 @@
 						<p>Список нормативно-правовых документов</p>
 					</div>
 					<div class="col-xl-3 col-lg-4">
-						<div class="badge-primary text-center mb-3">
-							<a href="#">НАШИ ДОКУМЕНТЫ</a>
-						</div>
-						<div class="main-btn badge wrap m-0">
-							<a href="#">ДОКУМЕНТЫ ДЛЯ ВУЗОВ И ИНСТИТУТОВ</a>
-						</div>
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+							<li class="nav-item w-100" role="presentation">
+							  <button class="nav-link w-100 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">НАШИ ДОКУМЕНТЫ</button>
+							</li>
+							<li class="nav-item w-100" role="presentation">
+							  <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">ДОКУМЕНТЫ ДЛЯ ВУЗОВ И ИНСТИТУТОВ</button>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="table-bg p-4">
-					<h1 class="text-white text-center pt-3">КАК ПОДТВЕРЖДАТЬ ДОКУМЕНТЫ ЭИОС</h1>
-					<p class="text-white text-center mb-4">Отчетный период - в момент проведения государственной аккредитации</p>
-					<div class="table-responsive-xl table-content p-3">
-						<table class="table text-center table-bordered border-dark">
-							<thead>
-							  <tr style="border-top: none;">
-								<th scope="col" class="br-none"><p class="text-red">Элемент ЭИОС</p></th>
-								<th scope="col"><p class="text-red">Что предоставлять <span>(Приказ 18.04.2023 №409)</span></p></th>
-								<th scope="col"><p class="text-red">ФГОС 3++</p></th>
-								<th scope="col"><p class="text-red">ФЗ “Об образовании”</p></th>
-								<th scope="col"><p class="text-red">Вывод об обязательности</p></th>
-								<th scope="col" class="br-none"><p class="text-red">Предлагаемые перспективные дополнения</p></th>
-							  </tr>
-							</thead>
-							<tbody>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Наличие доступа к сети “Интернет”</p></th>
-								<td><p>Договором или актами
-									выполненных работ</p></td>
-								<td><p>Функционирование ЭИОС обеспечивается соответствующими средствами информационно-коммуникационных технологий</p></td>
-								<td><p>Статья 2, 16, 29</p></td>
-								<td><p><span class="fw-700">Обязателен</span></p></td>
-								<td class="br-none"><p>Обязательное условие для доступа к ЭИОС. Вынести как условие
-									и подтверждение наличия ЭИОС, не является компонентом</p></td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Локальный нормативный акт об ЭИОС</p></th>
-								<td><p>Ссылка на соответствующие разделы официального сайта организации</p></td>
-								<td><p>Вариативно</p></td>
-								<td><p>Не закреплено обязательство создания акта на ЭИОС</p></td>
-								<td><p>Вариативно</p></td>
-								<td class="br-none"><p>Вынести как условие и подтверждение
-									наличия ЭИОС, не является компонентом</p></td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Наличие доступа к электронной библиотечной системе</p></th>
-								<td><p>Ссылка + <span>бесшовный доступ
-									ко всем материалам ЭБС через единый логин и проль
-									с возможностью проверки статистических показателей (предлагаемое уточнение)</p></span></td>
-								<td><p>Закреплен доступ
-									к изданиям электронных библиотечных систем</p></td>
-								<td><p>Статья 2, 16, 29</p></td>
-								<td><p><span class="fw-700">Обязателен</span></p></td>
-								<td class="br-none"><p>Обязательная регистрация в Реестре российского ПО.
-									Соответствие специализированным отраслевым стандартам. Доступ к статистике ЭБС и ЭИОС.</p></td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Наличие доступа
-									к электронным образовательным
-									ресурсам и (или) профессиональным базам данных (подборкам информационных ресурсов
-									по тематикам) в соответствии
-									с содержанием реализуемой образовательной программы</p></th>
-								<td><p>Ссылка + <span>бесшовный доступ
-									ко всем материалам ЭБС через единый логин и проль
-									(предлагаемое уточнение)</span></p></td>
-								<td><p>Закреплено</p></td>
-								<td><p>Статья 2, 16, 29</p></td>
-								<td><p>Важно наличие</p></td>
-								<td class="br-none"><p>Обязательная регистрация в Реестре российского ПО. Выделенный специализированный ресурс на отдельном домене.
-									Соответствие специализированным отраслевым стандартам.</p> </td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Личные кабинеты
-									обучающихся
-									и преподавателей в ЭИОС</p></th>
-								<td><p>Ссылка + перспективный критерий единая точка доступа ко всем элементам ЭИОС</p></td>
-								<td><p>Синхронное и(или) асинхронное взаимодействие посредством сети “Интернет”</p></td>
-								<td><p>Статья 16 (п.1), 98</p></td>
-								<td><p><span class="fw-700">Обязателен</span></p></td>
-								<td class="br-none"><p>Обязательное условие для доступа к ЭИОС. Наличие API.
-									Бесшовный переход для всех элементов ЭИОС. Интеграция с ГИС.</p></td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Доступ к электронному расписанию</p></th>
-								<td><p>Ссылка</p></td>
-								<td><p>Не сформулировано</p></td>
-								<td><p>Не сформулировано,
-									в компетенциях вуза</p></td>
-								<td><p>Вариативно</p></td>
-								<td class="br-none"><p>ПО или специальный модуль (Реестр российского ПО). Бесшовный
-									переход из личного кабинета. Доступ к профилю ППС. Материалам
-									по дисциплин. Статистика.</p></td>
-							  </tr>
-							  <tr>
-								<th scope="row" class="br-none"><p class="text-red">Электронное портфолио обучающегося</p></th>
-								<td><p>Ссылка</p></td>
-								<td><p>Указано</p></td>
-								<td><p>Не сформулировано,
-									в компетенциях вуза</p></td>
-								<td><p>Вариативно</p></td>
-								<td class="br-none"><p>ВКР - закрепить как элемент ЭИОС. Приказ Минобрнауки РФ
-									от 29.06.2015 №636. Реестр российского ПО. Бесшовная авторизация</p></td>
-							  </tr>
-							  <tr style="border-bottom: none;">
-								<th scope="row" class="br-none"><p class="text-red">Наличие доступа к учебным планам, рабочим программам дисциплин (модулей), программам практик</p></th>
-								<td><p>Ссылка</p></td>
-								<td><p>Указано</p></td>
-								<td><p>Не сформулировано,
-									в компетенциях вуза</p></td>
-								<td><p>Вариативно</p></td>
-								<td class="br-none"><p>Реестр российского ПО. Бесшовная авторизация. Доступ к ЭБС и учебным изданиям бесшовно.</p></td>
-							  </tr>
-							</tbody>
-						  </table>
+				  <div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+						<div class="table-bg p-4">
+							<h1 class="text-white text-center pt-3">КАК ПОДТВЕРЖДАТЬ ДОКУМЕНТЫ ЭИОС</h1>
+							<p class="text-white text-center mb-4">Отчетный период - в момент проведения государственной аккредитации</p>
+							<div class="table-responsive-xl table-content p-3">
+								<table class="table text-center table-bordered border-dark">
+									<thead>
+									  <tr style="border-top: none;">
+										<th scope="col" class="br-none"><p class="text-red">Элемент ЭИОС</p></th>
+										<th scope="col"><p class="text-red">Что предоставлять <span>(Приказ 18.04.2023 №409)</span></p></th>
+										<th scope="col"><p class="text-red">ФГОС 3++</p></th>
+										<th scope="col"><p class="text-red">ФЗ “Об образовании”</p></th>
+										<th scope="col"><p class="text-red">Вывод об обязательности</p></th>
+										<th scope="col" class="br-none"><p class="text-red">Предлагаемые перспективные дополнения</p></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Наличие доступа к сети “Интернет”</p></th>
+										<td><p>Договором или актами
+											выполненных работ</p></td>
+										<td><p>Функционирование ЭИОС обеспечивается соответствующими средствами информационно-коммуникационных технологий</p></td>
+										<td><p>Статья 2, 16, 29</p></td>
+										<td><p><span class="fw-700">Обязателен</span></p></td>
+										<td class="br-none"><p>Обязательное условие для доступа к ЭИОС. Вынести как условие
+											и подтверждение наличия ЭИОС, не является компонентом</p></td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Локальный нормативный акт об ЭИОС</p></th>
+										<td><p>Ссылка на соответствующие разделы официального сайта организации</p></td>
+										<td><p>Вариативно</p></td>
+										<td><p>Не закреплено обязательство создания акта на ЭИОС</p></td>
+										<td><p>Вариативно</p></td>
+										<td class="br-none"><p>Вынести как условие и подтверждение
+											наличия ЭИОС, не является компонентом</p></td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Наличие доступа к электронной библиотечной системе</p></th>
+										<td><p>Ссылка + <span>бесшовный доступ
+											ко всем материалам ЭБС через единый логин и проль
+											с возможностью проверки статистических показателей (предлагаемое уточнение)</p></span></td>
+										<td><p>Закреплен доступ
+											к изданиям электронных библиотечных систем</p></td>
+										<td><p>Статья 2, 16, 29</p></td>
+										<td><p><span class="fw-700">Обязателен</span></p></td>
+										<td class="br-none"><p>Обязательная регистрация в Реестре российского ПО.
+											Соответствие специализированным отраслевым стандартам. Доступ к статистике ЭБС и ЭИОС.</p></td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Наличие доступа
+											к электронным образовательным
+											ресурсам и (или) профессиональным базам данных (подборкам информационных ресурсов
+											по тематикам) в соответствии
+											с содержанием реализуемой образовательной программы</p></th>
+										<td><p>Ссылка + <span>бесшовный доступ
+											ко всем материалам ЭБС через единый логин и проль
+											(предлагаемое уточнение)</span></p></td>
+										<td><p>Закреплено</p></td>
+										<td><p>Статья 2, 16, 29</p></td>
+										<td><p>Важно наличие</p></td>
+										<td class="br-none"><p>Обязательная регистрация в Реестре российского ПО. Выделенный специализированный ресурс на отдельном домене.
+											Соответствие специализированным отраслевым стандартам.</p> </td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Личные кабинеты
+											обучающихся
+											и преподавателей в ЭИОС</p></th>
+										<td><p>Ссылка + перспективный критерий единая точка доступа ко всем элементам ЭИОС</p></td>
+										<td><p>Синхронное и(или) асинхронное взаимодействие посредством сети “Интернет”</p></td>
+										<td><p>Статья 16 (п.1), 98</p></td>
+										<td><p><span class="fw-700">Обязателен</span></p></td>
+										<td class="br-none"><p>Обязательное условие для доступа к ЭИОС. Наличие API.
+											Бесшовный переход для всех элементов ЭИОС. Интеграция с ГИС.</p></td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Доступ к электронному расписанию</p></th>
+										<td><p>Ссылка</p></td>
+										<td><p>Не сформулировано</p></td>
+										<td><p>Не сформулировано,
+											в компетенциях вуза</p></td>
+										<td><p>Вариативно</p></td>
+										<td class="br-none"><p>ПО или специальный модуль (Реестр российского ПО). Бесшовный
+											переход из личного кабинета. Доступ к профилю ППС. Материалам
+											по дисциплин. Статистика.</p></td>
+									  </tr>
+									  <tr>
+										<th scope="row" class="br-none"><p class="text-red">Электронное портфолио обучающегося</p></th>
+										<td><p>Ссылка</p></td>
+										<td><p>Указано</p></td>
+										<td><p>Не сформулировано,
+											в компетенциях вуза</p></td>
+										<td><p>Вариативно</p></td>
+										<td class="br-none"><p>ВКР - закрепить как элемент ЭИОС. Приказ Минобрнауки РФ
+											от 29.06.2015 №636. Реестр российского ПО. Бесшовная авторизация</p></td>
+									  </tr>
+									  <tr style="border-bottom: none;">
+										<th scope="row" class="br-none"><p class="text-red">Наличие доступа к учебным планам, рабочим программам дисциплин (модулей), программам практик</p></th>
+										<td><p>Ссылка</p></td>
+										<td><p>Указано</p></td>
+										<td><p>Не сформулировано,
+											в компетенциях вуза</p></td>
+										<td><p>Вариативно</p></td>
+										<td class="br-none"><p>Реестр российского ПО. Бесшовная авторизация. Доступ к ЭБС и учебным изданиям бесшовно.</p></td>
+									  </tr>
+									</tbody>
+								  </table>
+								</div>
+							</div>
+					</div>
+					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+						<div class="row g-3">
+							<div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+								<div class="doc doc-1">
+										<h4 class="text-center">СОГЛАСИЕ</h4>
+										<p class="text-center">На обработку персональных данных</p>
+								</div>
+							</div>
+							<div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+								<div class="doc doc-2">
+									<h4 class="text-center">СОГЛАСИЕ</h4>
+									<p class="text-center">На использование Cookies</p>
+								</div>
+							</div>
+							<div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+								<div class="doc doc-1">
+									<h4 class="text-center">СОГЛАСИЕ</h4>
+									<p class="text-center">О соответствии программного обеспечения</p>
+								</div>
+							</div>
+							<div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+								<div class="doc doc-2">
+									<h4 class="text-center">СОГЛАСИЕ</h4>
+									<p class="text-center">На публикацию данных о цифровой активности пользователей</p>
+								</div>
+							</div>
+							<div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+								<div class="doc doc-1">
+									<h4 class="text-center">ЛИЦЕНЗИИ</h4>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -420,128 +458,6 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script>
-		AOS.init();
-
-		const swiper = new Swiper('.swiper-container', {
-			loop: true,
-			speed: 1000,
-			effect: 'fade', 
-			fadeEffect: {           
-				crossFade: true 
-			},
-			autoplay: {
-				delay: 2000,
-			},
-		})
-
-		function help (a) {
-			var slideNumber = 0;
-			slideNumber = a.getAttribute('data-index-slide');
-			var swiperModal = new Swiper(".mySwiper", {
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				initialSlide: slideNumber,
-			});
-		}
-  
-	</script>
-	<script type="text/javascript">
-		$("#btn-menu").on("click", function () {
-			$btn = $('#btn-menu');
-			$icon = $('#btn-menu-icon');
-			$icon.toggleClass("fa-bars", $btn.hasClass("collapsed"));
-			$icon.toggleClass("fa-xmark");
-		});
-		$(document).ready(function ($) {
-			if (window.innerWidth < 767) {
-				function removeAos() {
-					var elem = document.getElementById('aos-css-file');
-					elem.parentNode.removeChild(elem);
-					return false;
-				}
-				removeAos();
-			}
-			$(".owl-carousel-comp").owlCarousel({
-				loop: true,
-				margin: 10,
-				dots: false,
-				nav: true,
-				autoplay: true,
-				slideTransition: 'linear',
-				autoplayTimeout: 6000,
-				autoplaySpeed: 6000,
-				autoplayHoverPause: true,
-				responsive: {
-					0: {
-						items: 1
-					},
-					767: {
-						items: 3
-					},
-					960: {
-						items: 5
-					},
-					1200: {
-						items: 5
-					},
-					1785: {
-						items: 6
-					}
-				}
-			});
-			$(".owl-carousel-book").owlCarousel({
-				loop: true,
-				margin: 20,
-				dots: false,
-				nav: true,
-				responsive: {
-					0: {
-						items: 1
-					},
-					767: {
-						items: 2
-					},
-					960: {
-						items: 3
-					},
-					1200: {
-						items: 4
-					},
-					1785: {
-						items: 5
-					}
-				}
-			});
-			$(".owl-carousel-video").owlCarousel({
-				loop: true,
-				margin: 20,
-				dots: false,
-				nav: true,
-				responsive: {
-					0: {
-						items: 1
-					},
-					767: {
-						items: 2
-					},
-					960: {
-						items: 3
-					},
-					1200: {
-						items: 4
-					},
-					1785: {
-						items: 5
-					}
-				}
-			});
-		});
-
-	</script>
-
 </body>
 
 </html>
