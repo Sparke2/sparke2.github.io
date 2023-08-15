@@ -551,6 +551,7 @@ input, button {
 	position: absolute;
 	bottom: -13px;
 	left: 0;
+	width: 767px;
 }
 .world .video-bg {
 	background-image: url("img/main/bg-v.png");
@@ -587,12 +588,14 @@ input, button {
 #eco-system .bg-ipr {
 	background-image: url("img/main/ipr.png");
 	width: 100%;
-	height: 776px;
+	height: 650px;
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: 65%;
+
 }
 #eco-system .bg-ipr p {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 }
 #eco-system .bg-ipr p span {
@@ -829,15 +832,37 @@ header .link-tab {
 	font-size: 20px;
 	font-weight: 500;
 }
-.badge-primary {
+#doc .nav-link.active {
 	border-radius: 67px;
 	background: linear-gradient(113deg, #E64EFF 0%, #FF7A00 100%);
-	padding: 1.3em 2em;
-}
-.badge-primary a {
 	color: #FFF;
+}
+#doc .nav-link.active::before {
+	display: none;
+}
+#doc .nav-link {
+	position: relative;
+	border-radius: 67px;
+	background: #fff;
+	text-align: center;
+	margin: 0.5rem 0;
+	padding: 1em 2em;
+	color: #FE7101;
 	font-size: 16px;
 	font-weight: 700;
+	letter-spacing: 0.27px;
+	transition: 0.4s;
+}
+#doc .nav-link::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: linear-gradient(180deg, #FF8A00 0%, #F90C4F 100%); 
+	border-radius: 67px;
+	z-index: -1;
 }
 .wrap {
 	white-space: normal;
@@ -855,6 +880,27 @@ header .link-tab {
 }
 .br-none {
 	border: none;
+}
+#doc .doc {
+	background-image: url(img/doc/doc-1.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#doc .doc h4 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25);
+}
+#doc .doc p {
+	text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	font-weight: 600;
+}
+@media(min-width: 1650px) {
+	#eco-system .block-2, #eco-system .block-3 {
+		margin: 3rem 0 0 0 !important;
+	}
 }
 @media(max-width: 1784px) {
 	#main-page h1 {
@@ -922,6 +968,51 @@ header .link-tab {
 	}
 	header .tab-pane a {
 		font-size: 20px;
+	}
+	.world .bg-3-div {
+		width: 43%;
+	}
+}
+@media(max-width: 1649px) {
+	#eco-system img {
+		width: 30%;
+	}
+	#eco-system img.prof {
+		width: 60px;
+	}
+	#eco-system img.vkr {
+		width: 20%;
+	}
+	#eco-system .bg-ipr p {
+		font-size: 16px;
+	}
+	#eco-system .bg-ipr p span {
+		font-size: 18px;
+	}
+	#eco-system .bg-ipr {
+		height: 500px;
+		background-size: 50%;
+	}
+	#main-page h3 {
+		font-size: 45px;
+	}
+	.stat-block p {
+		font-size: 20px;
+	}
+	.stat-block p span {
+		font-size: 50px;
+	}
+	.lid p span {
+		font-size: 45px;
+	}
+	.custom-div-br .lin {
+		padding: 1rem;
+	}
+	.lid h6 {
+		font-size: 14px;
+	}
+	.world .social img {
+		width: 15%;
 	}
 }
 @media(max-width: 1399px) {
