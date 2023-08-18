@@ -154,7 +154,6 @@ input, button {
 	font-size: 28px;
 	font-weight: 600;
 	letter-spacing: 1.12px;
-	text-transform: lowercase;
 }
 .stat-block p span {
 	color: #FFF;
