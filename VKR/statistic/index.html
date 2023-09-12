@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPR SMART</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://datalib.dev.datalib.ru/fonts/coolicons/v4.1/coolicons.css" />
+    <link id="aos-css-file" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="static.css">
+</head>
+
+<body>
+    <main>
+        <div class="bg-light">
+            <ul class="nav nav-tabs pt-5" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">
+                        <span>Использование платформы</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false"><span>Скачивание
+                            изданий</span></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                        type="button" role="tab" aria-controls="messages"
+                        aria-selected="false"><span>Отчеты</span></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
+                        type="button" role="tab" aria-controls="settings" aria-selected="false"><span>Использование
+                            мобильного приложения</span></button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="bg-light box-shadow br-20">
+                        <form>
+                            
+                        </form>
+                    </div>
+                    <div class="row pt-5">
+                        <div class="col-xl-3 col-lg-4">
+                            <div class="div-stat-info div-1 p-4 mb-4">
+                                <p class="mb-2"><span class="text-white">4 546</span></p>
+                                <p>Количество посещений
+                                    преподавателями платформы</p>
+                            </div>
+                            <div class="div-stat-info div-2 p-4 mb-4">
+                                <p class="mb-2"><span class="text-white">3 546</span></p>
+                                <p>Количество посещений студентами платформы</p>
+                            </div>
+                            <div class="div-stat-info div-3 p-4 mb-4">
+                                <p class="mb-2"><span class="text-white">14 546 часов</span></p>
+                                <p>Среднее время студентов
+                                    и преподавателе
+                                    на платформе</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="chart-graph">
+                                <canvas id="line-chart" class="p-5" width="600" height="450"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...
+                </div>
+                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+        Chart.defaults.global.legend.display = false;
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: [12.08, 13.08, 14.08, 15.08, 16.08, 17.08, 18.08, 19.08, 20.08, 21.08],
+                datasets: [{
+                    data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                    label: 'Активных пользователей',
+                    borderColor: "#FF6328",
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointBackgroundColor: "#fff",
+                    pointHoverBackgroundColor: "#FF6328",
+                    fill: true,
+                    backgroundColor: "#FF5C000F",
+
+                }, {
+                    data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                    label: 'Посещений',
+                    borderColor: "#BD51C3",
+                    cubicInterpolationMode: 'monotone',
+                    tension: 0.4,
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointBackgroundColor: "#fff",
+                    backgroundColor: "#BD51C30F",
+                    pointHoverBackgroundColor: "#BD51C3",
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            borderWidth: 2,
+                            borderDash: [16, 10],
+                            color: "#C5C6C7",
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }]
+                },
+                interaction: {
+                    mode: 'index'
+                },
+            }
+
+        });
+    </script>
+</body>
