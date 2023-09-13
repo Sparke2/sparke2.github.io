@@ -1,0 +1,235 @@
+h1 {
+    background: linear-gradient(92deg, #7630A1 -1.91%, #B961FF 112.16%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+}
+.block-padding {
+    padding: 4rem 0;
+}
+.block-padding:last-child {
+    padding: 4rem 0 0 0;
+}
+.fs-18 {
+    font-size: 18px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+a {
+    color: #BD51C3;
+}
+a:hover {
+    color: #8b4b8f;
+}
+.text-purpur {
+    color: #7630A1;
+    font-size: 25px;
+}
+.btn-send, .btn-send:hover {
+    border-radius: 53px;
+    background: linear-gradient(90deg, #E362D5 -14.47%, #D722F5 -14.45%, #FF8A00 107.74%);
+    color: #fff;
+    padding: 0.4rem 4rem;
+}
+.btn-purpur,
+.btn-purpur:hover {
+    border-radius: 53px;
+    background: linear-gradient(90deg, #B166DE -14.47%, #D722F5 -14.45%, #C579F3 107.74%);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+}
+
+.btn-arrow {
+    background-image: url('img/service/arrow-icon.svg');
+    width: 68px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.block-key {
+    border-radius: 20px;
+    background: #F9FAFC;
+    box-shadow: 0px 0px 28px -4px rgba(0, 0, 0, 0.25);
+}
+
+ul.progressbar {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+ul.progressbar li.step {
+    position: relative;
+    color: var(--dark-grey);
+    width: 33%;
+    text-align: center;
+    background: linear-gradient(103deg, #8B43B7 2.43%, #D52EF4 89.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+ul.progressbar li.step:before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: attr(data-step);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 30px);
+    z-index: 99;
+    background: linear-gradient(137deg, #7630A1 -42.14%, #E851ED 113.66%);
+    color: #fff;
+    font-size: 42px;
+    font-weight: 600;
+    -webkit-text-fill-color: #fff;
+}
+
+ul.progressbar li.step:after {
+    content: '';
+    width: 80%;
+    height: 5px;
+    position: absolute;
+    top: -35px;
+    left: -50%;
+    background: linear-gradient(137deg, #7630A1 -42.14%, #E851ED 113.66%);
+    margin: 0 10%;
+    border-radius: 100px;
+}
+
+ul.progressbar li.step:first-child:after {
+    width: 0;
+}
+.step-text {
+    color: #000;
+    -webkit-text-fill-color:#000;
+    font-size: 20px;
+}
+.bg-text {
+    background-image: url(img/service/bg-service-4.png);
+    border-radius: 55px;
+    background-size: cover;
+    z-index: 3;
+}
+.bg-text p {
+    font-size: 22px;
+}
+.br-28 {
+    border-radius: 28px;
+}
+.setting-bg-1 {
+    top: 18%;
+}
+.setting-bg-2 {
+    top: 18%;
+    right: 0;
+}
+.form .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(38, 50, 56, 0.50);
+}
+
+.form .input-bg {
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+.form .form-control::placeholder {
+    color: rgba(38, 50, 56, 0.50);
+}
+
+.bg-block {
+    width: 600px;
+}
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .bg-block {
+        width: 550px;
+    }
+}
+@media (max-width: 1200px) {
+    ul.progressbar li.step {
+        font-size: 20px;
+    }
+    .step-text {
+        font-size: 16px;
+    }
+}
+@media(max-width: 992px) {
+    .bg-text p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    ul.progressbar li.step {
+        font-size: 16px;
+    }
+    .step-text {
+        font-size: 14px;
+    }
+    ul.progressbar li.step:before {
+        top: -30px;
+    }
+    ul.progressbar li.step {
+        width: 100%;
+    }
+    ul.progressbar {
+        flex-direction: column;
+    }
+    ul.progressbar li.step:after {
+        display: none;
+    }
+    .amb-block .badge {
+        font-size: 20px;
+    }
+    
+}
+@media (max-width: 576px) { 
+    .amb-block .badge {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
