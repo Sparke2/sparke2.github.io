@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPR SMART</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+
+    <link id="aos-css-file" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="collection.css">
+</head>
+
+<body>
+    <main>
+        <div class="container pt-5">
+            <h1>КОЛЛЕКЦИЯ «ALPINA»</h1>
+            <p class="text-collection">С учётом сложившейся международной обстановки, реализация намеченных плановых заданий предоставляет широкие возможности
+                для новых предложений. Повседневная практика показывает, что сплочённость команды профессионалов влечет за собой процесс внедрения и модернизации как самодостаточных, так и внешне зависимых концептуальных решений. Господа, постоянный количественный рост и сфера нашей активности не оставляет шанса для благоприятных перспектив.</p>
+            <ul class="nav nav-pills mb-3 justify-content-center switch pt-5" id="pills-tab" role="tablist">
+                <li class="nav-item me-lg-4 my-0" role="presentation">
+                    <button class="nav-link active" id="pills-filter-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-filter" type="button" role="tab" aria-controls="pills-filter"
+                        aria-selected="true">ПОИСК ПО ПАРАМЕТРАМ</button>
+                </li>
+                <li class="nav-item my-0" role="presentation">
+                    <button class="nav-link text-uppercase" id="pills-topic-tab" data-bs-toggle="pill" data-bs-target="#pills-topic"
+                        type="button" role="tab" aria-controls="pills-topic" aria-selected="false">помощь в подборе коллекции</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab"
+                    tabindex="0">
+                    <h2 class="text-center pt-3 pb-5 fw-700">РАСШИРЕННЫЙ ПОИСК</h2>
+                    <div class="bg-light-filter box-shadow br-20">
+                        <form>
+                            <div class="row g-4 p-4 px-5 form">
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">Заглавие</label>
+                                        <div class="input-bg">
+                                            <input type="text" class="form-control" id="title"
+                                                placeholder="Начните ввод...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="publication" class="form-label">Издательство</label>
+                                        <div class="input-bg">
+                                            <input type="text" class="form-control" id="publication"
+                                                placeholder="Начните ввод...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="ugsn" class="form-label">УГСН</label>
+                                        <div class="input-bg">
+                                            <input type="text" class="form-control" id="ugsn"
+                                                placeholder="Начните ввод...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="availability" class="form-label">Доступность журнала</label>
+                                        <div class="input-bg">
+                                            <input type="text" class="form-control" id="availability"
+                                                placeholder="Начните ввод...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <label for="vak" class="form-label">Входит ли в ВАК</label>
+                                    <select class="select" name="vak">
+                                        <option></option>
+                                        <option value="1">Выбор из списка</option>
+                                        <option value="0">Выбор из списка</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <label for="subscribe" class="form-label">Вариант подписки</label>
+                                    <select class="select" name="subscribe">
+                                        <option></option>
+                                        <option value="1">Выбор из списка</option>
+                                        <option value="0">Выбор из списка</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 mt-xl-auto mt-4">
+                                    <button class="btn btn-badge px-4 w-100 mb-lg-2 my-0">ОЧИСТИТЬ ВСЕ <i class="fa-solid fa-circle-xmark ps-3"></i></button>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 mt-xl-auto mt-4">
+                                    <button class="btn btn-active w-100 mb-2">ПРИМЕНИТЬ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane" id="pills-topic" role="tabpanel" aria-labelledby="pills-topic-tab" tabindex="0">
+                    <h2 class="text-center pt-3 pb-4 fw-700 text-uppercase">помощь в подборе коллекции</h2>
+                </div>
+            </div>
+            <h3 class="pt-5 fw-700">В коллекции найдено 33 000 результатов</h3>
+            <div class="d-flex justify-content-between align-items-md-center mt-4 flex-md-row flex-column">
+                <ul class="nav nav-pills justify-content-center flex-md-row flex-column" id="pills-tab-list" role="tablist">
+                    <li class="nav-item m-0" role="presentation">
+                        <button class="nav-link btn text-lin-1 active ps-0" id="pills-list-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-list" type="button" role="tab" aria-controls="pills-list"
+                            aria-selected="true"><i class="fa-solid fa-list"></i> Смотреть списком</button>
+                    </li>
+                    <li class="nav-item m-0" role="presentation">
+                        <button class="nav-link btn text-lin-1 ps-md-2 ps-0" id="pills-full-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-full" type="button" role="tab" aria-controls="pills-full"
+                            aria-selected="false"> <i class="fa-solid fa-border-all"></i> Смотреть наглядно</button>
+                    </li>
+                </ul>
+                <a href="#">
+                    <p class="text-lin-2 fw-500 m-0 pt-md-0 pt-2"><i class="fa-solid fa-download"></i> Выгрузить
+                        результаты
+                    </p>
+                </a>
+            </div>
+            <div class="row py-5 g-4">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pills-list" role="tabpanel" aria-labelledby="pills-list-tab" tabindex="0">
+                        <div class="tab-content-book">
+                            <ul>
+                                <li>
+                                    <h5>Ретроспектива. Всемирная история глазами молодых исследователей. Сборник научных статей</h5>
+                                    <p>С учётом сложившейся международной обстановки, реализация намеченных плановых заданий предоставляет широкие возможности для новых
+                                        предложений. Повседневная практика показывает, что сплочённость команды профессионалов влечет за собой процесс внедрения и модернизации
+                                        как самодостаточных, так и внешне зависимых концептуальных решений. Господа, постоянный количественный рост и сфера нашей активности не оставляет
+                                        шанса для благоприятных перспектив.</p>
+                                </li>
+                                <li>
+                                    <h5>Ретроспектива. Всемирная история глазами молодых исследователей. Сборник научных статей</h5>
+                                    <p>С учётом сложившейся международной обстановки, реализация намеченных плановых заданий предоставляет широкие возможности для новых
+                                        предложений. Повседневная практика показывает, что сплочённость команды профессионалов влечет за собой процесс внедрения и модернизации
+                                        как самодостаточных, так и внешне зависимых концептуальных решений. Господа, постоянный количественный рост и сфера нашей активности не оставляет
+                                        шанса для благоприятных перспектив.</p>
+                                </li>
+                                <li>
+                                    <h5>Ретроспектива. Всемирная история глазами молодых исследователей. Сборник научных статей</h5>
+                                    <p>С учётом сложившейся международной обстановки, реализация намеченных плановых заданий предоставляет широкие возможности для новых
+                                        предложений. Повседневная практика показывает, что сплочённость команды профессионалов влечет за собой процесс внедрения и модернизации
+                                        как самодостаточных, так и внешне зависимых концептуальных решений. Господа, постоянный количественный рост и сфера нашей активности не оставляет
+                                        шанса для благоприятных перспектив.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link next" href="#">ДАЛЬШЕ</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pills-full" role="tabpanel" aria-labelledby="pills-full-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                            <div class="col-xxl-2 col-lg-3 col-md-6 col-12">
+                                <p class="placeholder-glow">
+                                    <span class="placeholder col-12 py-5"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link next" href="#">ДАЛЬШЕ</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.select').select2({
+                minimumResultsForSearch: -1,
+                placeholder: "Выбор из списка...",
+                width: '100%',
+            });
+        });
+    </script>
+</body>
