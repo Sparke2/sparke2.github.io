@@ -182,12 +182,54 @@ h2 {
     padding-top:9vw;
     padding-bottom: 9vw;
 }
+.swiper-container {
+    width: 100%;
+    max-width: 21vw;
+    height: 13vw;
+    margin: 0 auto;
+}
+.slider {
+    overflow: hidden;
+    right: 4.7vw;
+    top: 12vw;
+}
+.card-slider {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.21);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.06);
+}
+.card-slider p {
+    color: #fff;
+    font-size: 14px;
+}
+.card-slider img {
+    width: 50px !important;
+}
 @media (max-width: 1399px) {
-    .bg-1 {
+    .bg-1 img {
         width: 50vw;
     }
     .bg-2 {
         top: 17vw;
+    }
+    .swiper-container {
+        width: 100%;
+        max-width: 17vw;
+        height: 11vw;
+    }
+    .slider {
+        overflow: hidden;
+        right: 4.7vw;
+        top: 10.5vw;
+    }
+    .card-slider p {
+       font-size: 10px;
+    }
+    .card-slider span.fs-37 {
+        font-size: 20px;
+    }
+    .card-slider img {
+        width: 30px !important;
     }
 }
 @media (max-width: 1199px) {
