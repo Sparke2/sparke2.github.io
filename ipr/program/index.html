@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPR SMART</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl fixed-top header-nav p-0">
+            <div class="container-fluid align-items-center d-block">
+                <div class="d-flex justify-content-between">
+                    <button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <!-- <img src="img/main/Menu_Alt_04.svg" alt=""> -->
+                        <i class="ci-Menu_Alt_04"></i>
+                    </button>
+                    <a class="navbar-brand brandName d-xl-none d-block" href="#">
+                        <img src="img/main/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="bdNavbar">
+                    <div
+                        class="w-100 d-flex justify-content-between align-items-center align-content-between flex-wrap py-1">
+                        <button id="btn-menu" class="btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+                            <i id="btn-menu-icon" class="fa-solid fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand brandName d-xl-block d-none" href="#">
+                            <img src="img/main/logo.svg" alt="">
+                        </a>
+                        <form class="my-auto">
+                            <div class="input-group search-header">
+                                <input type="text" name="search-header" class="form-control" placeholder="Поиск...">
+                                <button class="btn" type="submit" id="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <p class="m-0">sales@iprmedia.ru</p>
+                        <p class="m-0">+7 800 555-22-35</p>
+                        <button class="btn">
+                            <!-- <img src="img/main/Shopping_Cart_02.svg" alt=""> -->
+                            <i class="ci-Shopping_Cart_02"></i>
+                        </button>
+                        <button class="btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="btn">
+                            <p class="m-0">Тестовый доступ</p>
+                        </button>
+                        <button class="btn">
+                            <!-- <img src="img/main/User_Circle.svg" alt=""> -->
+                            <i class="ci-User_Circle"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseMenu">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="nav flex-column nav-pills py-sm-5 py-2 pe-4"
+                                style="box-shadow: 41px 45px 42px -36px rgba(0, 0, 0, 0.09);" id="v-pills-tab"
+                                role="tablist" aria-orientation="vertical">
+                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true"><span>Библиотека</span></button>
+                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile"
+                                    aria-selected="false"><span>Коллекции</span></button>
+                                <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-disabled" type="button" role="tab"
+                                    aria-controls="v-pills-disabled" aria-selected="false"><span>Альтернативные виды
+                                        обучения</span></button>
+                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-messages" type="button" role="tab"
+                                    aria-controls="v-pills-messages"
+                                    aria-selected="false"><span>Экосистема</span></button>
+                                <a href="#" class="nav-link"><span>Интеграция в ЭИОС</span></a>
+                                <a href="#" class="nav-link"><span>Правообладателям</span></a>
+                                <button class="nav-link" id="v-pills-info-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info"
+                                    aria-selected="false"><span>Информация</span></button>
+                                <button class="nav-link" id="v-pills-mobile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-mobile" type="button" role="tab"
+                                    aria-controls="v-pills-mobile" aria-selected="false"><span>Мобильное
+                                        приложение</span></button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tab-content pt-sm-5 pt-2" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab" tabindex="0">
+                                    <div class="row px-md-5">
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Издания</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Эксклюзивные издания</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Новые издания</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Журналы</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Архивные фонды</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Печатные книги</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                    <div class="row px-md-5">
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Новые коллекции</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Коллекция ИИ</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Коллекции от издательств</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Коллекции от университетов</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Популрные коллекции</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Коллекции ПРО</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Научно-образовательные
+                                                    платформы</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Создать свою коллекию</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+                                    aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                                    <div class="row px-md-5">
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Онлайн курсы</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Аудиоиздания</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Лекториум</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Видеоресурсы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                    <div class="row px-md-5">
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">DataLIB</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">РКИ</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">ПрофОбразование</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">ВКР Smart</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-info" role="tabpanel"
+                                    aria-labelledby="v-pills-info-tab" tabindex="0">
+                                    <div class="row px-md-5">
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">О компании</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Адаптивные технологии</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Шаблоны и документы</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Контакты</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Инструкции</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Курс “ДПО по цифровизации”</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="link-tab"><a href="#">Часто задаваемые вопросы</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-mobile" role="tabpanel"
+                                    aria-labelledby="v-pills-mobile-tab" tabindex="0">
+                                    <div class="row px-md-5 qr-header">
+                                        <div class="col-xl-6 text-center">
+                                            <a href="https://play.google.com/store/apps/details?id=ru.iprbooks.iprbooksmobile&hl=ru&gl=US&pli=1"
+                                                target="_blank">
+                                                <img src="img/main/qr-code-android.gif">
+                                                <span class="text-center"><br>Android</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xl-6 text-center">
+                                            <a href="https://apps.apple.com/ru/app/ipr-smart-mobile-reader/id1322302612"
+                                                target="_blank">
+                                                <img src="img/main/qr-code-ios.gif">
+                                                <span class="text-center"><br>IOS</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="position-relative" style="overflow: hidden;">
+        <div id="program">
+            <div class="position-absolute bg-1 d-xl-block d-none">
+                <img src="img/program/bg-1.svg" alt="">
+            </div>
+            <div class="container-fluid padding-main-block">
+                <div class="row">
+                    <div class="col-xxl-5 col-xl-6">
+                        <h1>IPR SMART</h1>
+                        <p class="fs-22 py-4">Цифровая трансформация управленческой модели <span
+                                class="fw-500">библиотечной экосистемы ВУЗа</span></p>
+                        <button class="btn btn-send fw-600 fs-18 py-sm-3">ЗАПИСАТЬСЯ НА ПРОГРАММУ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="block-padding">
+                    <h2 class="mb-4 pb-md-3 text-center">ПРЕИМУЩЕСТВА ПРОГРАММЫ</h2>
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="amb-block position-relative mt-5">
+                                <div class="badge lin-3">РЕЗУЛЬТАТЫ</div>
+                                <p class="mb-4 fw-500">По результатам программы вы освоите следующие навыки:</p>
+                                <ul class="mb-0 fs-18">
+                                    <li class="mb-0">Поймете специфику работы с большими объемами информации.</li>
+                                    <li class="mb-0 mt-1">Овладете знаниями по основам программного  обеспечения и
+                                        технические средства для регулярной коммуникации, мониторинга информации в
+                                        Интернете</li>
+                                    <li class="mb-0 mt-1">Ознакомитесь со структурой организации, зонами ответственности
+                                        и функциями подразделений.</li>
+                                    <li class="mb-0 mt-1">Углубитесь во внутренние правила согласования и утверждения
+                                        документов.</li>
+                                    <li class="mb-0 mt-1">Обучитесь вести работу с агрегаторами новостей, электронными
+                                        подписками, социальными сетями, форумами.</li>
+                                    <li class="mb-0 mt-1">Узнатете особенности ЭИОС вуза.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="amb-block position-relative mt-5">
+                                <div class="badge lin-2">ЦЕЛЬ</div>
+                                <p class="m-0">Целью Программы является <span class="fw-500">получение новой компетенции
+                                        «Управление информацией
+                                        из различных источников»,</span> необходимой
+                                    для профессиональной деятельности</p>
+                            </div>
+                            <div class="amb-block position-relative mt-5">
+                                <div class="badge lin-1">СОДЕРЖАНИЕ</div>
+                                <p class="m-0">Содержание программы разработано с учетом
+                                    квалификационных требований по должности
+                                    <span class="fw-500">«Специалист по информационным ресурсам»,</span>
+                                    утвержденных Приказом Министерства труда
+                                    и социальной защиты РФ от 19 июля 2022 г. № 420н
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-padding">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <h2 class="fs-40 fs-37">ЗАЛОГ УСПЕШНОЙ ОРГАНИЗАЦИИ —
+                                ПОВЫШЕНИЕ УРОВНЯ ПРОФЕССИОНАЛЬНЫХ
+                                КОМПЕТЕНЦИЙ СОТРУДНИКОВ</h2>
+                            <div class="bg-criteria p-4 mt-4">
+                                <p class="fw-600 fs-22">Критерии отбора на программу:</p>
+                                <ul class="fs-18">
+                                    <li>Оконченное среднее профессиональное или высшее образование;</li>
+                                    <li>Неоконченное среднее профессиональное или высшее образование;</li>
+                                </ul>
+                                <p class="fw-600 fs-22">Категория обучающегося:</p>
+                                <ul class="m-0 fs-18">
+                                    <li class="pb-0">Специалист по информационным ресурсам</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 position-relative d-xl-block d-none">
+                            <div class="position-absolute bg-2">
+                                <img src="img/program/bg-2.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-certification p-4 mt-4 position-relative">
+                        <h5 class="text-white text-center fw-600">ЛИЦУ, УСПЕШНО ПРОШЕДШЕМУ ИТОГОВУЮ АТТЕСТАЦИЮ, ВЫДАЕТСЯ
+                            УДОСТОВЕРЕНИЕ О ПОВЫШЕНИИ
+                            КВАЛИФИКАЦИИ</h5>
+                        <p class="text-white text-center m-0">При освоении дополнительной профессиональной программы
+                            параллельно с получением среднего
+                            профессионального образовании
+                            и (или) высшего образования удостоверение о повышение квалификации выдается одновременно с
+                            получением соответствующего документа
+                            об образовании и о квалификации*</p>
+                    </div>
+                </div>
+                <div class="block-padding">
+                    <h2 class="mb-4 pb-md-3 text-center">НОРМАТИВНО-ПРАВОВЫЕ ОСНОВАНИЯ
+                        РАЗРАБОТКИ ПРОГРАММЫ</h2>
+                    <div class="position-relative">
+                        <div class="position-absolute norm-bg-1 d-xl-block d-none">
+                            <img src="img/program/bg-4.svg" alt="">
+                        </div>
+                        <div class="col-xl-10 mx-auto">
+                            <div class="bg-text p-4 mx-xl-5 position-relative">
+                                <div class="bg-white p-sm-5 p-2 m-2 br-28">
+                                    <div>
+                                        <div class="badge-text py-2 px-4 mb-4">
+                                            <p class="text-white fw-600 m-0">Перечень документов, на основании которых
+                                                разработана программа:</p>
+                                        </div>
+                                        <ul class="m-0">
+                                            <li>Федеральный закон от 29 декабря 2012 года № 273-ФЗ «Об образовании в
+                                                Российской Федерации»;</li>
+                                            <li>Приказ Министерства образования и науки Российской Федерации от 01 июля
+                                                2013 года № 499 «Об утверждении Порядка организации и осуществления
+                                                образовательной деятельностипо дополнительным профессиональным
+                                                программам»;</li>
+                                            <li>Приказ Министерства образования и науки Российской Федерации от 23
+                                                августа 2017 года № 816 «Об утверждении Порядка применения
+                                                организациями, осуществляющими образовательную деятельность,
+                                                электронного обучения, дистанционных образовательных технологий при
+                                                реализации образовательных программ»;</li>
+                                            <li class="p-0">Приказ Министерства труда и социальной защиты РФ от 8
+                                                сентября 2014 г. N 629н «Об утверждении профессионального стандарта
+                                                «Специалист по информационным ресурсам»».</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute norm-bg-2 d-xl-block d-none">
+                            <img src="img/program/bg-5.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="block-padding">
+                    <h2 class="text-center">ГРАФИК ОБУЧЕНИЯ</h2>
+                    <div>
+                        <div class="table-responsive-xl table-content p-3">
+                            <table class="table text-center table-bordered border-dark">
+                                <thead>
+                                    <tr style="border-top: none;">
+                                        <th scope="col" class="br-none w-10">
+                                            <div class="lin lin-1">№ п/п</div>
+                                        </th>
+                                        <th scope="col" class="w-50">
+                                            <div class="lin lin-2">Наименование тем</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="lin lin-3">Количество часов</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="lin lin-4">Период обучения</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700">1</p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Библиотека в составе цифрового университета</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">18</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">Х</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>1.1</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Модель “Цифрового университета”</p>
+                                        </td>
+                                        <td>
+                                            <p>5</p>
+                                        </td>
+                                        <td>
+                                            <p>1 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>1.2</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Трансформация формы и содержания образования, новые
+                                                роли
+                                                библиотечно-информационных комплексов</p>
+                                        </td>
+                                        <td>
+                                            <p>7</p>
+                                        </td>
+                                        <td>
+                                            <p>1 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>1.3</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Компетенция цифровой трансформации</p>
+                                        </td>
+                                        <td>
+                                            <p>6</p>
+                                        </td>
+                                        <td>
+                                            <p>1 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700">2</p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Трансформация управленческой модели</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">18</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">Х</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>2.1</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Цифровые роли в библиотеке вуза: как и во что
+                                                трансформировать
+                                                штат?</p>
+                                        </td>
+                                        <td>
+                                            <p>4</p>
+                                        </td>
+                                        <td>
+                                            <p>1 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>2.2</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Цена сценария “оставить все как есть”</p>
+                                        </td>
+                                        <td>
+                                            <p>4</p>
+                                        </td>
+                                        <td>
+                                            <p>2 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>2.3</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Экскурс в гибкие практики управления</p>
+                                        </td>
+                                        <td>
+                                            <p>4</p>
+                                        </td>
+                                        <td>
+                                            <p>3 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>2.4</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Работа с данными в университете: кто и зачем возьмет
+                                                на себя
+                                                data management?</p>
+                                        </td>
+                                        <td>
+                                            <p>4</p>
+                                        </td>
+                                        <td>
+                                            <p>3 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700">3</p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Библиотека в медиапространстве</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">18</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">Х</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>3.1</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Бесконечный поток информации: как библиотеке выстроить
+                                                внешние коммуникации, не тратя дополнительных ресурсов, и создать
+                                                на это фундаменте новый бренд</p>
+                                        </td>
+                                        <td>
+                                            <p>10</p>
+                                        </td>
+                                        <td>
+                                            <p>4 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>3.2</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Библиотека в коммуникационной экосистеме вуза: как
+                                                заключать
+                                                эффективные партнерства и оказывать влияние</p>
+                                        </td>
+                                        <td>
+                                            <p>8</p>
+                                        </td>
+                                        <td>
+                                            <p>5 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700">4</p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Финансовая устойчивость библиотеки вуза</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">17</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">Х</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>4.1</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Развитие финансовой грамотности — от личной к
+                                                системной</p>
+                                        </td>
+                                        <td>
+                                            <p>8</p>
+                                        </td>
+                                        <td>
+                                            <p>6-8 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p>4.2</p>
+                                        </th>
+                                        <td>
+                                            <p class="text-start">Как в библиотеке вуза стать активом: data-driven
+                                                подход
+                                                к планированию бюджета</p>
+                                        </td>
+                                        <td>
+                                            <p>9</p>
+                                        </td>
+                                        <td>
+                                            <p>8-9 неделя обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700">5</p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Итоговая аттестация</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">1</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">9 недель обучения</p>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: none;">
+                                        <th scope="row" class="br-none">
+                                            <p class="fw-700"></p>
+                                        </th>
+                                        <td>
+                                            <p class="fw-700 text-start">Итого</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">72</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-700">9 недель обучения</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-center">ОСТАЛИСЬ ВОПРОСЫ?</h2>
+                    <div class="row">
+                        <div class="col-xxl-5 col-xl-6 col-lg-8 mb-xl-0 mb-5 mx-auto">
+                            <div class="block-key p-sm-5 p-3 text-center mt-3">
+                                <h4 class="fw-600 text-purpur">Введите в форму свои данные</h4>
+                                <p class="mb-4">и мы свяжемся с вами</p>
+                                <form class="form">
+                                    <div class="input-bg mb-3">
+                                        <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="input-bg mb-3">
+                                        <input type="text" class="form-control" id="title"
+                                            placeholder="Название образовательной организации">
+                                    </div>
+                                    <div class="input-bg mb-3">
+                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                    <button class="btn btn-send fw-600 mt-2">ОТПРАВИТЬ</button>
+                                </form>
+                            </div>
+                            <div class="d-flex justify-content-between mx-sm-5 my-4">
+                                <a href="#"><img src="img/program/VK.svg" alt="VK"></a>
+                                <a href="#"><img src="img/program/OK.svg" alt="OK"></a>
+                                <a href="#"><img src="img/program/TG.svg" alt="Telegram"></a>
+                                <a href="#"><img src="img/program/Viber.svg" alt="Viber"></a>
+                                <a href="#"><img src="img/program/WA.svg" alt="WhatsApp"></a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-7 col-xl-6 ms-auto d-xl-block d-none">
+                            <img src="img/program/bg-6.svg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+</body>
+</html>

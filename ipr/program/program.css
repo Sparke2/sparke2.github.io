@@ -1,0 +1,212 @@
+h1,
+h2 {
+    font-weight: 700;
+}
+
+h1 {
+    background: linear-gradient(90deg, #F90 0%, #FF7A00 96.46%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+.block-key {
+    border-radius: 20px;
+    background: #F9FAFC;
+    box-shadow: 0px 0px 28px -4px rgba(0, 0, 0, 0.25);
+}
+
+.text-purpur {
+    color: #7630A1;
+    font-size: 25px;
+}
+
+.form .input-bg {
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+.form .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(38, 50, 56, 0.50);
+}
+
+.btn-send,
+.btn-send:hover {
+    border-radius: 53px;
+    background: linear-gradient(90deg, #E362D5 -14.47%, #D722F5 -14.45%, #FF8A00 107.74%);
+    color: #fff;
+    padding: 0.4rem 4rem;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.bg-text {
+    background-image: url(img/program/bg-7.png);
+    border-radius: 55px;
+    background-size: cover;
+    z-index: 3;
+}
+
+.bg-text p {
+    font-size: 20px;
+}
+
+.norm-bg-1 {
+    top: 18%;
+}
+
+.norm-bg-2 {
+    top: 18%;
+    right: 0;
+}
+
+.br-28 {
+    border-radius: 28px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.bg-text ul li {
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+
+.badge-text {
+    border-radius: 48px;
+    background: linear-gradient(90deg, #F90 9.92%, #FF7A00 101.33%);
+}
+
+.bg-1 {
+    right: 0;
+    top: 3vw;
+}
+
+.bg-1 img {
+    width: 58vw;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.padding-main-block {
+    padding-top: 11vw;
+    padding-bottom: 16vw;
+}
+
+.fs-37 {
+    font-size: 37px;
+}
+
+.bg-criteria {
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.20);
+}
+
+.bg-certification {
+    border-radius: 30px;
+    background-image: url(img/program/bg-3.png);
+    z-index: 2;
+}
+
+.bg-criteria li::marker {
+    content: url(img/program/Checkmark.svg);
+}
+
+.bg-criteria li {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bg-criteria ul {
+    padding-left: 1.2rem;
+}
+
+.bg-2 {
+    top: 9vw;
+}
+
+.bg-2 img {
+    width: 75%;
+}
+
+.table .lin {
+    border-radius: 53px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+.table .lin-1 {
+    background: linear-gradient(88deg, #F90 4.72%, #FF7A00 46.75%);
+    text-wrap: nowrap;
+}
+
+.table .lin-2 {
+    background: linear-gradient(90deg, #E362D5 -14.47%, #FF8A00 -14.45%, #E537AA 95.01%); 
+}
+
+.table .lin-3 {
+    background: linear-gradient(90deg, #F46ADD -14.47%, #7630A1 107.74%);
+}
+
+.table .lin-4 {
+    background: linear-gradient(94deg, #7630A1 -10.38%, #6ACAF4 104.9%);
+}
+.w-10 {
+    width: 10%;
+}
+.block-padding {
+    padding-top:9vw;
+    padding-bottom: 9vw;
+}
+@media (max-width: 1399px) {
+    .bg-1 {
+        width: 50vw;
+    }
+    .bg-2 {
+        top: 17vw;
+    }
+}
+@media (max-width: 1199px) {
+    h2, .fs-37 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 580px) {
+    h1 {
+        font-size: 47px;
+    }
+    h2, .fs-37 {
+        font-size: 24px;
+    }
+    .amb-block .badge, .bg-text p {
+        font-size: 16px;
+    }
+    .block-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
