@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="js/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="program.css">
 </head>
@@ -240,9 +241,43 @@
             </div>
         </nav>
     </header>
-    <main class="position-relative" style="overflow: hidden;">
+    <main class="position-relative">
         <div id="program">
             <div class="position-absolute bg-1 d-xl-block d-none">
+                <div class="position-absolute slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-slider p-4 h-100 text-center">
+                                    <img src="img/program/Certificate.svg" alt="" class="mb-1">
+                                    <p class="m-0">Дополнительная профессиональная программа — <span class="fw-600 text-white">программа повышения квалификации</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-slider p-4 h-100 text-center">
+                                    <img src="img/program/Graduation_cap.svg" alt="" class="mb-1">
+                                    <p class="m-0">Форма обучения: <span class="fw-600 text-white">заочная
+                                        с применением 
+                                        дистанционных образовательных технологий</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-slider p-4 h-100 text-center">
+                                    <img src="img/program/Time.svg" alt="" class="mb-1">
+                                    <p class="mb-1">Срок обучения:</p>
+                                    <p class="m-0"><span class="fw-600 text-white fs-37">72 часа</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-slider p-4 h-100 text-center">
+                                    <img src="img/program/Laptop.svg" alt="">
+                                    <p class="m-0">Программа реализуется в виде <span class="fw-600 text-white">онлайн-курса</span>, создавая
+                                        для слушателей комфортное обучения в электронной информационно-образовательной среде</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <img src="img/program/bg-1.svg" alt="">
             </div>
             <div class="container-fluid padding-main-block">
@@ -697,5 +732,19 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'vertical',
+            effect: 'slide',
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                reverseDirection: true,
+                disableOnInteraction: false,
+            },
+        })
+    </script>
 </body>
 </html>
