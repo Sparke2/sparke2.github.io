@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IPR SMART</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+	<link rel="stylesheet" href="https://datalib.dev.datalib.ru/fonts/coolicons/v4.1/coolicons.css" />
+	<link id="aos-css-file" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="publication.css">
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-xl fixed-top header-nav p-0">
+			<div class="container-fluid align-items-center d-block">
+				<div class="d-flex justify-content-between">
+					<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse"
+						data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<img src="img/main/Menu_Alt_04.svg" alt="">
+						<!-- <i class="ci-Menu_Alt_04"></i> -->
+					</button>
+					<a class="navbar-brand brandName d-xl-none d-block" href="#">
+						<img src="img/main/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="bdNavbar">
+					<div
+						class="w-100 d-flex justify-content-between align-items-center align-content-between flex-wrap py-1">
+						<button id="btn-menu" class="btn" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+							<i id="btn-menu-icon" class="fa-solid fa-bars"></i>
+						</button>
+						<a class="navbar-brand brandName d-xl-block d-none" href="#">
+							<img src="img/main/logo.svg" alt="">
+						</a>
+						<form class="my-auto">
+							<div class="input-group search-header">
+								<input type="text" name="search-header" class="form-control" placeholder="Поиск...">
+								<button class="btn" type="submit" id="search">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+						<p class="m-0">sales@iprmedia.ru</p>
+						<p class="m-0">+7 800 555-22-35</p>
+						<button class="btn">
+							<img src="img/main/Shopping_Cart_02.svg" alt="">
+							<!-- <i class="ci-Shopping_Cart_02"></i> -->
+						</button>
+						<button class="btn"><i class="fa-solid fa-eye"></i></button>
+						<button class="btn">
+							<p class="m-0">Тестовый доступ</p>
+						</button>
+						<button class="btn">
+							<img src="img/main/User_Circle.svg" alt="">
+							<!-- <i class="ci-User_Circle"></i> -->
+						</button>
+					</div>
+				</div>
+				<div class="collapse" id="collapseMenu">
+					<div class="row">
+						<div class="col-6">
+							<div class="nav flex-column nav-pills py-sm-5 py-2 pe-4"
+								style="box-shadow: 41px 45px 42px -36px rgba(0, 0, 0, 0.09);" id="v-pills-tab" role="tablist"
+								aria-orientation="vertical">
+								<button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+									aria-selected="true"><span>Библиотека</span></button>
+								<button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-profile" type="button" role="tab"
+									aria-controls="v-pills-profile" aria-selected="false"><span>Коллекции</span></button>
+								<button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-disabled" type="button" role="tab"
+									aria-controls="v-pills-disabled" aria-selected="false"><span>Альтернативные виды
+										обучения</span></button>
+								<button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-messages" type="button" role="tab"
+									aria-controls="v-pills-messages" aria-selected="false"><span>Экосистема</span></button>
+								<a href="#" class="nav-link"><span>Интеграция в ЭИОС</span></a>
+								<a href="#" class="nav-link"><span>Правообладателям</span></a>
+								<button class="nav-link" id="v-pills-info-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info"
+									aria-selected="false"><span>Информация</span></button>
+								<button class="nav-link" id="v-pills-mobile-tab" data-bs-toggle="pill"
+								data-bs-target="#v-pills-mobile" type="button" role="tab"
+								aria-controls="v-pills-mobile" aria-selected="false"><span>Мобильное приложение</span></button>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="tab-content pt-sm-5 pt-2" id="v-pills-tabContent">
+								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+									aria-labelledby="v-pills-home-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Эксклюзивные издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Новые издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Журналы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Архивные фонды</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Печатные книги</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+									aria-labelledby="v-pills-profile-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Новые коллекции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекция ИИ</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции от издательств</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции от университетов</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Популрные коллекции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции ПРО</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Научно-образовательные
+													платформы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Создать свою коллекию</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+									aria-labelledby="v-pills-disabled-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Онлайн курсы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Аудиоиздания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Лекториум</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Видеоресурсы</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+									aria-labelledby="v-pills-messages-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">DataLIB</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">РКИ</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">ПрофОбразование</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">ВКР Smart</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-info" role="tabpanel"
+									aria-labelledby="v-pills-info-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">О компании</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Адаптивные технологии</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Шаблоны и документы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Контакты</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Инструкции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Курс “ДПО по цифровизации”</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Часто задаваемые вопросы</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-mobile" role="tabpanel"
+									aria-labelledby="v-pills-mobile-tab" tabindex="0">
+									<div class="row px-md-5 qr-header">
+										<div class="col-xl-6 text-center">
+											<a href="https://play.google.com/store/apps/details?id=ru.iprbooks.iprbooksmobile&hl=ru&gl=US&pli=1" target="_blank">
+												<img src="img/main/qr-code-android.gif">
+												<span class="text-center"><br>Android</span>
+											</a>
+										</div>
+										<div class="col-xl-6 text-center">
+											<a href="https://apps.apple.com/ru/app/ipr-smart-mobile-reader/id1322302612" target="_blank">
+												<img src="img/main/qr-code-ios.gif">
+												<span class="text-center"><br>IOS</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="position-relative" style="overflow: hidden;">
+		<div id="publications">
+			<div class="box-shadow">
+				<div class="container pt-5 pb-3">
+					<div class="row head-page-doc pb-4 g-4">
+						<div class="col-xl-8 col-lg-7">
+							<h1 class="m-0 text-uppercase">Издания</h1>
+						</div>
+						<div class="col-xl-4 col-lg-5">
+							<button class="btn btn-badge text-uppercase">Посмотреть инструкцию по созданию своей коллекции</button>
+						</div>
+					</div>
+					<div class="owl-carousel-padding-1">
+						<div class="owl-carousel owl-theme owl-carousel-publication">
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+							<div class="item">
+								<p class="placeholder-glow">
+									<span class="placeholder col-12 py-4"></span>
+								  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-light py-5">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-md-center mt-4 flex-md-row flex-column">
+						<ul class="nav nav-pills justify-content-center flex-md-row flex-column" id="pills-tab-list" role="tablist">
+							<li class="nav-item m-0" role="presentation">
+								<button class="nav-link btn text-lin-1 active ps-0" id="pills-list-tab" data-bs-toggle="pill" data-bs-target="#pills-list" type="button" role="tab" aria-controls="pills-list" aria-selected="true"><i class="fa-solid fa-list"></i> Смотреть списком</button>
+							</li>
+							<li class="nav-item m-0" role="presentation">
+								<button class="nav-link btn text-lin-1 ps-md-2 ps-0" id="pills-full-tab" data-bs-toggle="pill" data-bs-target="#pills-full" type="button" role="tab" aria-controls="pills-full" aria-selected="false" tabindex="-1"> <i class="fa-solid fa-border-all"></i> Смотреть наглядно</button>
+							</li>
+						</ul>
+						<a href="#">
+							<p class="text-lin-2 fw-500 m-0 pt-md-0 pt-2"><i class="fa-solid fa-download"></i> Выгрузить
+								результаты
+							</p>
+						</a>
+					</div>
+					<ul class="nav nav-pills mb-3 justify-content-center switch pt-5 position-sticky" id="pills-tab" role="tablist">
+						<li class="nav-item me-lg-4 my-0" role="presentation">
+							<button class="nav-link active d-block" id="pills-filter-tab" data-bs-toggle="pill"
+								data-bs-target="#pills-filter" type="button" role="tab" aria-controls="pills-filter"
+								aria-selected="true">ПОИСК ПО ПАРАМЕТРАМ</button>
+						</li>
+						<li class="nav-item my-0" role="presentation">
+							<button class="nav-link" id="pills-topic-tab" data-bs-toggle="pill" data-bs-target="#pills-topic"
+								type="button" role="tab" aria-controls="pills-topic" aria-selected="false">ПОКАЗАТЬ
+								ТЕМАТИКИ</button>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab"
+							tabindex="0">
+							<h2 class="text-center pt-3 pb-5 fw-700">РАСШИРЕННЫЙ ПОИСК</h2>
+							<div class="bg-light-filter box-shadow br-20">
+								<form>
+									<div class="row g-4 p-4 px-5 form">
+										<div class="col-xl-3 col-lg-4 col-md-6">
+											<div class="row g-3">
+												<div class="col-12">
+													<p class="fw-600">УГСН</p>
+													<div class="inner-out p-3">
+														<div class="ugsn inner">
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-1" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-1" class="ms-3 form-check-label">Математика и механика</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-2" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-2" class="ms-3 form-check-label">Компьютерные и информационная</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-3" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-3" class="ms-3 form-check-label">Физика и астрономия</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-4" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-4" class="ms-3 form-check-label">Химия</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-7" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-7" class="ms-3 form-check-label">Науки о земле</label> 
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="ugsn-6" type="radio" name="ugsn-categories[]"
+																	value="" class="form-check-input d-none">
+																	<label for="ugsn-6" class="ms-3 form-check-label">Естественные науки</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<p class="fw-600">ББК</p>
+													<div class="inner-out p-3">
+														<div class="inner">
+															<div class="div-check-mark d-flex">
+																	<input id="bbk-1" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																	<label for="bbk-1" class="ms-3 form-check-label flex-shrink">Естественные науки</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="bbk-2" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																	<label for="bbk-2" class="ms-3 form-check-label flex-shrink">Техника. Технические науки</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="bbk-3" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																	<label for="bbk-3" class="ms-3 form-check-label flex-shrink">Сельское и лесное хозяйство</label> 
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="bbk-4" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																	<label for="bbk-4" class="ms-3 form-check-label flex-shrink">Здравоохранение. Медицина</label>
+															</div>
+															<div class="div-check-mark d-flex">
+																	<input id="bbk-5" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																	<label for="bbk-5" class="ms-3 form-check-label flex-shrink">Общественные и гуманитарн...</label> 
+															</div>
+															<div class="div-check-mark d-flex">
+																<input id="bbk-6" type="checkbox" name="bbk-categories[]"
+																	value="" class="form-check-input">
+																<label for="bbk-6" class="ms-3 form-check-label flex-shrink">Естественные науки</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-9 col-lg-8 col-md-6">
+											<div class="row g-3">
+												<div class="col-xl-4 col-lg-6">
+													<div class="mb-3">
+														<label for="title" class="form-label">Заглавие</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="title"
+																placeholder="Начните ввод...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<div class="mb-3">
+														<label for="publication" class="form-label">Издательство</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="publication"
+																placeholder="Начните ввод...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<div class="mb-3">
+														<label for="author" class="form-label">Автор</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="author"
+																placeholder="Начните ввод...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-2 col-lg-6">
+													<div class="mb-3">
+														<label for="year_from" class="form-label">Год от</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="year_from"
+																placeholder="от...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-2 col-lg-6">
+													<div class="mb-3">
+														<label for="year_to" class="form-label">Год до</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="year_to"
+																placeholder="до...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<div class="mb-3">
+														<label for="isbn" class="form-label">ISBN</label>
+														<div class="input-bg">
+															<input type="text" class="form-control" id="isbn"
+																placeholder="ISBN...">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<label for="type_publication" class="form-label">Вид издания</label>
+													<select id="type_publication" class="select" name="type_publication">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<label for="special_purpose" class="form-label">Целевое назначение</label>
+													<select id="special_purpose" class="select" name="special_purpose">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<label for="availability" class="form-label">Доступность изданий</label>
+													<select id="availability" class="select" name="availability">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<label for="collections" class="form-label">Подборки изданий</label>
+													<select id="collections" class="select" name="collections">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-12 col-lg-6">
+													<label for="additionally" class="form-label">Дополнительно</label>
+													<select id="additionally" class="select" name="additionally">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-4 col-lg-6">
+													<label id="scientific" for="scientific" class="form-label">Научные</label>
+													<select class="select" name="scientific">
+														<option></option>
+														<option value="1">Выбор из списка</option>
+														<option value="0">Выбор из списка</option>
+													</select>
+												</div>
+												<div class="col-xl-4 col-lg-6 mt-xl-auto mt-4">
+													<button class="btn btn-badge px-4 w-100 mb-lg-2 my-0">ОЧИСТИТЬ ВСЕ <i class="fa-solid fa-circle-xmark ps-3"></i></button>
+												</div>
+												<div class="col-xl-4 col-lg-6 mt-xl-auto mt-4">
+													<button class="btn btn-active w-100 mb-2">ПРИМЕНИТЬ</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="tab-pane" id="pills-topic" role="tabpanel" aria-labelledby="pills-topic-tab" tabindex="0">
+							<h2 class="text-center pt-3 pb-4 fw-700">ТЕМАТИКИ</h2>
+							<div class="row g-4">
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row align-items-center blue">
+										<a href="#"><img src="img/catalog/1.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Промышленность</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center violet">
+										<a href="#"><img src="img/catalog/5.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">IT-технологии</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center pink">
+										<a href="#"><img src="img/catalog/9.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Культура</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center orange">
+										<a href="#"><img src="img/catalog/13.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Энергетика</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center blue">
+										<a href="#"><img src="img/catalog/2.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Науки об обществе и человеке</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center violet">
+										<a href="#"><img src="img/catalog/6.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Социальная сфера</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center pink">
+										<a href="#"><img src="img/catalog/10.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Гуманитарные науки</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center orange">
+										<a href="#"><img src="img/catalog/14.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Транспорт</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center blue">
+										<a href="#"><img src="img/catalog/3.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Инженерные науки</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center violet">
+										<a href="#"><img src="img/catalog/7.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Оборона и безопасность</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center pink">
+										<a href="#"><img src="img/catalog/11.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Архитектура и строительство</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center orange">
+										<a href="#"><img src="img/catalog/15.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Сельское хозяйство</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center blue">
+										<a href="#"><img src="img/catalog/4.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Естественные науки</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center violet">
+										<a href="#"><img src="img/catalog/8.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Педагогика</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center pink">
+										<a href="#"><img src="img/catalog/12.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Музыка и искусство</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="card catalog-card d-flex flex-row  align-items-center orange">
+										<a href="#"><img src="img/catalog/16.svg" alt=""></a>
+										<a href="#">
+											<p class="m-0">Здравоохранение</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<footer>
+		<div class="py-5">
+			<div class="container">
+				<div class="row py-4 g-4">
+					<div class="col-xl-4 col-md-6">
+						<p>База данных «Цифровая библиотека IPRsmart (IRPsmart ONE)» зарегистрирована в Федеральной
+							службе по интеллектуальной собственности 10 февраля 2022 г.</p>
+						<p class="text-white fw-500">Свидетельство о государственной регистрации № 2 022 620 333.</p>
+						<p>Программа для ЭВМ «Автоматизированная система управления Цифровой библиотекой IPRsmart»
+							зарегистрирована в Федеральной службе по интеллектуальной собственности 27 августа 2021 г.
+						</p>
+						<p class="text-white fw-500">Свидетельство о государственной регистрации № 2021664034.</p>
+						<p class="text-white fw-500">© Общество с ограниченной ответственностью<br> Компания «Ай Пи Ар
+							Медиа»</p>
+					</div>
+					<div class="col-xl-4 col-md-6">
+						<p>ООО Компания «Ай Пи Ар Медиа» включено в Реестр аккредитованных IT компаний, на основании
+							РЕШЕНИЯ о предоставлении государственной аккредитации организации, осуществляющей
+							деятельность в области информационных технологий от 11.03.2022 г. № АО-20 220 310-3 775 333
+							561-3, выданного МИНИСТЕРСТВОМ ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ
+							ФЕДЕРАЦИИ.</p>
+						<p class="mb-0">Программа для ЭВМ зарегистрирована в Едином реестре российского программ для
+							электронно-вычислительных машин и баз данных <span>https://reestr.digital.gov.ru</span>,
+							запись в реестре <span>№ 13 509 от 11.05.2022 г.</span> произведена на основании поручения
+							Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от
+							11.05.2022 г. по протоколу заседания экспертного совета от <span>29.04.2022 № 570пр.</span>
+						</p>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-6">
+						<p class="mb-1 text-white">support@iprmedia.ru</p>
+						<p class="text-white fs-20 mb-1">8 800 555-22-35</p>
+						<p class="text-white">Звонок бесплатный для всех регионов России</p>
+						<p class="m-0">143405, Московская область,</p>
+						<p class="m-0"> г.о. Красногорск, г. Красногорск,</p>
+						<p class="m-0"> ш. Ильинское, д. 1А,</p>
+						<p class="m-0"> помещ. 17,6/ком. 5</p>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-6">
+						<div class="mb-4">
+							<a class="pe-1" href="https://www.iprbookshop.ru/getsharelink?link_id=1" target="_blank"
+								title="Vkontakte">
+								<img src="img/main/vk.svg" alt="">
+							</a>
+							<a class="px-1" href="https://www.iprbookshop.ru/getsharelink?link_id=4" target="_blank"
+								title="Youtube">
+								<img src="img/main/youtube.svg" alt="">
+							</a>
+							<a class="px-1" href="https://www.iprbookshop.ru/getsharelink?link_id=5" target="_blank"
+								title="Telegram">
+								<img src="img/main/tg.svg" alt="">
+							</a>
+						</div>
+						<p class="mb-2"><a class="fw-500" href="#">Пользовательское соглашение</a></p>
+						<p class="mb-2"><a class="fw-500" href="#">Политика конфиденциальности</a></p>
+						<p><a class="fw-500" href="#">Сведения об организации</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script>
+		$('.owl-carousel-publication').owlCarousel({
+			loop:true,
+			margin:10,
+			dots: false,
+			nav:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			}
+		})
+
+		
+        $(document).ready(function () {
+            $('.select').select2({
+                minimumResultsForSearch: -1,
+                placeholder: "Выбор из списка...",
+                width: '100%',
+            });
+        });
+
+		$(document).ready(function(){
+			  
+		});
+		$( 'input[name="ugsn-categories[]"]' ).on( "click", function() {
+			if($(this).is(':checked')) {
+				$('input[name="ugsn-categories[]"]').parent().css("background-color", "#fff"); 
+				$(this).parent().css("background-color", "#F8F9FA");  
+			} else {
+				$(this).parent().css("background-color", "#fff"); 
+			}
+		});
+	</script>
+</body>
+</html>

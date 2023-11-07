@@ -1,0 +1,287 @@
+h1, .fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+#publications h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+.btn-badge {
+	padding: 0.5rem;
+}
+.btn-badge:hover, .btn-badge:active {
+	color: #fff !important;
+	transition: 0.3s;
+}
+#publications .box-shadow {
+	position: sticky;
+	box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.09);
+}
+.btn-badge i {
+    color: #FE7101;
+}
+.btn-badge{
+	position: relative;
+	border-radius: 67px;
+	background: #fff;
+	text-align: center;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	color: #FE7101;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.27px;
+	transition: 0.4s;
+}
+.btn-badge::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: linear-gradient(180deg, #FF8A00 0%, #F90C4F 100%); 
+	border-radius: 67px;
+	z-index: -1;
+}
+.text-lin-1 {
+    background: linear-gradient(113deg, #FF7A00 17.19%, #E64EFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.text-lin-1.active {
+    opacity: 1;
+}
+
+.text-lin-2 {
+    background: linear-gradient(150deg, #8B2CF5 0%, #D92CF5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.switch .nav-link.active {
+    border-radius: 67px;
+    background: linear-gradient(113deg, #E64EFF 0%, #FF7A00 100%);
+    color: #FFF;
+}
+
+.switch .nav-link.active::before {
+    display: none;
+}
+
+.switch .nav-link {
+    position: relative;
+    border-radius: 67px;
+    background: #fff;
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 1em 5em;
+    color: #FE7101;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.27px;
+    transition: 0.4s;
+}
+
+.switch .nav-link::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(180deg, #FF8A00 0%, #F90C4F 100%);
+    border-radius: 67px;
+    z-index: -1;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.catalog-card {
+    border-radius: 18px;
+    box-shadow: 2px 4px 11px -4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.catalog-card.blue:hover {
+    background-color: #ECF2FF;
+}
+
+.catalog-card.violet:hover {
+    background-color: #FBECFF;
+}
+
+.catalog-card.pink:hover {
+    background-color: #FFECFA;
+}
+
+.catalog-card.orange:hover {
+    background-color: #FFF7EC;
+}
+
+.catalog-card p {
+    color: #000;
+    font-weight: 500;
+}
+
+.btn-active {
+    border-radius: 67px;
+    background: linear-gradient(113deg, #E64EFF 0%, #FF7A00 100%);
+    color: #FFF;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+}
+
+.form .form-label {
+    font-weight: 600;
+}
+
+.form .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(38, 50, 56, 0.50);
+}
+
+.form .input-bg {
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+.form .form-control::placeholder {
+    color: rgba(38, 50, 56, 0.50);
+}
+
+.select2-search--dropdown,
+.select2-results {
+    padding: 1rem .3rem 0 .3rem !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #031E80FF !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: none !important;
+    border-radius: 0.5rem !important;
+    padding: 1rem !important;
+    height: auto !important;
+    font-weight: 500 !important;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+
+.select2-dropdown {
+    border: none !important;
+    border-radius: 1rem !important;
+    margin-top: -0.5rem !important;
+    border-top-width: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    z-index: 1049 !important;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25)
+}
+
+.select2-results__option {
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.25rem !important;
+    font-weight: 400 !important;
+    font-size: 13px;
+}
+
+.select2-results__options {
+    margin-bottom: 1rem !important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border: solid #cdd2e6 !important;
+    border-width: 0 2px 2px 0 !important;
+    display: inline-block !important;
+    padding: 3px !important;
+    transform: rotate(-135deg) !important;
+    -webkit-transform: rotate(-135deg) !important;
+    margin-top: 12px !important;
+    margin-left: -15px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: solid #cdd2e6 !important;
+    border-width: 0 2px 2px 0 !important;
+    display: inline-block !important;
+    padding: 3px !important;
+    transform: rotate(45deg) !important;
+    -webkit-transform: rotate(45deg) !important;
+    margin-top: 12px !important;
+    margin-left: -15px !important;
+}
+
+.br-20 {
+    border-radius: 20px;
+}
+
+.inner::-webkit-scrollbar {
+    width: 10px;
+}
+.inner::-webkit-scrollbar-track {
+    background: #F9FAFC;;
+    border-radius: 37px;
+}
+
+.inner::-webkit-scrollbar-thumb {
+    background-color: #8F969A;
+    border-radius: 37px;
+    border: 0px solid #FFFFFF;
+}
+
+.inner {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0;
+}
+.inner-out {
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.09);
+}
+hr {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.15) 15.1%, rgba(0, 0, 0, 0.15) 79.69%, rgba(0, 0, 0, 0.00) 100%);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
+    height: 2px;
+}
+.flex-shrink {
+    flex-shrink: 10;
+}
+
+.form .form-check-input {
+    border-color: #8F969A;
+    background-color: transparent;
+}
+.form .form-check-input:checked {
+    background-color: #8F969A;
+}
+.div-check-mark {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-left: 0;
+    border-right: 0;        
+    border-top: 0;
+    border-image-source: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.15) 15.1%, rgba(0, 0, 0, 0.15) 79.69%, rgba(0, 0, 0, 0.00) 100%);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.div-check-mark label {
+    color: rgba(38, 50, 56, 0.50);
+    cursor: pointer;
+}
