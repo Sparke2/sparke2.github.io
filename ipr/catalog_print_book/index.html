@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IPR SMART</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://dev.datalib.ru/fonts/awesome/v5.15.4/css/all.css" />
+	<link rel="stylesheet" href="https://datalib.dev.datalib.ru/fonts/coolicons/v4.1/coolicons.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="catalog_print_book.css">
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-xl fixed-top header-nav p-0">
+			<div class="container-fluid align-items-center d-block">
+				<div class="d-flex justify-content-between">
+					<button class="navbar-toggler collapsed box-shadow-none" type="button" data-bs-toggle="collapse"
+						data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<img src="img/main/Menu_Alt_04.svg" alt="">
+<!-- 						<i class="ci-Menu_Alt_04"></i> -->
+					</button>
+					<a class="navbar-brand brandName d-xl-none d-block" href="#">
+						<img src="img/main/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="bdNavbar">
+					<div
+						class="w-100 d-flex justify-content-between align-items-center align-content-between flex-wrap py-1">
+						<button id="btn-menu" class="btn" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+							<i id="btn-menu-icon" class="fa-solid fa-bars"></i>
+						</button>
+						<a class="navbar-brand brandName d-xl-block d-none" href="#">
+							<img src="img/main/logo.svg" alt="">
+						</a>
+						<form class="my-auto">
+							<div class="input-group search-header">
+								<input type="text" name="search-header" class="form-control" placeholder="Поиск...">
+								<button class="btn" type="submit" id="search">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</form>
+						<p class="m-0">sales@iprmedia.ru</p>
+						<p class="m-0">+7 800 555-22-35</p>
+						<button class="btn">
+							<img src="img/main/Shopping_Cart_02.svg" alt="">
+<!-- 							<i class="ci-Shopping_Cart_02"></i> -->
+						</button>
+						<button class="btn"><i class="fa-solid fa-eye"></i></button>
+						<button class="btn">
+							<p class="m-0">Тестовый доступ</p>
+						</button>
+						<button class="btn">
+							<img src="img/main/User_Circle.svg" alt="">
+<!-- 							<i class="ci-User_Circle"></i> -->
+						</button>
+					</div>
+				</div>
+				<div class="collapse" id="collapseMenu">
+					<div class="row">
+						<div class="col-6">
+							<div class="nav flex-column nav-pills py-sm-5 py-2 pe-4"
+								style="box-shadow: 41px 45px 42px -36px rgba(0, 0, 0, 0.09);" id="v-pills-tab" role="tablist"
+								aria-orientation="vertical">
+								<button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+									aria-selected="true"><span>Библиотека</span></button>
+								<button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-profile" type="button" role="tab"
+									aria-controls="v-pills-profile" aria-selected="false"><span>Коллекции</span></button>
+								<button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-disabled" type="button" role="tab"
+									aria-controls="v-pills-disabled" aria-selected="false"><span>Альтернативные виды
+										обучения</span></button>
+								<button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-messages" type="button" role="tab"
+									aria-controls="v-pills-messages" aria-selected="false"><span>Экосистема</span></button>
+								<a href="#" class="nav-link"><span>Интеграция в ЭИОС</span></a>
+								<a href="#" class="nav-link"><span>Правообладателям</span></a>
+								<button class="nav-link" id="v-pills-info-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info"
+									aria-selected="false"><span>Информация</span></button>
+								<button class="nav-link" id="v-pills-mobile-tab" data-bs-toggle="pill"
+								data-bs-target="#v-pills-mobile" type="button" role="tab"
+								aria-controls="v-pills-mobile" aria-selected="false"><span>Мобильное приложение</span></button>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="tab-content pt-sm-5 pt-2" id="v-pills-tabContent">
+								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+									aria-labelledby="v-pills-home-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Эксклюзивные издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Новые издания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Журналы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Архивные фонды</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Печатные книги</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+									aria-labelledby="v-pills-profile-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Новые коллекции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекция ИИ</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции от издательств</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции от университетов</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Популрные коллекции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Коллекции ПРО</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Научно-образовательные
+													платформы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Создать свою коллекию</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+									aria-labelledby="v-pills-disabled-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Онлайн курсы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Аудиоиздания</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Лекториум</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Видеоресурсы</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+									aria-labelledby="v-pills-messages-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">DataLIB</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">РКИ</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">ПрофОбразование</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">ВКР Smart</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-info" role="tabpanel"
+									aria-labelledby="v-pills-info-tab" tabindex="0">
+									<div class="row px-md-5">
+										<div class="col-12">
+											<div class="link-tab"><a href="#">О компании</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Адаптивные технологии</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Шаблоны и документы</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Контакты</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Инструкции</a></div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Курс “ДПО по цифровизации”</a>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="link-tab"><a href="#">Часто задаваемые вопросы</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-mobile" role="tabpanel"
+									aria-labelledby="v-pills-mobile-tab" tabindex="0">
+									<div class="row px-md-5 qr-header">
+										<div class="col-xl-6 text-center">
+											<a href="https://play.google.com/store/apps/details?id=ru.iprbooks.iprbooksmobile&hl=ru&gl=US&pli=1" target="_blank">
+												<img src="img/main/qr-code-android.gif">
+												<span class="text-center"><br>Android</span>
+											</a>
+										</div>
+										<div class="col-xl-6 text-center">
+											<a href="https://apps.apple.com/ru/app/ipr-smart-mobile-reader/id1322302612" target="_blank">
+												<img src="img/main/qr-code-ios.gif">
+												<span class="text-center"><br>IOS</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</nav>
+	</header>
+	<main class="position-relative">
+		<div id="catalog_print_book">
+			<div class="container py-5">
+				<h1 class="py-5">КАТАЛОГ ПЕЧАТНЫХ КНИГ</h2>
+				<div class="row g-3">
+					<div class="col-xl-6">
+						<p class="fw-600 fs-20">С 2005 года издаем качественную практико ориентированную литературу для высшего и среднего профессионального образования.</p>
+							<p class="fs-20">Мы изучаем тренды в образовании, проводим тщательный отбор авторов и создаем для вас эксклюзивную учебную литературу для изучения новых дисциплин и освоения образовательных программ.</p>
+					</div>
+					<div class="col-xl-6">
+						<div class="row g-3">
+							<div class="col-lg-4">
+								<div class="img-box-logo h-100 d-flex p-4 justify-content-center">
+									<img src="img/catalog_print_book/iprmedia.svg" alt="" class="img-fluid my-auto">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="img-box-logo h-100 d-flex p-4 justify-content-center">
+									<img src="img/catalog_print_book/prof.svg" alt="" class="img-fluid my-auto">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="img-box-logo h-100 d-flex p-4 justify-content-center">
+									<img src="img/catalog_print_book/EDP_HUB.svg" alt="" class="img-fluid my-auto">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container pb-5 pt-xl-0 pt-5">
+				<div class="row g-3">
+					<div class="col-xl-6 col-lg-8">
+						<div class="p-4 box-shadow-content">
+							<h2 class="text-uppercase mb-4">Важно!<br> Для образовательных организаций</h3>
+							<p>Покупка книг напрямую у издательств «Ай Пи Ар Медиа», «Профобразование» и EDP Hub, как у единственных поставщиков, обладающих исключительными правами, избавит Вашу организацию от необходимости проведения торгов, 
+								аукционов и ограничений суммы контракта.</p>
+							<h3>Книги по ценам издателя — лучший выбор!<br>Убедитесь сами</h4>
+							<div class="pt-3 d-sm-flex justify-content-between">
+								<a class="btn btn-linear px-xxl-5 px-4 mb-sm-0 mb-3" href="#">СМОТРЕТЬ ПРАЙС-ЛИСТ</a>
+								<a class="btn btn-linear px-xxl-5 px-4" href="#">КУПИТЬ КНИГИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 d-xl-block d-none">
+						<img src="img/catalog_print_book/bg_1.png" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="container py-5">
+				<div class="row g-3">
+					<div class="col-lg-6 position-relative">
+						<h2 class="text-uppercase mb-4">Помощь <br> в оформлении заказов</h2>
+						<p class="fw-600">Если не можете определиться с выбором, напишите нам. Наши менеджеры всегда помогут сориентироваться и подберут лучшие издания под ваш запрос.</p>
+						<img src="img/catalog_print_book/bg_2.png" alt="" class="img-fluid d-xl-block d-none">
+						<div class="box-shadow-content p-4 block-contact">
+							<h3 class="text-center mb-4">Контакты</h3>
+							<p><a href="mailto:izdat@iprmedia.ru" class="link-a"><i class="fa-regular fa-envelope"></i> izdat@iprmedia.ru</a></p>
+							<p><a href="mailto:books@iprmedia.ru" class="link-a"><i class="fa-regular fa-envelope"></i> books@iprmedia.ru</a></p>
+							<p><a href="tel:88005552235" class="link-a"><i class="fa-solid fa-phone"></i> 8 800 555 22 35 (доб. 214, 115)</a></p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="box-shadow-content text-center p-sm-5 p-3 bg-pale-grey">
+							<h3>Введите в форму свои данные</h3>
+							<p class="fw-500 mb-4">и мы свяжемся с вами в ближайшее время</p>
+							<form class="form-send-req">
+								<div class="row g-3 mb-4"> 
+									<div class="col-12">
+										<label for="fio" class="form-label d-none">ФИО</label>
+										<input type="text" class="form-control" id="fio" placeholder="ФИО">
+									</div>
+									<div class="col-12">
+										<label for="post" class="form-label d-none">Должность</label>
+										<input type="text" class="form-control" id="post" placeholder="Должность">
+									</div>
+									<div class="col-12">
+										<label for="organization" class="form-label d-none">Организация</label>
+										<input type="text" class="form-control" id="organization" placeholder="Организация">
+									</div>
+									<div class="col-12">
+										<label for="phone" class="form-label d-none">Телефон</label>
+										<input type="phone" class="form-control" id="phone" placeholder="Телефон">
+									</div>
+									<div class="col-12">
+										<label for="email" class="form-label d-none">E-mail</label>
+										<input type="email" class="form-control" id="email" placeholder="E-mail">
+									</div>
+									<div class="col-12">
+										<label for="book_name" class="form-label d-none">Наименование книги</label>
+										<input type="text" class="form-control" id="book_name" placeholder="Наименование книги">
+									</div>
+									<div class="col-12">
+										<label for="ammount" class="form-label d-none">Количество экземпляров</label>
+										<input type="number" class="form-control" id="ammount" placeholder="Количество экземпляров">
+									</div>
+								</div>
+								<button class="btn text-uppercase mx-auto btn-linear px-5">Заказать книги</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="py-5">
+			<div class="container">
+				<div class="row py-4 g-4">
+					<div class="col-xl-4 col-md-6">
+						<p>База данных «Цифровая библиотека IPRsmart (IRPsmart ONE)» зарегистрирована в Федеральной
+							службе по интеллектуальной собственности 10 февраля 2022 г.</p>
+						<p class="text-white fw-500">Свидетельство о государственной регистрации № 2 022 620 333.</p>
+						<p>Программа для ЭВМ «Автоматизированная система управления Цифровой библиотекой IPRsmart»
+							зарегистрирована в Федеральной службе по интеллектуальной собственности 27 августа 2021 г.
+						</p>
+						<p class="text-white fw-500">Свидетельство о государственной регистрации № 2021664034.</p>
+						<p class="text-white fw-500">© Общество с ограниченной ответственностью<br> Компания «Ай Пи Ар Медиа»</p>
+					</div>
+					<div class="col-xl-4 col-md-6">
+						<p>ООО Компания «Ай Пи Ар Медиа» включено в Реестр аккредитованных IT-компаний, на основании
+							РЕШЕНИЯ о предоставлении государственной аккредитации организации, осуществляющей
+							деятельность в области информационных технологий от 11.03.2022 г. № АО-20 220 310-3 775 333
+							561-3, выданного МИНИСТЕРСТВОМ ЦИФРОВОГО РАЗВИТИЯ, СВЯЗИ И МАССОВЫХ КОММУНИКАЦИЙ РОССИЙСКОЙ
+							ФЕДЕРАЦИИ.</p>
+						<p class="mb-0">Программа для ЭВМ зарегистрирована в Едином реестре российских программ для
+								электронно-вычислительных машин и баз данных <span>https://reestr.digital.gov.ru</span>,
+								запись в реестре <span>№ 13 509 от 11.05.2022 г.</span> произведена на основании поручения
+								Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от
+								11.05.2022 г. по протоколу заседания экспертного совета от <span>29.04.2022 № 570пр.</span>
+							</p>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-6">
+						<p class="mb-1 text-white">support@iprmedia.ru</p>
+						<p class="text-white fs-20 mb-1">8 800 555-22-35</p>
+						<p class="text-white">Звонок бесплатный для всех регионов России</p>
+						<p class="m-0">143405, Московская область,</p>
+						<p class="m-0"> г.о. Красногорск, г. Красногорск,</p>
+						<p class="m-0"> ш. Ильинское, д. 1А,</p>
+						<p class="m-0"> помещ. 17,6/ком. 5</p>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-6">
+						<div class="mb-4">
+							<a class="pe-1" href="https://www.iprbookshop.ru/getsharelink?link_id=1" target="_blank"
+								title="Vkontakte">
+								<img src="img/main/vk.svg" alt="">
+							</a>
+							<a class="px-1" href="https://www.iprbookshop.ru/getsharelink?link_id=4" target="_blank" title="Youtube">
+								<img src="img/main/youtube.svg" alt="">
+							</a>
+							<a class="px-1" href="https://www.iprbookshop.ru/getsharelink?link_id=5" target="_blank"
+								title="Telegram">
+								<img src="img/main/tg.svg" alt="">
+							</a>
+						</div>
+						<p class="mb-2"><a class="fw-500" href="#">Пользовательское соглашение</a></p>
+						<p class="mb-2"><a class="fw-500" href="#">Политика конфиденциальности</a></p>
+						<p><a class="fw-500" href="#">Сведения об организации</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/406508d26b.js" crossorigin="anonymous"></script>
+</body>
+</html>
