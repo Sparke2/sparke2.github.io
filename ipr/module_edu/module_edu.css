@@ -1,0 +1,134 @@
+.fs-55 {
+    font-size: 55px;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.bg-1 {
+    right: 0; 
+    top: 0;
+    text-align: end;
+}
+.bg-2 {
+    right: 0; 
+    bottom: 0;
+    text-align: center;
+}
+.text-grey {
+    color:#7B7B7B;
+}
+.pr-5 {
+    padding-right: 5rem;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-24 {
+    font-size: 24px;
+}
+.include-module {
+    box-shadow: 0px 0px 15px 0px #00000026;
+    border-radius: 1rem;
+}
+.include-module p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+.include-module.mod-1 {
+    background: linear-gradient(90deg, #69C9F2 0%, #8666C2 100%);
+}
+.include-module.mod-2 {
+    background: linear-gradient(90deg, #9163C3 0%, #E85D73 100%);
+}
+.include-module.mod-3 {
+    background: linear-gradient(90deg, #E85D73 0%, #F29E10 100%);
+}
+.amb-block .badge.lin-orange {
+    background: linear-gradient(180deg, #F77531 0%, #FFA927 100%);
+}
+
+.custom-div-br {
+	--b: 0.2em; 
+	--c: 3em; 
+	--r: 1em;
+	position: relative;
+	border: solid var(--b) transparent;
+}
+.custom-div-br.b-1::before {
+    background: linear-gradient(#FFA927, #F77531) border-box;
+}
+.custom-div-br .lin {
+	padding: 1.5rem;
+	border-radius: 1em;
+	box-shadow: -1px 0px 11px 0px rgba(0, 0, 0, 0.25);
+}
+.custom-div-br .lin.lin-2 {
+	background: linear-gradient(180deg, #FFFEFF 0%, #EEF0FF 100%);
+}
+.btn-outline-orange,
+.btn-outline-orange:hover {
+    border: 2px solid #FFA927;
+    color: #FFA927;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+}
+.btn-orange,
+.btn-orange:hover {
+    background: linear-gradient(180deg, #F77531 0%, #FFA927 100%);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+}
+.fs-13 {
+    font-size: 13px;
+}
+.block-white {
+    box-shadow: 0px 0px 15px 0px #00000026;
+    border-radius: 1rem;
+}
+.text-black,
+.text-black:hover {
+    color: #263238;
+}
+.fit-content {
+    width: fit-content;
+}
+.bg-4 {
+    bottom: -2rem;
+    left: -7rem;
+}
+.href-lin,
+.href-lin:hover {
+    background: linear-gradient(90deg, #6BC5F2 0%, #7541AA 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    color: #fff;
+}
+.href-lin-1,
+.href-lin-1:hover {
+    background: linear-gradient(90deg, #7542AB 0%, #E85E72 50.51%, #EC980F 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    color: #fff;
+}
+
+@media (max-width:1399px) {
+    .fs-55 {
+        font-size: 46px;
+    }
+}
+@media (max-width:767px) {
+    .fs-55 {
+        font-size: 30px;
+    }
+    .fs-30 {
+        font-size: 24px;
+    }
+}
+@media(max-width:455px) {
+    .href-lin,
+    .href-lin-1 {
+        font-size: 12px;
+    }
+}
