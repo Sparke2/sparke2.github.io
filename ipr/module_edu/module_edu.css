@@ -113,6 +113,12 @@
     color: #fff;
 }
 
+@media (max-width:1899px) {
+    .bg-1 {
+        width: 45%;
+    }
+}
+
 @media (max-width:1399px) {
     .fs-55 {
         font-size: 46px;
